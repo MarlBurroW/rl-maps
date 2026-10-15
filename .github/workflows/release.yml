@@ -1,0 +1,63 @@
+name: Release
+
+# Release automatique : à chaque push sur main, si la version de package.json n'a pas encore
+# de tag vX.Y.Z, on teste, on construit et on publie la release GitHub.
+# Pour sortir une version : npm version patch (ou minor/major) puis git push --follow-tags.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['registry/sources/**', '**.md']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+
+      - name: Version à publier
+        id: version
+        shell: bash
+        run: |
+          v="v$(node -p "require('./package.json').version")"
+          echo "tag=$v" >> "$GITHUB_OUTPUT"
+          if gh release view "$v" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "La release $v existe déjà : rien à publier."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - if: steps.version.outputs.exists == 'false'
+        run: npm ci
+      - if: steps.version.outputs.exists == 'false'
+        run: npm run typecheck
+      - if: steps.version.outputs.exists == 'false'
+        run: npm test
+      - if: steps.version.outputs.exists == 'false'
+        run: npm run dist
+
+      - name: Publier la release
+        if: steps.version.outputs.exists == 'false'
+        shell: bash
+        run: |
+          gh release create "${{ steps.version.outputs.tag }}" \
+            dist/RL-Maps-Setup-*.exe dist/RL-Maps-*-portable.exe \
+            --target "$GITHUB_SHA" \
+            --title "RL Maps ${{ steps.version.outputs.tag }}" \
+            --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}

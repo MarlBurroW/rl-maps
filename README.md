@@ -1,0 +1,94 @@
+# RL Maps
+
+Market et loader de maps custom pour **Rocket League** (Epic Games et Steam), sans BakkesMod.
+
+Tu parcours le catalogue, tu cliques sur **Installer** puis sur **Jouer**, et la map t'attend dans
+Free Play → **Underpass**.
+
+## Télécharger
+
+Dernière version : **[Releases](https://github.com/MarlBurroW/rl-maps/releases/latest)**
+- `RL-Maps-Setup-x.y.z.exe` : installeur (raccourci, désinstallation propre)
+- `RL-Maps-x.y.z-portable.exe` : version portable, sans installation
+
+> L'exécutable n'est pas signé : au premier lancement, Windows SmartScreen peut afficher
+> « Windows a protégé votre ordinateur ». Clique sur **Informations complémentaires → Exécuter quand même**.
+
+## Fonctionnalités
+
+- **Market** : près de 400 maps, issues de [lethamyr.com](https://lethamyr.com/maps) et de
+  [BakkesPlugins](https://bakkesplugins.com/maps) (la bibliothèque de maps de BakkesMod). Recherche, filtres par
+  catégorie et par source, fiches détaillées. Installation en un clic, avec suivi de la progression.
+- **Doublons fusionnés** : une map publiée sur les deux sources n'apparaît qu'une fois, et si un lien ne marche pas
+  (quota Google Drive, par exemple), le téléchargement bascule automatiquement sur l'autre source.
+- **Bibliothèque** : tes maps installées. Glisse-dépose un `.upk`, `.udk` ou `.zip` n'importe où dans la fenêtre pour en ajouter.
+- **Chargement sûr** : l'original est sauvegardé une seule fois (`Labs_Underpass_P.upk.bak`), chaque écriture passe
+  par un fichier temporaire, et l'original peut être restauré automatiquement à la fermeture.
+- **Compatible avec les anciens loaders** : un backup laissé par [marzeq/rl-map-loader](https://github.com/marzeq/rl-map-loader)
+  ou [nikosleft/rl-map-loader](https://github.com/nikosleft/rl-map-loader) est reconnu et peut être restauré.
+- **Détection automatique** de l'installation (Epic, Steam, Heroic) et du jeu lancé.
+- **Pas de droits admin** quand le dossier du jeu est accessible en écriture (c'est le cas par défaut avec Epic).
+  Sinon, une seule invite UAC au moment de l'écriture.
+- **Registres ouverts** : chaque source est un fichier JSON dans [`registry/sources/`](registry/README.md), mis à jour
+  chaque semaine par la CI. On ajoute une map par PR, et on peut brancher d'autres registres dans les réglages.
+
+## Jouer
+
+1. **Jouer** sur une map de la bibliothèque.
+2. Sur Epic : Bibliothèque → Rocket League → **⋯ → Lancer sans anti-triche**.
+3. Entraînement → Free Play → arène **Underpass**.
+4. Avant de rejouer en ligne : **Restaurer l'original** (automatique en quittant l'app si l'option est active).
+
+Textures roses ? Installe une fois pour toutes le
+[pack de textures Workshop](https://videogamemods.com/vgm/rocketleague/mods/workshop-textures) dans `TAGame/CookedPCConsole`.
+
+> Projet non affilié à Psyonix ni à Epic Games. N'utilise jamais une map custom en partie en ligne.
+
+## Développement
+
+```bash
+npm install
+npm run dev          # app en mode dev (HMR)
+npm test             # tests unitaires
+npm run typecheck
+npm run dist         # installeur + version portable Windows dans dist/
+```
+
+### Publier une version
+
+Les releases sont automatiques (`.github/workflows/release.yml`) : à chaque push sur `main`, si la version de
+`package.json` n'a pas encore de release, la CI teste, construit l'installeur et la version portable, puis publie
+la release GitHub avec des notes générées.
+
+```bash
+npm version patch        # ou minor / major : met à jour package.json et crée le commit
+git push --follow-tags
+```
+
+Test bout-en-bout avec téléchargement réel : `RLMAPS_NET=1 npx vitest run tests/integration.test.ts`.
+
+Pour lancer une instance isolée (données et réglages séparés) : `RLMAPS_USER_DATA=/un/dossier npm run dev`.
+
+> Depuis le terminal intégré de VS Code, la variable `ELECTRON_RUN_AS_NODE=1` est héritée et empêche
+> Electron de démarrer : lance avec `env -u ELECTRON_RUN_AS_NODE npm run dev`.
+
+### Architecture
+
+```
+src/
+  main/                 process principal (Node)
+    game/slot.ts        swap Labs_Underpass_P.upk <-> map, backup, détection d'état
+    game/fsops.ts       écritures atomiques + repli UAC
+    game/detect.ts      détection Epic / Steam / Heroic
+    library/            bibliothèque locale (+ extraction zip)
+    market/             registres (réseau -> cache -> copie embarquée) et téléchargements
+    index.ts            fenêtre, IPC, protocole rlmaps:// pour les miniatures
+  preload/              pont IPC typé (contextIsolation + sandbox)
+  renderer/             UI React + Tailwind
+  shared/               types et config partagés
+registry/
+  sources/              un registre JSON par source (lethamyr, bakkesplugins, community)
+  scripts/              importeurs et validation
+```
+
+Les données de l'app sont dans `%APPDATA%/RL Maps` : `library/` (maps), `cache/` (registres) et `settings.json`.

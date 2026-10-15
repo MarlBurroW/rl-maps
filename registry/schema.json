@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RL Maps — registre de maps",
+  "type": "object",
+  "required": [
+    "version",
+    "name",
+    "maps"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "const": 1
+    },
+    "name": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "maps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "author",
+          "tags",
+          "download"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_.-]+$",
+            "description": "Identifiant unique et stable (ex. auteur-nom-de-la-map)"
+          },
+          "name": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string",
+            "description": "Une ligne affichée sur la carte"
+          },
+          "description": {
+            "type": "string"
+          },
+          "recommendedSettings": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "thumbnail": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^https://"
+          },
+          "homepage": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "source": {
+            "type": "string",
+            "description": "Origine de l'entrée (lethamyr, bakkesplugins, manual…)"
+          },
+          "download": {
+            "type": "object",
+            "required": [
+              "url"
+            ],
+            "properties": {
+              "url": {
+                "type": "string",
+                "pattern": "^https://",
+                "description": "Lien direct, GitHub Release, Google Drive ou Dropbox vers un .zip, .udk ou .upk"
+              },
+              "filename": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "size": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "description": "Taille en octets"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "mirrors": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^https://"
+                },
+                "description": "Autres liens vers le même fichier, essayés si le premier échoue"
+              }
+            }
+          },
+          "version": {
+            "type": "string",
+            "description": "Version publiée de la map (ex. v1.0.0)"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+appId: app.rlmaps.desktop
+publish: null
+productName: RL Maps
+directories:
+  output: dist
+  buildResources: build
+files:
+  - out/**
+  - package.json
+extraResources:
+  # Copie embarquée des registres : le market fonctionne même hors ligne
+  - from: registry/sources
+    to: registry/sources
+    filter: ['*.json']
+asarUnpack: []
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+  icon: build/icon.ico
+nsis:
+  artifactName: RL-Maps-Setup-${version}.${ext}
+  oneClick: true
+  perMachine: false
+  deleteAppDataOnUninstall: false
+  shortcutName: RL Maps
+portable:
+  artifactName: RL-Maps-${version}-portable.${ext}
+linux:
+  target: [AppImage]
+  category: Game
+  icon: build/icon.png

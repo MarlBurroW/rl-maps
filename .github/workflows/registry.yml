@@ -1,0 +1,44 @@
+name: Registry
+
+on:
+  pull_request:
+    paths: ['registry/**']
+  schedule:
+    - cron: '0 6 * * 1' # chaque lundi : resynchronise Lethamyr et BakkesPlugins
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: node registry/scripts/validate.mjs
+
+  refresh:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: node registry/scripts/import-lethamyr.mjs
+      - run: node registry/scripts/import-bakkesplugins.mjs
+      - run: node registry/scripts/validate.mjs
+      - name: Commit si le registre a changé
+        run: |
+          git config user.name "rl-maps-bot"
+          git config user.email "rl-maps-bot@users.noreply.github.com"
+          # updatedAt change à chaque run : on ne committe que si des maps ont changé
+          if git diff --quiet -I '"updatedAt"' -- registry/sources; then
+            echo "Aucun changement"
+          else
+            git add registry/sources
+            git commit -m "registry: synchronisation des sources"
+            git push
+          fi

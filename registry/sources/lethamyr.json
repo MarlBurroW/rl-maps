@@ -1,0 +1,3781 @@
+{
+  "$schema": "../schema.json",
+  "version": 1,
+  "name": "Lethamyr",
+  "updatedAt": "2026-10-15T20:34:24.080Z",
+  "maps": [
+    {
+      "id": "lethamyr-1d",
+      "name": "1D",
+      "author": "Lethamyr",
+      "summary": "1-Dimensional RL",
+      "description": "I turned Rocket League into a 1-Dimensional game! The field is long, but very thin and short, just enough to fit a ball and a car into. This map is a bit of a silly one, but there is still some interesting strategy. You can slightly fit around the ball so sometimes getting on the opposite side could be helpful!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/01JR3E7GZA52ENE508X4WTPZ0W.jpg",
+      "homepage": "https://lethamyr.com/maps/198",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1TFWrmpAkx9Z624PwsQv5bIzuyGdwpudf/view",
+        "filename": "Leth1D.zip",
+        "size": 2301218
+      }
+    },
+    {
+      "id": "lethamyr-2fort",
+      "name": "2Fort",
+      "author": "Lethamyr",
+      "summary": "2Fort from Team Fortress brought into Rocket League!",
+      "description": "2Fort is a map from Team Fortress 2, and it’s HUGE! This map is made up of nearly 3000 models I had to individually import and texture, and took me around 300 hours to finish. With this in mind, the map is nearly 1GB in size and can cause crashes occasionally, but it’s still one of my favorite Hide n Seek maps to date.",
+      "recommendedSettings": "Boost: Unlimited\nTime: Unlimited",
+      "tags": [
+        "Free For All",
+        "Hide and Seek"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/CsrvnYtckXc1uI9cl1cOG1n8lR0PbnCZG2FEv2eWEmG1sApSMMpS6ApSQsMex9wc.jpg",
+      "homepage": "https://lethamyr.com/maps/17",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1uUmzGUjpoUITo0Sg9Kpu8oTQ8vMBvAUi/view",
+        "filename": "2Fort.zip",
+        "size": 270053561
+      }
+    },
+    {
+      "id": "lethamyr-4-square",
+      "name": "4-Square",
+      "author": "Lethamyr",
+      "summary": "Play my favourite recess pass time in this 4-Square map",
+      "description": "A childhood favorite during recess, 4-square is here in Rocket League! The ball has to fall below the floor to score, feel free to keep tally of individual points or cycle around with a king of the hill!",
+      "recommendedSettings": "Boost: Unlimited\nBall Physics: Light\nDo unlimited time if you’re doing lives or king of the hill.",
+      "tags": [
+        "Free For All",
+        "Mini Games",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/CjRERCK7xptn1gzzX5bL3hqbWup7ps8h55J0xDSczuyHjcxEvlQpxXNehro3yLZW.jpg",
+      "homepage": "https://lethamyr.com/maps/37",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1rmqKjf-0RmMpPssMB6ssgrebnzK34HPd/view",
+        "filename": "4-Square.zip",
+        "size": 86129065
+      }
+    },
+    {
+      "id": "lethamyr-4v4-field",
+      "name": "4v4 Field",
+      "author": "Lethamyr",
+      "summary": "",
+      "description": "This 4v4 field is 1.5x longer and wider, and has 10 big boosts instead of 6 that are spread out along the middle of the field. This map features a normal-sized goal. I may re-iterate on this in the future.",
+      "recommendedSettings": "Standard Settings",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/DMF9gqvIec1dHmWA6eEbowWmfjYhWelIX5ExikmTdOdytUdOM1ksIm5QzAyoBTw7.jpg",
+      "homepage": "https://lethamyr.com/maps/163",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1iklF9DJ2J0LpE5RgcyVVg8L9oGDjxDjk/view",
+        "filename": "4v4 Field.zip",
+        "size": 10101420
+      }
+    },
+    {
+      "id": "lethamyr-8-ball",
+      "name": "8 Ball",
+      "author": "Lethamyr",
+      "summary": "Tabletop pool table",
+      "description": "I turned a tabletop pool table into a competitive map! There are 6 pockets to score in, and every time a ball spawns it will be one of the 15 pool balls. The amount of points you score depends on the numbered ball, and something \"special\" happens when you score the 8 Ball! This one is a ton of fun, especially with boomer mode.",
+      "recommendedSettings": "Boost: Unlimited \nBoomer and Rumble is recommended!",
+      "tags": [
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/01JR3EM3SHSD29093N60HHWAYC.jpg",
+      "homepage": "https://lethamyr.com/maps/199",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1bnTYnoHd0Ln-3EMvALnElRA-WqQ7owKd/view",
+        "filename": "Leth8Ball.zip",
+        "size": 12519570
+      }
+    },
+    {
+      "id": "lethamyr-abstract",
+      "name": "Abstract",
+      "author": "Lethamyr",
+      "summary": "Welcome to Abstract, a long corridor of angled walls and pockets",
+      "description": "I wanted to make a field that is confusing to look at, difficult to play, but still fun, and this is what I came up with. Welcome to Abstract, a long corridor of angled walls and pockets. All you have to do to score is get the ball to one end of the hallway. Easier said than done, enter at your own risk.",
+      "recommendedSettings": "Boost: Unlimited \nBoomer and Rumble is recommended!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/01JR3ETTCK9PYS8E1WDE8HFEFT.jpg",
+      "homepage": "https://lethamyr.com/maps/200",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1q1HoSA5sCn8vprWzTOSKt1-QxbNs_vQJ/view",
+        "filename": "LethAbstract.zip",
+        "size": 8035061
+      }
+    },
+    {
+      "id": "lethamyr-aerial-training-remastered",
+      "name": "Aerial Training Remastered",
+      "author": "Lethamyr",
+      "summary": "",
+      "description": "Aerial Training was a map created by Thanrek in the early days of Rocket League, and I went back and retextured all surfaces and updated the color scheme.",
+      "recommendedSettings": "Freeplay",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/PQ0Lbc17oPICzHBMZszzAj4ENu6YDlPrvFWeU7YiVapOAVDghid0UUhexejDcrB5.jpg",
+      "homepage": "https://lethamyr.com/maps/162",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/17DKLR0gc-Xfs_B4trkkLePI9ZM0nStvE/view",
+        "filename": "Aerial Training Remastered.zip",
+        "size": 1622773
+      }
+    },
+    {
+      "id": "lethamyr-air-dribble-arena",
+      "name": "Air Dribble Arena",
+      "author": "Lethamyr",
+      "summary": "Air dribble to the elevated goals!",
+      "description": "This map is perfect for air dribble practice! The goals are elevated on the backboard, with a ramp in the center that sets you up to carry the ball. This map is unique in the fact that under the net on your side is rather safe.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/2jPwUXg7cO6H3Zrxb8hYetwWk1JczVpmSlgPdFt9M5mOCFUiUYzwFe6EiTjpZOCo.jpg",
+      "homepage": "https://lethamyr.com/maps/71",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1KuuekUKzoXM4Fux0pioVkDS98FsfqzZ-/view",
+        "filename": "Air Dribble Arena.zip",
+        "size": 25258239
+      }
+    },
+    {
+      "id": "lethamyr-air-hockey-remastered",
+      "name": "Air Hockey Remastered",
+      "author": "Lethamyr",
+      "summary": "Air Hockey Table in Rocket League Remastered!",
+      "description": "Anyone remember my VERY old air hockey map with the underpass in the middle and GIGANTIC goals in the back? Yeah… we don’t talk about that. Here is my brand new air hockey table with a working puck! Choose how fast you want the puck to move by messing with ball mutators!",
+      "recommendedSettings": "Boost: Unlimited\nBall Physics: Boomer mode is best for fast-paced action",
+      "tags": [
+        "Mini Games",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/cEAoDM4qFcdrXao7qTpqMHWhYVs82RcGZRoISsjj8NLOVjeGGUkZqsJvSsDOHV2S.jpg",
+      "homepage": "https://lethamyr.com/maps/75",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1tVYlmtt1a8yhI69SMYoLElizueVs_b-N/view",
+        "filename": "Air Hockey Table Remastered.zip",
+        "size": 262989764
+      }
+    },
+    {
+      "id": "lethamyr-air-hockey-table",
+      "name": "Air Hockey Table",
+      "author": "Lethamyr",
+      "summary": "Played with a puck, this map brings air hockey to Rocket League!",
+      "description": "The puck (or ball) spawns on top of the bridge, and there is a barrier between the two halves of the map to divide players. If you shoot the puck (or ball) through the underpass, the velocity of the puck will be boosted! I plan on recreating this map in a polished, proper air hockey style!",
+      "recommendedSettings": "Boost: Unlimited\nBall Type: Puck\nBall Size: Large\nBall Bounciness: Low",
+      "tags": [
+        "Sports",
+        "Standard",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/jY8bfqmwF6oN62tN88vKyuwPukdDGKyL1L8RyolpuX7Mk3zWiqu2xuZJKCglEmKD.jpg",
+      "homepage": "https://lethamyr.com/maps/3",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/19i-hW3DawqTLbS4NbYqBDjG3lJZS5Bf8/view",
+        "filename": "Air Hockey Table.zip",
+        "size": 1227370
+      }
+    },
+    {
+      "id": "lethamyr-air-hockey-4-team",
+      "name": "Air Hockey: 4-Team",
+      "author": "Lethamyr",
+      "summary": "Air Hockey Table - 4 Team Edition!",
+      "description": "This is a variation of the Air Hockey Map I released in the Rocket League arcade, this time with 4 teams! There are corners which push the puck back into play. You decide rules on crossing sides or not! Lives are displayed on screen.",
+      "recommendedSettings": "Boost: Unlimited\nBall Physics: Boomer mode is best for fast-paced action",
+      "tags": [
+        "Mini Games",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/tsgRKJ3xDzOQuxtdSBAf14wR2GJY05iMeMg2ejEYcZaVskuiwavGXbQ6UFJnqSXk.jpg",
+      "homepage": "https://lethamyr.com/maps/87",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ZoeA8AqMSZNSDwQBpfvLd2uzcRbzPDuz/view",
+        "filename": "Air Hockey 4 Team.zip",
+        "size": 270659884
+      }
+    },
+    {
+      "id": "lethamyr-airship",
+      "name": "Airship",
+      "author": "Lethamyr",
+      "summary": "Sky-high sumo action!",
+      "description": "This is the third installment of the Sumo Series, this time with fans that launch you into the air! There are elevated platforms that you can hide away and collect boost, but be careful of falling off!",
+      "recommendedSettings": "Time: Unlimited\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/HFaHF2VtXAW7bcEygZ4NqFjpbwOHUaqEJDIlExsXdBIsjgZfHIPZyTHXyhZclqPL.jpg",
+      "homepage": "https://lethamyr.com/maps/46",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1Cj0j1Z-B72krprUu7v6MQm3pVqS2XNwA/view",
+        "filename": "Airship.zip",
+        "size": 24196393
+      }
+    },
+    {
+      "id": "lethamyr-among-us-in-rocket-league",
+      "name": "Among Us in Rocket League",
+      "author": "Lethamyr",
+      "summary": "A fully working Among Us game in Rocket League!",
+      "description": "With the help of Gidek and Cinderblock, 2 amazing modders in the community, we have come together to bring a fully working Among Us game inside Rocket League! This took over 1200 hours total to finish, and it works so well. Make sure to download the plugin for Bakkesmod to make the map work with friends.",
+      "recommendedSettings": "Boost: No Boost\nTime: Unlimited\nScore: First to 1 Goal (set score when game ends)\nUse KBM for this map\nPlugin REQUIRED: https://bakkesplugins.com/plugins/view/166",
+      "tags": [
+        "Mini Games"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/WNAhtIoCJY9JV2tkPWZK3iBbaaXA15vGfWdN3W1fCLkC9qOw2tXUnLPiJUKNmh10.jpg",
+      "homepage": "https://lethamyr.com/maps/77",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/10zcZ61fVsqLByhETOwc_z_0Ex8hv1Z6G/view",
+        "filename": "Among Us in Rocket League.zip",
+        "size": 145320286
+      }
+    },
+    {
+      "id": "lethamyr-arabian-nights",
+      "name": "Arabian Nights",
+      "author": "Lethamyr",
+      "summary": "A brand new Standard arena set in the Middle East!",
+      "description": "Welcome to yet another standard Custom Rocket League map! This time it’s a tribute to the Middle East. Arabian Nights is one of my most detail standard maps yet, but there’s another one coming soon… If you check my ongoing projects on this site you’ll see what I’m up to!",
+      "recommendedSettings": "Any settings work!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/TlcJI2HFStvCQtp2HikOdHnufBRIztuxmwXY6pxuXEzf23veGE5wDMgI4f7VbeBN.jpg",
+      "homepage": "https://lethamyr.com/maps/118",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1tk26Dcpzps4csGU6UbgCeuzVaviBIYXX/view",
+        "filename": "Arabian Nights.zip",
+        "size": 211131521
+      }
+    },
+    {
+      "id": "lethamyr-backrooms",
+      "name": "Backrooms",
+      "author": "Lethamyr",
+      "summary": "Welcome to the Backrooms in Rocket League",
+      "description": "Welcome to the Backrooms in Rocket League. This map will get you lost in a sea of corridors, trying to find your way to 1 of 6 goals spread throughout the hallways. There are creatures that loom in the dark, and beware of the entity that will randomly chase a player!",
+      "recommendedSettings": "Recommended settings:\nUnlimited Boost,\nBoomer settings",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01K27WTRZ9Q53YCQ34A5A0YY8Z.jpg",
+      "homepage": "https://lethamyr.com/maps/201",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1LlXR3aztwIjn3CMeBqIy1PqNO3OzPBDG/view",
+        "filename": "LethBackrooms.zip",
+        "size": 8708461
+      }
+    },
+    {
+      "id": "lethamyr-banjo-bridge",
+      "name": "Banjo Bridge",
+      "author": "Lethamyr",
+      "summary": "Banjo Bridge is a fun twist on Sumo",
+      "description": "Banjo Bridge is a fun twist on Sumo where the only goal is to get all of your players into the opponent's cave first. Use the boot powerup to knock opponents into the abyss to prevent both players from finding their way into the cave!",
+      "recommendedSettings": "Recommended settings: \nBoost recharge slow\nRumble ON\nUse Rocket Plugin to reduce powerups to only boot\nTornado is also fun but more difficult",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01K28864HDZT2ZR728CPVRK22H.jpg",
+      "homepage": "https://lethamyr.com/maps/205",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1Pxj8dT7Lk93q2NBM_QOMrMbLkimSYZB-/view",
+        "filename": "LethBanjoBridge.zip",
+        "size": 5071732
+      }
+    },
+    {
+      "id": "lethamyr-barrel-run",
+      "name": "Barrel Run",
+      "author": "Lethamyr",
+      "summary": "",
+      "description": "Barrel Run is not unique to Rocket League - so many games have a similar game mode where you have to climb to the top while objects fall down towards you. But you’ve never seen one as ruthless as this one. Barrels spawn AND move very quickly, see if you can beat your friends to the top. Beware of that final stretch!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited or recharge (difficulty up to you)",
+      "tags": [
+        "Knockout"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/hKvZiq7DNj7da41nPoIQW2xjYLR3dBGynSWkjdjHN5YA2io4Vj0hlc2yfjSsrq3m.jpg",
+      "homepage": "https://lethamyr.com/maps/164",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1-zQWpRIBVAZtolu0yoUYdBmMXUA7pFGR/view",
+        "filename": "Barrel Run.zip",
+        "size": 3011211
+      }
+    },
+    {
+      "id": "lethamyr-basketball-court",
+      "name": "Basketball Court",
+      "author": "Lethamyr",
+      "summary": "Hoops inside an actual gym!",
+      "description": "This basketball court features 3 basketball nets on each team, elevated from the floor. The outer nets grant you 2 points per goal! Be careful not to get stuck in the rafters, or on the balcony!",
+      "recommendedSettings": "Boost: Unlimited\nTime: Unlimited\nRumble or Boomer (why not both?) is also quite fun!",
+      "tags": [
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/4MDGdzhBA8RHQG4dhJVCo1EwATUCoe4DMmHPlOj6SyGSY8hvNSYFJjnZfchtGvEL.jpg",
+      "homepage": "https://lethamyr.com/maps/19",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1elDjJtTqRksDhuV_BNu-9K5PG5YxuQWR/view",
+        "filename": "Basketball Court.zip",
+        "size": 48300854
+      }
+    },
+    {
+      "id": "lethamyr-battlegrounds",
+      "name": "Battlegrounds",
+      "author": "Lethamyr",
+      "summary": "This 7 room map is INTENSE.",
+      "description": "Welcome to the battlegrounds! This map is 7 nearly-standard maps glued together. Probably one of the funniest maps I’ve created, even though it’s quite glitchy at the intersections of each map. You may find yourself getting sucked through a wall here or there, but it’s worth it.",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: First to 1 Goal\nBoost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/rOyyoQWI5a1oEdjNc51ZYC0fNWQtwvQk3Y8W31kTZvtlqvIJdKdZUNizCbM7eB02.jpg",
+      "homepage": "https://lethamyr.com/maps/11",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1z8I5Dcz55B3lcHbUJp9GVfdTO5WdNRYL/view",
+        "filename": "Battlegrounds.zip",
+        "size": 34403040
+      }
+    },
+    {
+      "id": "lethamyr-beach-brawl",
+      "name": "Beach Brawl",
+      "author": "Lethamyr",
+      "summary": "Throwback Stadium meets Water Polo!",
+      "description": "I took Water Polo and the Rocket League Throwback Stadium and put them together into a mash-up of land and water gameplay! The goals are at the edges of the water pool. I suggest using Rumble but it’s not necessary, definitely adds some fun aspects to it though!",
+      "recommendedSettings": "Boost: Unlimited\nBall Type: Beach Ball",
+      "tags": [
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/QYjd3t6b9H8wJ2mk0mGCeJhhjB7eEE4NFbDTWUqiW0gxtDjb88c6p0S4IIVlOtKj.jpg",
+      "homepage": "https://lethamyr.com/maps/54",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1u95vAYtDKIEddYMeDv_94lO-VtW0sX3x/view",
+        "filename": "Beach Brawl.zip",
+        "size": 11827889
+      }
+    },
+    {
+      "id": "lethamyr-beach-brawl-2-0",
+      "name": "Beach Brawl 2.0",
+      "author": "Lethamyr",
+      "summary": "This is a remastered version of Beach Brawl with updated textures",
+      "description": "This is a remastered version of Beach Brawl with updated textures on quite a few meshes to bring this into the modern day. Still one of my favorite water concepts I've ever created, and still just as difficult in 2025.",
+      "recommendedSettings": "Recommended settings: \nUnlimited Boost\nBall Type Beachball (because why not)",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01K27XDXZ6G9S9BD2EXYM97MYN.jpg",
+      "homepage": "https://lethamyr.com/maps/202",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1oN7tClhF2tvTufFVl--uuFikMCaEuDA0/view",
+        "filename": "LethBeachBrawl2.zip",
+        "size": 12111505
+      }
+    },
+    {
+      "id": "lethamyr-beer-pong",
+      "name": "Beer Pong",
+      "author": "Lethamyr",
+      "summary": "Beer pong in Rocket League!",
+      "description": "This map brings the classic game of Beer Pong into Rocket League. There are 6 cups for each team, score on all 6 to win the game! There is a giant cup portal at the back of the map that takes you to the other side of the field. Drink responsibly.",
+      "recommendedSettings": "Time: Unlimited\nBoost Amount: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/x8UxUPlkLpQiwQuwFDfbQCQJdbstK9tnORgbHn9xwMSR146mOiQyafiUsKtmk3Sd.jpg",
+      "homepage": "https://lethamyr.com/maps/6",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1WfO5gRfGs5xhQA6bfjVgnrWIKpaOCxlF/view",
+        "filename": "Beer Pong.zip",
+        "size": 3081407
+      }
+    },
+    {
+      "id": "lethamyr-beer-pong-remastered",
+      "name": "Beer Pong - Remastered",
+      "author": "Lethamyr",
+      "summary": "A brand new rendition of the classic Beer Pong!",
+      "description": "This map is based on one of my earliest maps in Rocket League. Beer Pong is set up with 6 cups per team, and the objective is to score in each cup once to win the round! You can either take turns shooting at the cups, or play in this map competitively like a standard map. Scoring in the back cups or repeat cups results in a ball reset.",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/pOYTivVp5rH0Zcl2hOUbYP10wQtp74KnXFj32oP0F9YQ3yTUbKQeD7TVpgP5NMyM.jpg",
+      "homepage": "https://lethamyr.com/maps/101",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/11xRGYhJmlPpMLKQWzlT9ZAnIAY8plg-Y/view",
+        "filename": "Beer Pong Remastered.zip",
+        "size": 10044749
+      }
+    },
+    {
+      "id": "lethamyr-birthday-cake",
+      "name": "Birthday Cake",
+      "author": "Lethamyr",
+      "summary": "This map was for when I turned 28",
+      "description": "This map was for when I turned 28, so there are 8 candles on the bottom tier of each cake, and 2 candles on top to represent 10 years each. The goal is to shoot the ball through all 10 candles of your opponent's cake first to score.",
+      "recommendedSettings": "Recommended settings:\nUnlimited Time,\nMax Score 1 Goal,\nUnlimited Boost",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01K284A203J6F216B9VESMPR10.jpg",
+      "homepage": "https://lethamyr.com/maps/203",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1bqXlk8gAp0-miOjGE66dYz5wrkoMRctI/view",
+        "filename": "LethCake28.zip",
+        "size": 13814515
+      }
+    },
+    {
+      "id": "lethamyr-block-fort",
+      "name": "Block Fort",
+      "author": "Lethamyr",
+      "summary": "Bringing the classic battle arena from Mario Kart to Rocket League!",
+      "description": "Block Fort was an original Mario Kart 64 Battle Arena, and I brought it into Rocket League! Each block fort has a cube goal on top, feel free to play free for all on this map, or team sides with yellow and red vs green and blue.",
+      "recommendedSettings": "Boost: Unlimited\nScore Limit: Your choice!\nPlaying with lives is very fun",
+      "tags": [
+        "Free For All",
+        "Mini Games",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/orAlXlVoOG3S1TXyHWz2nkmWEsk8pfdSuJePq36EvvLsaqoixjlLpYKbnmwOKlo3.jpg",
+      "homepage": "https://lethamyr.com/maps/16",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1AHgQz6aQT3BXK8yOps6tSANc545PpqtC/view",
+        "filename": "Block Fort.zip",
+        "size": 3396746
+      }
+    },
+    {
+      "id": "lethamyr-block-fort-sumo",
+      "name": "Block Fort Sumo",
+      "author": "Lethamyr",
+      "summary": "Block Fort turned into a sumo map!",
+      "description": "Rocket League Block Fort, but this time with lava! Challenge your friends to a game of Sumo, and feel free to use demolition derby rumble powerups to make it feel more like balloon battle! We had a lot of fun playing on this one.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Recharge Slow\nDemo: Disabled\nRumble: Demolition Derby",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/M5bUsgNFjsn2dsyaAMmOhznT7Ada34iGALBfcfwo8ixLh8N9qKzPMLbdPDQq13ef.jpg",
+      "homepage": "https://lethamyr.com/maps/79",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1esbrQ32pn2sIB5A2dwZ78zDbmJ0UbHcx/view",
+        "filename": "Block Fort Sumo.zip",
+        "size": 8988357
+      }
+    },
+    {
+      "id": "lethamyr-boardwalk",
+      "name": "Boardwalk",
+      "author": "Lethamyr",
+      "summary": "Play Rocket League with an elevated platform!",
+      "description": "The goals of this map are atop a boardwalk that splits off in 4 ways in the center. This map was built from the skeleton of my Water Polo map, and I created a series of boards to drive across and mess around.\nWarning: Don’t smash into the boardwalk too hard, you might just break it ;)",
+      "recommendedSettings": "Boost: Unlimited\nBoomer can be fun!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Im39OkaVof3kcyrguNxmnmNP6uGfJ4nWvT3FQmZgCZc9BEq30YWhqabTq7WJgZTk.jpg",
+      "homepage": "https://lethamyr.com/maps/14",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1awLsxi48Mk0lAQbuMKrhCNAs5ofvs4To/view",
+        "filename": "Boardwalk.zip",
+        "size": 14429962
+      }
+    },
+    {
+      "id": "lethamyr-bomberman",
+      "name": "Bomberman",
+      "author": "Lethamyr",
+      "summary": "A video game classic in Rocket League",
+      "description": "Bomberman is a video game classic and it’s a shame it’s not as popular it used to be. But I brought it to life in Rocket League. Jump to drop a bomb. Each player has a limited number of bombs allowed to be up at a time! Bombs explode in a + pattern shown by the explosion visual.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/0T9Jk8tyjecVeiXEmn1JmsxwmIgRN7W3ckJtyf3EbOM3uHJrETnNTo0UPlIEjEbp.jpg",
+      "homepage": "https://lethamyr.com/maps/161",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1O56AgYAUcuHpSfoyzRTnF6oU5zFZ8obZ/view",
+        "filename": "Bomberman.zip",
+        "size": 100205005
+      }
+    },
+    {
+      "id": "lethamyr-bouncy-castle",
+      "name": "Bouncy Castle",
+      "author": "Lethamyr",
+      "summary": "Battle with your friends in this crazy 4 four goal bouncy castle! No Adults Allowed!!",
+      "description": "Rocket League inside a bouncy castle! There are 4 goals in each quadrant of the map, and the floor is quite bumpy. Using Rocket Plugin (Bakkesmod), you can change the floor friction values to simulate a bouncy floor.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nBall Type: Beachball\nBall Max Speed: Fast\nBall Physics: Light\nBall Bounciness: High",
+      "tags": [
+        "Mini Games",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/L03EOv1A0pEkPOW2z309F4RwKseIvasrCCxHvK8LmSdbtwJh1AYBRkn5VnOFrBX8.jpg",
+      "homepage": "https://lethamyr.com/maps/21",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1yDry1VmxWLz6zg48uz0ZfKb3leqSGT6T/view",
+        "filename": "Bouncy Castle.zip",
+        "size": 63181817
+      }
+    },
+    {
+      "id": "lethamyr-break-the-bank",
+      "name": "Break the Bank",
+      "author": "Lethamyr",
+      "summary": "Collect points and bring the ball to your net to secure them!",
+      "description": "Collect points by getting the ball through your colored rings and bring the ball to your color's bank! If a goal is scored, the collections reset. At the moment, it's set to first to 100, but set whatever points you want as a cap.",
+      "recommendedSettings": "Boost Amount: Unlimited\nSpike rush is not required but is a lot of fun!",
+      "tags": [
+        "Mini Games"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/uJnLxr8JNpNdaayXlV0T6FdLLe6NwRjdZxv6OQMjm7ZEG6SJ0WngN37HXdvF3hl6.jpg",
+      "homepage": "https://lethamyr.com/maps/5",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1C_MWMQxsCnpP0jH9vjnkCKAwuFx6Shc4/view",
+        "filename": "Break the Bank.zip",
+        "size": 3270287
+      }
+    },
+    {
+      "id": "lethamyr-breaking-point-standard-day",
+      "name": "Breaking Point Standard (Day)",
+      "author": "Lethamyr",
+      "summary": "Standard map concept art brought to life!",
+      "description": "I took a concept art from a Rocket League community member and brought it to life! This took a lot of time and it is by no means even close to where I wanted to get it to, but Unreal Engine 3 is a bit limited… so I had to stop at this detail level. This is the Day version! There is also a Night version.",
+      "recommendedSettings": "None",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/exKywPChwpJHrwkB1W6UBrs4NSPG3gvGJcWBuZANptHci9semdWvW3bCEbzi1Avf.jpg",
+      "homepage": "https://lethamyr.com/maps/147",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1TxRq5C6_ZAlr8tTauABQYXU5pI2LSwsW/view",
+        "filename": "Breaking Point (Day).zip",
+        "size": 214725661
+      }
+    },
+    {
+      "id": "lethamyr-breaking-point-standard-night",
+      "name": "Breaking Point Standard (Night)",
+      "author": "Lethamyr",
+      "summary": "Standard map concept art brought to life at night time!",
+      "description": "I took a concept art from a Rocket League community member and brought it to life! This took a lot of time and it is by no means even close to where I wanted to get it to, but Unreal Engine 3 is a bit limited… so I had to stop at this detail level. This is the Night version! There is also a Day version.",
+      "recommendedSettings": "None",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/aIJFkZeVJYHoiR5Nda2H6gsDPNHbdLq5jU10xfEm2PLgPNnh3ShPRYCi73SajSTh.jpg",
+      "homepage": "https://lethamyr.com/maps/148",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1So1Hu1VlM4aIzoK7R8u7Rwqfcx4i2PZd/view",
+        "filename": "Breaking Point (Night).zip",
+        "size": 214691403
+      }
+    },
+    {
+      "id": "lethamyr-broken-bridge",
+      "name": "Broken Bridge",
+      "author": "Lethamyr",
+      "summary": "Rocket League on a bent field!",
+      "description": "The Broken Bridge is one of the first maps my sister (iamKikira on Twitch) designed. Originally the map was just the field, but together we came up with an interesting concept and look by incorporating the field into a split bridge. Playing on a slanted surface isn’t the easiest thing, so I recommend boomer settings for this one.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings are very good",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/hjUnAlw2sEvyz2yob9UUoMMgQ4naVIXR9EeokRVFawZc4eL7akDzm0ikYzGBv8aG.jpg",
+      "homepage": "https://lethamyr.com/maps/100",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1HvxHxFZqfq4M_9itbbhwA_IQLSTF3ags/view",
+        "filename": "Broken Bridge.zip",
+        "size": 97627201
+      }
+    },
+    {
+      "id": "lethamyr-capture-the-flag",
+      "name": "Capture the Flag",
+      "author": "Lethamyr",
+      "summary": "Capture the flag in Rocket League!",
+      "description": "This map has been requested for so long, and it’s finally a reality! Welcome to Rocket League Capture the Flag! Bring the opponent’s ball to your zone while your ball is home to score a point! Feel free to choose what score to reach!",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Recharge (Slow)\nRumble: Spike Rush",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/2FDVADUHSOZwDP6weaXeyR1Q46NqlTMbDfLTTIfA6ut6qhwjOM9xd33nGen2Iqsa.jpg",
+      "homepage": "https://lethamyr.com/maps/73",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1IiboaP1rnRM-YyPn4OC0D-k4F2VDBsOV/view",
+        "filename": "Capture The Flag.zip",
+        "size": 76105360
+      }
+    },
+    {
+      "id": "lethamyr-capture-the-flag-retro",
+      "name": "Capture the Flag Retro",
+      "author": "Lethamyr",
+      "summary": "Capture the Flag map styled similar to old Halo Forge vibes.",
+      "description": "This is my first ever attempt at Capture the Flag that I never really finished until years later, as I scrapped it. But I tried my best to salvage my original vision in a map styled similar to old Halo Forge vibes.",
+      "recommendedSettings": "Recommended settings:\nUnlimited Time,\nMax Score 1 Goal,\nUnlimited Boost,\nRumble Spike Rush",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01K284J98QRT8E3YYCTEACP5W5.jpg",
+      "homepage": "https://lethamyr.com/maps/204",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1LMpc-NmCdFQhx4sWBQJFgzjBH4eUYxRb/view",
+        "filename": "LethCaptureTheFlagOG.zip",
+        "size": 9480739
+      }
+    },
+    {
+      "id": "lethamyr-capture-the-flag-candyland",
+      "name": "Capture the Flag: Candyland",
+      "author": "Lethamyr",
+      "summary": "Capture the Flag: Candyland edition!",
+      "description": "This is the 3rd (technically 4th if you include Winter CTF) installment of the Capture the Flag series, and this is by far my favorite to play on yet! Welcome to Candyland, where the flags spawn on top of a cake on each end of the field. Return the flags in the waffle cones, and plan out your attack with a bunch of friends!",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Recharge (slow or fast)\nRumble: Spike Rush",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/fx2PRJpvfu4L9ZgDOSp8dB01iRaPUYR02CkCkOSpxjDv2RCaSGl0ozs9ok5HmPF2.jpg",
+      "homepage": "https://lethamyr.com/maps/127",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1oLVA3oQJLFSuA3Xlw0qMJ5lMvfA9A5L_/view",
+        "filename": "Capture the Flag Candyland.zip",
+        "size": 122556907
+      }
+    },
+    {
+      "id": "lethamyr-capture-the-flag-sandcastle",
+      "name": "Capture the Flag: Sandcastle",
+      "author": "Lethamyr",
+      "summary": "Capture the Flag: Sandcastle edition!",
+      "description": "This map is the second concept of Rocket League Capture the Flag! Bring the opponent’s ball to the top of your castle zone while your ball is home to score a point! Feel free to choose what score to reach!",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Recharge (slow or fast)\nRumble: Spike Rush",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/dkJMZFNBHJAS0meR3TSqBs4D0RIrxp5Bqf3BUhY5MGVDKW5E4iEeB7CnGYf6fMU1.jpg",
+      "homepage": "https://lethamyr.com/maps/94",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1kvrwruof2XN75eCyRKFNlYO6pBaGURDO/view",
+        "filename": "Capture the Flag Sandcastle.zip",
+        "size": 47957242
+      }
+    },
+    {
+      "id": "lethamyr-capture-the-flag-winter",
+      "name": "Capture the Flag: Winter",
+      "author": "Lethamyr",
+      "summary": "Capture the Flag: Winter edition!",
+      "description": "This map is a re-skin of my first Capture the Flag for Beyond the Summit! Bring the opponent’s ball to your zone while your ball is home to score a point! Feel free to choose what score to reach!",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Recharge (Slow)\nRumble: Spike Rush",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/yfZ1nxvqi1VfuKaQzJNaBlFspWV8yMUj0LpUBJBUcb5V18IWf11rJaj7mSeP007k.jpg",
+      "homepage": "https://lethamyr.com/maps/85",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1EJLZCEfh4jnlnckUowXBb1aGod6yYPgD/view",
+        "filename": "Capture the Flag Winter.zip",
+        "size": 116998430
+      }
+    },
+    {
+      "id": "lethamyr-cargo-bay",
+      "name": "Cargo Bay",
+      "author": "Lethamyr",
+      "summary": "The cars are zero gravity in this spaceship-styled standard map!",
+      "description": "Rocket League in space! The ball behaves normally but the cars float in the “air” in the map! This makes it very difficult to control your car, so enjoy as you float around with your friends trying to hit the ball.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/PwI4exfQQKYlMdKBYLFCPlNU6eqkh08SQixK98la6DWHk4BsPo20KpFOeQMMGZtP.jpg",
+      "homepage": "https://lethamyr.com/maps/66",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1CSxQL0zagDlnu5hkNl8vTbXvM-cn0vmF/view",
+        "filename": "Cargo Bay.zip",
+        "size": 463521575
+      }
+    },
+    {
+      "id": "lethamyr-chemical-chamber",
+      "name": "Chemical Chamber",
+      "author": "Lethamyr",
+      "summary": "This standard field isn’t so standard after all…",
+      "description": "This standard field isn’t so standard after all… All of the Rocket League balls are different molecules! Some are pretty difficult to score, goodluck!",
+      "recommendedSettings": "Standard Settings",
+      "tags": [
+        "Dropshot"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/1gsc7oHQRuVKjoXo0WGb7fOQ6N7ae9MiQCXfVCTVMXYsWw4qKVRjopSTl0NXbwCK.jpg",
+      "homepage": "https://lethamyr.com/maps/166",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/101PZbH3cRn56cwuPI5mB7iW3XFMYj36P/view",
+        "filename": "Chemical Chamber.zip",
+        "size": 100822290
+      }
+    },
+    {
+      "id": "lethamyr-chess",
+      "name": "Chess",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League on a Chess board!",
+      "description": "This map takes standard Rocket League and adds Chess pieces spread across the field! Enjoy Rocket League with some obstacles, and be sure not to own-goal off your own pawns.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/LLn5myJ5JHYAJ4eqJEJ1FbGjKiRYUWqPa2jCSkmR7WDi5cRCU6RhAND3n4Gaz3ap.jpg",
+      "homepage": "https://lethamyr.com/maps/88",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1gNU4Svamdp8AutkX9y1esbciWlee7he0/view",
+        "filename": "Chess.zip",
+        "size": 166849060
+      }
+    },
+    {
+      "id": "lethamyr-choo-choo-train",
+      "name": "Choo Choo Train",
+      "author": "Lethamyr",
+      "summary": "A classic train toy turned into a Rocket League map!",
+      "description": "A classic train toy turned into a Rocket League map! A toy train circles the outskirts of the map with 2 cargo containers that can be scored on. But the goal is the same for both teams, it only matters WHERE you score the ball! When the train is on the other team’s side, now’s your time to score!",
+      "recommendedSettings": "Boost: Unlimited\nRumble and Boomer are both very fun!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/8WSXTlxAGChL1h1ftDunB4sipoKTe2sdZvdbA0vTaDi9krBkLMcuEkQ0GxGXMBll.jpg",
+      "homepage": "https://lethamyr.com/maps/168",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1vbl7C2SWldk9ryxfOuFzLm7ZDTRO70Ty/view",
+        "filename": "Choo Choo Train.zip",
+        "size": 31481829
+      }
+    },
+    {
+      "id": "lethamyr-christmas-snow-hill",
+      "name": "Christmas Snow Hill",
+      "author": "Lethamyr",
+      "summary": "Enjoy the holidays with a sprinkle of Rocket League action!",
+      "description": "I created this map for 2019 Christmas, taking a ski-hill design and creating a sloped standard Rocket League field. The most difficult part to make in this map was the outer detail. Definitely one of the brighter and cheerier maps I’ve created!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Sd4t3vOd5JBlOmZ2b6dZSYcygd6DKBl9dtqLXVwUOXqTArpnVPz1TxGDIfyL80Ow.jpg",
+      "homepage": "https://lethamyr.com/maps/18",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1dfojnVATUEc_DpXyQexz1xDI_3StGM66/view",
+        "filename": "Christmas Snowhill.zip",
+        "size": 102333953
+      }
+    },
+    {
+      "id": "lethamyr-clock-tower",
+      "name": "Clock Tower",
+      "author": "Lethamyr",
+      "summary": "Rocket League inside a giant clock tower!",
+      "description": "Welcome to the Rocket League Clock Tower! This map is a giant re-imagination of the inside of a giant clock tower, with moving gears. The clock ticks to each second, but the gear teeth don’t affect the ball or car to avoid any collision issues. Boomer is super fun on this one!",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings are very good",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Cc5t0Jivl1V9pmbK5F1sZSbP7sbKfMGHjnCVHtbFhVe0sQhkg2kvBZyStYqxrtKS.jpg",
+      "homepage": "https://lethamyr.com/maps/103",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/16CCO3DvUg3zq4_rHIieMvOsf_tlyyBB-/view",
+        "filename": "Clocktower.zip",
+        "size": 7887041
+      }
+    },
+    {
+      "id": "lethamyr-connect-4",
+      "name": "Connect 4",
+      "author": "Lethamyr",
+      "summary": "Connect 4 in a line to win!",
+      "description": "Welcome to Connect 4! This map is possibly the final installment of the Rocket League Arcade I’ve built since it’s getting quite cramped, both because the map has so many game modes in it, and the file is just getting way too big. The puck alternates from blue to orange, everyone goes for the puck! Force your opponents to make a mistake, and make a line of 4 with your own color!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nBall Type: MUST BE regular puck\nRumble may be helpful to score",
+      "tags": [
+        "Mini Games",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/qjsTJrJnhPyDpq6lw1QDknztXrQOmAEHRbLW3YuJV2I4cfFKu0me8vBVIDUTWxqt.jpg",
+      "homepage": "https://lethamyr.com/maps/125",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1fWk66CD2q4_0iSUM-vptjIy78vEUhAh8/view",
+        "filename": "Connect 4.zip",
+        "size": 331724287
+      }
+    },
+    {
+      "id": "lethamyr-cornhole",
+      "name": "Cornhole",
+      "author": "Lethamyr",
+      "summary": "Bean bag toss in Rocket League!",
+      "description": "Using cube balls in rocket league, I’ve created a brand new game mode in Rocket League based on the game Cornhole! Take turns throwing bean bags onto the board, at the end of all 8 throws, add up points and the team with more points gets the difference in points in score. Bean bags in the hole = 3 points, bean bags on the board = 1. If you scored 5, and the opponents scored 3, you get 2 points. You have to score exactly 11 to win! Going over means you lose those points.",
+      "recommendedSettings": "Boost: Unlimited\nTime: Unlimited\nBall Type: Cube\nBall Physics: Light\nGravity: High",
+      "tags": [
+        "Mini Games"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/vqCypXHbtZTrtaItO1mIkfDRIB3l0AqzDruf77IzFwPPpuUnmhpyjFDqq1eRuOnR.jpg",
+      "homepage": "https://lethamyr.com/maps/80",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1d_QN9OQcqPH_xLIvpPOSmoqFlxRZM1kn/view",
+        "filename": "Cornhole.zip",
+        "size": 26358035
+      }
+    },
+    {
+      "id": "lethamyr-crokinole",
+      "name": "Crokinole",
+      "author": "Lethamyr",
+      "summary": "2 giant Crokinole boards connected together!",
+      "description": "2 giant Crokinole boards connected together! The goal is the center 20-point hole. If the ball (puck) lands in the outside it will respawn in the center. Use that to your advantage and catch the other team by surprise!",
+      "recommendedSettings": "Boost: Unlimited\nBall Type: Puck\nRumble and Boomer are both very fun!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Q32DbSwqR24Vvur56AeW1HeerYB3EarOFdg6nAl87Qfhjh7yGHdwBJJJKR1vW4ph.jpg",
+      "homepage": "https://lethamyr.com/maps/171",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1u0javFAo1TlXhMiLAo_hFzXdwIYDNJYN/view",
+        "filename": "Crokinole.zip",
+        "size": 5453828
+      }
+    },
+    {
+      "id": "lethamyr-cross-bridge",
+      "name": "Cross Bridge",
+      "author": "Lethamyr",
+      "summary": "Labs-style Rocket League with a giant bridge in the middle!",
+      "description": "Another addition to the labs-style maps I’ve made, this map features 2 goals in the floor on each end of the cross bridge in the middle. This map was used as a way for me to improve seams along curved edges.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings are fun, and so is Rumble",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/QPBtECUcfIbhZGNJhdqZNMS1pta32ocYg7NCA6H1NOmHZMjXkMdYyqBwwRrvqkFn.jpg",
+      "homepage": "https://lethamyr.com/maps/134",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/13PypJ84gZisoViRpeaYfgVznoyLigOha/view",
+        "filename": "Cross Bridge.zip",
+        "size": 2818469
+      }
+    },
+    {
+      "id": "lethamyr-crossroads",
+      "name": "Crossroads",
+      "author": "Lethamyr",
+      "summary": "4 nets in a cross pattern!",
+      "description": "Similar to the old Octagon map, there are 4 goals in the outer edges of the map, but I’ve cut in the sides creating a cross-shape in the map. Quickly change from defense to offense and have quick transitions between sides.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ovUeruZzUBGOcNVZm74E7j2rrhi1QmdQtLptkPf3PkKs0YAAnikwbkTJoIPTn2YQ.jpg",
+      "homepage": "https://lethamyr.com/maps/76",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/192aLpMOfFP5aG7HCkdfAgtexrEE7PSiZ/view",
+        "filename": "Crossroads.zip",
+        "size": 4977248
+      }
+    },
+    {
+      "id": "lethamyr-dart-board",
+      "name": "Dart Board",
+      "author": "Lethamyr",
+      "summary": "Practice your aim with a life-size dartboard!",
+      "description": "The second addition to the Rocket League Arcade, the Rocket League dartboard joins the Pool Table Race as another fun mini game to enjoy with friends! Test your accuracy by spawning in darts (colored balls), and you can clear the board with the push of a button.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nBoost Strength: 1.5x",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Pd40PDra8krg0lQo1EG9X93y4RGflLMTd8nDz3b7RMfBzfGcLbcibJMaclk1TGaq.jpg",
+      "homepage": "https://lethamyr.com/maps/59",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/11yIANOo94zfQwFbc2taL07Sch3m2kGtl/view",
+        "filename": "Dart Board.zip",
+        "size": 253980775
+      }
+    },
+    {
+      "id": "lethamyr-dfh-cliffside",
+      "name": "DFH Cliffside",
+      "author": "Lethamyr",
+      "summary": "Race up a one-way hill to the final tunnel!",
+      "description": "Rocket League racing, one-way this time! Introducing DFH Cliffside, where it’s a race to the top of the hill. There are pitstops for fun relay races if you want to mix it up, otherwise the fastest to the final tunnel wins!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited or Recharge\nDemo: Disabled\nRumble can be interesting! Just use Demo Derby",
+      "tags": [
+        "Free For All",
+        "Race"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/rg4tFfZqsYpagMIwhlYPss0l9qbjXZjAryEi893jvKo3nQHPWduxD4L3fK2gStwG.jpg",
+      "homepage": "https://lethamyr.com/maps/91",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1i8J6OlvgUBYCDPsjDMVSPta_L4WxaHnq/view",
+        "filename": "DFH Cliffside.zip",
+        "size": 44986027
+      }
+    },
+    {
+      "id": "lethamyr-dice",
+      "name": "Dice",
+      "author": "Lethamyr",
+      "summary": "Score in the holes of dice to gain points!",
+      "description": "Welcome to the Rocket League Dice! This map is a more basic map, but the goals are simply the pips of dice spread across the ground. The goals are worth the opposite amount of points (6 is worth 1 because there’s so many holes, 1 is worth 6 because there’s only 1 goal) and this map is HUGE! Fun with any size of group!",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings are fun, and so is Rumble",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/LOUVtPl474MzauYAbWnjjO7HEGJT1EiyTxb1Q84JRHibGPymBhSxt1CaRYzR8pJk.jpg",
+      "homepage": "https://lethamyr.com/maps/132",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1XzoE_ONZoWyE9jym32pC93P1KP5VGkfV/view",
+        "filename": "Dice.zip",
+        "size": 31946708
+      }
+    },
+    {
+      "id": "lethamyr-donut-dropshot",
+      "name": "Donut Dropshot",
+      "author": "Lethamyr",
+      "summary": "Dropshot in a circle this time!",
+      "description": "Donut Dropshot is a unique spin (get it?) on the Dropshot maps I’ve created! The outer wall is circular, and the center platform is raised up. Score in the arch of Dropshot tiles to score! One of my favorite Dropshot maps, gameplay-wise.",
+      "recommendedSettings": "Game Mode: Dropshot",
+      "tags": [
+        "Dropshot"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/MV4yi7j3z4E19PmtkEYRKh7QToRTX9Dk4rrEfGm8SSyZkEcBGsaQ9Ve7w7u40cZa.jpg",
+      "homepage": "https://lethamyr.com/maps/123",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/11D023FsfSRfeQqpJu6Fc9eLQOaikgqmD/view",
+        "filename": "Donut Dropshot.zip",
+        "size": 2975765
+      }
+    },
+    {
+      "id": "lethamyr-double-size",
+      "name": "Double-Size",
+      "author": "Lethamyr",
+      "summary": "Rocket League, but it’s double the size!",
+      "description": "Rocket League, but it’s twice the size! Feel free to experiment with ball size and boomer, expect a long journey back to your goal! This is part 2 to the half-size map I made recently.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer is very fun on this map!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/3FYYKrDvYP6gDb0795QECmMIZeqHM3XWUFRGIofWFSP3iu8uExZkB2KZrjWJvtue.jpg",
+      "homepage": "https://lethamyr.com/maps/69",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1GNhpnCimbMDAQ_fN1RpE7Kg6fveFpJJO/view",
+        "filename": "Double-Size.zip",
+        "size": 49532178
+      }
+    },
+    {
+      "id": "lethamyr-dribbling-challenge-1",
+      "name": "Dribbling Challenge 1",
+      "author": "Lethamyr",
+      "summary": "Practice your dribbling on an advanced course!",
+      "description": "This map was my first attempt at making a dribbling challenge. I purposely made this one very difficult to elevate the difficulty of dribbling challenges out there.\nThere are 30 levels in total, which increase in difficulty substantially as the levels go on. Enter at your own risk!",
+      "recommendedSettings": "Enter in Freeplay!",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Pr6yBNVC6Xm1nm4QfNUOH6FW7kfs4msao0r4YHpuNoRiwXR5Zm6Utr8O5b6qzvBr.jpg",
+      "homepage": "https://lethamyr.com/maps/15",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1Ky1MtS8kSShwoGDUk8dAiHUHU3bfUIGO/view",
+        "filename": "Dribbling Challenge .zip",
+        "size": 124602259
+      }
+    },
+    {
+      "id": "lethamyr-dribbling-challenge-1-remastered",
+      "name": "Dribbling Challenge 1 Remastered",
+      "author": "Lethamyr",
+      "summary": "",
+      "description": "Over 100 maps later, I’ve remastered the Dribble Challenge 1 I made years ago. I’ve made a few anti-cheat additions and prepared the game logic for Dribble Challenge 2 (yes it’s coming soon)",
+      "recommendedSettings": "Enter in Freeplay!",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/wsrtlmVhaNXcksolkvLvO2gYTgWItTZRF9Nyw5iIQNegt5T852QEpT6SxyECDYvZ.jpg",
+      "homepage": "https://lethamyr.com/maps/139",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1o7GbhR5NnD4xyLpOchaXjBeBD64zRcxN/view",
+        "filename": "Dribble Challenge Remastered.zip",
+        "size": 49570994
+      }
+    },
+    {
+      "id": "lethamyr-dual-pinball-tables",
+      "name": "Dual Pinball Tables",
+      "author": "Lethamyr",
+      "summary": "Rocket League inside 2 giant arcade Pinball machines!",
+      "description": "This map is a 1-to-1 scale of 2 pinball tables connected together. The ball is the exact size a ball would be inside an arcade pinball machine, and this map is as ridiculous as you’d think. Score in the ball return to win! I highly recommend boomer settings/rumble.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings\nRumble: Civilized",
+      "tags": [
+        "Standard",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/UJyO505sSSlB7pEmKQ4dwNi8EAvrz2RZVPGP1hZ2RFIJqBfR64pAbKD6LJOwdTVz.jpg",
+      "homepage": "https://lethamyr.com/maps/99",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1doXKBW-Z_bomPVfXZ54_TCwNci3SfBXW/view",
+        "filename": "Dual Pinball Machine.zip",
+        "size": 306102183
+      }
+    },
+    {
+      "id": "lethamyr-dueling-snakes-ball-sized-goal",
+      "name": "Dueling Snakes (Ball-Sized Goal)",
+      "author": "Lethamyr",
+      "summary": "Rocket League with a goal the size of the ball!",
+      "description": "This map features a goal NEARLY the size of the ball (it’s got a bit of wiggle room because otherwise you’d go insane) and my sister actually built this map! She created the theme and I finished the lighting. This map is extremely chaotic with boomer mode!",
+      "recommendedSettings": "Any settings work! Except for a larger ball…",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/IjstZXb0LzxZV0UJSUSkD0AzTcFjO6qHah5XaNc7DsscbHCJ7PvQsA4kCmw23vwA.jpg",
+      "homepage": "https://lethamyr.com/maps/122",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1dthBRRri1ST8j6EkxwLuu2HKz5yGdIfR/view",
+        "filename": "Dueling Snakes.zip",
+        "size": 23473610
+      }
+    },
+    {
+      "id": "lethamyr-dungeon-parkour",
+      "name": "Dungeon Parkour",
+      "author": "Lethamyr",
+      "summary": "Welcome to the sequel of Egyptian Parkour!",
+      "description": "Welcome to the sequel of Egyptian Parkour! This map took me over 2 years to complete. You're now stuck in a dungeon and have to find the 8 keys to open the gate to the throne room. There are also 30 tokens you can collect to discover the secret of the dungeon... This map is non-linear, and you can go in many different directions to find your way around the dungeon. Some keys are quite tough to reach! Best of luck.",
+      "recommendedSettings": "For solo: Freeplay, disabled boost\nFor multiplayer: Unlimited Time, Disable Demos, Disable Boost",
+      "tags": [
+        "Parkour"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/mzCqRSuFKF00C45yILnVcrJd1qkcKz-metaMjAyMzExMDYxNTQzMzlfMS5qcGc=-.jpg",
+      "homepage": "https://lethamyr.com/maps/176",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1qzCsdzB-QUtMl1Fwx3FxF3KA4z32B4PC/view",
+        "filename": "Dungeon Parkour.zip",
+        "size": 217460366
+      }
+    },
+    {
+      "id": "lethamyr-easter-catwalk",
+      "name": "Easter Catwalk",
+      "author": "Lethamyr",
+      "summary": "Easter themed catwalk map full of Easter Eggs and more",
+      "description": "This map was created for Easter of 2019, collaborated by myself and Glhglh, a well-known map maker! This map has 2 goals on top of a catwalk in the center of the field, and the outer sides of the field have boost in the grass. How many golden eggs can you spot outside the field?",
+      "recommendedSettings": "None",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/wM2ZnsmqEOqMDtuG3dyezAloS0akxVQERkvgpNyP2GqxO5PHKFYKIOYJbkPSYkC3.jpg",
+      "homepage": "https://lethamyr.com/maps/24",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1yMVz97fHe1mUqWHYB3GwERQ9cCojKR3f/view",
+        "filename": "Easter Catwalk.zip",
+        "size": 106359272
+      }
+    },
+    {
+      "id": "lethamyr-egyptian-parkour",
+      "name": "Egyptian Parkour",
+      "author": "Lethamyr",
+      "summary": "An entire adventure game inside Rocket League!",
+      "description": "I created an entire Egyptian Tomb adventure map inside Rocket League! Beware, as this map is very difficult! Boost is not allowed. The best experience is with friends online. The ankhs are optional, but if you manage to get all 30, something special awaits you…",
+      "recommendedSettings": "Boost: No Boost\nTime: Unlimited\nRespawn Time: 1 Second (helps make respawns faster)",
+      "tags": [
+        "Parkour"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/7kJ1ivgfSYkjN9xtifHLMqd2SlxiOmNemmWFtDY0IS0gwftBrQVj1ENHeZzh5UJp.jpg",
+      "homepage": "https://lethamyr.com/maps/78",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1-5CuIS4jN9j55EaxipTmzDsYiWtVjpTB/view",
+        "filename": "Egyptian Parkour.zip",
+        "size": 201811650
+      }
+    },
+    {
+      "id": "lethamyr-f-zero-big-blue",
+      "name": "F-Zero Big Blue",
+      "author": "Lethamyr",
+      "summary": "Race through a classic Nintendo racing stage!",
+      "description": "Rocket League racing, but this time it’s in a classic Nintendo stage! F-Zero was one of my favorite games growing up, and Big Blue is an instant classic as well. Race with your friends using the team speed boost mod on bakkesmod for extra chaos!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Race"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Gmax30I9owLW1CAbRYpdiAyCtGM2P7Je982hnFIRftMDyzjBaRXIvdUpKTQbKYa7.jpg",
+      "homepage": "https://lethamyr.com/maps/117",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1MCLLOLkLX-KmFuB0qHlTz3YsaYCLYasW/view",
+        "filename": "F-Zero Big Blue.zip",
+        "size": 7660545
+      }
+    },
+    {
+      "id": "lethamyr-fall-guys",
+      "name": "Fall Guys",
+      "author": "Lethamyr",
+      "summary": "Slime Climb brought to life inside Rocket League!",
+      "description": "It may have taken me 300+ hours to make all the models and get the whole map functioning, but it’s finally a reality! Fall Guys in Rocket League. This is Slime Climb from Season 1 of Fall Guys. Play with a bunch of your friends and race to the top! It’s not as easy as it looks.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Disabled\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Mini Games",
+        "Race"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/F5GfovABZN7lj20gmSneD5mmG0cY715E2rt9qZwOho8Iigmh7nZj2dUxbIKr3ivq.jpg",
+      "homepage": "https://lethamyr.com/maps/58",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1IFD9Z744ppFCFqvdEedP_pY9zEkGjxIG/view",
+        "filename": "fall guys rocket league.zip",
+        "size": 77199101
+      }
+    },
+    {
+      "id": "lethamyr-fashion-show",
+      "name": "Fashion Show",
+      "author": "Lethamyr",
+      "summary": "Show off your car in a fancy Rocket League stage!",
+      "description": "Show off your car in this unique fashion show room! This was a map I made for BlackWidow for her fashion show. This map could be used for a deathmatch!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited",
+      "tags": [
+        "Mini Games"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/TERbnf9icqrq5Wy61lCmQ6O9XRp6ILTwkBx4wvh8nQFcMRZclTrv6dIObmqA047n.jpg",
+      "homepage": "https://lethamyr.com/maps/44",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1BWD3mjKpQU6BMTUxoAh7RSEqwRr8Mn2C/view",
+        "filename": "Fashion Show.zip",
+        "size": 55353904
+      }
+    },
+    {
+      "id": "lethamyr-flappy-bird",
+      "name": "Flappy Bird",
+      "author": "Lethamyr",
+      "summary": "Flappy Bird in Rocket League!",
+      "description": "I took the classic viral game of Flappy Bird and put it into Rocket League! Enabled “unlimited flips” in Bakkesmod freeplay settings, and try your best to clear pipes as long as you can by using the unlimited jumps. Try either 1st Person or 3rd Person below!",
+      "recommendedSettings": "Freeplay",
+      "tags": [
+        "Mini Games"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/7Lq3YVXCrdFuljJ6cGpculq5hcNiqchEsJsVpOLbCaZMpANz9SyW09n3Y70SPXIc.jpg",
+      "homepage": "https://lethamyr.com/maps/104",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/17dRvfo0EDgi2NjqsjWWv6XI_XCv1Q9dM/view",
+        "filename": "Flappy Bird - 1st Person.zip",
+        "size": 6638545
+      }
+    },
+    {
+      "id": "lethamyr-flash-freeze",
+      "name": "Flash Freeze",
+      "author": "Lethamyr",
+      "summary": "The ball freezes randomly!",
+      "description": "Welcome to Rocket League Flash Freeze! Every 15-30 seconds a random flash freeze will occur, stopping the ball’s motion for up to 3 seconds! There’s no moving that ball during that time, so try and time when it’s released!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/stnZVUpxrW8SHaygJHQQPmNj52iRWAaZf4sYXzCezJ17Fm1Xnv21lZEsB05pKoNa.jpg",
+      "homepage": "https://lethamyr.com/maps/64",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/16O0WTcUhZqav_2k_wHehvNAyo_qpPCpO/view",
+        "filename": "Flash Freeze.zip",
+        "size": 122940541
+      }
+    },
+    {
+      "id": "lethamyr-floating-rings",
+      "name": "Floating Rings",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League with floating goals!",
+      "description": "This map takes standard Rocket League and puts the rings in the air! Test your skill at accurate power shots, or try your hand at boomer mode with your friends. This map is also quite fun with the football if you load the Gridiron game mode through Rocket Plugin.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer and Rumble are both great",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/BlFpGJCEsFrMfDw52ZqORo99WnQgn67B1swdQAVLTHsd6t8i09jBe92DyUGBHufM.jpg",
+      "homepage": "https://lethamyr.com/maps/89",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1M8m7ilUaTCVpr0oXZTImeoAq3adGzT4X/view",
+        "filename": "Floating Rings.zip",
+        "size": 21556641
+      }
+    },
+    {
+      "id": "lethamyr-foosball-table-2-0",
+      "name": "Foosball Table 2.0",
+      "author": "Lethamyr",
+      "summary": "A remastered version of the first foosball table in Rocket League!",
+      "description": "REMASTERED VERSION:\nThis map takes Standard Rocket League and places it on regular foosball table!. Scoring is just like normal, except the ball has to fall into the floor of the goal! The figures on each teams’ side can get in the way, causing some unique moments.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer is also quite fun!",
+      "tags": [
+        "Sports",
+        "Standard",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/9MRkJN9YkAObfxpPzcBvibK4wOyvhFpD9koLXBwiHkpZ7bk3mkMHJSiEA22JvOsf.jpg",
+      "homepage": "https://lethamyr.com/maps/33",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/14JYj64T8EblN0MvEiBUODolA6JOkqeQs/view",
+        "filename": "Foosball Table - Remastered.zip",
+        "size": 50263214
+      }
+    },
+    {
+      "id": "lethamyr-forest",
+      "name": "Forest",
+      "author": "Lethamyr",
+      "summary": "Explore an overgrown Rocket League field!",
+      "description": "I created this map to help Mr. Beast with his #TeamTrees project last year to plant 20 million trees! This map is an interpretation of a standard map overrun by the environment, and has some quirky features inside that make controlling the ball… uh… well, difficult.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer ball is also quite fun!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/OW009AhczNywaTtrko0JAhQ1egck5b1xfQkwqeJD2xTmKldSzfDNLpzJnek21vDc.jpg",
+      "homepage": "https://lethamyr.com/maps/52",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1sXD46WjoqzWkrsmR164t1AjQ1Jsp-lLM/view",
+        "filename": "Leth.Forest.zip",
+        "size": 87016465
+      }
+    },
+    {
+      "id": "lethamyr-full-scale-football-field",
+      "name": "Full-Scale Football Field",
+      "author": "Lethamyr",
+      "summary": "Rocket League football brought to the largest field ever!",
+      "description": "This map is a 1-to-1 scale of a football field (as much as it can be to scale for these cars…) with field goals and end zones. This map is incredibly fun with a higher number of players, but no matter what team size it’s very satisfying to run the football down this huge open field.",
+      "recommendedSettings": "Game Mode: Gridiron\nGoal Reset: Disabled\nBoost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/v9gPSJDPFNgrLvhdf7znthR2cVZWyPz1EpuvSF4YH8NiQAyiygDVTiohs6rQ8hl9.jpg",
+      "homepage": "https://lethamyr.com/maps/98",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1HwJnmHs6nY6oZOOmOy88iZSarbDlIurQ/view",
+        "filename": "Full-scale Football.zip",
+        "size": 49940202
+      }
+    },
+    {
+      "id": "lethamyr-garrison",
+      "name": "Garrison",
+      "author": "Lethamyr",
+      "summary": "A brand new game mode with 2 zones!",
+      "description": "Welcome to a brand new type of game mode I’ve created that I’m calling Garrison. The basic idea is that there are 2 zones, 1 for each team. Each team has 100 HP and as the ball stays in a team’s zone, their team loses HP until reaching 0. At that point, the opposing team scores a point! Health drops every 1 second, so do your best to keep it out of your zone!",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/3J1bYkSICR0ovcDfHX8yoJpP13LP7hnAQ9A7AVuDPtiFfLxTtoOFhfTAEpNKKUk4.jpg",
+      "homepage": "https://lethamyr.com/maps/130",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/16OW_8Ps7XfWn367DSlMHXjt48rBBjL3b/view",
+        "filename": "Garrison.zip",
+        "size": 9207995
+      }
+    },
+    {
+      "id": "lethamyr-giant-easter-egg",
+      "name": "Giant Easter Egg",
+      "author": "Lethamyr",
+      "summary": "Rocket League inside a giant egg with multiple platforms!",
+      "description": "This standard Rocket League map variant was created by my sister, and it features 3 different platforms suspended inside a giant Easter egg! This map is a ton of fun with Boomer or Rumble, and helps with reading strange ball bounces.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer/Rumble are both great",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/lIK3P0iwBLULbSGQQMwcrvkZsNWDGUhlUg3h9kAmawgOEewip0uztfyr8Tkm7A3X.jpg",
+      "homepage": "https://lethamyr.com/maps/83",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/15VmhdWzJcTNb4IUtOQl9v2rgAyyqKS_Q/view",
+        "filename": "Giant Easter Egg.zip",
+        "size": 60429016
+      }
+    },
+    {
+      "id": "lethamyr-giant-foosball-table",
+      "name": "Giant Foosball Table",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League on a giant foosball table!",
+      "description": "This map takes Standard Rocket League and places it on regular foosball table!. Scoring is just like normal, except the ball has to fall into the floor of the goal! The figures on each teams’ side can get in the way, causing some unique moments.",
+      "recommendedSettings": "Boost: Unlimited\nBall Speed: Fast\nBall Physics: Light\nBall Bounciness: High",
+      "tags": [
+        "Sports",
+        "Standard",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/i6n20NGJoBgZ7xMvx0MWMPzUS2vVomK1OhWwHB7omnxywwA5IZfrAX7Wnfk56dFu.jpg",
+      "homepage": "https://lethamyr.com/maps/2",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1-2PIVY-WiIpTKNuFYQFwi2qWYueGr2HW/view",
+        "filename": "Giant Foosball Table.zip",
+        "size": 5107911
+      }
+    },
+    {
+      "id": "lethamyr-giant-pinball-table",
+      "name": "Giant Pinball Table",
+      "author": "Lethamyr",
+      "summary": "Use your car to control this giant pinball table! Can you get the high score?",
+      "description": "Insert the ball into the coin slot to start the game. Use your car to control the flippers and launch the ball. See how high of a score you can get!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ZVJO6BWeHdRfolPUSB9lRZTk5tgK5XmJDofF62MPSq7VoUZCmRvG8uxX2A7fIyHy.jpg",
+      "homepage": "https://lethamyr.com/maps/4",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1pFjKvGiv3uDNHSHBwgYBiX4yx0jyv7pd/view",
+        "filename": "Pinball Table.zip",
+        "size": 7308609
+      }
+    },
+    {
+      "id": "lethamyr-gladiator",
+      "name": "Gladiator",
+      "author": "Lethamyr",
+      "summary": "Unique Tug of War at its best using elevated rings. This map is cray fun",
+      "description": "Gladiator is a unique form of Tug of War, where you battle against the opponent to push the ball through the rings and score in the final goal at the back of the field. The white rings don’t do anything, only the blue and orange rings push the goal further away!",
+      "recommendedSettings": "Boost: Unlimited\nTime: Unlimited\nRumble, Boomer, or Spike Rush are also fun!",
+      "tags": [
+        "Mini Games",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Mg4XdLNJGdIoUWzIpgNc1IXtdni3E2Gpti891Ttmsib8QdITheyvAseaqVN0Tc6N.jpg",
+      "homepage": "https://lethamyr.com/maps/25",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1o7V_zPZIZc30imj1wd4exGIEfhnKptSc/view",
+        "filename": "Gladiator.zip",
+        "size": 84548327
+      }
+    },
+    {
+      "id": "lethamyr-go-kart-mania",
+      "name": "Go-Kart Mania",
+      "author": "Lethamyr",
+      "summary": "Race on 10 different maps in 1!",
+      "description": "Rocket League racing on steroids! 10 Go-Kart maps packed into one. Every time you restart the kickoff, all players will spawn in a new course! Using the team speed boost mod really makes this exciting.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Race"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/L8d5HUwDBvqj5ovRlqmgF4NFDST3Q5Rs17JIBlGc8MBgy5HBPaJRvHffaqBbIVbC.jpg",
+      "homepage": "https://lethamyr.com/maps/120",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1GJW-h2mzKaIixzaCvBhGg0HwUgYFAyTt/view",
+        "filename": "Go-Kart Mania.zip",
+        "size": 129680837
+      }
+    },
+    {
+      "id": "lethamyr-grand-hall",
+      "name": "Grand Hall",
+      "author": "Lethamyr",
+      "summary": "Peek inside the Utopia Building for one of my favourite maps",
+      "description": "A freestyler’s paradise… Enjoy this non-standard map with pilars around a cylindrical hall! Expect some crazy bounces off the pillars around the edge of the map.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer is very fun on this map!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/LINMq3deOMPIrNTp2og5eYyKsZR4a3caMd551UrNbYnjHqExQvDTG9iixzw1G2Fq.jpg",
+      "homepage": "https://lethamyr.com/maps/68",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1rsbKLrrnQphOpul7NSZqmRqDj-cVNb4d/view",
+        "filename": "custom map.zip",
+        "size": 7480827
+      }
+    },
+    {
+      "id": "lethamyr-graverobber",
+      "name": "Graverobber",
+      "author": "Lethamyr",
+      "summary": "My Rocket League Halloween event!",
+      "description": "In this spooky Rocket League map, enjoy a bit of a spin-off of standard gameplay with goals that open up in the floor! Score in the standard net to open the opponent’s graves, and score in the open hole to win!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ssxYbwOlICzXlbngy2qfdI1RfFZvq4lnrOS8MFoCxd91bsbd8k2fKAr2njumcTLB.jpg",
+      "homepage": "https://lethamyr.com/maps/70",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ByRe2zLu4uqvK6zCXJBlEgYrq6tKB5ao/view",
+        "filename": "Graverobber.zip",
+        "size": 101724718
+      }
+    },
+    {
+      "id": "lethamyr-graverobber-day",
+      "name": "Graverobber (Day)",
+      "author": "Lethamyr",
+      "summary": "The Day version of my Halloween map!",
+      "description": "This is simply the Day version of last year’s Halloween map!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/rsai74kX1XJvnXH7ERKdwHn6e6mTq6jIplJYRZiViyvSE4hJQRlthCTMnr48rmNJ.jpg",
+      "homepage": "https://lethamyr.com/maps/126",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ByRe2zLu4uqvK6zCXJBlEgYrq6tKB5ao/view",
+        "filename": "Graverobber.zip",
+        "size": 101724718
+      }
+    },
+    {
+      "id": "lethamyr-half-size",
+      "name": "Half-Size",
+      "author": "Lethamyr",
+      "summary": "Rocket League, but half the size! Experiment with ball and car sizes!",
+      "description": "Rocket League, but half the size! This map can destroy your brain, but it’s super fun! You can mess with the ball size to make the ball fit to scale, or mess with car scale to try and play at hyper-speed.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/nSHMu2De64ndTSRsT99WbjxquCkiDykuCt4leKcWxycisaz8sZSmGBT5fzefBDn3.jpg",
+      "homepage": "https://lethamyr.com/maps/60",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ZYFXUiKBzM0esYVEHfaQfF64pIQ2uA2m/view",
+        "filename": "leth.zip",
+        "size": 45979063
+      }
+    },
+    {
+      "id": "lethamyr-haunted-hallows-escape",
+      "name": "Haunted Hallows Escape",
+      "author": "Lethamyr",
+      "summary": "",
+      "description": "THIS IS A 2-PLAYER CO-OP MAP\nHaunted Hallows Escape was an event commissioned by Rocket League and Epic Games. Simple Shark, Mr. Swaggles & I worked tirelessly for a month to put this escape room puzzle together. There are 4 parts to the story, load each one as you complete each in order.",
+      "recommendedSettings": "ALL PLAYERS MUST JOIN BLUE TEAM\nTime: Unlimited\nThis map will NOT load with my map loader. All files need to be within a mods folder to run.\nSome textures are missing (Rocket League changed some in-game materials which no longer work)",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/NipzVVtgVsNEKL3BD3Oj61cIbridtE35eh1pns6sV8UTRLctK2Ggq24E2lEVZQO0.jpg",
+      "homepage": "https://lethamyr.com/maps/170",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1AXReLHaTlbFweqlT182TdM7_0nS7wrCb/view",
+        "filename": "Haunted Hallows.zip",
+        "size": 343809215
+      }
+    },
+    {
+      "id": "lethamyr-heatseeker-dungeon",
+      "name": "Heatseeker Dungeon",
+      "author": "Lethamyr",
+      "summary": "Travel to the dungeons for some Heatseeker fun",
+      "description": "A standard map with a re-colored Heatseeker ball! I had this as a game mode before Rocket League officially put Heatseeker in as a mutator. Enjoy playing Heatseeker in a different environment!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Heatseeker",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/WWJqtGE5dUmIZP36Cxxq4cr4P9akpNCMHiNkjwjD3CCKYxcbqCf7qxZJ23c0IJaX.jpg",
+      "homepage": "https://lethamyr.com/maps/39",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1kodyQ-zCAKuGT-6wI82epIU7kRBCuB7-/view",
+        "filename": "Heatseeker Dungeon.zip",
+        "size": 78827940
+      }
+    },
+    {
+      "id": "lethamyr-heatseeker-tennis",
+      "name": "Heatseeker Tennis",
+      "author": "Lethamyr",
+      "summary": "Tennis with a heat-seeking tennis ball?!",
+      "description": "Heatseeker with a twist! The net in the center of the map can really cause some trouble for either your opponent or yourself! Be careful if the ball hits the net because the ball will punish you! A ton of fun in any team size.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Heatseeker",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/JgFNuSYUECOsL99zCWqrP9NBCucUyAsOimxIR1uI9ERsykfcZuP3Ghg5DWESVcah.jpg",
+      "homepage": "https://lethamyr.com/maps/40",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/19XNx3JxKQUM7dyiLhbvp6ZUbCV61QWml/view",
+        "filename": "Heatseeker Tennis.zip",
+        "size": 81399157
+      }
+    },
+    {
+      "id": "lethamyr-helium-ball",
+      "name": "Helium Ball",
+      "author": "Lethamyr",
+      "summary": "The ball has no weight to it!",
+      "description": "Rocket League, but the ball is weightless! Enjoy a ball with zero gravity in my standard dungeon map. This will mess with your brain, gauranteed, but it’s still a lot of fun!",
+      "recommendedSettings": "Boost: Unlimited\nSlight boomer or rumble can be fun!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/79Xk17vKb54xJxHJJ3RxqFFxk9wvndJpfm2aNflRQWHgucDn9SzOZ6KXtmzq4tzd.jpg",
+      "homepage": "https://lethamyr.com/maps/65",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1fA2mckE8yXrwGYQ5C2II7fvnG0trHfpb/view",
+        "filename": "Helium Ball.zip",
+        "size": 81584142
+      }
+    },
+    {
+      "id": "lethamyr-hex-drop",
+      "name": "Hex Drop",
+      "author": "Lethamyr",
+      "summary": "A unique spin on the classic game mode!",
+      "description": "Hex Drop is the second of Dropshot maps I’ve created! This map is the sister to Inside Out, where dropshot goals are between the H-shaped middle area. There’s a window in the middle for the ball to spawn! Definitely puts a different spin on the classic Dropshot mode.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nScore Limit: First to 1 Goal",
+      "tags": [
+        "Dropshot"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/QIiERN6Xb4dDP246XNQeoACyAOuJcPFWToblWCwwh4Zu1YjH4DIuqC5cKuh911eu.jpg",
+      "homepage": "https://lethamyr.com/maps/61",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1viWI3uaOkpzq-8b5knm_nwn_C_X48RfX/view",
+        "filename": "Hex Drop.zip",
+        "size": 8791314
+      }
+    },
+    {
+      "id": "lethamyr-hexagon-2v2v2",
+      "name": "Hexagon 2v2v2",
+      "author": "Lethamyr",
+      "summary": "Rocket League with 3 goals for teams of 2!",
+      "description": "This map was designed to be a larger 3-team map, intended for 2v2v2. The goals are GIGANTIC, so enjoy as you betray your friends in this large open field. My sister (iamKikira) designed the models for this one!",
+      "recommendedSettings": "Boost: Unlimited\nBoomer mode and Rumble is pretty fun",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/0yNyJyvO9aRN3V1LdAnyrlzC292l5YuQUH1GZxO1sA2uUpWAYB0SqjrheZMI5DrG.jpg",
+      "homepage": "https://lethamyr.com/maps/97",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/12PE7dmLoBXwA_AvlEBNSj3ZIdsSp7CVe/view",
+        "filename": "Hexagon 2v2v2.zip",
+        "size": 3090033
+      }
+    },
+    {
+      "id": "lethamyr-hoops-stadium",
+      "name": "Hoops Stadium",
+      "author": "Lethamyr",
+      "summary": "Hoops meets Throwback Stadium!",
+      "description": "Hoops meets Throwback stadium! I’ve created 2 bowls and placed them inside an oval-shaped Rocket League field. The map is exactly what you’d expect: score in the bowl to win the game! A lot of fun in any team size, so go for it!",
+      "recommendedSettings": "Game Mode: Hoops\nBoost: Unlimited",
+      "tags": [
+        "Hoops",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/LxXlxQmuU5ju8LvNoTOytVAwgNH1jIYickBtoWQaVRfIX6yP0NbReqd5uSZLjvC9.jpg",
+      "homepage": "https://lethamyr.com/maps/43",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1v39I_SIUvScJ6SYXedm4J9SercFYj7eC/view",
+        "filename": "Hoops Stadium.zip",
+        "size": 26653739
+      }
+    },
+    {
+      "id": "lethamyr-horseshoe",
+      "name": "Horseshoe",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League inside a horseshoe!",
+      "description": "This map was designed by my sister (IamKikira on Twitch) and she created a vertical horseshoe with goals in the very bottom of each end. There are platforms mid-air where the ball and cars spawn on kickoff. Is luck on your side in this map?",
+      "recommendedSettings": "Boost: Unlimited\nBoomer mode is STRONGLY recommended",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ipoIQ5oaTLav8cZPFHdNvgNUk99IUoy73qGbxpurSB4F0Qm5AMGN0wLgflVrZQK0.jpg",
+      "homepage": "https://lethamyr.com/maps/90",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1lpeAkAe-bBI3r_pSg1qpb6uL0i6ggKXz/view",
+        "filename": "Horseshoe.zip",
+        "size": 13617343
+      }
+    },
+    {
+      "id": "lethamyr-hospital",
+      "name": "Hospital",
+      "author": "Lethamyr",
+      "summary": "The biggest Hide and Seek map!",
+      "description": "Welcome to the Rocket League Hospital! One of the biggest Hide and Seek maps to date, there are plenty of unique ways to hide your car from the seekers. Storage containers, cranes, cars, crates, and more! The hospital is in the center of the map but there is much more to this place.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited",
+      "tags": [
+        "Free For All",
+        "Hide and Seek"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/cmruM4p8oEJv5Ea1mYpR1mvzHUQhhV6I7quWFNS3FjGGvcAJEM5vtzyp9bjHVxNU.jpg",
+      "homepage": "https://lethamyr.com/maps/48",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1gy6k5ZyIZESGImH3lEKQryV8kF-kbg6v/view",
+        "filename": "Hospital.zip",
+        "size": 60383346
+      }
+    },
+    {
+      "id": "lethamyr-ice-cube",
+      "name": "Ice Cube",
+      "author": "Lethamyr",
+      "summary": "A ball that never slows down!",
+      "description": "I created a Rocket League ball (well… cube) that has zero friction! I made it look like an ice cube and gave it its own custom map. Enjoy as the ice cube never slows down! Boomer is hilarious!",
+      "recommendedSettings": "Boost: Unlimited\nHighly suggest Rumble or Boomer!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/nZbW40kiPHEhzr5EYfIgQUMVAfnYp0ZHlokBApm8zCjG41fb01sAclhTbQOp1YCT.jpg",
+      "homepage": "https://lethamyr.com/maps/146",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1OMSXgtvYUfWSHqzE_nufE9bCb_RhrrAd/view",
+        "filename": "Ice Cube.zip",
+        "size": 52141512
+      }
+    },
+    {
+      "id": "lethamyr-ice-rings",
+      "name": "Ice Rings",
+      "author": "Lethamyr",
+      "summary": "Practice your aerials in an icy environment!",
+      "description": "Learn how to aerial like a pro inside a giant 20-level course of aerial navigation. The rings get smaller as you go through the levels, try for a personal best!",
+      "recommendedSettings": "Freeplay",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Ur8KX8GiKyqUBJfs7q20HemKdOLk6AA3KwHwAVf0aZ9OsIg92fLXQQAJSLg6Wreh.jpg",
+      "homepage": "https://lethamyr.com/maps/34",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1lZP3KfdZsn2K2WAF92JWuhrnZlU-X5x4/view",
+        "filename": "Ice Ring;lhkj.zip",
+        "size": 164909817
+      }
+    },
+    {
+      "id": "lethamyr-infinium-sumo",
+      "name": "Infinium Sumo",
+      "author": "Lethamyr",
+      "summary": "Sumo with gravity wells!",
+      "description": "Rocket League Infinium: the newest Sumo map on the block. This time around, there are gravity wells in the center which will make travelling over them quite difficult for you. The gravity is 10x as strong, so be careful trying to escape from your friends when they’re bumping you!",
+      "recommendedSettings": "Time: Unlimited\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/K6rTrumZgouKTwcnEXKg3oVdyepjqHJH5cQePjnOlEpufxSLGRP5nrgdyLAi5rfy.jpg",
+      "homepage": "https://lethamyr.com/maps/96",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1vHDTIImiRLwSlzNfri_XE2dURtUKZJQ2/view",
+        "filename": "Infinium Sumo.zip",
+        "size": 3759667
+      }
+    },
+    {
+      "id": "lethamyr-inside-out",
+      "name": "Inside Out",
+      "author": "Lethamyr",
+      "summary": "Rocket League turned inside-out! The goals are in the center.",
+      "description": "Rocket League but it’s inside-out! I put the goals in the middle of the field this time around, which leads to some pretty cool interactions above and around the goals. Very fast-paced action! Definitely on the more polished side of most of my maps.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/5xmw0R23rHndNLW0vwaqsSAl21QlgP3XzJmUPLQsJx5GDXH960Zq8c9h8yrSXeVG.jpg",
+      "homepage": "https://lethamyr.com/maps/55",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1d54Z7-Xzzphn0CvGPQ2HOIe1F0wF2Bed/view",
+        "filename": "Inside Out.zip",
+        "size": 13532056
+      }
+    },
+    {
+      "id": "lethamyr-jacuzzi",
+      "name": "Jacuzzi",
+      "author": "Lethamyr",
+      "summary": "Rub-a-Dub-Dub!",
+      "description": "This map may be categorized as “Standard” but it is far from it. The ball is now a rubber ducky, and goals are in soap dishes! There are also giant rubber duckies that get in your way. Also, who doesn’t love water making it impossible to move around in the tub? Have fun!",
+      "recommendedSettings": "Boost: Unlimited\nBoomer & Rumble highly recommended!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/WrpdVW5vHpnnO0PQJf7152o57uysVrEI3CsyAxBblfSiYfM06DAb8N08szzjyxFa.jpg",
+      "homepage": "https://lethamyr.com/maps/152",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1MhrrS6m_41ln_Qnixi5FsLNkRPOWQGZ5/view",
+        "filename": "Jacuzzi.zip",
+        "size": 115380581
+      }
+    },
+    {
+      "id": "lethamyr-jenga-sumo",
+      "name": "Jenga Sumo",
+      "author": "Lethamyr",
+      "summary": "Sumo with moving Jenga blocks!",
+      "description": "This sumo map is the first of potentially many sumo maps that introduce moving objects you have to maneuver around to survive! The Jenga blocks start in a stack at the start of the match and quickly fall apart, creating a new and unique stage to fight your friends every time.",
+      "recommendedSettings": "Time: 10 Minutes\nDemo: Disabled\nRumble: Demo Derby or select the powerups through Rocket Plugin",
+      "tags": [
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/dDVF7X2kK7m0TDj6jBXuUkn3kzE7sWM55wZ9cDhDpNB2nvQGtkBGNAqYgGV2AI2U.jpg",
+      "homepage": "https://lethamyr.com/maps/141",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1SYK2gSvLUgKAKut0xU7caq14O3N16Lhr/view",
+        "filename": "Jenga Sumo.zip",
+        "size": 40923298
+      }
+    },
+    {
+      "id": "lethamyr-jump-rope-sumo",
+      "name": "Jump Rope Sumo",
+      "author": "Lethamyr",
+      "summary": "Sumo with a moving obstacle that demos you!",
+      "description": "This is one of my first Sumo maps where the goal isn’t to know your opponents off a platform! In this unique “spin” on the Sumo game mode, there is a spinning bar that will destroy any car that touches it, and give the other team a point. Playing this without any boost is incredibly fun!",
+      "recommendedSettings": "Time: Unlimited\nDemo: Disabled\nRumble: Demo Derby or custom powerups plugin",
+      "tags": [
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/BjRXHPEXvk14bHy6lnJVwgRaOEwGZt0olGrcSIIFa5hArxToPAEHtidKMHMCdKVm.jpg",
+      "homepage": "https://lethamyr.com/maps/131",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1M612yeCSSwGWCZqlx9zuk4pFmEswe3fU/view",
+        "filename": "Jump Rope.zip",
+        "size": 40437335
+      }
+    },
+    {
+      "id": "lethamyr-jungle-gym-sumo-day",
+      "name": "Jungle Gym Sumo (Day)",
+      "author": "Lethamyr",
+      "summary": "A giant wooden jungle gym in a deadly lake!",
+      "description": "Welcome to the Rocket League Jungle Gym! This map features wooden structures inside a giant lake. This is a team deathmatch Sumo where every time a player falls into the water, a point is gained for the opposite team.",
+      "recommendedSettings": "Time: 10 Minutes\nDemo: Disabled\nRumble: Demo Derby or select the powerups through Rocket Plugin",
+      "tags": [
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/vRTgElsgV8YjZcfH9FtzAmZFc8ovMb1xtuCqcOrJAhIoNhTxwpON1jUckVhSFPSf.jpg",
+      "homepage": "https://lethamyr.com/maps/136",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/12dB6uickRxrlA1C8qEhcVSMkd69-F4me/view",
+        "filename": "Jungle Gym Sumo - Day.zip",
+        "size": 115329335
+      }
+    },
+    {
+      "id": "lethamyr-jungle-gym-sumo-night",
+      "name": "Jungle Gym Sumo (Night)",
+      "author": "Lethamyr",
+      "summary": "The night version of Jungle Gym Sumo!",
+      "description": "The night version of Jungle Gym Sumo.",
+      "recommendedSettings": "Time: 10 Minutes\nDemo: Disabled\nRumble: Demo Derby or select the powerups through Rocket Plugin",
+      "tags": [
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/QAKK020he3Ck3yAuAETKlR0mmtA9ES9KX0BL339shq3XU29Ldlgk0a2tXwDHYwM8.jpg",
+      "homepage": "https://lethamyr.com/maps/137",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1JuXnu08JnrBf82Nlg3-SWPz-9toPlzDb/view",
+        "filename": "Jungle Gym Sumo - Night.zip",
+        "size": 115979519
+      }
+    },
+    {
+      "id": "lethamyr-knockout-air-battle",
+      "name": "Knockout: Air Battle",
+      "author": "Lethamyr",
+      "summary": "",
+      "description": "This is a Knockout rendition of my Air Battle map, with floating platforms and fans that push you into the air! Be careful not to float too high above the safezone!",
+      "recommendedSettings": "Game Type: Knockout",
+      "tags": [
+        "Knockout"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/iEQVG1scoMvKO04HnNU3lIfYefxbrajWZDb6M4VpTdydizwx6wwlXd6KlCFV792E.jpg",
+      "homepage": "https://lethamyr.com/maps/154",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1vppO-BPIH6XQa9CeT6RGxQpCv7qoKRnw/view",
+        "filename": "Knockout Air Battle.zip",
+        "size": 9945102
+      }
+    },
+    {
+      "id": "lethamyr-knockout-cubic",
+      "name": "Knockout: Cubic",
+      "author": "Lethamyr",
+      "summary": "",
+      "description": "This is the biggest Knockout map I’ve ever made, with places to play/hide at the very edge of the safezone.",
+      "recommendedSettings": "Game Type: Knockout",
+      "tags": [
+        "Knockout"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/jn1DUXqpG8RUCTm7JMraM5lWgvcKlfaPKh2wqqRvMdPl6hgxyBLMyNpjYaRPKyZe.jpg",
+      "homepage": "https://lethamyr.com/maps/156",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1DmBKV_q-EUkNJZeqKxkVx2UOomXPkdQ8/view",
+        "filename": "Knockout Cubic.zip",
+        "size": 4054053
+      }
+    },
+    {
+      "id": "lethamyr-knockout-infinium",
+      "name": "Knockout: Infinium",
+      "author": "Lethamyr",
+      "summary": "Knockout with gravity pits!",
+      "description": "This is a Knockout rendition of my Infinium map, where gravity pits in the middle of the stage will take you down! I’ve made the pits much stronger this time, and once again the field is much larger. Throw your friends into the pits to win!",
+      "recommendedSettings": "Game Type: Knockout",
+      "tags": [
+        "Knockout"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/VQB1l7q8tkiG8hdXBD7C93RCRNhKUHpeVeNe7vZAG5DaGJHvu3Sj5Q3w3WCb6uNe.jpg",
+      "homepage": "https://lethamyr.com/maps/150",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1WZ9RbRoDqKU4hXyUH8baaqXzdWt1tTpk/view",
+        "filename": "Knockout Infinium.zip",
+        "size": 3537128
+      }
+    },
+    {
+      "id": "lethamyr-knockout-outskirts",
+      "name": "Knockout: Outskirts",
+      "author": "Lethamyr",
+      "summary": "Fight over territory in the center of the map",
+      "description": "Fight over territory in the center of the map, or hide along the outer ring. Watch out for the safezone!",
+      "recommendedSettings": "Game Type: Knockout",
+      "tags": [
+        "Knockout"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/uxWGn0ZfdHZvgN4j7Bzio6OiRdcpHm45kYrRSJ3OYPbpMhWlGhsQIWsj2cd8uT0f.jpg",
+      "homepage": "https://lethamyr.com/maps/157",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1H2ojnC2zZSlc-5BsJsHg3HxMK4HtF4b1/view",
+        "filename": "Knockout Outskirts.zip",
+        "size": 1593280
+      }
+    },
+    {
+      "id": "lethamyr-knockout-solar-system",
+      "name": "Knockout: Solar System",
+      "author": "Lethamyr",
+      "summary": "Fight your friends as giant cars",
+      "description": "Fight your friends as giant cars exploring our Solar System. Watch out for the spinning suns that will demo you!",
+      "recommendedSettings": "Game Type: Knockout",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/0ku4FkwvGv9quvzZjBwvtpjCfgkpnJvjTcjgYUNY37bNyhLvKwPODtQkthoolih8.jpg",
+      "homepage": "https://lethamyr.com/maps/165",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1Qeb1MnypBZCsD1zcqyxL3o--JbeCnKEI/view",
+        "filename": "Knockout Solar System.zip",
+        "size": 219083420
+      }
+    },
+    {
+      "id": "lethamyr-knockout-swinging-boat",
+      "name": "Knockout: Swinging Boat",
+      "author": "Lethamyr",
+      "summary": "Beware of sea-sickness",
+      "description": "Beware of sea-sickness: this map features a giant boat swing! The boat isn’t actually moving, it’s just the background/water. The water demos you. Try your best to stay inside the boat!",
+      "recommendedSettings": "Game Type: Knockout",
+      "tags": [
+        "Knockout"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/SZQcjWvM9dnz1hkREesMqisM8wgKhCM46rBRrF575k90EwAHh5JzQPi4DGLHjFFY.jpg",
+      "homepage": "https://lethamyr.com/maps/159",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1WfA6LoCdBrVSyfJdJUrmVs7UZlN5CDkm/view",
+        "filename": "Knockout Swinging Boat.zip",
+        "size": 8846311
+      }
+    },
+    {
+      "id": "lethamyr-knockout-volcano",
+      "name": "Knockout: Volcano",
+      "author": "Lethamyr",
+      "summary": "My first Knockout custom map!",
+      "description": "This was my first attempt at a Knockout custom map! The volcano launches you up as usual from my Sumo version, but there are now pillars that demo you, and the map is much larger!",
+      "recommendedSettings": "Game Type: Knockout",
+      "tags": [
+        "Knockout"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/DuwALkHjVMQVwI3yruxwEqa8HLhPsqCECmr1tGZhJkF1CsTYRvQkG0WbaYlr3j7d.jpg",
+      "homepage": "https://lethamyr.com/maps/149",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1my5Jp5c1GxupHIdK0CJv1Luxoc4Tm9Vi/view",
+        "filename": "Knockout Volcano.zip",
+        "size": 62436652
+      }
+    },
+    {
+      "id": "lethamyr-lava-rings",
+      "name": "Lava Rings",
+      "author": "Lethamyr",
+      "summary": "A re-textured version of my rings map!",
+      "description": "Re-textured Ice Rings:\nLearn how to aerial like a pro inside a giant 20-level course of aerial navigation. The rings get smaller as you go through the levels, try for a personal best!",
+      "recommendedSettings": "Freeplay",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/RBrbD8ZTdnSLyluhPq5CSBeSZ0DjFGgNRyt1Q9oU3OGExkrkWPHXc3u0mw7DH9sy.jpg",
+      "homepage": "https://lethamyr.com/maps/45",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1_EUc0kD4HSgZlEYHdCkatIn0zTUE2nHM/view",
+        "filename": "lava map.zip",
+        "size": 136286290
+      }
+    },
+    {
+      "id": "lethamyr-loopty-loop",
+      "name": "Loopty Loop",
+      "author": "Lethamyr",
+      "summary": "Standard field with a \"twist\"",
+      "description": "Ever wondered what Rocket League would look like in a Loopty Loop? This field features standard-sized goals, but getting from one side of the field to the other will take a little more work.",
+      "recommendedSettings": "Boost: Unlimited \nBoomer and Rumble is recommended!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/01JK44GMXJXJXYF6DBG950T0QB.jpg",
+      "homepage": "https://lethamyr.com/maps/197",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1TZVeXMtZUdEBWKamFspPxHAtTlfIDYf_/view",
+        "filename": "LethLoopty.zip",
+        "size": 2728033
+      }
+    },
+    {
+      "id": "lethamyr-luigi-s-mansion",
+      "name": "Luigi’s Mansion",
+      "author": "Lethamyr",
+      "summary": "Race on this spooky Mario Kart track is 2 different ways",
+      "description": "Luigi’s Mansion is an old race track from the Mario Kart series! This map is great as a race map in 2 different ways. Either as a driving race, or using the Ghost Hunt balls to try and push your ball around the racetrack first! This can get quite competitive!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nBall Type: Ghost Hunt",
+      "tags": [
+        "Free For All",
+        "Race",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/w42IAAhdS4u0mQwvUC5rw82OCMeXDXuENtiEGFhguig0N88Qsw7YRv4NVj8jwKQ7.jpg",
+      "homepage": "https://lethamyr.com/maps/27",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1fKXXD-1QqrgySNqln2ZF4PdrrdliGy5u/view",
+        "filename": "Luigi's Mansion.zip",
+        "size": 2520486
+      }
+    },
+    {
+      "id": "lethamyr-mario-64-mirror-room",
+      "name": "Mario 64 Mirror Room",
+      "author": "Lethamyr",
+      "summary": "Mario 64’s mirror room brought to life inside Rocket League!",
+      "description": "Mario 64’s mirror room brought to life inside Rocket League! Score in the 2 paintings at the end of the hall. The pillars have team-colored flames on them to notify which side is for each team.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer and Rumble is both very fun",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/EmV6Gbwzylou2R544Eh9i2ExLtPXv8j4Y1xKjQyodSleaOOGjYORfDZNuctbpacM.jpg",
+      "homepage": "https://lethamyr.com/maps/160",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1l4mAHWwbhe-shoqbGLtHAR78PxFfQS2A/view",
+        "filename": "Mario 64 Mirror.zip",
+        "size": 5000916
+      }
+    },
+    {
+      "id": "lethamyr-mayan-pitz",
+      "name": "Mayan Pitz",
+      "author": "Lethamyr",
+      "summary": "Road to El Dorado in Rocket League!",
+      "description": "Designed after an old historic game with rings on the wall. Score through the rings with the ball to win! This game was in Road to El Dorado, one of my favorite cartoon movies as a kid!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/BGNqME4fUC3NcWVUYh7I49iX90AzxWJTHgIFrbHrtY42c8HaHOuuUgedQFHFPC6u.jpg",
+      "homepage": "https://lethamyr.com/maps/32",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1w-cTJZ3LC80HTRZ2BZbrnI3dETY_MT_M/view",
+        "filename": "Mayan Pitz.zip",
+        "size": 294357387
+      }
+    },
+    {
+      "id": "lethamyr-medieval-bumperball",
+      "name": "Medieval Bumperball",
+      "author": "Lethamyr",
+      "summary": "A medieval version of Bumperball!",
+      "description": "This is a Medieval rendition of a custom Rocket League map made by Yoshilus. Bumperball features 3 goals on each end, but the middle is worth 6 points and resets the kickoff, meanwhile the outer 2 are only worth 1 point and give possession to the team that conceded. Give it a go with spike rush!",
+      "recommendedSettings": "Boost: Unlimited\nRumble: Spike Rush",
+      "tags": [
+        "Medieval",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/PD1X9iI758bs1PKDMZyvOkbFI7F39soNbAd1Gpn141kmnHajb6OoORaWD7NLOOof.jpg",
+      "homepage": "https://lethamyr.com/maps/112",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/136JQtAhz7t-03QcL-xKoiD3zX3IQaLnH/view",
+        "filename": "Medieval Bumperball.zip",
+        "size": 303283330
+      }
+    },
+    {
+      "id": "lethamyr-medieval-chainball",
+      "name": "Medieval Chainball",
+      "author": "Lethamyr",
+      "summary": "A medieval version of Chainball!",
+      "description": "This is a Medieval rendition of a custom Rocket League map made by Mr. Swaggles, but in a completely new form! Chainball features a ball that follows a wire. Push the ball to the opponent’s goal to score a point!",
+      "recommendedSettings": "Boost: Unlimited\nBoomer settings",
+      "tags": [
+        "Medieval",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/lS0vPb0hzLd3fJH0GAOJxo4DVgucZFA5cLI9ScmKzUTeMBVTqH7cSFhdlF9m58ZK.jpg",
+      "homepage": "https://lethamyr.com/maps/116",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/14lffmN3mFaZc_WgcnEWkbw1UxXwqPcop/view",
+        "filename": "Medieval Chainball.zip",
+        "size": 312435725
+      }
+    },
+    {
+      "id": "lethamyr-medieval-hoops-stadium",
+      "name": "Medieval Hoops Stadium",
+      "author": "Lethamyr",
+      "summary": "A medieval version of Hoops Stadium",
+      "description": "This is a Medieval rendition of my older custom Rocket League map, Hoops Stadium. This map is a mix of Hoops and the anniversary stadium. Play with the Hoops basketball and enjoy a new look to an older arena!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Hoops",
+        "Medieval",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/xuORvCj8jvuTCT4WcAvu3KNaoLQkxBRMm3BUE055dYuU07kjEpbg3qYpwzWw2hNb.jpg",
+      "homepage": "https://lethamyr.com/maps/114",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1HtabZAULmJ91_njs_AwDViee7zYkx3ug/view",
+        "filename": "Medieval Hoops Stadium.zip",
+        "size": 306746730
+      }
+    },
+    {
+      "id": "lethamyr-medieval-jousting-sumo",
+      "name": "Medieval Jousting (Sumo)",
+      "author": "Lethamyr",
+      "summary": "The earliest Sumo ever known to exist!",
+      "description": "We jump into the land of medieval Rocket League, but this time around we’re jousting! This is a 1 on 1 game mode where you actually wear a giant lance as you try and knock your opponent into the water. Careful of the thin platform!",
+      "recommendedSettings": "Time: Unlimited\nDemo: Disabled\nRumble: Demo Derby or custom powerups plugin",
+      "tags": [
+        "Free For All",
+        "Medieval",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/FnlyrtqGEbsjUSELckeqcLxFAVgFHdksgki60QT9BcMgyLoQQu0yZIjVjzN9akhu.jpg",
+      "homepage": "https://lethamyr.com/maps/111",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1N0pVfqCeDjh9k2NRJwV1MlJ_S7HnPv6M/view",
+        "filename": "Medieval Jousting Sumo.zip",
+        "size": 290287214
+      }
+    },
+    {
+      "id": "lethamyr-medieval-quidditch",
+      "name": "Medieval Quidditch",
+      "author": "Lethamyr",
+      "summary": "A medieval version of Quidditch!",
+      "description": "This is a Medieval rendition of a custom Rocket League map made by Gidek. Competitive Quidditch is a new and improved version of older Quidditch maps in Rocket League, with launch pads on the floor. Each ring is worth more points as you get higher!",
+      "recommendedSettings": "Boost: Unlimited\nRumble: Civilized\nGravity: Low",
+      "tags": [
+        "Medieval",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ZCyWuZO7m2Nh6uq0DE6jjmVJXs0GFZrwUf4MJodfKeM53nS5ZHoTSsOI8Lgl1Vrf.jpg",
+      "homepage": "https://lethamyr.com/maps/115",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1LDqpZyx_Ez2dEH7QiT2x7HoZP4demuD6/view",
+        "filename": "Medieval Quidditch.zip",
+        "size": 299838364
+      }
+    },
+    {
+      "id": "lethamyr-medieval-rings",
+      "name": "Medieval Rings",
+      "author": "Lethamyr",
+      "summary": "Practice your aerials in a medieval town environment!",
+      "description": "Learn how to aerial like a pro inside my third giant 20-level course of aerial navigation. The rings get smaller as you go through the levels, try for a personal best!",
+      "recommendedSettings": "Freeplay",
+      "tags": [
+        "Medieval",
+        "Training"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/BjJxzrHRDOluWAD44seb1xKBguxH4rIpv0Q5zIpLj1PELQapLSk8HAMok21chRvV.jpg",
+      "homepage": "https://lethamyr.com/maps/145",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1aVh74XgpQ-eyr2PzbfQ64RUK8LjOvi01/view",
+        "filename": "Medieval Rings.zip",
+        "size": 287894943
+      }
+    },
+    {
+      "id": "lethamyr-medieval-volleyball",
+      "name": "Medieval Volleyball",
+      "author": "Lethamyr",
+      "summary": "A medieval version of Volleyball!",
+      "description": "This is a Medieval rendition of a custom Rocket League map made by Derzo and MrPhil. Volleyball is one of the most classic custom Rocket League maps out there, and has so many different versions. It is constantly being tweaked and improved upon, and has been for years. Enjoy this new background in a polished game mode!",
+      "recommendedSettings": "Boost: Unlimited\nPhysics: these are you to you! This is quite a difficult map, so you can try low gravity, light ball, and any combination of bounciness to see what works for you. Larger ball size may be helpful too!",
+      "tags": [
+        "Medieval",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/iwFSt9V482ya4eYf9Y1u3IDXB6MkkHZ7NLKbx73ea9wNv25owbWXUy3u5j865kDv.jpg",
+      "homepage": "https://lethamyr.com/maps/113",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1uGstb-p3NHq82o8_796Seqm872Sg8GRe/view",
+        "filename": "Medieval Volleyball.zip",
+        "size": 304343665
+      }
+    },
+    {
+      "id": "lethamyr-minecraft",
+      "name": "Minecraft",
+      "author": "Lethamyr",
+      "summary": "Explore the world of Minecraft in this map",
+      "description": "Bring Minecraft and Rocket League together in giant map of a Minecraft town. This map can be played as either a Standard map or Hide n Seek. You can hide anywhere in the map, including inside the houses, lighthouses, or even underwater!",
+      "recommendedSettings": "Time: Unlimited (Hide and Seek)\nBoost: Unlimited",
+      "tags": [
+        "Free For All",
+        "Hide and Seek",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/mkXyH0dtBCpo2juc1ATt5zpLzmFxuoBUbrzLHL3nDk0fPVmJ3tyIeYVSCnpg0gcl.jpg",
+      "homepage": "https://lethamyr.com/maps/26",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1WloVyjYijI6PhgevPulNkm8i6mrO4UZO/view",
+        "filename": "Minecraft in Rocket League.zip",
+        "size": 25571359
+      }
+    },
+    {
+      "id": "lethamyr-miniature-pool-table",
+      "name": "Miniature Pool Table",
+      "author": "Lethamyr",
+      "summary": "Race with your friends or alone in a giant tabletop from bird’s eye view!",
+      "description": "A top-down Rocket League racer inside a classic style arcade. Honestly one of my favorite maps in terms of visual aesthetic, I really love the mood of this one. The race track has a couple shortcuts and MANY ways to get stuck! So be careful as you race around the map!",
+      "recommendedSettings": "Time: Unlimited\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Race",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/7KfIQojSHwZ3TSXoQyu1tKY6EN7VukqZGHDYNKzzXYi4F10F0Wxd1XsFSndsQdwQ.jpg",
+      "homepage": "https://lethamyr.com/maps/42",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/13btgH_9ILiqaKyo7QQUMGWeKSOhff9qy/view",
+        "filename": "Minature Pool Table.zip",
+        "size": 242556673
+      }
+    },
+    {
+      "id": "lethamyr-monster-truck-rally",
+      "name": "Monster Truck Rally",
+      "author": "Lethamyr",
+      "summary": "Dirt tracks, hills, and rings of fire!",
+      "description": "This SUNDAY SUNDAY SUNDAY! Come on down to the Rocket League Monster Truck Rally! Featuring tracks, hills, and a ring of fire! This is a standard Rocket League map with just 2 goals on each end, but in this case it’s 2 fiery rings. You might recognize these rings from another map of mine?",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings are very good",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/wYCf0BsPYiOyow26kEJW9GuROvn2V8yqzDtBWb616VFD3wz6xAYL4DlSwpHtibey.jpg",
+      "homepage": "https://lethamyr.com/maps/109",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1Q7cNNqoAKVnQ_O6MpE6DPmg3xwK8Tz48/view",
+        "filename": "Monster Truck Rally.zip",
+        "size": 180789943
+      }
+    },
+    {
+      "id": "lethamyr-neon-heights-rings",
+      "name": "Neon Heights Rings",
+      "author": "Lethamyr",
+      "summary": "Practice your aerials in a neon city environment!",
+      "description": "Learn how to aerial like a pro inside my second giant 20-level course of aerial navigation. The rings get smaller as you go through the levels, try for a personal best!",
+      "recommendedSettings": "Freeplay",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/cR1NWsYj41fXTIZ3FkU7zInSDrwBStgxA5CJC8vZkfIbTMotuCo8HsXXD4op8DVF.jpg",
+      "homepage": "https://lethamyr.com/maps/82",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1vRx6OUhS-uAXNiOjhAzQS0_rVdAcShHp/view",
+        "filename": "Neon Heights Rings.zip",
+        "size": 25405550
+      }
+    },
+    {
+      "id": "lethamyr-oil-rig",
+      "name": "Oil Rig",
+      "author": "Lethamyr",
+      "summary": "Hide and Seek on a gigantic oil rig!",
+      "description": "Welcome to the largest of my Hide n Seek maps! This map features a giant oil rig with plenty of places to hide. No place is off limits!\nHuge thanks to my sister (Kikira) for helping make this map!",
+      "recommendedSettings": "Time: Unlimited\nBoost: You choose!\nDemo: On Contact",
+      "tags": [
+        "Free For All",
+        "Hide and Seek"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/RnKYyJbWEOqxj6ivfMj7OsGC1X23Pgc7V91LW6BfgzjEzYHCPJdJ6kncMi8f50gs.jpg",
+      "homepage": "https://lethamyr.com/maps/138",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ED5FwvERQTRtK3EyILMfN61Zf5HFuVak/view",
+        "filename": "Oil Rig Hide n Seek.zip",
+        "size": 128576980
+      }
+    },
+    {
+      "id": "lethamyr-original-sumo",
+      "name": "Original Sumo",
+      "author": "Lethamyr",
+      "summary": "Try to be the last remaining player on my classic circular sumo map.",
+      "description": "This is the first of many Sumo maps I’ve created! This map is a simple sumo map with a single circular platform to battle with your friends! Be the last one standing! Team battles are also quite fun. We usually give points equal to the number of players left on a team that survived. Go to whatever point cap you want!",
+      "recommendedSettings": "Boost: Recharge Slow\nTime: Unlimited\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/260v4v5dvR2FuCDJwfVsakhMVn75ZmHNGHyjSu0R87xaKAdKpmoTr1HXPR6f7xMU.jpg",
+      "homepage": "https://lethamyr.com/maps/20",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1MpdAyiQF55gUMt2ZfVwFfbSPTnAE18Uo/view",
+        "filename": "Original Sumo.zip",
+        "size": 23603134
+      }
+    },
+    {
+      "id": "lethamyr-ping-pong-table",
+      "name": "Ping Pong Table",
+      "author": "Lethamyr",
+      "summary": "This map brings ping pong to rocket league!",
+      "description": "This was one of my first attempts at custom models and importing them into Rocket League. This ping pong table has goals around the outside border, and can lead to a lot of chaos. Feel free to play by your own rules.\n(stay on your own side, for example, or one hit per player)",
+      "recommendedSettings": "Time: Unlimited\nBall Max Speed: Fast\nBall Physics: Curveball\nBall Bounciness: High\nBoost: Unlimited\nBoost Strength: 1.5x\nGravity: Low",
+      "tags": [
+        "Sports",
+        "Standard",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/1hU3HJyu9Y3wRwhS86W1TtRZmqOucfkivhUKwHMwucFnQxMUkNokFSaCgR8AF5Jq.jpg",
+      "homepage": "https://lethamyr.com/maps/8",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ZbIfpC5bbWau9K7v5gacWsz0xx3kOlum/view",
+        "filename": "Ping Pong Table.zip",
+        "size": 7057621
+      }
+    },
+    {
+      "id": "lethamyr-pitch-black",
+      "name": "Pitch Black",
+      "author": "Lethamyr",
+      "summary": "Hope you aren’t afraid of the dark! Its your standard game but all you see is the ball. Good Luck",
+      "description": "Rocket League but everything except the ball and cars is completely invisible! Try not to get lost. The ball color definitely helps keep an idea of where the ball is in the field.",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/JUKSMVUahUUrmOubEJyt0xwPOSfCVrdnUa25aEJO1RQdX49Bt5NOzqSt2PqfQSI4.jpg",
+      "homepage": "https://lethamyr.com/maps/30",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/15awKK_o5pW-KyxGNkijJHK-_XLWV4XHP/view",
+        "filename": "Pitch Black.zip",
+        "size": 2417770
+      }
+    },
+    {
+      "id": "lethamyr-pool-table",
+      "name": "Pool Table",
+      "author": "Lethamyr",
+      "summary": "My first pool table map brings billiards to Rocket League!",
+      "description": "This map is currently broken, but feel free to explore the map and see how it all works!\nThe original map worked by shooting the cue ball into the group of pool balls, and the scoreboard would keep track of sunk balls. You could also reset the cue ball in the kitchen if the white ball dropped!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/V77OjwfTU3cEVEFQjbYTLn73UWSWVjEMJtE6phvjV19knmGPsbWQ0wFvzv1ljibB.jpg",
+      "homepage": "https://lethamyr.com/maps/10",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1dDgibDkbxyUZ-x66KPtNKuS4DfUwqw7u/view",
+        "filename": "Pool Table.zip",
+        "size": 29630812
+      }
+    },
+    {
+      "id": "lethamyr-popshot",
+      "name": "Popshot",
+      "author": "Lethamyr",
+      "summary": "Dropshot but the goals are on the ceiling!?",
+      "description": "Rocket League Dropshot… but on the ceiling instead?! This map was a lot of fun to create, and a lot of fun to play! Pop the ball into the ceiling to open up the tiles, and shoot it into an open tile to score!",
+      "recommendedSettings": "Game Mode: Dropshot\nSlight boomer or rumble can be helpful!",
+      "tags": [
+        "Dropshot"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/FrA39qxhNJIKeXYxwc4gchoAsWY1EwalnjUkXBczn2xdSXeo5omfKnQIfC6A3Vlr.jpg",
+      "homepage": "https://lethamyr.com/maps/63",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/14zP8xNlixxT_DIyg4f4DUHlNlR8Aab9z/view",
+        "filename": "Popshot.zip",
+        "size": 2563300
+      }
+    },
+    {
+      "id": "lethamyr-portal",
+      "name": "Portal",
+      "author": "Lethamyr",
+      "summary": "Portal 2 meets Rocket League! Teleport both the cars and the ball!",
+      "description": "Play in a Portal-style map with portals that connect to each side of the room!\nThe goals are the giant doors on each side of the map. I plan on making a second version of this in the future as I revisit older maps. Enjoy!",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/v12yA5Yj9SmmDNr51tOHqXl1wZtDQpzZduBQZSVDyR1nPZIqieVXWi6HAjdSlzrz.jpg",
+      "homepage": "https://lethamyr.com/maps/13",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/19TC50r7CVyHuMJDru7lRlrKi6s9T-mjP/view",
+        "filename": "Portal.zip",
+        "size": 24619467
+      }
+    },
+    {
+      "id": "lethamyr-prop-hunt",
+      "name": "Prop Hunt",
+      "author": "Lethamyr",
+      "summary": "Disguise your car as a prop and try to avoid getting caught!",
+      "description": "Disguise your car as a prop and try to avoid getting caught!\nThis map is the first prop hunt map I created. You can choose a variety of medieval props to hide on 4 different floors of the castle. Once you get caught, you swap teams and help find the rest of the props!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nDemo: On Contact",
+      "tags": [
+        "Free For All",
+        "Hide and Seek"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/QAIpdylVzsPS5mwrDaVQuIgQCwcgtZp6JEvJ8z849wJOX9hm8DxUs8LJoMW6fqoM.jpg",
+      "homepage": "https://lethamyr.com/maps/7",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1LA4aAVL0nzlE0cbWqMByhHU4Ho6EsVeg/view",
+        "filename": "Prop Hunt - Castle.zip",
+        "size": 140163049
+      }
+    },
+    {
+      "id": "lethamyr-prop-hunt-remastered",
+      "name": "Prop Hunt Remastered",
+      "author": "Lethamyr",
+      "summary": "Hide as a prop and try not to get caught!",
+      "description": "UPDATED VERSION OF PROP HUNT:\nDisguise your car as a prop and try to avoid getting caught!\nThis map is the first prop hunt map I created. You can choose a variety of medieval props to hide on 4 different floors of the castle. Once you get caught, you swap teams and help find the rest of the props!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nDemo: On Contact",
+      "tags": [
+        "Free For All",
+        "Hide and Seek"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/iRd4bMhuDXvSiUGBgGVm6w6Ri1A2oodxZ0xZc6G2zfH1EJG6LF3keczEFFBvwu41.jpg",
+      "homepage": "https://lethamyr.com/maps/49",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1hJz3AIwQmG-OQFwXuQ1JHFTeh1YMKFE-/view",
+        "filename": "Prop Hunt - Castle Remastered.zip",
+        "size": 130359475
+      }
+    },
+    {
+      "id": "lethamyr-pyramids",
+      "name": "Pyramids",
+      "author": "Lethamyr",
+      "summary": "Venture to the Rocket League Desert on this rockey map",
+      "description": "A standard field hidden away in the Rocket League desert, this map features bumpy sand dunes with pyramids scattered inside a giant map! Try to keep control of your car in the air, and avoid getting stuck on the ground!",
+      "recommendedSettings": "Boost: Unlimited\nBoomer and Rumble are great on this map!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/eMsS5GPLcD8RaYRK0pFb3g77cm283YVRqz22xFJ3WXYglvstXVloDTFRS40jqs6k.jpg",
+      "homepage": "https://lethamyr.com/maps/28",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1-Gz9rbVhe2c3HF36pobA9eAeeh64jALi/view",
+        "filename": "Pyramids.zip",
+        "size": 132068960
+      }
+    },
+    {
+      "id": "lethamyr-quake-sumo",
+      "name": "Quake Sumo",
+      "author": "Lethamyr",
+      "summary": "Sumo Team Deathmatch!",
+      "description": "Rocket League Quake Sumo is another addition to the Sumo series of maps I’ve made, but this one runs a little differently. Instead of only having 1 life, this is instead a Team Deathmatch mode where every time you fall off the edge, you give the other team a point on the scoreboard. Battle with your friends or 1v1 your rival and see how you do!",
+      "recommendedSettings": "Time: 10 or 20 Minutes\nDemo: Disabled\nRumble: Demo Derby",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/X57L7C6sQH9HxqXbKPxED9cFVSq0wubUA9pg6EfvFfWfoXume1NUcZ66bVGasiDf.jpg",
+      "homepage": "https://lethamyr.com/maps/108",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1Bl6Le0I_Y9RV-EVSAHWgiqKNf0VTq84F/view",
+        "filename": "Quake Sumo.zip",
+        "size": 10143183
+      }
+    },
+    {
+      "id": "lethamyr-quicksand-sumo",
+      "name": "Quicksand Sumo",
+      "author": "Lethamyr",
+      "summary": "Sumo with dangerous quicksand!",
+      "description": "Rocket League, but with Quicksand! Welcome to another addition to the Sumo series on my site. There are 4 islands with pyramids you can climb and hide from your friends. Don’t fall into the quicksand though! This one is a ton of fun with demo derby settings (use the custom rumble plugin to customize powerups on bakkesmod)",
+      "recommendedSettings": "Time: Unlimited\nDemo: Disabled\nRumble: Demo Derby or custom powerups plugin",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/65UlDfHBAwFfrwVfdsAmM4vrVppKQQkNPeoQrF3AETfL9yV1yTKt9cQlitJo3XSa.jpg",
+      "homepage": "https://lethamyr.com/maps/110",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1hmkLBmaFy1bixROBzi1a7WJaLbdsTyYc/view",
+        "filename": "Quicksand Sumo.zip",
+        "size": 129998517
+      }
+    },
+    {
+      "id": "lethamyr-rainbow-road-64",
+      "name": "Rainbow Road 64",
+      "author": "Lethamyr",
+      "summary": "A favourtie Mario Kart map brought to Rocket League",
+      "description": "Rainbow Road 64 brought to life inside Rocket League! This is the first race map I’ve created. These are models ripped from the N64 game and imported into a map that works for Rocket League. Be careful not to fall off the map! I didn’t have checkpoints in this map quite yet.",
+      "recommendedSettings": "Boost: Up to you!\nTime: Unlimited",
+      "tags": [
+        "Free For All",
+        "Race"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/oY100UD59AoPeESQXZpbFrVFVn8YPDx79uBarQE5YkGR1aznfHm2tZ1lHtNsKEwx.jpg",
+      "homepage": "https://lethamyr.com/maps/22",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1JxwfpjLRohCDgNtjWg5S0hDZfZP5N4D1/view",
+        "filename": "Rainbow Road 64.zip",
+        "size": 2880179
+      }
+    },
+    {
+      "id": "lethamyr-random-goal-locations-arabian-nights",
+      "name": "Random Goal Locations (Arabian Nights)",
+      "author": "Lethamyr",
+      "summary": "Rocket League, but the goal could literally be anywhere!",
+      "description": "This map features random goals every time the kickoff starts! I created this game mode inside my new standard Rocket League field. There’s no rhyme or reason for this to exist, but it does…",
+      "recommendedSettings": "Any settings work!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/lXGCYizhKuqKM3hQZ31fKc8YVimGCBsXGVhON3Cf8gmiCB3TyPq06B8HBe0VEt67.jpg",
+      "homepage": "https://lethamyr.com/maps/119",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/109SFUqma4PiUsXHmZ9jf5GLJBUUCPtls/view",
+        "filename": "Random Goal Locations.zip",
+        "size": 211175141
+      }
+    },
+    {
+      "id": "lethamyr-rapid-fire",
+      "name": "Rapid Fire",
+      "author": "Lethamyr",
+      "summary": "Hungry Hungry Hippos? I’m in!",
+      "description": "Inspired by Hungry Hungry Hippos, I created a 4-player (or 2-team) ball collection game mode! There are 3 different ball types:\nStandard Ball: 1 Point\nDropshot Ball: 2 Points\nHeatseeker Ball: 5 Points\nScore the most before the time runs out!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nSpike Rush is very fun on this map!",
+      "tags": [
+        "Free For All",
+        "Mini Games",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ieCLJboHpfbzZ3AjBg4x5Ny4vYlzvzdRCLs0cKTTReWCowit1KRxEdYnyRTRV0Pv.jpg",
+      "homepage": "https://lethamyr.com/maps/51",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1CU8qRmqIbJ7rdBJacpr9YvW98FobKeqY/view",
+        "filename": "Rapid Fire.zip",
+        "size": 6657447
+      }
+    },
+    {
+      "id": "lethamyr-rocket-labs-revolver",
+      "name": "Rocket Labs: Revolver",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League in a Labs environment, 3 goals in the floor!",
+      "description": "This map was an attempt at making a similar map to Rocket League’s own labs map, Loophole. Definitely one of my favorite projects based on how clean the map is. There are 3 goals (holes in the floor) for each team with a pillar in the center. Score in any of the 3 goals to score points! I’ll be making variations of game modes on this map soon.",
+      "recommendedSettings": "Standard gameplay works just fine on this map!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/JXt8sqDLnOKLzXfn63ejlA6rDslucIWXOr6IuBHpE6T4dRYi0LZWCdyRr3khEavD.jpg",
+      "homepage": "https://lethamyr.com/maps/95",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1WBv-aCkvPGhGwp0eRn0FRlws4Ul04Txl/view",
+        "filename": "Rocket Labs Revolver.zip",
+        "size": 7538120
+      }
+    },
+    {
+      "id": "lethamyr-roulette",
+      "name": "Roulette",
+      "author": "Lethamyr",
+      "summary": "A giant Roulette table turned into a field!",
+      "description": "The whole map spins! I created a giant Roulette table with a TON of goals. Each goal is worth different points for each team. Don’t score in the 0 points slot or you immediately lose the game! Quite the gamble…",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ZWSvCE8RXRCod9Lw5IljNFDQTLKYuknfe7cQoPM5h4F4JDJzugKbBNrnw8bEyKoK.jpg",
+      "homepage": "https://lethamyr.com/maps/151",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1KOZXYoCwSeAMneLmgh05dvug062LYr8m/view",
+        "filename": "Roulette.zip",
+        "size": 70489965
+      }
+    },
+    {
+      "id": "lethamyr-shipment",
+      "name": "Shipment",
+      "author": "Lethamyr",
+      "summary": "The classic Call of Duty Map now in Rocket League!",
+      "description": "I brought Call of Duty into Rocket League by recreating the Shipment map we all know and love! The goals are inside the open shipping containers on each team’s side.",
+      "recommendedSettings": "Boost: Unlimited\nBall Max Speed: Fast\nBall Physics: Light\nBall Bounciness: High",
+      "tags": [
+        "Mini Games",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/7wWjD5Lg7FXsZ1sppF3BUh02aVF9WsHZ583t3B3Nyc9Xq6eU1MziKGh791wPazXo.jpg",
+      "homepage": "https://lethamyr.com/maps/12",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1MjqsUtNXVb3lPA-7A8EXIWCkWWkCe4fw/view",
+        "filename": "Call of Duty Shipment.zip",
+        "size": 121670479
+      }
+    },
+    {
+      "id": "lethamyr-shuffleboard",
+      "name": "Shuffleboard",
+      "author": "Lethamyr",
+      "summary": "Play a fun game of Shuffleboard in this map",
+      "description": "Play shuffleboard with your friends in Rocket League! Spawn in the puck and slide it down the track to try and score as many points as you can! Feel free to make up your own rules to make it more fun for your group.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nBall Type: Puck",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/KdSkstoxZubfNgyc7FhnRdDPizObLV82wdsm6XBNlgLMgK8qpVinN0yhDPYRwSlW.jpg",
+      "homepage": "https://lethamyr.com/maps/31",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1brD-ccDOdTr4DRhrOt3i_kY0TcZl-0f1/view",
+        "filename": "Shuffleboard.zip",
+        "size": 18151313
+      }
+    },
+    {
+      "id": "lethamyr-sideswipe-dropshot",
+      "name": "Sideswipe Dropshot",
+      "author": "Lethamyr",
+      "summary": "Dropshot: Sideswipe edition!",
+      "description": "Welcome to a proof-of-concept for Sideswipe: Dropshot! This map features a line of tiles instead of the usual full floor, for obvious reasons.",
+      "recommendedSettings": "Game Mode: Dropshot\nBoost: Unlimited",
+      "tags": [
+        "Dropshot"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/tdjawtwxOtMrM94JrfJZ06ONw6UaslAINMyUHKbFtgct5uZLBw5MNBXSJNi130Wn.jpg",
+      "homepage": "https://lethamyr.com/maps/142",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1jwO9v2tCpdcUEk8_hCt9QqAevgpSO91u/view",
+        "filename": "Sideswipe Dropshot.zip",
+        "size": 4564227
+      }
+    },
+    {
+      "id": "lethamyr-sizz-s-building",
+      "name": "Sizz’s Building",
+      "author": "Lethamyr",
+      "summary": "Sizz asked me to make this…",
+      "description": "Sizz asked me to make this… don’t ask",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings are very helpful, and so is Rumble",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/mp19GtWBWed1iMVDWWahx9WUIIqibSgUkbZazARGrZgiDsvi6GZW3xeB9rsnMEZO.jpg",
+      "homepage": "https://lethamyr.com/maps/129",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1b-rQymcsJyi2WAUYa4uXFkjmh9ToPVlG/view",
+        "filename": "Sizz Building.zip",
+        "size": 20205176
+      }
+    },
+    {
+      "id": "lethamyr-skyscraper",
+      "name": "Skyscraper",
+      "author": "Lethamyr",
+      "summary": "Classic Mario Kart 64 mini game brought to Rocket League",
+      "description": "Another classic battle map from Mario Kart 64, turned into a standard map in Rocket League! The 4 goals are in the colored openings of the skyscraper. You can come up with your own game modes or play free for all with 4 different colors!",
+      "recommendedSettings": "Boost: Unlimited\nBoomer ball is also quite fun!",
+      "tags": [
+        "Free For All",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/nXcFhGK5mhzoEk5pZTbHTblr4XkVL2rTp7sQ3KpJ9BP5n9nkbquWehx8MHIwhWXP.jpg",
+      "homepage": "https://lethamyr.com/maps/36",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/11JAzhuUK0A6RCJ496UGx3afxVCJZ3MBt/view",
+        "filename": "Skyscraper.zip",
+        "size": 1139562
+      }
+    },
+    {
+      "id": "lethamyr-slantshot",
+      "name": "Slantshot",
+      "author": "Lethamyr",
+      "summary": "Dropshot but the goals are on a slanted hill!",
+      "description": "Rocket League Dropshot… but on the slanted floor this time around! Don’t worry if the ball is completely black, it’s intentional. For “some” reason, Rocket League really doesn’t like Dropshot tiles being on an angle, so I had to do some voodoo magic to make this one work, and the end result is a black ball. But this map is really fun with Boomer mode!",
+      "recommendedSettings": "Game Mode: Dropshot\nSlight boomer or rumble are great!",
+      "tags": [
+        "Dropshot"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/51hbN7pq2jgHqX3gqavpLKlEgZ2RS6N3LFMmFndQkuVjvnZa6QB1aWSgLs69cYxT.jpg",
+      "homepage": "https://lethamyr.com/maps/93",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1llYcV1djdXOBTY7w6kvmiztw3XjC58SA/view",
+        "filename": "Slantshot.zip",
+        "size": 4126501
+      }
+    },
+    {
+      "id": "lethamyr-sling-puck",
+      "name": "Sling Puck",
+      "author": "Lethamyr",
+      "summary": "Sling Puck board game in Rocket League!",
+      "description": "This map is based on a real-life board game where you use the elastic to get all of your pucks onto the opponent’s side… So I brought it to life in Rocket League! 5 pucks spawn on each side, be the first to clear all of the pucks to win the round!",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Tabletop"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/F82JXQClY2nyZFsHUWevOSXa9rftEu4H0MIB6KkwNpkOHHSsDNzxwVmI56xU6OQb.jpg",
+      "homepage": "https://lethamyr.com/maps/74",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1aq3W9rga5GJq1uILY8ugck3D-AH-hJzl/view",
+        "filename": "Sling Puck.zip",
+        "size": 256558892
+      }
+    },
+    {
+      "id": "lethamyr-smash-bros-sumo",
+      "name": "Smash Bros. Sumo",
+      "author": "Lethamyr",
+      "summary": "Smash Bros. in Rocket League!",
+      "description": "Smash Bros. meets Rocket League! This 2D platforming map was built similarly to my 2D Mario Bros. map. Knock your friends off the stage on the sides or the pit to gain a point for your team!",
+      "recommendedSettings": "Time: 10 Minutes\nDemo: Disabled\nRumble: Demo Derby\nRECOMMENDED: Bakkesmod plugin - Smash plugin\nhttps://bakkesplugins.com/plugins/view/312",
+      "tags": [
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/vNfTUAhT6wTQH0cR2uLLQ26cBykQ9fQpcg0H6VlVsKy6bcdr4LLMfX770NMZl73Y.jpg",
+      "homepage": "https://lethamyr.com/maps/133",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1NQFTvN8nITC6Njydj23vE1iRspriAXgL/view",
+        "filename": "Smash Bros.zip",
+        "size": 734524
+      }
+    },
+    {
+      "id": "lethamyr-spaceseeker",
+      "name": "Spaceseeker",
+      "author": "Lethamyr",
+      "summary": "Heatseeker in space!",
+      "description": "Heatseeker in space! What more could you want? I created a giant cage to contain this crazy heatseeker ball with zero gravity. Be careful of when the ball goes behind the goal, the ball has a mind of its own. Enjoy!",
+      "recommendedSettings": "Boost: Unlimited\nBoost Strength: 2x",
+      "tags": [
+        "Heatseeker"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/aIY6H8RdGtGlDsgAwv71rvuZrSjKq3grTs4lEu4pHDusAaPvExPjTdy8kgm0YJae.jpg",
+      "homepage": "https://lethamyr.com/maps/72",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1xeUuBVnSFAabvTXz2NYpiI3aiVrIzC7P/view",
+        "filename": "Space Seeker.zip",
+        "size": 17541720
+      }
+    },
+    {
+      "id": "lethamyr-spaceship",
+      "name": "Spaceship",
+      "author": "Lethamyr",
+      "summary": "An abandoned spaceship ready to be explored!",
+      "description": "Explore the depths of an abandoned Spaceship, or hide with your friends! This map is gigantic, so I’ve provided 2 versions to help with peoples’ PCs if they find the full version reduces framerate.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited",
+      "tags": [
+        "Free For All",
+        "Hide and Seek"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/jFA6DZzINdBMbnS8QtyyQcgWxC4laKgxzcnB728c5haWcDv92VJmLyUoFOseYqVn.jpg",
+      "homepage": "https://lethamyr.com/maps/47",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1OcNrZaie_ov39tdSGfWway6OMaM8wJIK/view",
+        "filename": "Spaceship - FULL SIZE.zip",
+        "size": 473088797
+      }
+    },
+    {
+      "id": "lethamyr-speed-training-whack-a-mole",
+      "name": "Speed Training: Whack a Mole",
+      "author": "Lethamyr",
+      "summary": "Practice your car control, boost efficiency, aerials, and recoveries all in one map!",
+      "description": "Practice your car control, boost efficiency, aerials, and recoveries all in one map! Whack a mole comes with different settings you can change to increase the difficulty. Smack the moles (or ball) to gain points within the time limit!",
+      "recommendedSettings": "Freeplay",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/rO7vfWGYq40bcEzCPrDN1GrAvzH8ZM5quBIjzKtbHJuqMc8lDtGCr2fZZGLjYxoD.jpg",
+      "homepage": "https://lethamyr.com/maps/155",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1FBwNfnFsysjqKMvOYiCFDMuBKx3Mn6Eg/view",
+        "filename": "Training Whack a Mole (Mole).zip",
+        "size": 18819528
+      }
+    },
+    {
+      "id": "lethamyr-sphereshot",
+      "name": "Sphereshot",
+      "author": "Lethamyr",
+      "summary": "Sphereshot is Dropshot with spherical goals!",
+      "description": "Sphereshot is Dropshot with spherical goals! There are 2 ball-shaped goals for each team, and the tiles are made up of unique shapes. This circular map plays out very differently to any other Dropshot map, enjoy!",
+      "recommendedSettings": "Game Mode: Dropshot",
+      "tags": [
+        "Knockout"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/twMmrkFqSBHdd4Z9GbBH0H1lUJK7lgUmjNNPXIKHHoq1JZPqP5G8zjuG58vqbgqg.jpg",
+      "homepage": "https://lethamyr.com/maps/167",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1CpiZXN4vrykM3IKnNbEFYnJhJZIuZMyr/view",
+        "filename": "Sphereshot.zip",
+        "size": 7687148
+      }
+    },
+    {
+      "id": "lethamyr-split",
+      "name": "Split",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League split in half!",
+      "description": "This map takes standard Rocket League and splits it in half. Since the map is split in half, 2v2 is the minimum game mode for this map, and make sure to disable demos!",
+      "recommendedSettings": "Team Size: 2v2+\nDemos: Disabled",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/VPmLCY5m9q9y4f71xrpYXxQPGRsBGMQo1rPN07h6TY76vxOefmz1qjdOTFxEvzQE.jpg",
+      "homepage": "https://lethamyr.com/maps/86",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1TqPw_VBGaiDZZoOwJaaTruvPqw42dbN7/view",
+        "filename": "Split.zip",
+        "size": 466387307
+      }
+    },
+    {
+      "id": "lethamyr-squash-court",
+      "name": "Squash Court",
+      "author": "Lethamyr",
+      "summary": "Super fun game of squash!",
+      "description": "Play Squash with a Rocket League ball! The court is to scale, and plays out just like the game in real life. Serve above the middle red line, and the possession changes when the ball hits the back wall. A ball is out if it touches any yellow parts of the wall! 1 bounce is allowed before a player or team loses the round.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nBall Physics: Light\nGoal Reset: Disabled",
+      "tags": [
+        "Mini Games",
+        "Sports"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Ns9GPQ6tjmR6Mtg5qRxghndzbkHgIUOTy7FBq4nu1ZYX4gr38hdZ7bH9b5idu19f.jpg",
+      "homepage": "https://lethamyr.com/maps/35",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1CRuHZWRestvJ7FejIBzfkMleWsTM4onv/view",
+        "filename": "Squash Court.zip",
+        "size": 18323902
+      }
+    },
+    {
+      "id": "lethamyr-squid-game-glass-bridge",
+      "name": "Squid Game - Glass Bridge",
+      "author": "Lethamyr",
+      "summary": "A glass bridge based on the Netflix series, Squid Game!",
+      "description": "Welcome to the Glass Bridge, inspired by the Netflix series Squid Game. I tried my best to make the map look as close to the original game as possible. Jump from glass panel to glass panel and try to make it across the entire room. If you fall, you’ll get demo’d, but you can try again. Give yourself a minimum life challenge or mess with your friends!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Disabled",
+      "tags": [
+        "Mini Games"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Tz5XKOaBuNCnWXClyH0PJGfAynD1B6eGxoVxstQ4pP4EYPLEtQ1SegLSY6kp2j6k.jpg",
+      "homepage": "https://lethamyr.com/maps/121",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1sbXYHzghxBAr_6fAb_8HYGqgqC5dluW6/view",
+        "filename": "Squid Game Glass Bridge.zip",
+        "size": 82615801
+      }
+    },
+    {
+      "id": "lethamyr-standard-dropshot",
+      "name": "Standard Dropshot",
+      "author": "Lethamyr",
+      "summary": "Score in the goal or the floor, your choice!",
+      "description": "Standard Dropshot is probably my most polished map to date. This is the ultimate combination between Standard Rocket League and Dropshot, including both the regular goals, as well as Dropshot tiles along the entire floor. The boost pads exist and float on the floor, but the ball won’t collide with them!",
+      "recommendedSettings": "Game Mode: Dropshot",
+      "tags": [
+        "Dropshot",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/SlfRhlCO5dpZd4hrpnmpzMHOF3eo0Zhiw3xUTb1tPCFVLBi4aHzotYfZT9WgYKnB.jpg",
+      "homepage": "https://lethamyr.com/maps/56",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1UtRrthfxqZNjasXtDI85VZsEASTZeCTN/view",
+        "filename": "Standard Dropshot.zip",
+        "size": 5688305
+      }
+    },
+    {
+      "id": "lethamyr-standard-garrison",
+      "name": "Standard Garrison",
+      "author": "Lethamyr",
+      "summary": "A standard variation of Garrison!",
+      "description": "This is a standard spin on the mode I created called Garrison! Keep the ball in the opponent’s half to take away their HP. Test your friends’ offense!",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/prxqf35qJ3rBwKW9tcEuWfReM76RVpn58wXb5IJmlgGWe1W1BuefFnsIA50ae4vS.jpg",
+      "homepage": "https://lethamyr.com/maps/143",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1yPI7yZAYQ78XTGP5AxalOA0ew3NjAELk/view",
+        "filename": "Standard Garrison.zip",
+        "size": 97643725
+      }
+    },
+    {
+      "id": "lethamyr-sumo-cagematch",
+      "name": "Sumo Cagematch",
+      "author": "Lethamyr",
+      "summary": "Demo each other to win!",
+      "description": "Technically this is the 6th map to join the Sumo Series of maps, but in this version it’s all about demolitions! Be the last one standing to win. Feel free to experiment with demo on contact, or play a skillful match of full-speed demos!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Recharge Fast\nDemo: Friendly Fire (or Contact FF)",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/GPVNRzQwCwHVo5FNEu2MCZhOlTfrkfd2KOxomRbReQHQ99Gdb3OfwqRecsre4zS0.jpg",
+      "homepage": "https://lethamyr.com/maps/67",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1UKFNv8Ej55GgqeaEExu69mbAVDem_Ijt/view",
+        "filename": "Sumo Cagematch.zip",
+        "size": 36340118
+      }
+    },
+    {
+      "id": "lethamyr-tetherball",
+      "name": "Tetherball",
+      "author": "Lethamyr",
+      "summary": "A classic game of Tetherball in Rocket League!",
+      "description": "I finally got Tetherball in Rocket League to work, and it’s amazing! The heatseeker ball swings around the center pole, and the goals are on the outer edges of the circular field! Get the proper angle and power or cheat up on the other side of the field! \nHuge thanks to glhglh and Cinderblock for help getting this to work!",
+      "recommendedSettings": "REQUIRED: Plugin - https://bakkesplugins.com/plugins/view/101\nBoost: Unlimited",
+      "tags": [
+        "Heatseeker",
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/R7hRWjwjfJ27bwc9VM4LhEREWsy81bcQN9SVscNOEoHrJp6skjRoWH0gcIOIcxv2.jpg",
+      "homepage": "https://lethamyr.com/maps/41",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1P7AXB9-pnb1Szu5bzIOM7lSdXpZRFFN_/view",
+        "filename": "Heatseeker Tetherball.zip",
+        "size": 34025600
+      }
+    },
+    {
+      "id": "lethamyr-tetris",
+      "name": "Tetris",
+      "author": "Lethamyr",
+      "summary": "Scattered Tetris blocks and goals!",
+      "description": "Welcome to Rocket League Tetris! This standard field is one of the craziest looking maps I’ve built in a while. There are 3 goals on the back wall of Tetris blocks worth 1-3 as you go up the wall. This map has ZERO curvature, so beware of popping the ball on sharp corners (I’m kidding, but it can be rough)",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings are very good",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/EBoDWLh6R7JgUGfQWxNKQ7setvXIth94CqILqNpXeoRJGTqhonfLqFw4UK6NS5Pg.jpg",
+      "homepage": "https://lethamyr.com/maps/106",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/10w-5A1RvZ8uPhJszya5qISr-mMpw__-U/view",
+        "filename": "Tetris.zip",
+        "size": 1792173
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-ascent",
+      "name": "The Apex - Ascent",
+      "author": "Lethamyr",
+      "summary": "Competitive Quidditch by gidek",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Unlimited Boost2x Boost StrengthSuper Light BallSuper Fast BallHigh Bounciness",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5SFW5VG2D2H9J4A4K9HETY.jpg",
+      "homepage": "https://lethamyr.com/maps/184",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1zOhYa_jSTiyObpfhW8LbY-ZO0CXNC3YG/view",
+        "filename": "TheApex_Ascent.udk",
+        "size": 259071630
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-barrage",
+      "name": "The Apex - Barrage",
+      "author": "Lethamyr",
+      "summary": "Volleyball by Derzo and MrPhil",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Unlimited BoostBeach BallLight Ball",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5SQQ8P90DJ9G386RJCCZNY.jpg",
+      "homepage": "https://lethamyr.com/maps/185",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1lkj4zjZ_pNPgrDBr17vlWBasjOWxeJw4/view",
+        "filename": "TheApex_Barrage.udk",
+        "size": 254930393
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-blacktop",
+      "name": "The Apex - Blacktop",
+      "author": "Lethamyr",
+      "summary": "Standard map by SimpleShark",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Soccar",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5SV6THPWJG714NQ5EC3QT6.jpg",
+      "homepage": "https://lethamyr.com/maps/186",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1OiedjQ8ju9H7gSmG2ao2-uAFyFuPdwRR/view",
+        "filename": "TheApex_Blacktop.udk",
+        "size": 256336406
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-colossus",
+      "name": "The Apex - Colossus",
+      "author": "Lethamyr",
+      "summary": "Big Hoops by Mr. Swaggles",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Hoops",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5SYFYPV1GREF6XZNFRX6NS.jpg",
+      "homepage": "https://lethamyr.com/maps/187",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1-7s_meLxpc8xOIENGcW3PiSVf6CkdSzk/view",
+        "filename": "TheApex_Colossus.udk",
+        "size": 257900567
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-convergence",
+      "name": "The Apex - Convergence",
+      "author": "Lethamyr",
+      "summary": "Galley-Oops by Mr. Swaggles",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Hoops",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5T0RBY5Y743T6HVW3MHWCT.jpg",
+      "homepage": "https://lethamyr.com/maps/188",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1VpzzFqLidXQCYm3kDd8vcD_Gop0PfLtn/view",
+        "filename": "TheApex_Convergence.udk",
+        "size": 268221664
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-crucible",
+      "name": "The Apex - Crucible",
+      "author": "Lethamyr",
+      "summary": "Hoops Stadium by Leth",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Hoops",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5T27ZY1AWX7HGXT3RSM8S1.jpg",
+      "homepage": "https://lethamyr.com/maps/189",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1azHNC2P2f3pl3m_aVW_1vs8NYA_etCLu/view",
+        "filename": "TheApex_Crucible.udk",
+        "size": 287846432
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-exfoliation",
+      "name": "The Apex - Exfoliation",
+      "author": "Lethamyr",
+      "summary": "The Bathtub by SimpleShark",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Soccar",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5T3TMKTY4H0JGP8WB167C1.jpg",
+      "homepage": "https://lethamyr.com/maps/190",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1pj5PPCHuqgTAjNYDcnA0JaJ8nctEcc9l/view",
+        "filename": "TheApex_Exfoliation.udk",
+        "size": 265848832
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-gradient",
+      "name": "The Apex - Gradient",
+      "author": "Lethamyr",
+      "summary": "RMP Arena by Nickster",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Soccar",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5T4TH8WXWJ8VM938RYGW3P.jpg",
+      "homepage": "https://lethamyr.com/maps/191",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ZHOw8IDkVWrSUpzxgUn_0FT6-YciaCoe/view",
+        "filename": "TheApex_Gradient.udk",
+        "size": 256980441
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-halo",
+      "name": "The Apex - Halo",
+      "author": "Lethamyr",
+      "summary": "Floating Rings by Leth",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Soccar",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5T5XG7P8YT311AWF9MSYF2.jpg",
+      "homepage": "https://lethamyr.com/maps/192",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1UuFUoyqQmM_Z5-C6j09onO-w44KuwaJ8/view",
+        "filename": "TheApex_Halo.udk",
+        "size": 268687905
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-overpass",
+      "name": "The Apex - Overpass",
+      "author": "Lethamyr",
+      "summary": "Highland Loop by Trinal",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Soccar",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5T77RVDHRDJQF356VT9PJE.jpg",
+      "homepage": "https://lethamyr.com/maps/193",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ku2VuDCSGz0V8gkaRU8T5vpaySASzBax/view",
+        "filename": "TheApex_Overpass.udk",
+        "size": 298658384
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-prominence",
+      "name": "The Apex - Prominence",
+      "author": "Lethamyr",
+      "summary": "Cross Bridge by Leth",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Soccar",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5T8EW7SGPPNFPR0DM65E4G.jpg",
+      "homepage": "https://lethamyr.com/maps/194",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1jg9Vn0_gGLzx6alw-oyf8Y0lZqzthHYA/view",
+        "filename": "TheApex_Prominence.udk",
+        "size": 259386357
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-shatter",
+      "name": "The Apex - Shatter",
+      "author": "Lethamyr",
+      "summary": "Wallbreaker by glhglh",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Dropshot",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5T9SY8HHVBY0RP4WS2KDGJ.jpg",
+      "homepage": "https://lethamyr.com/maps/195",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1blJG0oJ6PiT0yDcoFi42BVfB0NsS0kCN/view",
+        "filename": "TheApex_Shatter.udk",
+        "size": 252541734
+      }
+    },
+    {
+      "id": "lethamyr-the-apex-vertigo",
+      "name": "The Apex - Vertigo",
+      "author": "Lethamyr",
+      "summary": "The Tall One by MissMacho",
+      "description": "As seen at The Apex, the $10,000 LAN hosted by Lawler and Lethamyr.",
+      "recommendedSettings": "Soccar",
+      "tags": [],
+      "thumbnail": "https://lethamyr.com/storage/01JF5TAYQGRS1M5VS77STGC3XK.jpg",
+      "homepage": "https://lethamyr.com/maps/196",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1j1ZtUfMOAayd-3uvhbhPcXTKZglSejaW/view",
+        "filename": "TheApex_Vertigo.udk",
+        "size": 269147934
+      }
+    },
+    {
+      "id": "lethamyr-the-bubble",
+      "name": "The Bubble",
+      "author": "Lethamyr",
+      "summary": "The bubble has zero gravity! Don’t fall off!",
+      "description": "Welcome to the Rocket League Bubble, the 5th installment of the Sumo Series! This map features a ring around the outside, with a giant bubble in center floating above. This bubble has zero gravity! Tread carefully, and try not to fall into the water!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Recharge Slow\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/9BpKRU1NQ9NKdbOv3kBsiXzK4fcBeMmzpBKxdsMKAe87ReycoA7UhjME82YClNmG.jpg",
+      "homepage": "https://lethamyr.com/maps/57",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1YW2vbn1jyKt_ShoIIVaYCOPHC515rxxz/view",
+        "filename": "The Bubble.zip",
+        "size": 23940209
+      }
+    },
+    {
+      "id": "lethamyr-the-core",
+      "name": "The Core",
+      "author": "Lethamyr",
+      "summary": "Each goal is protected by 13 layers of dropshot rings",
+      "description": "The Core is a Dropshot map recreated from my Uplink map. Each goal is protected by 13 layers of dropshot rings. Break down the walls to the core to win!",
+      "recommendedSettings": "Game Mode: Dropshot\nGoals: First to score 1",
+      "tags": [
+        "Dropshot"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/nfknZBwCWc9WGMEidIQf5mArT2ESI0UwT7ET4x7VssKAgTnjkEj0yCpPFFwzKODC.jpg",
+      "homepage": "https://lethamyr.com/maps/169",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1bVlG0WQCiywCmnioSGeHFEL9j6JoDxiy/view",
+        "filename": "The Core.zip",
+        "size": 8562421
+      }
+    },
+    {
+      "id": "lethamyr-the-elements",
+      "name": "The Elements",
+      "author": "Lethamyr",
+      "summary": "Earth, Water, Air & Fire",
+      "description": "This 6-month project combines the 4 basic “elements” into one giant map: Earth, Water, Air & Fire. There are 3 rooms with goals on each team’s end, with water splitting the sides.",
+      "recommendedSettings": "Boost: Unlimited\nHighly suggest Rumble!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/N6BwcTqBylst940j0HQ7pOjItptBcoOcRhoIw6AWwhUkhLQqJ65tJc7pxvET3H2D.jpg",
+      "homepage": "https://lethamyr.com/maps/144",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1nDDqgNQ3AAgq3PtcKJiKPFY5zfcNsJ2e/view",
+        "filename": "The Elements.zip",
+        "size": 22320865
+      }
+    },
+    {
+      "id": "lethamyr-the-floor-is-lava",
+      "name": "The Floor is Lava",
+      "author": "Lethamyr",
+      "summary": "Don’t touch the floor! This awesome sumo map is spicy",
+      "description": "The second Sumo map of the series! This time the standard field has been overrun by lava and you have to avoid falling in. Feel free to play Free for All or Team Deathmatch, last team standing wins!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Recharge Fast\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/rE2SZ64sliTuMn7ifMZEtmzf8THaClEDend8cfPzIzAtHQKKFCdYN6EFBHbGxg14.jpg",
+      "homepage": "https://lethamyr.com/maps/29",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1A0BhB4qB_DkIVKF2x4_Aq49v7r-rWB39/view",
+        "filename": "The Floor is Lava.zip",
+        "size": 52900735
+      }
+    },
+    {
+      "id": "lethamyr-the-hive",
+      "name": "The Hive",
+      "author": "Lethamyr",
+      "summary": "Fight to repair your hive before the opponents!",
+      "description": "This new game mode was started a year ago by myself, and recently Mr. Swaggles joined me to do a lot of the final details. We worked together for countless hours to create a brand new field that has a unique feel and look. You pair up with teammates in opposite rooms to repair your own team colored room, while stopping the other team from repairing in theirs.",
+      "recommendedSettings": "Time: Unlimited\nBoost: Recharge or Unlimited\nTeam Size: 2v2+\nKNOWN ISSUES:\n- Goal explosions only work for host\n- Rare issue of major fps lag, only solution is to restart rocket league for everyone",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/GWcj4Hue18XdBYyaOf8w5vyvIHSScdb4u26KqDl8DkT3ySjnZmIAnnVKFjIePUD8.jpg",
+      "homepage": "https://lethamyr.com/maps/84",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1DomCdxuD3EnOZAHCO0tLez4iXxRrpsUT/view",
+        "filename": "The Hive.zip",
+        "size": 59553566
+      }
+    },
+    {
+      "id": "lethamyr-the-immortals-progressive-tower",
+      "name": "The Immortals Progressive Tower",
+      "author": "Lethamyr",
+      "summary": "Boost Your Coverage as you climb through 20 unique levels",
+      "description": "Map last updated 07/19/23 20:30\nBoost Your Coverage as you climb through 20 unique levels in the most comprehensive test of skills ever created for Rocket League. Speed, timing, shot accuracy, aerial control, boost usage, and much more will be pushed to the absolute limit. \nThis map utilizes Blaku's Map Expansion Plugin to save your times in between loads! The ID for the plugin is 294.\nContest Details:\n- $1,000 to the fastest person in 24 hours (Ends 7/18 9am PST)\n- $4,000 to the fastest people after 2 weeks (Ends 7/31) \n- 1st: $2,500\n- 2nd: $1,000\n- 3rd: $500\nAll submitted runs will be validated by the Rocket League Speedrun Community. Please see this site https://www.speedrun.com/ipt/ for submissions and the full list of rules.\nSpecial thanks to all of our playtesters! \n- Gyro \n- Rapid\n- LeeroyJenkinsOG\n- platymusPrime\n- ShadowedSkulls\n- Tredz\n- Kronovi\n- gidek\n- Plumato\n- kieo\n- ThundaSurge\n- Impulse",
+      "recommendedSettings": "Freeplay\nYou’ll need Workshop textures to see some materials in the map. Download them here: https://drive.google.com/file/d/1XW6jxckEkn2JjigwxQAgNu1LXLKb5KrE/view?usp=sharing\nGo to your game storage location (C:\\Program Files (x86)\\Steam\\steamapps\\common\\rocketleague\\TAGame\\CookedPCConsole) <— your location may be different\nDrop the 14 files in CookedPCConsole",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Jg2UCx6kjQ4UrAbrqE8puY1RkR4wtrmzEhEd4CI1DZAdG2D71nDSkJ0kbcO8dvJU.jpg",
+      "homepage": "https://lethamyr.com/maps/173",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1ldmB0X61TJstg1yCTVTGtKxhkHOAGZm0/view",
+        "filename": "Immortals Progressive Tower.zip",
+        "size": 64797488
+      }
+    },
+    {
+      "id": "lethamyr-the-ring-of-fire",
+      "name": "The Ring of Fire",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League in the circus, with a ring of fire!",
+      "description": "This map is the first of possibly many inside a brand new Rocket League Circus tent I created. This map features 2 ramps with a ring of fire in the center of the field, hanging from the ceiling. Don’t worry! The flames won’t hurt the cars. Score in the colored end of the ring to score a point for your team.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer mode is pretty fun",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/s4GY5mJc63IY9h3PdOC88uvPI9QseTHy3qTlU1oezwnekBL1XZQezFCGPbbPx2qT.jpg",
+      "homepage": "https://lethamyr.com/maps/92",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1pemUGCgZl4u_N7x8CCCqJBAQUWSrg1vY/view",
+        "filename": "The Ring of Fire.zip",
+        "size": 77106176
+      }
+    },
+    {
+      "id": "lethamyr-top-down-rocket-league",
+      "name": "Top Down Rocket League",
+      "author": "Lethamyr",
+      "summary": "Play Rocket League from above!",
+      "description": "Rocket League with a top-down view. Simple as that.",
+      "recommendedSettings": "Boost: Unlimited\nBoomer Settings can make the game mode pretty interesting",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/enwiYcJvY4h8R7xMlfz7Tey5GrBghB4ZdiC2pNEQsnKDqHYQ6DgsOOjFLumSRr4M.jpg",
+      "homepage": "https://lethamyr.com/maps/135",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1Afc0ygwhvTD0ZwUez9mJDdjxm5c5pCem/view",
+        "filename": "Top Down Rocket League.zip",
+        "size": 1701340
+      }
+    },
+    {
+      "id": "lethamyr-top-golf",
+      "name": "Top Golf",
+      "author": "Lethamyr",
+      "summary": "Top Golf in the US",
+      "description": "This is a Rocket League version of the popular Top Golf in the US! Take turns taking shots down the course to try and score big points! To keep things interesting, the score positions change each round!",
+      "recommendedSettings": "Boost: Unlimited\nTime: Unlimited\nBall Physics: Light\nBall Max Speed: Super Fast\nRumble: set the only powerup to Power Hitter (Rocket Plugin)\nSet your own score limit!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/66fjlkpxuN2iyUmKTqWMpg5cnDNTw2hRiJ2qj1wHtY5B3UKFSSmfwKbLPA3TK4Hp.jpg",
+      "homepage": "https://lethamyr.com/maps/172",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1WeVBh9-e4kh5h9BATMXHCupyGox152gb/view",
+        "filename": "Top Golf.zip",
+        "size": 69932561
+      }
+    },
+    {
+      "id": "lethamyr-toronto-track",
+      "name": "Toronto Track",
+      "author": "Lethamyr",
+      "summary": "Race in Downtown Toronto!",
+      "description": "Race in Downtown Toronto, my nearby city! There are crates covering the race track, and you can recover boost by running over the boost pads spread across the race.",
+      "recommendedSettings": "Time: Unlimited\nRumble: Demolition Derby\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Hide and Seek",
+        "Race"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/MIbS67ddC5BdBhLbUo3i98F7PdQD2zkHwPXFdOV10yyyp74Sbj8W2q03E4ulBlfr.jpg",
+      "homepage": "https://lethamyr.com/maps/62",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1mnsAt_FrCZYPRh1d5-MeZ5fv65Qtv8Pe/view",
+        "filename": "Toronto Track.zip",
+        "size": 25815549
+      }
+    },
+    {
+      "id": "lethamyr-triple-goal",
+      "name": "Triple Goal",
+      "author": "Lethamyr",
+      "summary": "Each team has 3 goals!",
+      "description": "This is my very first map creation. I was testing models and the basics of Rocket League custom maps. There are 3 goals on each side of the field, and that’s all there is to it! The ball MAY disappear randomly… Did I mention this was my first creation ever?",
+      "recommendedSettings": "Boost: Unlimited",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/0sZeemn0mjb9jVIVEJ4o81h0a3rvKKcJadsprb20JhpBoBkLViNw512rSjStNVgL.jpg",
+      "homepage": "https://lethamyr.com/maps/1",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1QiM9_Hm7ZyLuYNWs-HaggjMYaYbAxlJj/view",
+        "filename": "Triple Goal.zip",
+        "size": 614434
+      }
+    },
+    {
+      "id": "lethamyr-underwater-goals",
+      "name": "Underwater Goals",
+      "author": "Lethamyr",
+      "summary": "This map is impossible…",
+      "description": "This map is difficult. That is all.",
+      "recommendedSettings": "Boost: Unlimited\nTime: Unlimited\nYou may want Boomer or Rumble!",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/yd5MOgFdEYOtgQEdWrfSnYchXBe6YKza9SWX1cdgVoa2y9L5RXc5VMXtjESegrHr.jpg",
+      "homepage": "https://lethamyr.com/maps/23",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1wBYwRQR7-dchnQIY49mUmw9ZcahXjSCM/view",
+        "filename": "Underwater Goals.zip",
+        "size": 4645617
+      }
+    },
+    {
+      "id": "lethamyr-uplink",
+      "name": "Uplink",
+      "author": "Lethamyr",
+      "summary": "Connect the 6 towers to secure the goal in the middle!",
+      "description": "The idea of this map is that there are 6 towers that you need to transfer power to the center console. Send the ball through each zone to activate the tower, and once all 6 zones are cleared, the goal opens up in the middle to score.",
+      "recommendedSettings": "Time: 10+ Minutes\nScore: First to 1 Goal\nBoost: Unlimited",
+      "tags": [
+        "Mini Games",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/9yeYOqqARdZHnGM21B90bYrowHHyIYr3IIKIwE7RZtlbV5Vl4aJrzkbQOa2ECsIe.jpg",
+      "homepage": "https://lethamyr.com/maps/105",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1D5D5T9RrfDNR5cOgN3ByCZGfF258qOV8/view",
+        "filename": "Uplink.zip",
+        "size": 9192956
+      }
+    },
+    {
+      "id": "lethamyr-volcanic-eruption",
+      "name": "Volcanic Eruption",
+      "author": "Lethamyr",
+      "summary": "Beware of the volcano! Avoid getting knocked off the platforms!",
+      "description": "The fourth edition of my Rocket League Sumo series! This time around, beware of the active volcano that will erupt at random moments, sending every player high into the sky! Make sure to save enough boost to recover and avoid being bumped mid-air!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Recharge Fast",
+      "tags": [
+        "Free For All",
+        "Sumo"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/EPr8JBAzdN6qjIzmswEICdCtIbrhTGY7TzSPPgJqFqqOXXc1uEAItIGwyLRVYSGh.jpg",
+      "homepage": "https://lethamyr.com/maps/53",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/178jYpohqoju8-8D1qlojYn-4arJ8f-fh/view",
+        "filename": "Volcanic Eruption.zip",
+        "size": 87045251
+      }
+    },
+    {
+      "id": "lethamyr-volleyshot",
+      "name": "Volleyshot",
+      "author": "Lethamyr",
+      "summary": "Volleyball meets Dropshot!",
+      "description": "Volleyshot is a combination of Dropshot and Volleyball, where the goal is the same: score in the floor of the opponent’s side. However, in this version of Volleyshot, the wall is removed so you’re free to travel to either side of the field. Think of this map as Dropshot with a wall in the middle. Don’t get caught over-committing!",
+      "recommendedSettings": "Time: Unlimited\nScore Limit: You choose\nBoost: Unlimited",
+      "tags": [
+        "Dropshot",
+        "Sports"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/7uHNzeiMDUFBCRVvyUDIWlBmoe9yMJEa4J5jFTJEMucUFreYo3Ac4iTFCEsoLBFw.jpg",
+      "homepage": "https://lethamyr.com/maps/102",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1vFKGc4vxzV1qPGpV4mE9JQHZvEyLWMMI/view",
+        "filename": "Volleyshot.zip",
+        "size": 6579270
+      }
+    },
+    {
+      "id": "lethamyr-wario-s-goldmine",
+      "name": "Wario’s Goldmine",
+      "author": "Lethamyr",
+      "summary": "Another favourite Mario Kart Race Track",
+      "description": "The most detailed Mario Kart map brought into Rocket League so far: this map was extremely difficult to bring to life, and I had to create custom collision for the track given the nature of the bumpy models. Using custom demo derby rumble items on this map is insanely fun!",
+      "recommendedSettings": "Time: Unlimited",
+      "tags": [
+        "Free For All",
+        "Race"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/YoJGEhJLXOmfeDgHTk71UnTHjlWI8dm4Njq9JgMz0XoZC9j3VFWVSTvmtrPmhbd6.jpg",
+      "homepage": "https://lethamyr.com/maps/38",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1JHLvlVz_mQwqu_x2XuA7eHz2uDWjgMEq/view",
+        "filename": "LethGoldMine.udk",
+        "size": 95599270
+      }
+    },
+    {
+      "id": "lethamyr-warzone",
+      "name": "Warzone",
+      "author": "Lethamyr",
+      "summary": "",
+      "description": "This giant map is Rocket League spin-off of bombsites in many FPS games. There are giant warehouses with many places to take the ball in a unqiue way and score within the A/B bombsite zones.",
+      "recommendedSettings": "Boost: Unlimited\nRumble: Spikes Only (Spike Rush if you’re feeling spicy)",
+      "tags": [
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/iYLEtv5cye1Q7hmKINrrK898mf9qtNX71bxuouJJ5kb8q36ooK34UjxGuFq0goA8.jpg",
+      "homepage": "https://lethamyr.com/maps/158",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1KzX7odO_xs_VCtXb0J7JIDhb7RLj_p6l/view",
+        "filename": "Warzone.zip",
+        "size": 263276675
+      }
+    },
+    {
+      "id": "lethamyr-water-polo",
+      "name": "Water Polo",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League meets Water Polo!",
+      "description": "This map was originally created by Glhglh, but I remastered it to work in the current state of the game. The goals are suspended halfway up the sides of the field at a waterline. The ball and cars will float in the water, so prepare to lose control of your car as you bounce around the field!",
+      "recommendedSettings": "Boost: Unlimited\nFeel free to experiment with other settings like boomer!",
+      "tags": [
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/Di0lraaMrjNXxMKIWSrMO9MMFdNjqJp0z79fqqtX8anho5Hn03JZkhaaUPUTWBkX.jpg",
+      "homepage": "https://lethamyr.com/maps/9",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1wH6eCKqCzWtqJmutJ0eLsZwiqCi8-Lfr/view",
+        "filename": "Water Polo.zip",
+        "size": 12092677
+      }
+    },
+    {
+      "id": "lethamyr-water-polo-remastered",
+      "name": "Water Polo Remastered",
+      "author": "Lethamyr",
+      "summary": "Standard Rocket League meets Water Polo!",
+      "description": "UPDATED VERSION OF WATER POLO:\nThis map was originally created by Glhglh, but I remastered it to work in the current state of the game. The goals are suspended halfway up the sides of the field at a waterline. The ball and cars will float in the water, so prepare to lose control of your car as you bounce around the field!",
+      "recommendedSettings": "Boost: Unlimited\nFeel free to experiment with other settings like boomer!",
+      "tags": [
+        "Sports",
+        "Standard"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/lBPm7nvs1nqiP9ZxtOdQKpTttI4rtWjHSt8enWYYH5jkxGSRsTslnjToo9QoMIXY.jpg",
+      "homepage": "https://lethamyr.com/maps/50",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1000E518vTQKi4AR4NXopwLAPCwk2t6Wo/view",
+        "filename": "Water Polo Remastered.zip",
+        "size": 10406112
+      }
+    },
+    {
+      "id": "lethamyr-wave-race",
+      "name": "Wave Race",
+      "author": "Lethamyr",
+      "summary": "Race in a watery tunnel on jetskis!",
+      "description": "Rocket League racing… on a jetski??? Yep, I finally finished a project I started 2 years ago. This is Rocket League Wave Race, challenge your friends to the most unique race in Rocket League to date, and try not to hit too many barrels! Maneuver your way the best out of your friends to win!",
+      "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nBoost Strength: 1.5 or 2x\nDemo: Disabled\nRumble can be interesting! Just use Demo Derby mutator",
+      "tags": [
+        "Free For All",
+        "Race"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/jhAOKSVyQM0W3ihLjUszqeE4OnZNaKof6hbYqIceLtFA7jnyXgy25ec1JGoDmBsR.jpg",
+      "homepage": "https://lethamyr.com/maps/81",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1LbXGO_JvF6kNzhzZi_irX3DkxyFrMyal/view",
+        "filename": "Wave Race.zip",
+        "size": 43790138
+      }
+    },
+    {
+      "id": "lethamyr-whirly-tanks",
+      "name": "Whirly Tanks",
+      "author": "Lethamyr",
+      "summary": "Try to shoot your friends with Rocket League balls!",
+      "description": "Welcome to the FIRST installment of Whirly Tanks! The tops of your tanks spin and you have to hit your friends to knock them out of the game! Some spawns are too close at the start so just kindly split up before starting your attacks. These spawns were for the team deathmatch version that I’ll release soon.",
+      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\nTime: Unlimited\nSet your own score limit!\nBoost: Disabled\nDemo: Disabled",
+      "tags": [
+        "Free For All",
+        "Tanks"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ATtpHJmkAS0QxPtNmt867kBHAc5fp7LC4tKhUGehd3sdLkUnqB2g7esaYbZBNZNT.jpg",
+      "homepage": "https://lethamyr.com/maps/124",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1AKRD-eFqknIuwVVPqlTAD5duze-W5Y-9/view",
+        "filename": "Whirly Tanks.zip",
+        "size": 321711990
+      }
+    },
+    {
+      "id": "lethamyr-whirly-tanks-2",
+      "name": "Whirly Tanks 2",
+      "author": "Lethamyr",
+      "summary": "The second installment of Whirly Tanks!",
+      "description": "Welcome to the second installment of Whirly Tanks! The tops of your tanks spin and you have to hit your friends to knock them out of the game! This time around, it’s team deathmatch.",
+      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks2.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\nTime: 10 minutes is best, but you choose!\nBoost: Disabled\nDemo: Disabled",
+      "tags": [
+        "Tanks"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/9a7xs8Jpphw8IFfLx5iVDW2PzWSH4AFZyMPRzoWUzraMBbbeWGhnj3xw4gClIOgx.jpg",
+      "homepage": "https://lethamyr.com/maps/140",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1HIUFA8WasORcvHCkejXxYixMu-Rw882n/view",
+        "filename": "Whirly Tanks 2.zip",
+        "size": 252198993
+      }
+    },
+    {
+      "id": "lethamyr-whirly-tanks-3",
+      "name": "Whirly Tanks 3",
+      "author": "Lethamyr",
+      "summary": "Battle your friends on a breakfast buffet!",
+      "description": "Welcome to the 3rd installment of Whirly Tanks, which is on a breakfast table environment designed by my sister! Syrup spills are scattered on the battlefield which can cause some wild bounces which add to the chaos. Stay tuned for Whirly Tanks 4 which will be on the giant pool table from my arcade maps.",
+      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks3.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\nTime: 10 minutes is best, but you choose!\nBoost: Disabled\nDemo: Disabled",
+      "tags": [
+        "Tanks"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/ah9cj694uiR28E5PLYq95BDWnL8sZy-metaMjAyMzA1MjUwOTUwNDNfMS5qcGc=-.jpg",
+      "homepage": "https://lethamyr.com/maps/175",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1mLVLobadFAyTpfIn8jtKfnlABuzPtu5Q/view",
+        "filename": "Whirly Tanks 3.zip",
+        "size": 221354000
+      }
+    },
+    {
+      "id": "lethamyr-zelda-clock-town",
+      "name": "Zelda Clock Town",
+      "author": "Lethamyr",
+      "summary": "Zelda: Hide and Seek edition!",
+      "description": "Welcome to another hide n seek map! This one is based in The Legend of Zelda: Majora’s Mask’s Clock Town. I’ve added crates around the map to add more hiding spots, and I’ve included the basement/well of the clock tower as part of the map. You can hide anywhere you like, as long as you set the boundaries with your friends! Demo your friends to catch them!",
+      "recommendedSettings": "Time: Unlimited\nBoost: You choose!\nDemo: On Contact",
+      "tags": [
+        "Free For All",
+        "Hide and Seek"
+      ],
+      "thumbnail": "https://lethamyr.com/storage/SKdUKbVwzUtOCKNwLUDjDIoRwAOFG9nLARS0S35zlQ1snXA6aGEgIUEtQkbFAV6b.jpg",
+      "homepage": "https://lethamyr.com/maps/107",
+      "source": "lethamyr",
+      "download": {
+        "url": "https://drive.google.com/file/d/1O4eqgNLqe6Gp4OCZP-ENy-5d6v9fZ4wV/view",
+        "filename": "Zelda Clock Town.zip",
+        "size": 19038423
+      }
+    }
+  ]
+}

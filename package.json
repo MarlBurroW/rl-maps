@@ -1,0 +1,49 @@
+{
+  "name": "rl-maps",
+  "productName": "RL Maps",
+  "version": "0.1.0",
+  "description": "Market et loader de maps custom pour Rocket League (Epic & Steam)",
+  "main": "out/main/index.js",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run",
+    "dist": "electron-vite build && electron-builder --win --publish never",
+    "registry:import": "node registry/scripts/import-lethamyr.mjs && node registry/scripts/import-bakkesplugins.mjs",
+    "registry:validate": "node registry/scripts/validate.mjs"
+  },
+  "dependencies": {
+    "yauzl": "3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "24.19.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/yauzl": "3.4.0",
+    "@types/yazl": "3.3.1",
+    "@vitejs/plugin-react": "5.2.0",
+    "electron": "43.7.7",
+    "electron-builder": "26.15.3",
+    "electron-vite": "5.0.0",
+    "lucide-react": "1.49.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vite": "7.3.6",
+    "vitest": "4.1.11",
+    "yazl": "3.3.1"
+  },
+  "author": "MarlBurroW",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarlBurroW/rl-maps.git"
+  },
+  "homepage": "https://github.com/MarlBurroW/rl-maps"
+}
