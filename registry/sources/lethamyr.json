@@ -2,7 +2,7 @@
   "$schema": "../schema.json",
   "version": 1,
   "name": "Lethamyr",
-  "updatedAt": "2026-10-15T20:34:24.080Z",
+  "updatedAt": "2026-10-15T22:09:26.542Z",
   "maps": [
     {
       "id": "lethamyr-1d",
@@ -90,7 +90,7 @@
       "author": "Lethamyr",
       "summary": "Tabletop pool table",
       "description": "I turned a tabletop pool table into a competitive map! There are 6 pockets to score in, and every time a ball spawns it will be one of the 15 pool balls. The amount of points you score depends on the numbered ball, and something \"special\" happens when you score the 8 Ball! This one is a ton of fun, especially with boomer mode.",
-      "recommendedSettings": "Boost: Unlimited \nBoomer and Rumble is recommended!",
+      "recommendedSettings": "Boost: Unlimited \n\nBoomer and Rumble is recommended!",
       "tags": [
         "Tabletop"
       ],
@@ -109,7 +109,7 @@
       "author": "Lethamyr",
       "summary": "Welcome to Abstract, a long corridor of angled walls and pockets",
       "description": "I wanted to make a field that is confusing to look at, difficult to play, but still fun, and this is what I came up with. Welcome to Abstract, a long corridor of angled walls and pockets. All you have to do to score is get the ball to one end of the hallway. Easier said than done, enter at your own risk.",
-      "recommendedSettings": "Boost: Unlimited \nBoomer and Rumble is recommended!",
+      "recommendedSettings": "Boost: Unlimited \n\nBoomer and Rumble is recommended!",
       "tags": [
         "Standard"
       ],
@@ -247,7 +247,7 @@
       "author": "Lethamyr",
       "summary": "A fully working Among Us game in Rocket League!",
       "description": "With the help of Gidek and Cinderblock, 2 amazing modders in the community, we have come together to bring a fully working Among Us game inside Rocket League! This took over 1200 hours total to finish, and it works so well. Make sure to download the plugin for Bakkesmod to make the map work with friends.",
-      "recommendedSettings": "Boost: No Boost\nTime: Unlimited\nScore: First to 1 Goal (set score when game ends)\nUse KBM for this map\nPlugin REQUIRED: https://bakkesplugins.com/plugins/view/166",
+      "recommendedSettings": "Boost: No Boost\nTime: Unlimited\nScore: First to 1 Goal (set score when game ends)\nUse KBM for this map\n\nPlugin REQUIRED: https://bakkesplugins.com/plugins/view/166",
       "tags": [
         "Mini Games"
       ],
@@ -302,7 +302,7 @@
       "author": "Lethamyr",
       "summary": "Banjo Bridge is a fun twist on Sumo",
       "description": "Banjo Bridge is a fun twist on Sumo where the only goal is to get all of your players into the opponent's cave first. Use the boot powerup to knock opponents into the abyss to prevent both players from finding their way into the cave!",
-      "recommendedSettings": "Recommended settings: \nBoost recharge slow\nRumble ON\nUse Rocket Plugin to reduce powerups to only boot\nTornado is also fun but more difficult",
+      "recommendedSettings": "Recommended settings: \n\nBoost recharge slow\n\nRumble ON\n\nUse Rocket Plugin to reduce powerups to only boot\n\nTornado is also fun but more difficult",
       "tags": [],
       "thumbnail": "https://lethamyr.com/storage/01K28864HDZT2ZR728CPVRK22H.jpg",
       "homepage": "https://lethamyr.com/maps/205",
@@ -397,7 +397,7 @@
       "author": "Lethamyr",
       "summary": "This is a remastered version of Beach Brawl with updated textures",
       "description": "This is a remastered version of Beach Brawl with updated textures on quite a few meshes to bring this into the modern day. Still one of my favorite water concepts I've ever created, and still just as difficult in 2025.",
-      "recommendedSettings": "Recommended settings: \nUnlimited Boost\nBall Type Beachball (because why not)",
+      "recommendedSettings": "Recommended settings: \n\nUnlimited Boost\n\nBall Type Beachball (because why not)",
       "tags": [],
       "thumbnail": "https://lethamyr.com/storage/01K27XDXZ6G9S9BD2EXYM97MYN.jpg",
       "homepage": "https://lethamyr.com/maps/202",
@@ -512,7 +512,7 @@
       "name": "Boardwalk",
       "author": "Lethamyr",
       "summary": "Play Rocket League with an elevated platform!",
-      "description": "The goals of this map are atop a boardwalk that splits off in 4 ways in the center. This map was built from the skeleton of my Water Polo map, and I created a series of boards to drive across and mess around.\nWarning: Don’t smash into the boardwalk too hard, you might just break it ;)",
+      "description": "The goals of this map are atop a boardwalk that splits off in 4 ways in the center. This map was built from the skeleton of my Water Polo map, and I created a series of boards to drive across and mess around.\n\nWarning: Don’t smash into the boardwalk too hard, you might just break it ;)",
       "recommendedSettings": "Boost: Unlimited\nBoomer can be fun!",
       "tags": [
         "Standard"
@@ -1055,7 +1055,7 @@
       "name": "Dribbling Challenge 1",
       "author": "Lethamyr",
       "summary": "Practice your dribbling on an advanced course!",
-      "description": "This map was my first attempt at making a dribbling challenge. I purposely made this one very difficult to elevate the difficulty of dribbling challenges out there.\nThere are 30 levels in total, which increase in difficulty substantially as the levels go on. Enter at your own risk!",
+      "description": "This map was my first attempt at making a dribbling challenge. I purposely made this one very difficult to elevate the difficulty of dribbling challenges out there.\n\nThere are 30 levels in total, which increase in difficulty substantially as the levels go on. Enter at your own risk!",
       "recommendedSettings": "Enter in Freeplay!",
       "tags": [
         "Training"
@@ -1131,7 +1131,7 @@
       "author": "Lethamyr",
       "summary": "Welcome to the sequel of Egyptian Parkour!",
       "description": "Welcome to the sequel of Egyptian Parkour! This map took me over 2 years to complete. You're now stuck in a dungeon and have to find the 8 keys to open the gate to the throne room. There are also 30 tokens you can collect to discover the secret of the dungeon... This map is non-linear, and you can go in many different directions to find your way around the dungeon. Some keys are quite tough to reach! Best of luck.",
-      "recommendedSettings": "For solo: Freeplay, disabled boost\nFor multiplayer: Unlimited Time, Disable Demos, Disable Boost",
+      "recommendedSettings": "For solo: Freeplay, disabled boost\n\nFor multiplayer: Unlimited Time, Disable Demos, Disable Boost",
       "tags": [
         "Parkour"
       ],
@@ -1304,7 +1304,7 @@
       "name": "Foosball Table 2.0",
       "author": "Lethamyr",
       "summary": "A remastered version of the first foosball table in Rocket League!",
-      "description": "REMASTERED VERSION:\nThis map takes Standard Rocket League and places it on regular foosball table!. Scoring is just like normal, except the ball has to fall into the floor of the goal! The figures on each teams’ side can get in the way, causing some unique moments.",
+      "description": "REMASTERED VERSION:\n\nThis map takes Standard Rocket League and places it on regular foosball table!. Scoring is just like normal, except the ball has to fall into the floor of the goal! The figures on each teams’ side can get in the way, causing some unique moments.",
       "recommendedSettings": "Boost: Unlimited\nBoomer is also quite fun!",
       "tags": [
         "Sports",
@@ -1560,8 +1560,8 @@
       "name": "Haunted Hallows Escape",
       "author": "Lethamyr",
       "summary": "",
-      "description": "THIS IS A 2-PLAYER CO-OP MAP\nHaunted Hallows Escape was an event commissioned by Rocket League and Epic Games. Simple Shark, Mr. Swaggles & I worked tirelessly for a month to put this escape room puzzle together. There are 4 parts to the story, load each one as you complete each in order.",
-      "recommendedSettings": "ALL PLAYERS MUST JOIN BLUE TEAM\nTime: Unlimited\nThis map will NOT load with my map loader. All files need to be within a mods folder to run.\nSome textures are missing (Rocket League changed some in-game materials which no longer work)",
+      "description": "THIS IS A 2-PLAYER CO-OP MAP\n\nHaunted Hallows Escape was an event commissioned by Rocket League and Epic Games. Simple Shark, Mr. Swaggles & I worked tirelessly for a month to put this escape room puzzle together. There are 4 parts to the story, load each one as you complete each in order.",
+      "recommendedSettings": "ALL PLAYERS MUST JOIN BLUE TEAM\nTime: Unlimited\nThis map will NOT load with my map loader. All files need to be within a mods folder to run.\n\nSome textures are missing (Rocket League changed some in-game materials which no longer work)",
       "tags": [
         "Standard"
       ],
@@ -2041,7 +2041,7 @@
       "name": "Lava Rings",
       "author": "Lethamyr",
       "summary": "A re-textured version of my rings map!",
-      "description": "Re-textured Ice Rings:\nLearn how to aerial like a pro inside a giant 20-level course of aerial navigation. The rings get smaller as you go through the levels, try for a personal best!",
+      "description": "Re-textured Ice Rings:\n\nLearn how to aerial like a pro inside a giant 20-level course of aerial navigation. The rings get smaller as you go through the levels, try for a personal best!",
       "recommendedSettings": "Freeplay",
       "tags": [
         "Training"
@@ -2061,7 +2061,7 @@
       "author": "Lethamyr",
       "summary": "Standard field with a \"twist\"",
       "description": "Ever wondered what Rocket League would look like in a Loopty Loop? This field features standard-sized goals, but getting from one side of the field to the other will take a little more work.",
-      "recommendedSettings": "Boost: Unlimited \nBoomer and Rumble is recommended!",
+      "recommendedSettings": "Boost: Unlimited \n\nBoomer and Rumble is recommended!",
       "tags": [
         "Standard"
       ],
@@ -2364,7 +2364,7 @@
       "name": "Oil Rig",
       "author": "Lethamyr",
       "summary": "Hide and Seek on a gigantic oil rig!",
-      "description": "Welcome to the largest of my Hide n Seek maps! This map features a giant oil rig with plenty of places to hide. No place is off limits!\nHuge thanks to my sister (Kikira) for helping make this map!",
+      "description": "Welcome to the largest of my Hide n Seek maps! This map features a giant oil rig with plenty of places to hide. No place is off limits!\n\nHuge thanks to my sister (Kikira) for helping make this map!",
       "recommendedSettings": "Time: Unlimited\nBoost: You choose!\nDemo: On Contact",
       "tags": [
         "Free For All",
@@ -2404,7 +2404,7 @@
       "name": "Ping Pong Table",
       "author": "Lethamyr",
       "summary": "This map brings ping pong to rocket league!",
-      "description": "This was one of my first attempts at custom models and importing them into Rocket League. This ping pong table has goals around the outside border, and can lead to a lot of chaos. Feel free to play by your own rules.\n(stay on your own side, for example, or one hit per player)",
+      "description": "This was one of my first attempts at custom models and importing them into Rocket League. This ping pong table has goals around the outside border, and can lead to a lot of chaos. Feel free to play by your own rules.\n\n(stay on your own side, for example, or one hit per player)",
       "recommendedSettings": "Time: Unlimited\nBall Max Speed: Fast\nBall Physics: Curveball\nBall Bounciness: High\nBoost: Unlimited\nBoost Strength: 1.5x\nGravity: Low",
       "tags": [
         "Sports",
@@ -2482,7 +2482,7 @@
       "name": "Portal",
       "author": "Lethamyr",
       "summary": "Portal 2 meets Rocket League! Teleport both the cars and the ball!",
-      "description": "Play in a Portal-style map with portals that connect to each side of the room!\nThe goals are the giant doors on each side of the map. I plan on making a second version of this in the future as I revisit older maps. Enjoy!",
+      "description": "Play in a Portal-style map with portals that connect to each side of the room!\n\nThe goals are the giant doors on each side of the map. I plan on making a second version of this in the future as I revisit older maps. Enjoy!",
       "recommendedSettings": "Boost: Unlimited",
       "tags": [
         "Mini Games",
@@ -2502,7 +2502,7 @@
       "name": "Prop Hunt",
       "author": "Lethamyr",
       "summary": "Disguise your car as a prop and try to avoid getting caught!",
-      "description": "Disguise your car as a prop and try to avoid getting caught!\nThis map is the first prop hunt map I created. You can choose a variety of medieval props to hide on 4 different floors of the castle. Once you get caught, you swap teams and help find the rest of the props!",
+      "description": "Disguise your car as a prop and try to avoid getting caught!\n\nThis map is the first prop hunt map I created. You can choose a variety of medieval props to hide on 4 different floors of the castle. Once you get caught, you swap teams and help find the rest of the props!",
       "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nDemo: On Contact",
       "tags": [
         "Free For All",
@@ -2522,7 +2522,7 @@
       "name": "Prop Hunt Remastered",
       "author": "Lethamyr",
       "summary": "Hide as a prop and try not to get caught!",
-      "description": "UPDATED VERSION OF PROP HUNT:\nDisguise your car as a prop and try to avoid getting caught!\nThis map is the first prop hunt map I created. You can choose a variety of medieval props to hide on 4 different floors of the castle. Once you get caught, you swap teams and help find the rest of the props!",
+      "description": "UPDATED VERSION OF PROP HUNT:\n\nDisguise your car as a prop and try to avoid getting caught!\n\nThis map is the first prop hunt map I created. You can choose a variety of medieval props to hide on 4 different floors of the castle. Once you get caught, you swap teams and help find the rest of the props!",
       "recommendedSettings": "Time: Unlimited\nBoost: Unlimited\nDemo: On Contact",
       "tags": [
         "Free For All",
@@ -3052,8 +3052,8 @@
       "name": "Tetherball",
       "author": "Lethamyr",
       "summary": "A classic game of Tetherball in Rocket League!",
-      "description": "I finally got Tetherball in Rocket League to work, and it’s amazing! The heatseeker ball swings around the center pole, and the goals are on the outer edges of the circular field! Get the proper angle and power or cheat up on the other side of the field! \nHuge thanks to glhglh and Cinderblock for help getting this to work!",
-      "recommendedSettings": "REQUIRED: Plugin - https://bakkesplugins.com/plugins/view/101\nBoost: Unlimited",
+      "description": "I finally got Tetherball in Rocket League to work, and it’s amazing! The heatseeker ball swings around the center pole, and the goals are on the outer edges of the circular field! Get the proper angle and power or cheat up on the other side of the field! \n\nHuge thanks to glhglh and Cinderblock for help getting this to work!",
+      "recommendedSettings": "REQUIRED: Plugin - https://bakkesplugins.com/plugins/view/101\n\nBoost: Unlimited",
       "tags": [
         "Heatseeker",
         "Sports",
@@ -3392,7 +3392,7 @@
       "author": "Lethamyr",
       "summary": "Fight to repair your hive before the opponents!",
       "description": "This new game mode was started a year ago by myself, and recently Mr. Swaggles joined me to do a lot of the final details. We worked together for countless hours to create a brand new field that has a unique feel and look. You pair up with teammates in opposite rooms to repair your own team colored room, while stopping the other team from repairing in theirs.",
-      "recommendedSettings": "Time: Unlimited\nBoost: Recharge or Unlimited\nTeam Size: 2v2+\nKNOWN ISSUES:\n- Goal explosions only work for host\n- Rare issue of major fps lag, only solution is to restart rocket league for everyone",
+      "recommendedSettings": "Time: Unlimited\nBoost: Recharge or Unlimited\nTeam Size: 2v2+\n\nKNOWN ISSUES:\n- Goal explosions only work for host\n- Rare issue of major fps lag, only solution is to restart rocket league for everyone",
       "tags": [
         "Standard"
       ],
@@ -3410,8 +3410,8 @@
       "name": "The Immortals Progressive Tower",
       "author": "Lethamyr",
       "summary": "Boost Your Coverage as you climb through 20 unique levels",
-      "description": "Map last updated 07/19/23 20:30\nBoost Your Coverage as you climb through 20 unique levels in the most comprehensive test of skills ever created for Rocket League. Speed, timing, shot accuracy, aerial control, boost usage, and much more will be pushed to the absolute limit. \nThis map utilizes Blaku's Map Expansion Plugin to save your times in between loads! The ID for the plugin is 294.\nContest Details:\n- $1,000 to the fastest person in 24 hours (Ends 7/18 9am PST)\n- $4,000 to the fastest people after 2 weeks (Ends 7/31) \n- 1st: $2,500\n- 2nd: $1,000\n- 3rd: $500\nAll submitted runs will be validated by the Rocket League Speedrun Community. Please see this site https://www.speedrun.com/ipt/ for submissions and the full list of rules.\nSpecial thanks to all of our playtesters! \n- Gyro \n- Rapid\n- LeeroyJenkinsOG\n- platymusPrime\n- ShadowedSkulls\n- Tredz\n- Kronovi\n- gidek\n- Plumato\n- kieo\n- ThundaSurge\n- Impulse",
-      "recommendedSettings": "Freeplay\nYou’ll need Workshop textures to see some materials in the map. Download them here: https://drive.google.com/file/d/1XW6jxckEkn2JjigwxQAgNu1LXLKb5KrE/view?usp=sharing\nGo to your game storage location (C:\\Program Files (x86)\\Steam\\steamapps\\common\\rocketleague\\TAGame\\CookedPCConsole) <— your location may be different\nDrop the 14 files in CookedPCConsole",
+      "description": "Map last updated 07/19/23 20:30\n\nBoost Your Coverage as you climb through 20 unique levels in the most comprehensive test of skills ever created for Rocket League. Speed, timing, shot accuracy, aerial control, boost usage, and much more will be pushed to the absolute limit. \n\nThis map utilizes Blaku's Map Expansion Plugin to save your times in between loads! The ID for the plugin is 294.\n\nContest Details:\n- $1,000 to the fastest person in 24 hours (Ends 7/18 9am PST)\n- $4,000 to the fastest people after 2 weeks (Ends 7/31) \n- 1st: $2,500\n- 2nd: $1,000\n- 3rd: $500\n\nAll submitted runs will be validated by the Rocket League Speedrun Community. Please see this site https://www.speedrun.com/ipt/ for submissions and the full list of rules.\n\nSpecial thanks to all of our playtesters! \n- Gyro \n- Rapid\n- LeeroyJenkinsOG\n- platymusPrime\n- ShadowedSkulls\n- Tredz\n- Kronovi\n- gidek\n- Plumato\n- kieo\n- ThundaSurge\n- Impulse",
+      "recommendedSettings": "Freeplay\n\nYou’ll need Workshop textures to see some materials in the map. Download them here: https://drive.google.com/file/d/1XW6jxckEkn2JjigwxQAgNu1LXLKb5KrE/view?usp=sharing\n\nGo to your game storage location (C:\\Program Files (x86)\\Steam\\steamapps\\common\\rocketleague\\TAGame\\CookedPCConsole) <— your location may be different\n\nDrop the 14 files in CookedPCConsole",
       "tags": [
         "Training"
       ],
@@ -3468,7 +3468,7 @@
       "author": "Lethamyr",
       "summary": "Top Golf in the US",
       "description": "This is a Rocket League version of the popular Top Golf in the US! Take turns taking shots down the course to try and score big points! To keep things interesting, the score positions change each round!",
-      "recommendedSettings": "Boost: Unlimited\nTime: Unlimited\nBall Physics: Light\nBall Max Speed: Super Fast\nRumble: set the only powerup to Power Hitter (Rocket Plugin)\nSet your own score limit!",
+      "recommendedSettings": "Boost: Unlimited\nTime: Unlimited\nBall Physics: Light\nBall Max Speed: Super Fast\nRumble: set the only powerup to Power Hitter (Rocket Plugin)\n\nSet your own score limit!",
       "tags": [
         "Standard"
       ],
@@ -3664,7 +3664,7 @@
       "name": "Water Polo Remastered",
       "author": "Lethamyr",
       "summary": "Standard Rocket League meets Water Polo!",
-      "description": "UPDATED VERSION OF WATER POLO:\nThis map was originally created by Glhglh, but I remastered it to work in the current state of the game. The goals are suspended halfway up the sides of the field at a waterline. The ball and cars will float in the water, so prepare to lose control of your car as you bounce around the field!",
+      "description": "UPDATED VERSION OF WATER POLO:\n\nThis map was originally created by Glhglh, but I remastered it to work in the current state of the game. The goals are suspended halfway up the sides of the field at a waterline. The ball and cars will float in the water, so prepare to lose control of your car as you bounce around the field!",
       "recommendedSettings": "Boost: Unlimited\nFeel free to experiment with other settings like boomer!",
       "tags": [
         "Sports",
@@ -3705,7 +3705,7 @@
       "author": "Lethamyr",
       "summary": "Try to shoot your friends with Rocket League balls!",
       "description": "Welcome to the FIRST installment of Whirly Tanks! The tops of your tanks spin and you have to hit your friends to knock them out of the game! Some spawns are too close at the start so just kindly split up before starting your attacks. These spawns were for the team deathmatch version that I’ll release soon.",
-      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\nTime: Unlimited\nSet your own score limit!\nBoost: Disabled\nDemo: Disabled",
+      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\n\nTime: Unlimited\nSet your own score limit!\nBoost: Disabled\nDemo: Disabled",
       "tags": [
         "Free For All",
         "Tanks"
@@ -3725,7 +3725,7 @@
       "author": "Lethamyr",
       "summary": "The second installment of Whirly Tanks!",
       "description": "Welcome to the second installment of Whirly Tanks! The tops of your tanks spin and you have to hit your friends to knock them out of the game! This time around, it’s team deathmatch.",
-      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks2.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\nTime: 10 minutes is best, but you choose!\nBoost: Disabled\nDemo: Disabled",
+      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks2.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\n\nTime: 10 minutes is best, but you choose!\nBoost: Disabled\nDemo: Disabled",
       "tags": [
         "Tanks"
       ],
@@ -3744,7 +3744,7 @@
       "author": "Lethamyr",
       "summary": "Battle your friends on a breakfast buffet!",
       "description": "Welcome to the 3rd installment of Whirly Tanks, which is on a breakfast table environment designed by my sister! Syrup spills are scattered on the battlefield which can cause some wild bounces which add to the chaos. Stay tuned for Whirly Tanks 4 which will be on the giant pool table from my arcade maps.",
-      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks3.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\nTime: 10 minutes is best, but you choose!\nBoost: Disabled\nDemo: Disabled",
+      "recommendedSettings": "REQUIRED: Must leave the filename as LethWhirlyTanks3.upk for the tanks to be able to fire (won’t work with the Map Loader, must place in CookedPCConsole files - make a folder inside the game files called ‘mods’)\n\nTime: 10 minutes is best, but you choose!\nBoost: Disabled\nDemo: Disabled",
       "tags": [
         "Tanks"
       ],
