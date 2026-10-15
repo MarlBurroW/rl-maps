@@ -4,7 +4,7 @@ on:
   pull_request:
     paths: ['registry/**']
   schedule:
-    - cron: '0 6 * * 1' # chaque lundi : resynchronise Lethamyr et BakkesPlugins
+    - cron: '0 6 * * 1' # chaque lundi : resynchronise les sources importées
   workflow_dispatch:
 
 permissions:
@@ -27,8 +27,15 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with: { node-version: 24 }
-      - run: node registry/scripts/import-lethamyr.mjs
-      - run: node registry/scripts/import-bakkesplugins.mjs
+      # Chaque source est indépendante : si l'une échoue, son fichier reste inchangé et les autres sont mises à jour.
+      - name: Import Lethamyr
+        continue-on-error: true
+        run: node registry/scripts/import-lethamyr.mjs
+      - name: Import BakkesPlugins
+        # Cloudflare bloque souvent les IP de GitHub Actions (HTTP 403) : dans ce cas,
+        # lancer « npm run registry:import:bakkesplugins » en local et committer le résultat.
+        continue-on-error: true
+        run: node registry/scripts/import-bakkesplugins.mjs || { echo "::warning::Import BakkesPlugins impossible depuis la CI (probablement bloqué par Cloudflare). Lance npm run registry:import:bakkesplugins en local."; exit 1; }
       - run: node registry/scripts/validate.mjs
       - name: Commit si le registre a changé
         run: |

@@ -14,8 +14,10 @@
     "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
     "test": "vitest run",
     "dist": "electron-vite build && electron-builder --win --publish never",
-    "registry:import": "node registry/scripts/import-lethamyr.mjs && node registry/scripts/import-bakkesplugins.mjs",
-    "registry:validate": "node registry/scripts/validate.mjs"
+    "registry:import": "npm run registry:import:lethamyr && npm run registry:import:bakkesplugins",
+    "registry:validate": "node registry/scripts/validate.mjs",
+    "registry:import:lethamyr": "node registry/scripts/import-lethamyr.mjs",
+    "registry:import:bakkesplugins": "node registry/scripts/import-bakkesplugins.mjs"
   },
   "dependencies": {
     "yauzl": "3.4.0"

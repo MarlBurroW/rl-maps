@@ -15,8 +15,17 @@ ou par la plateforme d'origine.
 | [`sources/bakkesplugins.json`](sources/bakkesplugins.json) | [bakkesplugins.com/maps](https://bakkesplugins.com/maps), la bibliothèque de maps de BakkesMod (fichiers sur `cdn.bakkesplugins.com`) | `scripts/import-bakkesplugins.mjs` |
 | [`sources/community.json`](sources/community.json) | Ajouts manuels par PR | à la main |
 
-Les deux premiers fichiers sont régénérés chaque lundi par [`.github/workflows/registry.yml`](../.github/workflows/registry.yml)
-(`npm run registry:import` en local). N'édite pas ces fichiers à la main, tes changements seraient écrasés.
+Les deux premiers fichiers sont régénérés par leurs scripts : n'édite pas ces fichiers à la main, tes changements
+seraient écrasés.
+
+- **Lethamyr** est resynchronisé chaque lundi par [`.github/workflows/registry.yml`](../.github/workflows/registry.yml).
+- **BakkesPlugins** bloque les serveurs de GitHub Actions (Cloudflare, HTTP 403). Le workflow essaie quand même, mais
+  en pratique il faut le rafraîchir depuis une connexion classique, puis committer le résultat :
+
+  ```bash
+  npm run registry:import:bakkesplugins
+  git commit -am "registry: synchronisation BakkesPlugins" && git push
+  ```
 
 ### Doublons entre sources
 
