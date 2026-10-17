@@ -3,6 +3,7 @@ import { CircleCheck, ExternalLink, FolderOpen, Plus, Radar, Trash2, TriangleAle
 import type { GameInstall, RegistrySource } from '../../../shared/types'
 import { BUILTIN_SOURCE_IDS } from '../../../shared/config'
 import { useApp } from '../state'
+import { describeAppUpdate, useAppUpdate } from '../components/AppUpdate'
 import { useToast } from '../components/Toast'
 import { Button } from '../components/Button'
 
@@ -12,6 +13,8 @@ const platformLabel = { epic: 'Epic Games', steam: 'Steam', custom: 'Dossier per
 export function SettingsPage() {
   const { status, refreshMarket, settings, saveSettings: update, reloadSettings } = useApp()
   const toast = useToast()
+  const appUpdate = useAppUpdate()
+  const [checking, setChecking] = useState(false)
   const [detected, setDetected] = useState<GameInstall[] | null>(null)
   const [detecting, setDetecting] = useState(false)
   const [newSource, setNewSource] = useState({ name: '', url: '' })
@@ -196,6 +199,38 @@ export function SettingsPage() {
         <Section title="Données">
           <Button icon={<FolderOpen className="size-4" />} onClick={() => window.api.openDataFolder()}>
             Ouvrir le dossier de l'app
+          </Button>
+        </Section>
+
+        <Section title="À propos">
+          <div className="flex items-center gap-4 rounded-xl border border-line bg-surface p-4">
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-semibold">RL Maps {appUpdate ? `v${appUpdate.current}` : ''}</p>
+              <p className="mt-0.5 text-[13px] text-muted">{describeAppUpdate(appUpdate)}</p>
+            </div>
+            {appUpdate?.kind === 'ready' ? (
+              <Button size="sm" variant="primary" onClick={() => void window.api.installAppUpdate()}>
+                Redémarrer
+              </Button>
+            ) : (
+              <Button
+                size="sm"
+                busy={checking}
+                onClick={async () => {
+                  setChecking(true)
+                  try {
+                    await window.api.checkAppUpdate()
+                  } finally {
+                    setChecking(false)
+                  }
+                }}
+              >
+                Vérifier
+              </Button>
+            )}
+          </div>
+          <Button size="sm" variant="ghost" icon={<ExternalLink className="size-4" />} onClick={() => window.api.openExternal('https://github.com/MarlBurroW/rl-maps')}>
+            Projet sur GitHub
           </Button>
         </Section>
       </div>

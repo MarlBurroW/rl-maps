@@ -15,3 +15,11 @@ export function isUpToDate(installed: string | undefined, d: RegistryDownload): 
   if (![d.url, ...(d.mirrors ?? [])].includes(url)) return false
   return !size || !d.size || size === d.size
 }
+
+/** Compare deux versions « x.y.z » : > 0 si a est plus récente. */
+export function compareVersions(a: string, b: string): number {
+  const pa = a.replace(/^v/, '').split('.').map(Number)
+  const pb = b.replace(/^v/, '').split('.').map(Number)
+  for (let i = 0; i < 3; i++) if ((pa[i] ?? 0) !== (pb[i] ?? 0)) return (pa[i] ?? 0) - (pb[i] ?? 0)
+  return 0
+}

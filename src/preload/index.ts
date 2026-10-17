@@ -1,5 +1,5 @@
 import { contextBridge, ipcRenderer, webUtils } from 'electron'
-import type { Api, DownloadProgress, GameStatus, Result } from '../shared/types'
+import type { Api, AppUpdateState, DownloadProgress, GameStatus, Result } from '../shared/types'
 
 /** Le main renvoie toujours un Result : on le transmet tel quel… */
 const result = <T>(channel: string, ...args: unknown[]) => ipcRenderer.invoke(channel, ...args) as Promise<Result<T>>
@@ -42,6 +42,11 @@ const api: Api = {
   openExternal: (url) => value('shell:openExternal', url),
   openDataFolder: () => value('shell:openDataFolder'),
   getPathForFile: (file) => webUtils.getPathForFile(file),
+
+  getAppUpdate: () => value('app:update:get'),
+  checkAppUpdate: () => value('app:update:check'),
+  installAppUpdate: () => value('app:update:install'),
+  onAppUpdate: (cb) => subscribe<AppUpdateState>('app-update', cb),
 
   onStatus: (cb) => subscribe<GameStatus>('status', cb),
   onProgress: (cb) => subscribe<DownloadProgress>('progress', cb)

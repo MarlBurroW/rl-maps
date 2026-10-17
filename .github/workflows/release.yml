@@ -55,7 +55,7 @@ jobs:
         shell: bash
         run: |
           gh release create "${{ steps.version.outputs.tag }}" \
-            dist/RL-Maps-Setup-*.exe dist/RL-Maps-*-portable.exe \
+            dist/RL-Maps-Setup-*.exe dist/RL-Maps-Setup-*.exe.blockmap dist/RL-Maps-*-portable.exe dist/latest.yml \
             --target "$GITHUB_SHA" \
             --title "RL Maps ${{ steps.version.outputs.tag }}" \
             --generate-notes

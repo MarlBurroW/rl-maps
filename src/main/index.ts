@@ -14,6 +14,7 @@ import { readPackageImports } from './game/upk'
 import { gamePackages } from './game/packages'
 import { missingDependencies } from '../shared/compat'
 import { downloadFingerprint } from '../shared/updates'
+import { checkForUpdates, getUpdateState, initUpdater, installUpdate } from './updater'
 import type { MarketMap } from '../shared/types'
 
 const STATUS_POLL_MS = 4000
@@ -247,6 +248,10 @@ function registerIpc() {
     downloads.get(registryId)?.abort()
   })
 
+  handle('app:update:get', async () => getUpdateState())
+  handle('app:update:check', () => checkForUpdates())
+  handle('app:update:install', async () => installUpdate())
+
   handle('shell:openExternal', async (url: string) => {
     if (/^https:\/\//.test(url)) await shell.openExternal(url)
   })
@@ -311,6 +316,7 @@ app.whenReady().then(async () => {
 
   registerIpc()
   createWindow()
+  initUpdater((s) => win?.webContents.send('app-update', s))
   setInterval(() => void broadcastStatus(), STATUS_POLL_MS)
 })
 

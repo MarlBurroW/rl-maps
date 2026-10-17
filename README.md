@@ -11,6 +11,9 @@ Dernière version : **[Releases](https://github.com/MarlBurroW/rl-maps/releases/
 - `RL-Maps-Setup-x.y.z.exe` : installeur (raccourci, désinstallation propre)
 - `RL-Maps-x.y.z-portable.exe` : version portable, sans installation
 
+L'app se met ensuite à jour toute seule (installeur) : la nouvelle version se télécharge en arrière-plan et s'installe
+au redémarrage. La version portable signale simplement qu'une nouvelle version est disponible.
+
 > L'exécutable n'est pas signé : au premier lancement, Windows SmartScreen peut afficher
 > « Windows a protégé votre ordinateur ». Clique sur **Informations complémentaires → Exécuter quand même**.
 

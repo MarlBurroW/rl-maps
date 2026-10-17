@@ -1,4 +1,5 @@
 import { LibraryBig, Settings, Store } from 'lucide-react'
+import { AppUpdatePill } from './AppUpdate'
 
 export type Tab = 'market' | 'library' | 'settings'
 
@@ -34,6 +35,9 @@ export function TitleBar({ tab, onTab, libraryCount }: { tab: Tab; onTab: (t: Ta
           </button>
         ))}
       </nav>
+      <div className="ml-auto">
+        <AppUpdatePill />
+      </div>
     </header>
   )
 }

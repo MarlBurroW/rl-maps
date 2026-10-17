@@ -129,6 +129,19 @@ export interface DownloadProgress {
   error?: string
 }
 
+/** État de la mise à jour de l'app elle-même */
+export interface AppUpdateState {
+  kind: 'idle' | 'checking' | 'downloading' | 'ready' | 'portable' | 'error'
+  /** Version installée */
+  current: string
+  /** Version disponible */
+  version?: string
+  percent?: number
+  /** Page de la release (version portable) */
+  url?: string
+  error?: string
+}
+
 export type Result<T = void> = { ok: true; value: T } | { ok: false; error: string }
 
 /** Contrat IPC exposé au renderer via window.api */
@@ -155,6 +168,11 @@ export interface Api {
   openExternal(url: string): Promise<void>
   openDataFolder(): Promise<void>
   getPathForFile(file: File): string
+
+  getAppUpdate(): Promise<AppUpdateState>
+  checkAppUpdate(): Promise<AppUpdateState>
+  installAppUpdate(): Promise<void>
+  onAppUpdate(cb: (s: AppUpdateState) => void): () => void
 
   onStatus(cb: (s: GameStatus) => void): () => void
   onProgress(cb: (p: DownloadProgress) => void): () => void

@@ -1,5 +1,10 @@
 appId: app.rlmaps.desktop
-publish: null
+# Releases GitHub : sert à générer latest.yml et app-update.yml pour la mise à jour automatique.
+# La publication elle-même est faite par le workflow Release (electron-builder --publish never).
+publish:
+  provider: github
+  owner: MarlBurroW
+  repo: rl-maps
 productName: RL Maps
 directories:
   output: dist
