@@ -4,6 +4,7 @@ import { useApp, type Item } from '../state'
 import { normalize } from '../lib/format'
 import { MapCard, MapCardSkeleton } from '../components/MapCard'
 import { Button } from '../components/Button'
+import { t } from '../../../shared/i18n'
 
 type Sort = 'name' | 'size-asc' | 'size-desc'
 
@@ -33,8 +34,8 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
 
   const tags = useMemo(() => {
     const counts = new Map<string, number>()
-    for (const m of market?.maps ?? []) for (const t of m.tags) counts.set(t, (counts.get(t) ?? 0) + 1)
-    return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t)
+    for (const m of market?.maps ?? []) for (const tag of m.tags) counts.set(tag, (counts.get(tag) ?? 0) + 1)
+    return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([tag]) => tag)
   }, [market])
 
   const items = useMemo(() => {
@@ -74,8 +75,11 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
             <h1 className="font-display text-2xl font-bold">Market</h1>
             <p className="mt-1 text-sm text-muted">
               {market
-                ? `${market.maps.length} maps de ${sources.map((s) => s.name).join(', ') || 'la communauté'}, prêtes à jouer en un clic.`
-                : 'Chargement du catalogue…'}
+                ? t('{n} maps de {sources}, prêtes à jouer en un clic.', {
+                    n: market.maps.length,
+                    sources: sources.map((s) => t(s.name)).join(', ') || t('la communauté')
+                  })
+                : t('Chargement du catalogue…')}
             </p>
           </div>
           <div className="relative w-72">
@@ -83,32 +87,32 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Rechercher une map, un auteur…"
+              placeholder={t('Rechercher une map, un auteur…')}
               className="h-10 w-full rounded-lg border border-line bg-surface pr-3 pl-9 text-sm outline-none placeholder:text-faint focus:border-blue"
             />
           </div>
           {sources.length > 1 && (
-            <select value={source ?? ''} onChange={(e) => setSource(e.target.value || null)} className={selectClass} aria-label="Source">
-              <option value="">Toutes les sources</option>
+            <select value={source ?? ''} onChange={(e) => setSource(e.target.value || null)} className={selectClass} aria-label={t('Source')}>
+              <option value="">{t('Toutes les sources')}</option>
               {sources.map((s) => (
                 <option key={s.id} value={s.id}>
-                  {s.name} ({s.count})
+                  {t(s.name)} ({s.count})
                 </option>
               ))}
             </select>
           )}
-          <select value={sort} onChange={(e) => setSort(e.target.value as Sort)} className={selectClass} aria-label="Trier">
-            <option value="name">Nom (A → Z)</option>
-            <option value="size-asc">Plus légères</option>
-            <option value="size-desc">Plus lourdes</option>
+          <select value={sort} onChange={(e) => setSort(e.target.value as Sort)} className={selectClass} aria-label={t('Trier')}>
+            <option value="name">{t('Nom (A → Z)')}</option>
+            <option value="size-asc">{t('Plus légères')}</option>
+            <option value="size-desc">{t('Plus lourdes')}</option>
           </select>
           <Button
             variant="secondary"
             icon={<RefreshCw className={`size-4 ${marketLoading ? 'animate-spin' : ''}`} />}
             onClick={() => void refreshMarket()}
             disabled={marketLoading}
-            aria-label="Actualiser le catalogue"
-            title="Actualiser le catalogue"
+            aria-label={t('Actualiser le catalogue')}
+            title={t('Actualiser le catalogue')}
           />
         </div>
 
@@ -118,21 +122,21 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
             <button
               onClick={() => setCompleteOnly((v) => !v)}
               aria-pressed={completeOnly}
-              title="N'afficher que les maps dont toutes les dépendances sont présentes dans ton jeu"
+              title={t("N'afficher que les maps dont toutes les dépendances sont présentes dans ton jeu")}
               className={`inline-flex h-7 items-center gap-1.5 rounded-full px-3 text-[13px] font-medium transition ${
                 completeOnly ? 'bg-ok text-bg' : 'bg-surface text-muted hover:bg-surface-2 hover:text-fg'
               }`}
             >
               <CircleCheck className={`size-3.5 ${completeOnly ? '' : 'text-ok'}`} />
-              Rendu complet
+              {t('Rendu complet')}
             </button>
             <span className="mx-1 h-5 w-px bg-line" />
             <button onClick={() => setTag(null)} className={chip(tag === null)}>
-              Toutes
+              {t('Toutes')}
             </button>
-            {visibleTags.map((t) => (
-              <button key={t} onClick={() => setTag(t)} className={chip(tag === t)}>
-                {t}
+            {visibleTags.map((name) => (
+              <button key={name} onClick={() => setTag(name)} className={chip(tag === name)}>
+                {name}
               </button>
             ))}
             {moreTags.length > 0 && (
@@ -140,12 +144,12 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
                 value={tag && moreTags.includes(tag) ? tag : ''}
                 onChange={(e) => setTag(e.target.value || null)}
                 className={`${chip(!!tag && moreTags.includes(tag))} appearance-none pr-3 outline-none`}
-                aria-label="Autres catégories"
+                aria-label={t('Autres catégories')}
               >
-                <option value="">Plus…</option>
-                {moreTags.map((t) => (
-                  <option key={t} value={t}>
-                    {t}
+                <option value="">{t('Plus…')}</option>
+                {moreTags.map((name) => (
+                  <option key={name} value={name}>
+                    {name}
                   </option>
                 ))}
               </select>
@@ -156,7 +160,7 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
         {offline && (
           <p className="flex items-center gap-2 text-[13px] text-muted">
             <CloudOff className="size-4" />
-            Registre en ligne injoignable pour certaines sources : affichage de la copie locale du catalogue.
+            {t('Registre en ligne injoignable pour certaines sources : affichage de la copie locale du catalogue.')}
           </p>
         )}
       </div>
@@ -171,10 +175,10 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
         ) : items.length === 0 ? (
           <div className="py-24 text-center text-muted">
             {market.maps.length === 0
-              ? 'Aucune source de maps disponible. Vérifie les sources dans les réglages.'
+              ? t('Aucune source de maps disponible. Vérifie les sources dans les réglages.')
               : favOnly && favCount === 0
-                ? 'Aucun favori pour l’instant : clique sur le ♥ d’une map pour l’ajouter.'
-                : 'Aucune map ne correspond à ta recherche.'}
+                ? t('Aucun favori pour l’instant : clique sur le ♥ d’une map pour l’ajouter.')
+                : t('Aucune map ne correspond à ta recherche.')}
           </div>
         ) : (
           <Grid>
@@ -203,7 +207,7 @@ export function FavoritesChip({ active, count, onClick }: { active: boolean; cou
       }`}
     >
       <Heart className={`size-3.5 ${active ? 'fill-current' : 'text-rose-500'}`} />
-      Favoris
+      {t('Favoris')}
       {count > 0 && <span className={`tabular-nums ${active ? 'text-white/80' : 'text-faint'}`}>{count}</span>}
     </button>
   )

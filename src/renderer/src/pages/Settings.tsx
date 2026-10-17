@@ -6,9 +6,10 @@ import { useApp } from '../state'
 import { describeAppUpdate, useAppUpdate } from '../components/AppUpdate'
 import { useToast } from '../components/Toast'
 import { Button } from '../components/Button'
+import { t, tk, type LanguageSetting } from '../../../shared/i18n'
 
 const TEXTURES_URL = 'https://videogamemods.com/vgm/rocketleague/mods/workshop-textures'
-const platformLabel = { epic: 'Epic Games', steam: 'Steam', custom: 'Dossier personnalisé' }
+const platformLabel = { epic: 'Epic Games', steam: 'Steam', custom: tk('Dossier personnalisé') }
 
 export function SettingsPage() {
   const { status, refreshMarket, settings, saveSettings: update, reloadSettings } = useApp()
@@ -35,13 +36,13 @@ export function SettingsPage() {
 
   const pick = async () => {
     const r = await window.api.pickInstallFolder()
-    if (!r.ok) toast('error', 'Dossier invalide', r.error)
+    if (!r.ok) toast('error', t('Dossier invalide'), r.error)
     else if (r.value) await reloadSettings()
   }
 
   const addSource = async () => {
     const url = newSource.url.trim()
-    if (!/^https:\/\//.test(url)) return toast('error', 'URL invalide', "L'URL du registre doit commencer par https://")
+    if (!/^https:\/\//.test(url)) return toast('error', t('URL invalide'), t("L'URL du registre doit commencer par https://"))
     const source: RegistrySource = {
       id: `src-${Date.now().toString(36)}`,
       name: newSource.name.trim() || new URL(url).hostname,
@@ -58,27 +59,27 @@ export function SettingsPage() {
   return (
     <div className="h-full overflow-y-auto">
       <div className="mx-auto max-w-3xl space-y-8 px-8 py-7">
-        <h1 className="font-display text-2xl font-bold">Réglages</h1>
+        <h1 className="font-display text-2xl font-bold">{t('Réglages')}</h1>
 
-        <Section title="Rocket League" desc="L'app remplace une arène Labs de Free Play par la map choisie : Underpass en général, Utopia Retro pour les maps qui réutilisent des éléments d'Underpass.">
+        <Section title="Rocket League" desc={t("L'app remplace une arène Labs de Free Play par la map choisie : Underpass en général, Utopia Retro pour les maps qui réutilisent des éléments d'Underpass.")}>
           <div className="flex items-center gap-4 rounded-xl border border-line bg-surface p-4">
             {status?.valid ? <CircleCheck className="size-5 shrink-0 text-ok" /> : <TriangleAlert className="size-5 shrink-0 text-warn" />}
             <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold">{install ? platformLabel[install.platform] : 'Aucune installation configurée'}</p>
+              <p className="text-sm font-semibold">{install ? t(platformLabel[install.platform]) : t('Aucune installation configurée')}</p>
               <p className="selectable truncate text-[13px] text-muted" title={install?.root}>
-                {install?.root ?? 'Lance une détection ou choisis le dossier du jeu.'}
+                {install?.root ?? t('Lance une détection ou choisis le dossier du jeu.')}
               </p>
             </div>
             <Button size="sm" icon={<Radar className="size-4" />} busy={detecting} onClick={() => void detect()}>
-              Détecter
+              {t('Détecter')}
             </Button>
             <Button size="sm" icon={<FolderOpen className="size-4" />} onClick={() => void pick()}>
-              Choisir…
+              {t('Choisir…')}
             </Button>
           </div>
           {detected && (
             <div className="mt-2 space-y-1.5">
-              {detected.length === 0 && <p className="text-[13px] text-muted">Aucune installation trouvée automatiquement.</p>}
+              {detected.length === 0 && <p className="text-[13px] text-muted">{t('Aucune installation trouvée automatiquement.')}</p>}
               {detected.map((d) => {
                 const current = install?.root.toLowerCase() === d.root.toLowerCase()
                 return (
@@ -89,9 +90,9 @@ export function SettingsPage() {
                       current ? 'border-blue/60 bg-blue/10' : 'border-line hover:border-faint'
                     }`}
                   >
-                    <span className="font-semibold">{platformLabel[d.platform]}</span>
+                    <span className="font-semibold">{t(platformLabel[d.platform])}</span>
                     <span className="truncate text-muted">{d.root}</span>
-                    {current && <span className="ml-auto text-blue">Utilisée</span>}
+                    {current && <span className="ml-auto text-blue">{t('Utilisée')}</span>}
                   </button>
                 )
               })}
@@ -99,30 +100,30 @@ export function SettingsPage() {
           )}
         </Section>
 
-        <Section title="Comportement">
+        <Section title={t('Comportement')}>
           <Toggle
-            label="Restaurer l'original en quittant l'app"
-            desc="Remet les arènes d'origine à la fermeture, pour ne jamais rester avec une map custom en ligne."
+            label={t("Restaurer l'original en quittant l'app")}
+            desc={t("Remet les arènes d'origine à la fermeture, pour ne jamais rester avec une map custom en ligne.")}
             checked={settings.restoreOnExit}
             onChange={(v) => void update({ restoreOnExit: v })}
           />
           <Toggle
-            label="Garder l'app en arrière-plan à la fermeture"
-            desc="La croix cache la fenêtre : l'app reste près de l'horloge (clic pour la rouvrir, clic droit pour quitter). L'original n'est restauré qu'en quittant vraiment."
+            label={t("Garder l'app en arrière-plan à la fermeture")}
+            desc={t("La croix cache la fenêtre : l'app reste près de l'horloge (clic pour la rouvrir, clic droit pour quitter). L'original n'est restauré qu'en quittant vraiment.")}
             checked={settings.closeToTray}
             onChange={(v) => void update({ closeToTray: v })}
           />
           <Toggle
-            label="Mettre à jour les maps automatiquement"
-            desc="Installe d'office les nouvelles versions publiées par les auteurs. Sinon, un badge « Mise à jour » te les propose."
+            label={t('Mettre à jour les maps automatiquement')}
+            desc={t("Installe d'office les nouvelles versions publiées par les auteurs. Sinon, un badge « Mise à jour » te les propose.")}
             checked={settings.mapUpdates === 'auto'}
             onChange={(v) => void update({ mapUpdates: v ? 'auto' : 'ask' })}
           />
         </Section>
 
         <Section
-          title="Sources du market"
-          desc="Les maps présentes dans plusieurs sources sont fusionnées : la première source de la liste fournit la fiche, les autres servent de liens de secours. Ajoute tes propres registres JSON (voir registry/README.md)."
+          title={t('Sources du market')}
+          desc={t('Les maps présentes dans plusieurs sources sont fusionnées : la première source de la liste fournit la fiche, les autres servent de liens de secours. Ajoute tes propres registres JSON (voir registry/README.md).')}
         >
           <div className="divide-y divide-line overflow-hidden rounded-xl border border-line bg-surface">
             {settings.sources.map((s) => (
@@ -134,12 +135,12 @@ export function SettingsPage() {
                     void updateSources(settings.sources.map((x) => (x.id === s.id ? { ...x, enabled: e.target.checked } : x)))
                   }
                   className="size-4 accent-blue"
-                  aria-label={`Activer ${s.name}`}
+                  aria-label={t('Activer {name}', { name: t(s.name) })}
                 />
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-semibold">
-                    {s.name}
-                    {BUILTIN_SOURCE_IDS.has(s.id) && <span className="ml-2 text-[11px] font-medium text-faint">intégrée</span>}
+                    {t(s.name)}
+                    {BUILTIN_SOURCE_IDS.has(s.id) && <span className="ml-2 text-[11px] font-medium text-faint">{t('intégrée')}</span>}
                   </p>
                   <p className="selectable truncate text-[12px] text-faint">{s.url}</p>
                 </div>
@@ -147,7 +148,7 @@ export function SettingsPage() {
                   <button
                     onClick={() => void updateSources(settings.sources.filter((x) => x.id !== s.id))}
                     className="rounded-md p-1.5 text-faint hover:bg-danger/10 hover:text-danger"
-                    aria-label={`Supprimer ${s.name}`}
+                    aria-label={t('Supprimer {name}', { name: s.name })}
                   >
                     <Trash2 className="size-4" />
                   </button>
@@ -164,7 +165,7 @@ export function SettingsPage() {
               <input
                 value={newSource.name}
                 onChange={(e) => setNewSource((s) => ({ ...s, name: e.target.value }))}
-                placeholder="Nom"
+                placeholder={t('Nom')}
                 className="h-8 w-36 rounded-md border border-line bg-bg px-2.5 text-[13px] outline-none focus:border-blue"
               />
               <input
@@ -174,41 +175,57 @@ export function SettingsPage() {
                 className="h-8 flex-1 rounded-md border border-line bg-bg px-2.5 text-[13px] outline-none focus:border-blue"
               />
               <Button size="sm" type="submit" icon={<Plus className="size-4" />} disabled={!newSource.url.trim()}>
-                Ajouter
+                {t('Ajouter')}
               </Button>
             </form>
           </div>
         </Section>
 
-        <Section title="Aide">
+        <Section title={t('Aide')}>
           <div className="space-y-3 rounded-xl border border-line bg-surface p-5 text-sm leading-relaxed">
-            <p className="font-semibold">Jouer une map custom</p>
+            <p className="font-semibold">{t('Jouer une map custom')}</p>
             <ol className="list-inside list-decimal space-y-1 text-muted">
-              <li>Clique sur « Jouer » sur une map de ta bibliothèque.</li>
+              <li>{t('Clique sur « Jouer » sur une map de ta bibliothèque.')}</li>
               <li>
-                Sur Epic, lance le jeu via Bibliothèque → Rocket League → <b className="text-fg">⋯ → Lancer sans anti-triche</b>.
+                {t('Sur Epic, lance le jeu via Bibliothèque → Rocket League →')} <b className="text-fg">{t('⋯ → Lancer sans anti-triche')}</b>.
               </li>
-              <li>Entraînement → Free Play → choisis l'arène indiquée en bas de l'app (« Underpass » le plus souvent).</li>
-              <li>Restaure l'original avant de rejouer en ligne (automatique en quittant l'app si l'option est active).</li>
+              <li>{t("Entraînement → Free Play → choisis l'arène indiquée en bas de l'app (« Underpass » le plus souvent).")}</li>
+              <li>{t("Restaure l'original avant de rejouer en ligne (automatique en quittant l'app si l'option est active).")}</li>
             </ol>
-            <p className="pt-2 font-semibold">Textures roses ?</p>
+            <p className="pt-2 font-semibold">{t('Textures roses ?')}</p>
             <p className="text-muted">
-              Certaines maps utilisent des textures du Workshop absentes du jeu. Installe le pack de textures une fois pour toutes dans le
-              dossier <code className="text-fg">TAGame/CookedPCConsole</code>.
+              {t('Certaines maps utilisent des textures du Workshop absentes du jeu. Installe le pack de textures une fois pour toutes dans le dossier')}{' '}
+              <code className="text-fg">TAGame/CookedPCConsole</code>.
             </p>
             <Button size="sm" variant="ghost" icon={<ExternalLink className="size-4" />} onClick={() => window.api.openExternal(TEXTURES_URL)}>
-              Pack de textures Workshop
+              {t('Pack de textures Workshop')}
             </Button>
           </div>
         </Section>
 
-        <Section title="Données">
+        <Section title={t('Langue')}>
+          <div className="flex items-center gap-4 rounded-xl border border-line bg-surface p-4">
+            <p className="flex-1 text-sm font-semibold">{t("Langue de l'interface")}</p>
+            <select
+              value={settings.language ?? 'auto'}
+              onChange={(e) => void update({ language: e.target.value as LanguageSetting })}
+              className="h-9 rounded-lg border border-line bg-bg px-3 text-sm outline-none focus:border-blue"
+              aria-label={t("Langue de l'interface")}
+            >
+              <option value="auto">{t('Automatique (langue du système)')}</option>
+              <option value="fr">Français</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </Section>
+
+        <Section title={t('Données')}>
           <Button icon={<FolderOpen className="size-4" />} onClick={() => window.api.openDataFolder()}>
-            Ouvrir le dossier de l'app
+            {t("Ouvrir le dossier de l'app")}
           </Button>
         </Section>
 
-        <Section title="À propos">
+        <Section title={t('À propos')}>
           <div className="flex items-center gap-4 rounded-xl border border-line bg-surface p-4">
             <div className="min-w-0 flex-1">
               <p className="text-sm font-semibold">RL Maps {appUpdate ? `v${appUpdate.current}` : ''}</p>
@@ -216,7 +233,7 @@ export function SettingsPage() {
             </div>
             {appUpdate?.kind === 'ready' ? (
               <Button size="sm" variant="primary" onClick={() => void window.api.installAppUpdate()}>
-                Redémarrer
+                {t('Redémarrer')}
               </Button>
             ) : (
               <Button
@@ -231,12 +248,12 @@ export function SettingsPage() {
                   }
                 }}
               >
-                Vérifier
+                {t('Vérifier')}
               </Button>
             )}
           </div>
           <Button size="sm" variant="ghost" icon={<ExternalLink className="size-4" />} onClick={() => window.api.openExternal('https://github.com/MarlBurroW/rl-maps')}>
-            Projet sur GitHub
+            {t('Projet sur GitHub')}
           </Button>
         </Section>
       </div>

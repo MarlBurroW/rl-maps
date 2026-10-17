@@ -10,6 +10,7 @@ import { stat } from 'node:fs/promises'
 import path from 'node:path'
 import type { SlotId, SlotState } from '../../shared/types'
 import { applyOps, type FileOp } from './fsops'
+import { t } from '../../shared/i18n'
 
 export interface SlotDef {
   id: SlotId
@@ -135,11 +136,11 @@ export async function loadIntoSlot(
   const target = targetPath(root, slot)
   const backup = backupPath(root, slot)
   const size = await sizeOf(mapFile)
-  if (size === null) throw new Error(`Fichier de map introuvable : ${mapFile}`)
+  if (size === null) throw new Error(t('Fichier de map introuvable : {file}', { file: mapFile }))
 
   const ops = [...removeExtrasOps(root, opts.previous), ...(await restoreOps(root, slot))]
   if ((await sizeOf(backup)) === null) {
-    if ((await sizeOf(target)) === null) throw new Error(`${slot.pkg}.upk introuvable : le dossier du jeu est-il correct ?`)
+    if ((await sizeOf(target)) === null) throw new Error(t('{file} introuvable : le dossier du jeu est-il correct ?', { file: `${slot.pkg}.upk` }))
     ops.push({ op: 'copy', from: target, to: backup })
   }
   ops.push({ op: 'copy', from: mapFile, to: target })

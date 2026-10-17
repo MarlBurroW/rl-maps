@@ -6,7 +6,7 @@
 
 import { decode, get, pool, slug, text, writeSource } from './lib.mjs'
 import { findMainPackage, packageName, withImports, zipEntries } from './scan-imports.mjs'
-import { WORKSHOP_TEXTURE_PACKAGES } from '../../src/shared/compat.ts'
+import { WORKSHOP_TEXTURE_PACKAGES } from '../../src/shared/workshop.ts'
 
 const SITE = 'https://videogamemods.com'
 const FILES = 'https://uploads.videogamemods.com/'

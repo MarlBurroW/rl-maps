@@ -50,6 +50,12 @@ describe('maps en plusieurs paquets', () => {
     expect(map.extras).toEqual(['meshes.upk'])
   })
 
+  it('refuse un zip qui ne contient que le pack de textures', async () => {
+    const dir = await tempDir()
+    const zip = await makeZip(path.join(dir, 'Textures.zip'), { 'EditorMaterials.upk': 'x', 'EngineDebugMaterials.upk': 'y' })
+    await expect(new Library(path.join(dir, 'library')).import(zip)).rejects.toThrow(/pack de textures/)
+  })
+
   it('ne remplace jamais un fichier du jeu, sauf les annexes du chargement précédent', () => {
     const extras = [
       { name: 'HH_PuzzleOne.upk', path: 'a' },

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Upload } from 'lucide-react'
+import { t } from '../../../shared/i18n'
 
 /** Glisser-déposer de fichiers n'importe où dans la fenêtre. */
 export function DropOverlay({ onFiles }: { onFiles: (paths: string[]) => void }) {
@@ -44,8 +45,8 @@ export function DropOverlay({ onFiles }: { onFiles: (paths: string[]) => void })
     <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-bg/80 p-6 backdrop-blur-sm">
       <div className="flex size-full flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-blue/60 bg-blue/5">
         <Upload className="size-10 text-blue" />
-        <p className="font-display text-xl font-semibold">Dépose tes maps ici</p>
-        <p className="text-sm text-muted">Fichiers .upk, .udk ou .zip</p>
+        <p className="font-display text-xl font-semibold">{t('Dépose tes maps ici')}</p>
+        <p className="text-sm text-muted">{t('Fichiers .upk, .udk ou .zip')}</p>
       </div>
     </div>
   )

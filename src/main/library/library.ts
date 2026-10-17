@@ -10,6 +10,7 @@ import type { LibraryMap } from '../../shared/types'
 import { extractZip, IMAGE_EXTS, MAP_EXTS, pickContent } from './archive'
 import { readPackageImports, readPackageInfo } from '../game/upk'
 import { WORKSHOP_TEXTURE_PACKAGES } from '../../shared/compat'
+import { t } from '../../shared/i18n'
 
 export const THUMB_PROTOCOL = 'rlmaps'
 const EXTRAS_DIR = 'extras'
@@ -53,7 +54,7 @@ export class Library {
 
   private mapDir(id: string) {
     // Les ids viennent du registre ou de slug() : on refuse tout ce qui sortirait du dossier.
-    if (!/^[\w.-]+$/.test(id) || id.startsWith('.')) throw new Error(`Identifiant de map invalide : ${id}`)
+    if (!/^[\w.-]+$/.test(id) || id.startsWith('.')) throw new Error(t('Identifiant de map invalide : {id}', { id }))
     return path.join(this.dir, id)
   }
 
@@ -102,7 +103,7 @@ export class Library {
   /** Chemin absolu du fichier de map, pour le copier dans le jeu. */
   async mapFile(id: string): Promise<string> {
     const meta = await this.readMeta(id)
-    if (!meta) throw new Error('Map introuvable dans la bibliothèque')
+    if (!meta) throw new Error(t('Map introuvable dans la bibliothèque'))
     return path.join(this.mapDir(id), meta.file)
   }
 
@@ -133,7 +134,7 @@ export class Library {
   async import(source: string, hints: ImportHints = {}): Promise<LibraryMap> {
     const ext = path.extname(source).toLowerCase()
     if (!SUPPORTED_IMPORT_EXTS.includes(ext)) {
-      throw new Error(`Format non supporté (${ext || 'sans extension'}) : utilise un .upk, .udk ou .zip`)
+      throw new Error(t('Format non supporté ({ext}) : utilise un .upk, .udk ou .zip', { ext: ext || t('sans extension') }))
     }
     await mkdir(this.dir, { recursive: true })
     const staging = path.join(this.dir, `.staging-${randomBytes(4).toString('hex')}`)
@@ -147,7 +148,10 @@ export class Library {
 
       if (ext === '.zip') {
         const content = pickContent(await extractZip(source, staging))
-        if (!content.map) throw new Error("Aucun fichier .upk ou .udk trouvé dans l'archive")
+        if (!content.map) throw new Error(t("Aucun fichier .upk ou .udk trouvé dans l'archive"))
+        if ([content.map, ...content.extras].every((f) => WORKSHOP_TEXTURE_PACKAGES.has(path.parse(f.name).name.toLowerCase()))) {
+          throw new Error(t("Cette archive ne contient pas de map : c'est un pack de textures. Décompresse-le dans le dossier TAGame/CookedPCConsole du jeu."))
+        }
         // Plusieurs paquets : la map est le plus gros qui contient un niveau (les autres sont des assets)
         const all = [content.map, ...content.extras]
         const candidates = all

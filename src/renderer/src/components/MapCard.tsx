@@ -5,6 +5,7 @@ import { Thumb } from './Thumb'
 import { MapActions, UpdateButton } from './MapActions'
 import { FavoriteButton } from './FavoriteButton'
 import { CompatBadge } from './Compat'
+import { t } from '../../../shared/i18n'
 
 export function MapCard({ item, onOpen, badge = true }: { item: Item; onOpen: () => void; badge?: boolean }) {
   return (
@@ -17,11 +18,11 @@ export function MapCard({ item, onOpen, badge = true }: { item: Item; onOpen: ()
         <FavoriteButton item={item} className="absolute top-2 left-2" />
         <CompatBadge missing={item.missing} className="absolute bottom-2 left-2" />
         {item.updateAvailable && (
-          <span className="absolute right-2 bottom-2 rounded-full bg-blue px-2 py-0.5 text-[11px] font-semibold text-white">Mise à jour</span>
+          <span className="absolute right-2 bottom-2 rounded-full bg-blue px-2 py-0.5 text-[11px] font-semibold text-white">{t('Mise à jour')}</span>
         )}
         {badge && item.local && item.market && (
           <span className="absolute top-2 right-2 inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[11px] font-semibold text-ok backdrop-blur">
-            <CircleCheck className="size-3" /> Installée
+            <CircleCheck className="size-3" /> {t('Installée')}
           </span>
         )}
       </div>
@@ -31,15 +32,15 @@ export function MapCard({ item, onOpen, badge = true }: { item: Item; onOpen: ()
             {item.name}
           </h3>
           <p className="mt-0.5 truncate text-[13px] text-muted">
-            {item.author ?? 'Auteur inconnu'} · {formatBytes(item.size)}
+            {item.author ?? t('Auteur inconnu')} · {formatBytes(item.size)}
           </p>
         </div>
         {item.summary && <p className="line-clamp-2 text-[13px] leading-snug text-faint">{item.summary}</p>}
         <div className="mt-auto flex items-center gap-2">
           <div className="flex min-w-0 flex-1 gap-1 overflow-hidden">
-            {item.tags.slice(0, 2).map((t) => (
-              <span key={t} className="truncate rounded-md bg-surface-2 px-2 py-0.5 text-[11px] font-medium text-muted">
-                {t}
+            {item.tags.slice(0, 2).map((tag) => (
+              <span key={tag} className="truncate rounded-md bg-surface-2 px-2 py-0.5 text-[11px] font-medium text-muted">
+                {tag}
               </span>
             ))}
           </div>

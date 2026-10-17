@@ -4,6 +4,7 @@ import { pipeline } from 'node:stream/promises'
 import path from 'node:path'
 import yauzl from 'yauzl'
 import { WORKSHOP_TEXTURE_PACKAGES } from '../../shared/compat'
+import { t } from '../../shared/i18n'
 
 export const MAP_EXTS = ['.upk', '.udk']
 export const IMAGE_EXTS = ['.png', '.jpg', '.jpeg', '.jfif', '.webp']
@@ -22,9 +23,9 @@ export interface ExtractedFile {
  */
 export function extractZip(zipPath: string, destDir: string): Promise<ExtractedFile[]> {
   return new Promise<ExtractedFile[]>((resolve, fail) => {
-    const reject = (err: unknown) => fail(new Error(`Archive invalide ou corrompue : ${(err as Error)?.message ?? err}`))
+    const reject = (err: unknown) => fail(new Error(t('Archive invalide ou corrompue : {msg}', { msg: String((err as Error)?.message ?? err) })))
     yauzl.open(zipPath, { lazyEntries: true, autoClose: true }, async (err, zip) => {
-      if (err || !zip) return reject(err ?? new Error('Archive illisible'))
+      if (err || !zip) return reject(err ?? new Error(t('Archive illisible')))
       await mkdir(destDir, { recursive: true })
       const out: ExtractedFile[] = []
       const used = new Set<string>()

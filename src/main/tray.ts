@@ -3,6 +3,7 @@
 
 import { Menu, Tray, nativeImage } from 'electron'
 import type { GameStatus } from '../shared/types'
+import { t } from '../shared/i18n'
 
 export interface TrayActions {
   show(): void
@@ -14,15 +15,15 @@ let tray: Tray | null = null
 let actions: TrayActions | null = null
 
 function buildMenu(status: GameStatus | null) {
-  const loaded = status?.slot.kind === 'custom' ? status.slot.mapName : status?.slot.kind === 'unknown' ? 'map d’un autre outil' : null
+  const loaded = status?.slot.kind === 'custom' ? status.slot.mapName : status?.slot.kind === 'unknown' ? t('map d’un autre outil') : null
   return Menu.buildFromTemplate([
-    { label: 'Ouvrir RL Maps', click: () => actions?.show() },
+    { label: t('Ouvrir RL Maps'), click: () => actions?.show() },
     { type: 'separator' },
     loaded
-      ? { label: `Restaurer l'original (${loaded})`, click: () => actions?.restore() }
-      : { label: 'Aucune map custom chargée', enabled: false },
+      ? { label: t("Restaurer l'original ({name})", { name: loaded }), click: () => actions?.restore() }
+      : { label: t('Aucune map custom chargée'), enabled: false },
     { type: 'separator' },
-    { label: 'Quitter', click: () => actions?.quit() }
+    { label: t('Quitter'), click: () => actions?.quit() }
   ])
 }
 

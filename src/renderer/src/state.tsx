@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { DownloadProgress, GameStatus, LibraryMap, MarketMap, MarketState, Result, Settings } from '../../shared/types'
 import { isUpToDate } from '../../shared/updates'
 import { useToast } from './components/Toast'
+import { t } from '../../shared/i18n'
 
 /** Vue unifiée d'une map, qu'elle vienne du market, de la bibliothèque, ou des deux. */
 export interface Item {
@@ -25,7 +26,7 @@ export interface Item {
   updateAvailable: boolean
 }
 
-export const playHint = (arena: string) => `Dans Rocket League : Entraînement → Free Play → arène « ${arena} ».`
+export const playHint = (arena: string) => t('Dans Rocket League : Entraînement → Free Play → arène « {arena} ».', { arena })
 
 interface AppState {
   status: GameStatus | null
@@ -148,11 +149,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
           delete next[m.id]
           return next
         })
-        if (r.error !== 'Téléchargement annulé') toast('error', `Échec : ${m.name}`, r.error)
+        if (r.error !== t('Téléchargement annulé')) toast('error', t('Échec : {name}', { name: m.name }), r.error)
         return null
       }
-      if (opts.update) toast('success', `${m.name} mise à jour`, 'La dernière version publiée est installée.')
-      else toast('success', `${m.name} installée`, 'Clique sur « Jouer » pour la charger dans le jeu.')
+      if (opts.update) toast('success', t('{name} mise à jour', { name: m.name }), t('La dernière version publiée est installée.'))
+      else toast('success', t('{name} installée', { name: m.name }), t('Clique sur « Jouer » pour la charger dans le jeu.'))
       return r.value
     },
     [reloadLibrary, toast]
@@ -160,7 +161,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const play = useCallback(
     async (map: LibraryMap) => {
-      const s = await run(`play:${map.id}`, () => window.api.loadMap(map.id), 'Impossible de charger la map')
+      const s = await run(`play:${map.id}`, () => window.api.loadMap(map.id), t('Impossible de charger la map'))
       if (s) {
         setStatus(s)
         void reloadLibrary() // date de dernière partie
@@ -168,9 +169,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
         const moved = s.slot.kind === 'custom' && s.slot.slot !== 'underpass'
         toast(
           'success',
-          `${map.name} est prête`,
-          playHint(arena) + (moved ? `
-Cette map réutilise des éléments d’Underpass : elle est chargée dans ${arena} pour les garder intacts.` : '')
+          t('{name} est prête', { name: map.name }),
+          playHint(arena) +
+            (moved ? '\n' + t('Cette map réutilise des éléments d’Underpass : elle est chargée dans {arena} pour les garder intacts.', { arena }) : '')
         )
       }
     },
@@ -178,16 +179,16 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
   )
 
   const restore = useCallback(async () => {
-    const s = await run('restore', () => window.api.restoreOriginal(), 'Restauration impossible')
+    const s = await run('restore', () => window.api.restoreOriginal(), t('Restauration impossible'))
     if (s) {
       setStatus(s)
-      toast('info', 'Map d’origine restaurée', 'Underpass est de retour, tu peux rejouer en ligne.')
+      toast('info', t('Map d’origine restaurée'), t('Les arènes d’origine sont de retour, tu peux rejouer en ligne.'))
     }
   }, [run, toast])
 
   const remove = useCallback(
     async (map: LibraryMap) => {
-      const ok = await run(`remove:${map.id}`, () => window.api.removeMap(map.id), 'Suppression impossible')
+      const ok = await run(`remove:${map.id}`, () => window.api.removeMap(map.id), t('Suppression impossible'))
       if (ok !== null) await reloadLibrary()
     },
     [run, reloadLibrary]
@@ -198,11 +199,11 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
       const maps = await run(
         'import',
         () => (paths ? window.api.importFiles(paths) : window.api.pickAndImport()),
-        'Import impossible'
+        t('Import impossible')
       )
       await reloadLibrary()
       if (maps?.length) {
-        toast('success', maps.length === 1 ? `${maps[0].name} ajoutée` : `${maps.length} maps ajoutées`, 'Elles sont dans ta bibliothèque.')
+        toast('success', maps.length === 1 ? t('{name} ajoutée', { name: maps[0].name }) : t('{n} maps ajoutées', { n: maps.length }), t('Elles sont dans ta bibliothèque.'))
       }
     },
     [run, reloadLibrary, toast]
@@ -278,7 +279,7 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
       if (updated && status?.slot.kind === 'custom' && status.slot.mapId === updated.id) {
         const s = await window.api.loadMap(updated.id)
         if (s.ok) setStatus(s.value)
-        else toast('info', 'Nouvelle version prête', 'Elle sera chargée dans le jeu au prochain « Jouer ».')
+        else toast('info', t('Nouvelle version prête'), t('Elle sera chargée dans le jeu au prochain « Jouer ».'))
       }
     },
     [install, progress, status, toast]

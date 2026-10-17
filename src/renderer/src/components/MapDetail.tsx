@@ -7,6 +7,7 @@ import { MapActions, UpdateButton } from './MapActions'
 import { FavoriteButton } from './FavoriteButton'
 import { CompatSection } from './Compat'
 import { Button } from './Button'
+import { t } from '../../../shared/i18n'
 
 export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }) {
   const { remove, busy, status } = useApp()
@@ -21,9 +22,9 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
 
   // Un lien par registre où la map est publiée, sinon la page enregistrée à l'installation
   const links = item.market?.sources.length
-    ? item.market.sources.filter((s) => s.homepage).map((s) => ({ label: s.name, url: s.homepage! }))
+    ? item.market.sources.filter((s) => s.homepage).map((s) => ({ label: t(s.name), url: s.homepage! }))
     : item.homepage
-      ? [{ label: 'Page de la map', url: item.homepage }]
+      ? [{ label: t('Page de la map'), url: item.homepage }]
       : []
 
   return (
@@ -40,7 +41,7 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
           <button
             onClick={onClose}
             className="absolute top-3 right-3 rounded-full bg-black/50 p-2 text-white/80 backdrop-blur hover:text-white"
-            aria-label="Fermer"
+            aria-label={t('Fermer')}
           >
             <X className="size-5" />
           </button>
@@ -50,7 +51,7 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
               <FavoriteButton item={item} className="p-2" />
             </div>
             <p className="mt-1 text-sm text-muted">
-              par <span className="text-fg">{item.author ?? 'Auteur inconnu'}</span> · {formatBytes(item.size)}
+              {t('par')} <span className="text-fg">{item.author ?? t('Auteur inconnu')}</span> · {formatBytes(item.size)}
               {item.market?.version && <> · {item.market.version.replace(/^v+/i, 'v')}</>}
             </p>
           </div>
@@ -59,9 +60,9 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
         <div className="selectable flex-1 space-y-5 overflow-y-auto px-6 pt-3 pb-6">
           {item.tags.length > 0 && (
             <div className="flex flex-wrap gap-1.5">
-              {item.tags.map((t) => (
-                <span key={t} className="rounded-md bg-surface-2 px-2 py-1 text-xs font-medium text-muted">
-                  {t}
+              {item.tags.map((tag) => (
+                <span key={tag} className="rounded-md bg-surface-2 px-2 py-1 text-xs font-medium text-muted">
+                  {tag}
                 </span>
               ))}
             </div>
@@ -71,16 +72,16 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
           )}
           {item.local && (
             <p className="text-[13px] text-muted">
-              Ajoutée le {formatDate(item.local.addedAt)}
-              {item.local.updatedAt && <> · mise à jour le {formatDate(item.local.updatedAt)}</>}
+              {t('Ajoutée le {date}', { date: formatDate(item.local.addedAt) })}
+              {item.local.updatedAt && <> · {t('mise à jour le {date}', { date: formatDate(item.local.updatedAt) })}</>}
               {' · '}
-              {item.local.lastPlayedAt ? `dernière partie ${timeAgo(item.local.lastPlayedAt)}` : 'jamais jouée'}
+              {item.local.lastPlayedAt ? t('dernière partie {when}', { when: timeAgo(item.local.lastPlayedAt) ?? '' }) : t('jamais jouée')}
             </p>
           )}
           <CompatSection missing={item.missing} />
           {item.recommendedSettings && (
             <div className="rounded-xl border border-line bg-surface-2/60 p-4">
-              <h3 className="text-xs font-semibold tracking-wider text-muted uppercase">Réglages conseillés</h3>
+              <h3 className="text-xs font-semibold tracking-wider text-muted uppercase">{t('Réglages conseillés')}</h3>
               <p className="mt-2 text-sm whitespace-pre-line">{item.recommendedSettings}</p>
             </div>
           )}
@@ -105,13 +106,13 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
               icon={<Trash2 className="size-4" />}
               busy={busy === `remove:${item.local.id}`}
               disabled={!!loaded}
-              title={loaded ? "Restaure l'original avant de supprimer cette map" : undefined}
+              title={loaded ? t("Restaure l'original avant de supprimer cette map") : undefined}
               onClick={async () => {
                 await remove(item.local!)
                 if (!item.market) onClose()
               }}
             >
-              Supprimer
+              {t('Supprimer')}
             </Button>
           )}
           <UpdateButton item={item} className="ml-auto" />

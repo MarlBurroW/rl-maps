@@ -3,6 +3,7 @@ import { rm } from 'node:fs/promises'
 import { Readable, Transform } from 'node:stream'
 import { pipeline } from 'node:stream/promises'
 import path from 'node:path'
+import { t } from '../../shared/i18n'
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) RLMaps'
 
@@ -37,11 +38,11 @@ export interface DownloadOptions {
 /** Télécharge `url` dans `dir`, renvoie le chemin du fichier écrit. */
 export async function download(url: string, dir: string, fallbackName: string, opts: DownloadOptions = {}) {
   const res = await fetch(toDirectUrl(url), { headers: { 'user-agent': UA }, signal: opts.signal, redirect: 'follow' })
-  if (!res.ok || !res.body) throw new Error(`Téléchargement impossible (HTTP ${res.status})`)
+  if (!res.ok || !res.body) throw new Error(t('Téléchargement impossible (HTTP {status})', { status: res.status }))
   if ((res.headers.get('content-type') ?? '').includes('text/html')) {
     await res.body.cancel()
     throw new Error(
-      "L'hébergeur a renvoyé une page web au lieu du fichier (quota Google Drive dépassé ou lien privé). Réessaie plus tard ou ouvre la page de la map."
+      t("L'hébergeur a renvoyé une page web au lieu du fichier (quota Google Drive dépassé ou lien privé). Réessaie plus tard ou ouvre la page de la map.")
     )
   }
 
@@ -82,5 +83,9 @@ export async function downloadFirst(urls: string[], dir: string, fallbackName: s
       errors.push(`${new URL(url).hostname} : ${(err as Error).message}`)
     }
   }
-  throw new Error(errors.length > 1 ? `Aucun des ${errors.length} liens n'a fonctionné.\n${errors.join('\n')}` : (errors[0] ?? 'Aucun lien'))
+  throw new Error(
+    errors.length > 1
+      ? t("Aucun des {n} liens n'a fonctionné.", { n: errors.length }) + '\n' + errors.join('\n')
+      : (errors[0] ?? t('Aucun lien de téléchargement'))
+  )
 }

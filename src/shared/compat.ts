@@ -1,3 +1,5 @@
+import { t, tk } from './i18n'
+
 // Compatibilité d'une map avec le jeu installé : quels paquets dont elle dépend sont absents.
 
 /**
@@ -35,43 +37,24 @@ export interface DependencyInfo {
   reason: string
 }
 
-const REMOVED_BY_RL = 'Paquet supprimé par une mise à jour de Rocket League.'
+const REMOVED_BY_RL = tk('Paquet supprimé par une mise à jour de Rocket League.')
 
 const KNOWN: Record<string, DependencyInfo> = {
-  grass_textures: { effect: 'Reflets de l’environnement (sols et métaux plus ternes)', reason: REMOVED_BY_RL },
-  postprocess: { effect: 'Effets de post-traitement (flou des reflets, ambiance)', reason: REMOVED_BY_RL },
-  physicalmaterials: { effect: 'Physique des surfaces (murs collants, rebonds sur les poteaux)', reason: REMOVED_BY_RL },
-  fxactorevents: { effect: 'Effets visuels déclenchés par des événements', reason: REMOVED_BY_RL },
-  portalpackage: { effect: 'Physique des surfaces (murs collants)', reason: 'Paquet de travail du créateur, jamais publié.' },
-  enginemeshes: { effect: 'Quelques modèles 3D', reason: REMOVED_BY_RL }
+  grass_textures: { effect: tk('Reflets de l’environnement (sols et métaux plus ternes)'), reason: REMOVED_BY_RL },
+  postprocess: { effect: tk('Effets de post-traitement (flou des reflets, ambiance)'), reason: REMOVED_BY_RL },
+  physicalmaterials: { effect: tk('Physique des surfaces (murs collants, rebonds sur les poteaux)'), reason: REMOVED_BY_RL },
+  fxactorevents: { effect: tk('Effets visuels déclenchés par des événements'), reason: REMOVED_BY_RL },
+  portalpackage: { effect: tk('Physique des surfaces (murs collants)'), reason: tk('Paquet de travail du créateur, jamais publié.') },
+  enginemeshes: { effect: tk('Quelques modèles 3D'), reason: REMOVED_BY_RL }
 }
 
 export function describeDependency(pkg: string): DependencyInfo {
   const known = KNOWN[pkg.toLowerCase()]
-  if (known) return known
+  if (known) return { effect: t(known.effect), reason: t(known.reason) }
   if (/pack(age)?$/i.test(pkg)) {
-    return { effect: 'Assets propres à la map (textures, modèles)', reason: 'Paquet personnel du créateur, jamais publié.' }
+    return { effect: t('Assets propres à la map (textures, modèles)'), reason: t('Paquet personnel du créateur, jamais publié.') }
   }
-  return { effect: 'Textures, matériaux ou modèles', reason: 'Absent de ton installation de Rocket League.' }
+  return { effect: t('Textures, matériaux ou modèles'), reason: t('Absent de ton installation de Rocket League.') }
 }
 
-/**
- * Paquets du pack « Workshop textures » (moteur et éditeur UDK). Certains zips de maps les embarquent :
- * ce ne sont jamais la map elle-même.
- */
-export const WORKSHOP_TEXTURE_PACKAGES = new Set([
-  'editorlandscaperesources',
-  'editormaterials',
-  'editormeshes',
-  'editorresources',
-  'enginedebugmaterials',
-  'enginematerials',
-  'engineresources',
-  'maptemplateindex',
-  'maptemplates',
-  'nodebuddies',
-  'engine_mi_shaders',
-  'enginevolumetrics',
-  'enginebuildings',
-  'mods'
-])
+export { WORKSHOP_TEXTURE_PACKAGES } from './workshop'

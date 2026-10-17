@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useState, type ReactNode } from 'react'
 import { AppProvider, useApp, type Item } from './state'
 import { TitleBar, type Tab } from './components/TitleBar'
 import { NowPlaying } from './components/NowPlaying'
@@ -7,18 +7,31 @@ import { DropOverlay } from './components/DropOverlay'
 import { MarketPage } from './pages/Market'
 import { LibraryPage } from './pages/Library'
 import { SettingsPage } from './pages/Settings'
+import { resolveLang, setLang } from '../../shared/i18n'
 
 export function App() {
+  // L'onglet vit au-dessus du changement de langue, qui redessine tout le reste
+  const [tab, setTab] = useState<Tab>('market')
   return (
     <AppProvider>
-      <Shell />
+      <LanguageGate>
+        <Shell tab={tab} setTab={setTab} />
+      </LanguageGate>
     </AppProvider>
   )
 }
 
-function Shell() {
+/** Applique la langue choisie (ou celle du système) et redessine l'interface quand elle change. */
+function LanguageGate({ children }: { children: ReactNode }) {
+  const { settings } = useApp()
+  const lang = resolveLang(settings?.language, navigator.language)
+  setLang(lang)
+  document.documentElement.lang = lang
+  return <div key={lang} className="contents">{children}</div>
+}
+
+function Shell({ tab, setTab }: { tab: Tab; setTab: (t: Tab) => void }) {
   const { library, market, marketItem, localItem, importFiles } = useApp()
-  const [tab, setTab] = useState<Tab>('market')
   const [selectedKey, setSelectedKey] = useState<string | null>(null)
 
   // La fiche ouverte est recalculée depuis l'état courant (progression, installation, chargement…)

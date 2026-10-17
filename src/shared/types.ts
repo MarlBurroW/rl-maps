@@ -116,6 +116,8 @@ export interface GameStatus {
 export interface Settings {
   install: GameInstall | null
   restoreOnExit: boolean
+  /** Langue de l'interface (auto : celle du système) */
+  language?: 'auto' | 'fr' | 'en'
   /** Fermer la fenêtre garde l'app dans la zone de notification */
   closeToTray: boolean
   /** Mises à jour des maps installées : proposées (badge + bouton) ou automatiques */

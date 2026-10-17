@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ArrowDownToLine, LoaderCircle, RotateCw } from 'lucide-react'
 import type { AppUpdateState } from '../../../shared/types'
+import { t } from '../../../shared/i18n'
 
 export function useAppUpdate() {
   const [state, setState] = useState<AppUpdateState | null>(null)
@@ -20,8 +21,8 @@ export function AppUpdatePill() {
 
   if (state.kind === 'downloading') {
     return (
-      <span className={`${pill} bg-surface-2 text-muted`} title={`Téléchargement de la version ${state.version}`}>
-        <LoaderCircle className="size-3.5 animate-spin" /> Mise à jour {state.percent ?? 0} %
+      <span className={`${pill} bg-surface-2 text-muted`} title={t('Téléchargement de la version {v}', { v: state.version ?? '' })}>
+        <LoaderCircle className="size-3.5 animate-spin" /> {t('Mise à jour {n} %', { n: state.percent ?? 0 })}
       </span>
     )
   }
@@ -29,17 +30,17 @@ export function AppUpdatePill() {
     return (
       <button
         className={`${pill} bg-ok text-bg hover:brightness-110`}
-        title="Redémarre l'app pour installer la nouvelle version (sinon, elle s'installera à la prochaine fermeture)"
+        title={t("Redémarre l'app pour installer la nouvelle version (sinon, elle s'installera à la prochaine fermeture)")}
         onClick={() => void window.api.installAppUpdate()}
       >
-        <RotateCw className="size-3.5" /> v{state.version} prête · Redémarrer
+        <RotateCw className="size-3.5" /> {t('v{v} prête · Redémarrer', { v: state.version ?? '' })}
       </button>
     )
   }
   if (state.kind === 'portable' && state.url) {
     return (
       <button className={`${pill} bg-blue text-white hover:bg-blue-strong`} onClick={() => void window.api.openExternal(state.url!)}>
-        <ArrowDownToLine className="size-3.5" /> v{state.version} disponible
+        <ArrowDownToLine className="size-3.5" /> {t('v{v} disponible', { v: state.version ?? '' })}
       </button>
     )
   }
@@ -50,16 +51,16 @@ export function AppUpdatePill() {
 export function describeAppUpdate(state: AppUpdateState | null): string {
   switch (state?.kind) {
     case 'checking':
-      return 'Recherche de mises à jour…'
+      return t('Recherche de mises à jour…')
     case 'downloading':
-      return `Téléchargement de la version ${state.version} (${state.percent ?? 0} %)…`
+      return t('Téléchargement de la version {v} ({n} %)…', { v: state.version ?? '', n: state.percent ?? 0 })
     case 'ready':
-      return `La version ${state.version} est prête : redémarre l'app pour l'installer.`
+      return t("La version {v} est prête : redémarre l'app pour l'installer.", { v: state.version ?? '' })
     case 'portable':
-      return `La version ${state.version} est disponible. La version portable ne se met pas à jour seule : télécharge-la depuis la page des releases.`
+      return t('La version {v} est disponible. La version portable ne se met pas à jour seule : télécharge-la depuis la page des releases.', { v: state.version ?? '' })
     case 'error':
-      return `Vérification impossible : ${state.error}`
+      return t('Vérification impossible : {e}', { e: state.error ?? '' })
     default:
-      return 'Tu as la dernière version.'
+      return t('Tu as la dernière version.')
   }
 }

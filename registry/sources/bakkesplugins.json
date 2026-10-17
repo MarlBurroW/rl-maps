@@ -2,7 +2,7 @@
   "$schema": "../schema.json",
   "version": 1,
   "name": "BakkesPlugins",
-  "updatedAt": "2026-10-17T14:22:47.334Z",
+  "updatedAt": "2026-10-17T19:48:39.342Z",
   "maps": [
     {
       "id": "bakkesplugins-373",
@@ -12618,27 +12618,6 @@
         "MapTemplates",
         "enginedebugmaterials",
         "tagame"
-      ]
-    },
-    {
-      "id": "bakkesplugins-96",
-      "name": "Workshop Textures",
-      "author": "JetFox",
-      "summary": "Map Textures",
-      "description": "Map Textures",
-      "tags": [],
-      "thumbnail": "https://cdn.bakkesplugins.com/uploads/2f6caebd0d164f4199a6c041486b9c1e-images.jpg",
-      "homepage": "https://bakkesplugins.com/maps/96",
-      "source": "bakkesplugins",
-      "version": "v1.0.0",
-      "download": {
-        "url": "https://cdn.bakkesplugins.com/uploads/bda9556fe79d4359afb8e000ac7ec63e-96_1.0.0_6858564db4de4cba8ce31032563a0c44.zip",
-        "filename": "96_1.0.0_6858564db4de4cba8ce31032563a0c44.zip",
-        "size": 46667684
-      },
-      "imports": [
-        "Core",
-        "Engine"
       ]
     },
     {

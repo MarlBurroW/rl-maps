@@ -45,6 +45,7 @@ au redémarrage. La version portable signale simplement qu'une nouvelle version 
 - **Détection automatique** de l'installation (Epic, Steam, Heroic) et du jeu lancé.
 - **Pas de droits admin** quand le dossier du jeu est accessible en écriture (c'est le cas par défaut avec Epic).
   Sinon, une seule invite UAC au moment de l'écriture.
+- **Français et anglais** : l'interface suit la langue du système, ou celle choisie dans les réglages.
 - **Registres ouverts** : chaque source est un fichier JSON dans [`registry/sources/`](registry/README.md), mis à jour
   chaque semaine par la CI. On ajoute une map par PR, et on peut brancher d'autres registres dans les réglages.
 
@@ -89,6 +90,11 @@ Pour lancer une instance isolée (données et réglages séparés) : `RLMAPS_USE
 
 > Depuis le terminal intégré de VS Code, la variable `ELECTRON_RUN_AS_NODE=1` est héritée et empêche
 > Electron de démarrer : lance avec `env -u ELECTRON_RUN_AS_NODE npm run dev`.
+
+### Traductions
+
+Le texte français sert de clé : `t('Installer')` affiche « Install » en anglais. Les traductions sont dans
+`src/shared/i18n.en.ts`, et `tests/i18n.test.ts` échoue si un texte de l'interface n'y figure pas.
 
 ### Architecture
 

@@ -7,7 +7,7 @@ import zlib from 'node:zlib'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parsePackage } from '../../src/main/game/upk.ts'
-import { WORKSHOP_TEXTURE_PACKAGES } from '../../src/shared/compat.ts'
+import { WORKSHOP_TEXTURE_PACKAGES } from '../../src/shared/workshop.ts'
 import { get, pool, SOURCES_DIR } from './lib.mjs'
 
 const MAP_EXT = /\.(udk|upk)$/i
@@ -99,6 +99,8 @@ export async function findMainPackage(url, entries) {
   return { entry: fallback, header: await headerFromZip(url, fallback) }
 }
 
+export class NotAMapError extends Error {}
+
 /** Dépendances d'une entrée de registre, ou null si illisible. */
 export async function scanImports(download) {
   const url = directUrl(download.url)
@@ -108,6 +110,8 @@ export async function scanImports(download) {
   if (/\.zip$/i.test(name)) {
     const maps = (await zipEntries(url, download.size)).filter((e) => MAP_EXT.test(e.name))
     if (!maps.length) return null
+    // Que des paquets du pack de textures : ce n'est pas une map
+    if (maps.every((e) => WORKSHOP_TEXTURE_PACKAGES.has(packageName(e.name)))) throw new NotAMapError()
     const { entry: main, header: mainHeader } = await findMainPackage(url, maps)
     header = mainHeader
     // Les paquets livrés dans le même zip (niveaux secondaires, assets…) sont copiés avec la map
@@ -142,12 +146,15 @@ export async function withImports(sourceId, maps) {
     }
     try {
       m.imports = await scanImports(m.download)
-    } catch {
+    } catch (err) {
+      if (err instanceof NotAMapError) m.notAMap = true
+      else failed++
       m.imports = null
-      failed++
     }
     scanned++
   })
+  const notMaps = maps.filter((m) => m.notAMap)
+  if (notMaps.length) console.log(`Exclues (pack de textures, pas une map) : ${notMaps.map((m) => m.name).join(', ')}`)
   console.log(`Dépendances : ${scanned} maps analysées (${failed} illisibles), ${maps.length - scanned} reprises du registre`)
-  return maps
+  return maps.filter((m) => !m.notAMap)
 }

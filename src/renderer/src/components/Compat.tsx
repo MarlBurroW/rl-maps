@@ -1,15 +1,16 @@
 import { CircleCheck, TriangleAlert } from 'lucide-react'
 import { describeDependency } from '../../../shared/compat'
+import { plural, t } from '../../../shared/i18n'
 
 /** Petit badge sur la miniature quand des dépendances de la map manquent dans le jeu. */
 export function CompatBadge({ missing, className = '' }: { missing?: string[]; className?: string }) {
   if (!missing?.length) return null
   return (
     <span
-      title={`Rendu possiblement incomplet : ${missing.join(', ')} absent${missing.length > 1 ? 's' : ''} du jeu`}
+      title={plural(missing.length, 'Rendu possiblement incomplet : {list} absent du jeu', 'Rendu possiblement incomplet : {list} absents du jeu', { list: missing.join(', ') })}
       className={`inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[11px] font-semibold text-warn backdrop-blur ${className}`}
     >
-      <TriangleAlert className="size-3" /> Rendu incomplet
+      <TriangleAlert className="size-3" /> {t('Rendu incomplet')}
     </span>
   )
 }
@@ -21,7 +22,7 @@ export function CompatSection({ missing }: { missing?: string[] }) {
   if (missing.length === 0) {
     return (
       <p className="flex items-center gap-2 text-sm text-ok">
-        <CircleCheck className="size-4" /> Toutes les dépendances de cette map sont présentes dans ton jeu.
+        <CircleCheck className="size-4" /> {t('Toutes les dépendances de cette map sont présentes dans ton jeu.')}
       </p>
     )
   }
@@ -29,11 +30,10 @@ export function CompatSection({ missing }: { missing?: string[] }) {
   return (
     <div className="rounded-xl border border-warn/30 bg-warn/5 p-4">
       <h3 className="flex items-center gap-2 text-xs font-semibold tracking-wider text-warn uppercase">
-        <TriangleAlert className="size-4" /> Rendu possiblement incomplet
+        <TriangleAlert className="size-4" /> {t('Rendu possiblement incomplet')}
       </h3>
       <p className="mt-2 text-[13px] text-muted">
-        La map reste jouable, mais elle utilise des éléments absents de ton jeu. Aucun loader ne peut les recréer : seul son auteur peut
-        la mettre à jour.
+        {t('La map reste jouable, mais elle utilise des éléments absents de ton jeu. Aucun loader ne peut les recréer : seul son auteur peut la mettre à jour.')}
       </p>
       <ul className="mt-3 space-y-2">
         {missing.map((pkg) => {

@@ -1,12 +1,14 @@
 import { LibraryBig, Settings, Store } from 'lucide-react'
 import { AppUpdatePill } from './AppUpdate'
+import { t, tk } from '../../../shared/i18n'
 
 export type Tab = 'market' | 'library' | 'settings'
 
+// Libellés traduits au rendu (t() dépend de la langue courante)
 const tabs: { id: Tab; label: string; icon: typeof Store }[] = [
   { id: 'market', label: 'Market', icon: Store },
-  { id: 'library', label: 'Bibliothèque', icon: LibraryBig },
-  { id: 'settings', label: 'Réglages', icon: Settings }
+  { id: 'library', label: tk('Bibliothèque'), icon: LibraryBig },
+  { id: 'settings', label: tk('Réglages'), icon: Settings }
 ]
 
 export function TitleBar({ tab, onTab, libraryCount }: { tab: Tab; onTab: (t: Tab) => void; libraryCount: number }) {
@@ -27,7 +29,7 @@ export function TitleBar({ tab, onTab, libraryCount }: { tab: Tab; onTab: (t: Ta
             }`}
           >
             <Icon className="size-4" />
-            {label}
+            {t(label)}
             {id === 'library' && libraryCount > 0 && (
               <span className="rounded-full bg-surface-2 px-1.5 text-[11px] text-muted tabular-nums">{libraryCount}</span>
             )}

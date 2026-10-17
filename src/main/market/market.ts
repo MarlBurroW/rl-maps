@@ -7,6 +7,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import type { MarketMap, MarketState, RegistryIndex, RegistryMap, RegistrySource } from '../../shared/types'
 import { BUILTIN_SOURCE_IDS } from '../../shared/config'
+import { t } from '../../shared/i18n'
 
 const TTL_MS = 30 * 60 * 1000
 const isHttps = (u: unknown): u is string => typeof u === 'string' && /^https:\/\//.test(u)
@@ -14,7 +15,7 @@ const isHttps = (u: unknown): u is string => typeof u === 'string' && /^https:\/
 /** Validation légère : on garde les entrées exploitables, on ignore le reste sans tout rejeter. */
 export function parseRegistry(raw: unknown): RegistryIndex {
   const data = raw as Partial<RegistryIndex>
-  if (!data || typeof data !== 'object' || !Array.isArray(data.maps)) throw new Error('Registre invalide : champ "maps" manquant')
+  if (!data || typeof data !== 'object' || !Array.isArray(data.maps)) throw new Error(t('Registre invalide : champ « maps » manquant'))
   const maps = data.maps.filter(
     (m): m is RegistryMap =>
       !!m && typeof m.id === 'string' && /^[\w.-]+$/.test(m.id) && typeof m.name === 'string' && isHttps(m.download?.url)
@@ -26,7 +27,7 @@ export function parseRegistry(raw: unknown): RegistryIndex {
     maps: maps.map((m) => ({
       ...m,
       author: typeof m.author === 'string' ? m.author : 'Inconnu',
-      tags: Array.isArray(m.tags) ? m.tags.filter((t) => typeof t === 'string') : [],
+      tags: Array.isArray(m.tags) ? m.tags.filter((tag) => typeof tag === 'string') : [],
       thumbnail: isHttps(m.thumbnail) ? m.thumbnail : null,
       imports: Array.isArray(m.imports) ? m.imports.filter((p) => typeof p === 'string') : null,
       download: { ...m.download, mirrors: Array.isArray(m.download.mirrors) ? m.download.mirrors.filter(isHttps) : [] }

@@ -4,6 +4,7 @@ import { copyFile, rename, rm, writeFile, mkdtemp } from 'node:fs/promises'
 import { execFile } from 'node:child_process'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
+import { t } from '../../shared/i18n'
 
 export type FileOp = { op: 'copy'; from: string; to: string } | { op: 'remove'; path: string }
 
@@ -68,8 +69,8 @@ async function runElevated(ops: FileOp[]): Promise<void> {
     ])
   } catch (err) {
     const msg = (err as Error).message
-    if (/annul|cancel/i.test(msg)) throw new GameFileError("Autorisation administrateur refusée : la map n'a pas été modifiée.")
-    throw new GameFileError(`Échec de l'écriture en mode administrateur : ${msg}`)
+    if (/annul|cancel/i.test(msg)) throw new GameFileError(t("Autorisation administrateur refusée : la map n'a pas été modifiée."))
+    throw new GameFileError(t("Échec de l'écriture en mode administrateur : {msg}", { msg }))
   } finally {
     await rm(dir, { recursive: true, force: true })
   }
@@ -87,20 +88,19 @@ async function canWriteDir(dir: string): Promise<boolean> {
   }
 }
 
-const LOCKED = new GameFileError(
-  'Rocket League utilise actuellement ce fichier. Reviens au menu principal du jeu (ou ferme-le) puis réessaie.'
-)
+const locked = () =>
+  new GameFileError(t('Rocket League utilise actuellement ce fichier. Reviens au menu principal du jeu (ou ferme-le) puis réessaie.'))
 
 export async function applyOps(ops: FileOp[]): Promise<void> {
   try {
     await runDirect(ops)
   } catch (err) {
     const code = (err as NodeJS.ErrnoException).code
-    if (code === 'EBUSY') throw LOCKED
+    if (code === 'EBUSY') throw locked()
     if (code === 'EPERM' || code === 'EACCES') {
       const first = ops[0]
       const dir = path.dirname(first.op === 'copy' ? first.to : first.path)
-      if (await canWriteDir(dir)) throw LOCKED
+      if (await canWriteDir(dir)) throw locked()
       if (process.platform === 'win32') return runElevated(ops)
     }
     throw new GameFileError((err as Error).message)

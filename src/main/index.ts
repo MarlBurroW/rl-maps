@@ -16,6 +16,7 @@ import { missingDependencies } from '../shared/compat'
 import { downloadFingerprint } from '../shared/updates'
 import { checkForUpdates, getUpdateState, initUpdater, installUpdate } from './updater'
 import { createTray, updateTray } from './tray'
+import { resolveLang, setLang, t } from '../shared/i18n'
 import type { MarketMap } from '../shared/types'
 
 const STATUS_POLL_MS = 4000
@@ -90,7 +91,7 @@ async function presentPackages(refresh = false): Promise<Set<string> | null> {
 
 function requireInstall(): GameInstall {
   const install = store.settings.install
-  if (!install) throw new Error("Dossier de Rocket League non configuré : va dans Réglages.")
+  if (!install) throw new Error(t('Dossier de Rocket League non configuré : va dans Réglages.'))
   return install
 }
 
@@ -102,7 +103,7 @@ function handle<A extends unknown[], T>(channel: string, fn: (...args: A) => Pro
     try {
       return { ok: true, value: await fn(...args) }
     } catch (err) {
-      const message = (err as Error).name === 'AbortError' ? 'Téléchargement annulé' : (err as Error).message
+      const message = (err as Error).name === 'AbortError' ? t('Téléchargement annulé') : (err as Error).message
       return { ok: false, error: message }
     }
   })
@@ -116,9 +117,9 @@ async function importPaths(paths: string[]) {
   const imported = []
   for (const p of paths) {
     if (!SUPPORTED_IMPORT_EXTS.includes(path.extname(p).toLowerCase())) {
-      throw new Error(`${path.basename(p)} : seuls les fichiers .upk, .udk et .zip sont acceptés`)
+      throw new Error(t('{file} : seuls les fichiers .upk, .udk et .zip sont acceptés', { file: path.basename(p) }))
     }
-    if (!(await stat(p)).isFile()) throw new Error(`${path.basename(p)} n'est pas un fichier`)
+    if (!(await stat(p)).isFile()) throw new Error(t("{file} n'est pas un fichier", { file: path.basename(p) }))
     imported.push(await library.import(p))
   }
   return imported
@@ -127,25 +128,26 @@ async function importPaths(paths: string[]) {
 function registerIpc() {
   handle('settings:get', async () => store.settings)
   handle('favorites:set', async (id: string, favorite: boolean) => {
-    if (typeof id !== 'string' || !/^[\w.-]+$/.test(id)) throw new Error('Identifiant de map invalide')
+    if (typeof id !== 'string' || !/^[\w.-]+$/.test(id)) throw new Error(t('Identifiant de map invalide'))
     const rest = store.settings.favorites.filter((f) => f !== id)
     await store.update({ settings: { favorites: favorite ? [...rest, id] : rest } })
     return store.settings.favorites
   })
   handle('settings:update', async (patch: Partial<Settings>) => {
     await store.update({ settings: patch })
+    applyLanguage()
     await broadcastStatus(true)
     return store.settings
   })
   handle('game:detect', detectInstalls)
   handle('game:pickFolder', async () => {
     const res = await dialog.showOpenDialog(win!, {
-      title: 'Dossier de Rocket League',
+      title: t('Dossier de Rocket League'),
       properties: ['openDirectory']
     })
     if (res.canceled || !res.filePaths[0]) return null
     const install = await resolveInstallFolder(res.filePaths[0])
-    if (!install) throw new Error('Ce dossier ne contient pas Rocket League (TAGame/CookedPCConsole introuvable).')
+    if (!install) throw new Error(t('Ce dossier ne contient pas Rocket League (TAGame/CookedPCConsole introuvable).'))
     await store.update({ settings: { install } })
     await broadcastStatus(true)
     return install
@@ -155,7 +157,7 @@ function registerIpc() {
   handle('game:load', async (mapId: string) => {
     const install = requireInstall()
     const map = await library.get(mapId)
-    if (!map) throw new Error('Map introuvable dans la bibliothèque')
+    if (!map) throw new Error(t('Map introuvable dans la bibliothèque'))
     const file = await library.mapFile(mapId)
     // Une map qui réutilise les assets d'Underpass doit être chargée dans une autre arène
     const slot = await chooseSlot(install.root, await readPackageImports(file))
@@ -184,16 +186,16 @@ function registerIpc() {
   handle('library:import', importPaths)
   handle('library:pickAndImport', async () => {
     const res = await dialog.showOpenDialog(win!, {
-      title: 'Importer des maps',
+      title: t('Importer des maps'),
       properties: ['openFile', 'multiSelections'],
-      filters: [{ name: 'Maps Rocket League', extensions: SUPPORTED_IMPORT_EXTS.map((e) => e.slice(1)) }]
+      filters: [{ name: t('Maps Rocket League'), extensions: SUPPORTED_IMPORT_EXTS.map((e) => e.slice(1)) }]
     })
     return res.canceled ? [] : importPaths(res.filePaths)
   })
   handle('library:remove', async (mapId: string) => {
     const status = await computeStatus()
     if (status.slot.kind === 'custom' && status.slot.mapId === mapId) {
-      throw new Error("Cette map est chargée dans le jeu : restaure l'original avant de la supprimer.")
+      throw new Error(t("Cette map est chargée dans le jeu : restaure l'original avant de la supprimer."))
     }
     await library.remove(mapId)
   })
@@ -210,8 +212,8 @@ function registerIpc() {
       await market.get(store.settings.sources)
       entry = market.find(sourceId, registryId)
     }
-    if (!entry) throw new Error('Map introuvable dans le registre')
-    if (downloads.has(registryId)) throw new Error('Téléchargement déjà en cours')
+    if (!entry) throw new Error(t('Map introuvable dans le registre'))
+    if (downloads.has(registryId)) throw new Error(t('Téléchargement déjà en cours'))
 
     const controller = new AbortController()
     downloads.set(registryId, controller)
@@ -303,8 +305,8 @@ function createWindow() {
     if (!hintShown && Notification.isSupported()) {
       hintShown = true
       new Notification({
-        title: 'RL Maps tourne en arrière-plan',
-        body: "Clic sur l'icône près de l'horloge pour la rouvrir, clic droit pour quitter."
+        title: t('RL Maps tourne en arrière-plan'),
+        body: t("Clic sur l'icône près de l'horloge pour la rouvrir, clic droit pour quitter.")
       }).show()
     }
   })
@@ -327,8 +329,14 @@ function showWindow() {
 
 app.on('second-instance', showWindow)
 
+/** Langue des messages du process principal : la même que l'interface. */
+function applyLanguage() {
+  setLang(resolveLang(store.settings.language, app.getLocale()))
+}
+
 app.whenReady().then(async () => {
   await store.load()
+  applyLanguage()
   if (!store.settings.install) {
     const [first] = await detectInstalls()
     if (first) await store.update({ settings: { install: first } })
@@ -353,7 +361,7 @@ app.whenReady().then(async () => {
         if (!install) return
         void restoreSlot(install.root, store.slot)
           .then(() => store.update({ slot: null }))
-          .catch((err: Error) => dialog.showErrorBox('Restauration impossible', err.message))
+          .catch((err: Error) => dialog.showErrorBox(t('Restauration impossible'), err.message))
           .finally(() => void broadcastStatus(true))
       },
       quit: () => app.quit()
@@ -377,8 +385,8 @@ app.on('before-quit', (e) => {
     .then(() => store.update({ slot: null }))
     .catch((err: Error) =>
       dialog.showErrorBox(
-        'Restauration impossible',
-        `La map d'origine n'a pas pu être remise en place : ${err.message}\n\nRelance RL Maps pour réessayer.`
+        t('Restauration impossible'),
+        t("La map d'origine n'a pas pu être remise en place : {msg}", { msg: err.message }) + '\n\n' + t('Relance RL Maps pour réessayer.')
       )
     )
     .finally(() => app.quit())
