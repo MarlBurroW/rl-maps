@@ -9,7 +9,7 @@ import { Market } from './market/market'
 import { download, downloadFirst } from './market/download'
 import { detectInstalls, resolveInstallFolder } from './game/detect'
 import { isGameRunning } from './game/process'
-import { chooseSlot, isValidInstall, loadIntoSlot, readSlot, restoreSlot } from './game/slot'
+import { chooseSlot, isValidInstall, loadIntoSlot, readSlot, restoreSlot, selectExtras } from './game/slot'
 import { readPackageImports } from './game/upk'
 import { gamePackages } from './game/packages'
 import { missingDependencies } from '../shared/compat'
@@ -159,20 +159,27 @@ function registerIpc() {
     const file = await library.mapFile(mapId)
     // Une map qui réutilise les assets d'Underpass doit être chargée dans une autre arène
     const slot = await chooseSlot(install.root, await readPackageImports(file))
-    const record = await loadIntoSlot(install.root, file, map, slot)
+    // Paquets annexes (maps en plusieurs paquets) : copiés à côté, sans jamais remplacer un fichier du jeu
+    const present = await gamePackages(install.root, true)
+    const extras = selectExtras(await library.extraFiles(mapId), present, store.slot)
+    const record = await loadIntoSlot(install.root, file, map, slot, { extras, previous: store.slot })
     await library.patch(mapId, { lastPlayedAt: new Date().toISOString() })
     await store.update({ slot: record })
     return broadcastStatus(true)
   })
   handle('game:restore', async () => {
-    await restoreSlot(requireInstall().root)
+    await restoreSlot(requireInstall().root, store.slot)
     await store.update({ slot: null })
     return broadcastStatus(true)
   })
 
   handle('library:list', async () => {
     const [maps, present] = await Promise.all([library.list(), presentPackages()])
-    return maps.map((m) => ({ ...m, missing: missingDependencies(m.imports, present) }))
+    // Les paquets annexes livrés avec la map comptent comme présents
+    return maps.map((m) => {
+      const own = present && m.extras?.length ? new Set([...present, ...m.extras.map((e) => path.parse(e).name.toLowerCase())]) : present
+      return { ...m, missing: missingDependencies(m.imports, own) }
+    })
   })
   handle('library:import', importPaths)
   handle('library:pickAndImport', async () => {
@@ -344,7 +351,7 @@ app.whenReady().then(async () => {
       restore: () => {
         const install = store.settings.install
         if (!install) return
-        void restoreSlot(install.root)
+        void restoreSlot(install.root, store.slot)
           .then(() => store.update({ slot: null }))
           .catch((err: Error) => dialog.showErrorBox('Restauration impossible', err.message))
           .finally(() => void broadcastStatus(true))
@@ -366,7 +373,7 @@ app.on('before-quit', (e) => {
   if (!store.settings.restoreOnExit || !install || !store.slot) return
   e.preventDefault()
   quitting = true
-  restoreSlot(install.root)
+  restoreSlot(install.root, store.slot)
     .then(() => store.update({ slot: null }))
     .catch((err: Error) =>
       dialog.showErrorBox(

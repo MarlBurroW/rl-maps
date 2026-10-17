@@ -54,3 +54,24 @@ export function describeDependency(pkg: string): DependencyInfo {
   }
   return { effect: 'Textures, matériaux ou modèles', reason: 'Absent de ton installation de Rocket League.' }
 }
+
+/**
+ * Paquets du pack « Workshop textures » (moteur et éditeur UDK). Certains zips de maps les embarquent :
+ * ce ne sont jamais la map elle-même.
+ */
+export const WORKSHOP_TEXTURE_PACKAGES = new Set([
+  'editorlandscaperesources',
+  'editormaterials',
+  'editormeshes',
+  'editorresources',
+  'enginedebugmaterials',
+  'enginematerials',
+  'engineresources',
+  'maptemplateindex',
+  'maptemplates',
+  'nodebuddies',
+  'engine_mi_shaders',
+  'enginevolumetrics',
+  'enginebuildings',
+  'mods'
+])

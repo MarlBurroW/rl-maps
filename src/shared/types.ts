@@ -89,6 +89,8 @@ export interface LibraryMap {
   fingerprint?: string
   /** Paquets dont la map importe des objets (null : illisible) */
   imports?: string[] | null
+  /** Paquets annexes livrés avec la map (niveaux secondaires, assets…), copiés à côté du slot */
+  extras?: string[]
   /** Dépendances absentes du jeu installé (undefined : inconnu) */
   missing?: string[]
 }

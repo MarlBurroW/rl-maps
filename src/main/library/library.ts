@@ -8,9 +8,11 @@ import { randomBytes } from 'node:crypto'
 import path from 'node:path'
 import type { LibraryMap } from '../../shared/types'
 import { extractZip, IMAGE_EXTS, MAP_EXTS, pickContent } from './archive'
-import { readPackageImports } from '../game/upk'
+import { readPackageImports, readPackageInfo } from '../game/upk'
+import { WORKSHOP_TEXTURE_PACKAGES } from '../../shared/compat'
 
 export const THUMB_PROTOCOL = 'rlmaps'
+const EXTRAS_DIR = 'extras'
 
 interface StoredMeta extends Omit<LibraryMap, 'thumbnail'> {
   thumbFile?: string
@@ -104,6 +106,12 @@ export class Library {
     return path.join(this.mapDir(id), meta.file)
   }
 
+  /** Paquets annexes de la map (chemins absolus), à copier à côté du slot au chargement. */
+  async extraFiles(id: string): Promise<{ name: string; path: string }[]> {
+    const meta = await this.readMeta(id)
+    return (meta?.extras ?? []).map((name) => ({ name, path: path.join(this.mapDir(id), EXTRAS_DIR, name) }))
+  }
+
   /** Résout une URL rlmaps://library/<id>/<fichier> vers un fichier de la bibliothèque. */
   resolveThumb(id: string, file: string): string | null {
     if (!IMAGE_EXTS.includes(path.extname(file).toLowerCase()) || file !== path.basename(file)) return null
@@ -133,13 +141,29 @@ export class Library {
 
     try {
       let mapPath: string
+      let extraPaths: string[] = []
       let thumbPath: string | null = null
       let info: { title?: string; author?: string; desc?: string; description?: string } = {}
 
       if (ext === '.zip') {
         const content = pickContent(await extractZip(source, staging))
         if (!content.map) throw new Error("Aucun fichier .upk ou .udk trouvé dans l'archive")
-        mapPath = content.map.path
+        // Plusieurs paquets : la map est le plus gros qui contient un niveau (les autres sont des assets)
+        const all = [content.map, ...content.extras]
+        const candidates = all
+          .filter((f) => !WORKSHOP_TEXTURE_PACKAGES.has(path.parse(f.name).name.toLowerCase()))
+          .sort((a, b) => b.size - a.size)
+        let main = content.map
+        if (candidates.length > 1) {
+          for (const c of candidates) {
+            if ((await readPackageInfo(c.path))?.isLevel) {
+              main = c
+              break
+            }
+          }
+        }
+        mapPath = main.path
+        extraPaths = all.filter((f) => f !== main).map((f) => f.path)
         thumbPath = content.thumbnail?.path ?? null
         if (content.info) info = JSON.parse(await readFile(content.info.path, 'utf8').catch(() => '{}'))
       } else {
@@ -162,6 +186,10 @@ export class Library {
 
       const file = path.basename(mapPath)
       await rename(mapPath, path.join(finalDir, file))
+      if (extraPaths.length) {
+        await mkdir(path.join(finalDir, EXTRAS_DIR), { recursive: true })
+        for (const p of extraPaths) await rename(p, path.join(finalDir, EXTRAS_DIR, path.basename(p)))
+      }
       let thumbFile: string | undefined
       if (thumbPath) {
         thumbFile = `thumb${path.extname(thumbPath).toLowerCase()}`
@@ -183,6 +211,7 @@ export class Library {
         updatedAt: previous ? new Date().toISOString() : undefined,
         lastPlayedAt: previous?.lastPlayedAt,
         fingerprint: hints.fingerprint,
+        extras: extraPaths.length ? extraPaths.map((p) => path.basename(p)) : undefined,
         thumbFile,
         remoteThumbnail: hints.remoteThumbnail,
         imports: await readPackageImports(path.join(finalDir, file))

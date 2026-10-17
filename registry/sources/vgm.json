@@ -1,0 +1,561 @@
+{
+  "$schema": "../schema.json",
+  "version": 1,
+  "name": "VGM",
+  "updatedAt": "2026-10-17T19:27:53.586Z",
+  "maps": [
+    {
+      "id": "vgm-1-5x-lager-field-for-up-to-7x7-teams",
+      "name": "1.5x lager field for up to 7x7 teams",
+      "author": "Stanbroek",
+      "summary": "A 1.5x enlarged version of Simplicity v4.0 for up to 7 vs 7 in Rocket League.",
+      "description": "A 1.5x enlarged version of Simplicity v4.0 for up to 7 vs 7 in Rocket League.",
+      "tags": [
+        "Arena",
+        "Training"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/1-5x-lager-field-for-up-to-7x7-teams-e713a0df-8f40-4467-be14-7808576d850c/images/0_647c1866.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/1-5x-lager-field-for-up-to-7x7-teams",
+      "source": "vgm",
+      "version": "v1.0.0",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/1-5x-lager-field-for-up-to-7x7-teams-e713a0df-8f40-4467-be14-7808576d850c/files/1527858809_EnlargedMap.zip",
+        "filename": "1527858809_EnlargedMap.zip",
+        "size": 1679807
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Park_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-air-training",
+      "name": "Air training",
+      "author": "Zuckra",
+      "summary": "Air trining",
+      "description": "Air trining",
+      "tags": [
+        "Arena",
+        "Training"
+      ],
+      "thumbnail": null,
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/air-training",
+      "source": "vgm",
+      "version": "v1",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/air-training-e08ac172-3417-49be-a18e-b93a478926d6/files/1605037812_814164094_aerial_training-2.zip",
+        "filename": "1605037812_814164094_aerial_training-2.zip",
+        "size": 22361607
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "enginedebugmaterials"
+      ]
+    },
+    {
+      "id": "vgm-ascension-map",
+      "name": "Ascension [Map]",
+      "author": "TroJan_virus",
+      "summary": "Sorry my PC died when I was originally working on this and never got it to a playable state. I guess I can keep it here for reference to what I wanted to achiev",
+      "description": "Sorry my PC died when I was originally working on this and never got it to a playable state. I guess I can keep it here for reference to what I wanted to achieve. A multi-level battle arena. I'm sure it has been done by now though.",
+      "tags": [
+        "Arena"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/ascension-map-66c51c80-47b0-456c-9e1b-0892ff82934e/images/1_3bccde60.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/ascension-map",
+      "source": "vgm",
+      "version": "v0.2",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/ascension-map-66c51c80-47b0-456c-9e1b-0892ff82934e/files/1473156395_AscensionV0.2.zip",
+        "filename": "1473156395_AscensionV0.2.zip",
+        "size": 2232986
+      },
+      "imports": [
+        "ASC_Base",
+        "Engine",
+        "EngineMaterials",
+        "EngineVolumetrics",
+        "HU_Base",
+        "LT_Floors",
+        "MapTemplates",
+        "TestPackage",
+        "UN_DetailTex",
+        "UN_Liquid"
+      ]
+    },
+    {
+      "id": "vgm-obstacle-course-2",
+      "name": "Obstacle Course #2",
+      "author": "frenchfries",
+      "summary": "A series of challenges  (8 levels) of increasing difficulty, some parts like cs go surfing.",
+      "description": "A series of challenges  (8 levels) of increasing difficulty, some parts like cs go surfing.\n\nBy French Fries",
+      "tags": [
+        "Race",
+        "Training"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/obstacle-course-2-623d384c-72ef-4693-ab62-1181b8540e28/images/0_49c43044.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/obstacle-course-2",
+      "source": "vgm",
+      "version": "v1.0",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/obstacle-course-2-623d384c-72ef-4693-ab62-1181b8540e28/files/1480081731_ObstacleCourse2.zip",
+        "filename": "1480081731_ObstacleCourse2.zip",
+        "size": 37933649
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineMeshes",
+        "MyPackage",
+        "enginedebugmaterials"
+      ]
+    },
+    {
+      "id": "vgm-parcar-nb",
+      "name": "Parcar-NB",
+      "author": "neutrinobeam",
+      "summary": "A parkour style map with integrated timer and checkpoints. Land on each of the ten platforms in turn.",
+      "description": "A parkour style map with integrated timer and checkpoints. Land on each of the ten platforms in turn.\n\nPlay in Free Play under Training Mode.\nThe timer starts when you leave the first platform and stops when you land on the final.\nNo skipping platforms; you will be sent back.\nResetting will place you on the last attained platform and point you at the next.",
+      "tags": [],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/parcar-nb-c1a08c1d-23df-4e76-a0d7-38265718b635/images/0_1719f737.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/parcar-nb",
+      "source": "vgm",
+      "version": "v1.1",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/parcar-nb-c1a08c1d-23df-4e76-a0d7-38265718b635/files/1471489716_Parcar-NB1.zip",
+        "filename": "1471489716_Parcar-NB1.zip",
+        "size": 95753
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "enginedebugmaterials"
+      ]
+    },
+    {
+      "id": "vgm-parcour-map-v0-65",
+      "name": "Parcour-Map V0.65",
+      "author": "dreal",
+      "summary": "An Parcour-training map with not so many parcours yet ?",
+      "description": "An Parcour-training map with not so many parcours yet ?\n\nWork in Progress: Goal is 20 Parcours at the Moment - 13 done.\n\nIt's my Playground to try new Ideas for Maps and mechanics for making new interesting Maps ? \n\nSo give me Feedback! ;)",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/parcour-map-v0-65-e6d01906-5961-4668-8dcc-1f152c06fb88/images/2_1c2fe74e.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/parcour-map-v0-65",
+      "source": "vgm",
+      "version": "v0.65",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/parcour-map-v0-65-e6d01906-5961-4668-8dcc-1f152c06fb88/files/1473364281_Parcour_v0.55.zip",
+        "filename": "1473364281_Parcour_v0.55.zip",
+        "size": 8082207
+      },
+      "imports": [
+        "EditorLandscapeResources",
+        "Engine",
+        "Engine_MI_Shaders",
+        "Envy_Effects",
+        "KismetGame_Assets",
+        "WP_Enforcers",
+        "enginedebugmaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-pirate-ship-map",
+      "name": "Pirate Ship Map",
+      "author": "coco1359",
+      "summary": "Pirate ship map made by myself, hope you enjoy it",
+      "description": "Pirate ship map made by myself, hope you enjoy it",
+      "tags": [],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/pirate-ship-map-9ee1abe4-de67-45ea-b125-2324cc1b08a4/images/0_62e9e42a.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/pirate-ship-map",
+      "source": "vgm",
+      "version": "v1",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/pirate-ship-map-9ee1abe4-de67-45ea-b125-2324cc1b08a4/files/1471430335_Pirate_Ship_ByCoCo.zip",
+        "filename": "1471430335_Pirate_Ship_ByCoCo.zip",
+        "size": 44912809
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-proving-grounds",
+      "name": "Proving Grounds",
+      "author": "karlheinzschneid",
+      "summary": "Training Map - similar size as rl normal maps - with built in fully customizeable ball cannon and target shooting with random target positions",
+      "description": "Training Map - similar size as rl normal maps - with built in fully customizeable ball cannon and target shooting with random target positions\n\nthe map is built with multiplayer in mind, so following versions will be optimized for MP (though allready roughly working)\n\nNOTE: this is Beta 1, so not everything is working 100%. for controlls and how to use it see https://www.youtube.com/watch?v=GfovqqYTKK8\n\nPlease report bugs and post feedback so i can improve the map!\n\nPS: i'm looking for a skilled 3d artist for this and other RL mods, hit me up a reddit /u/KarlHeinz_Schneider/ or in the RL modding discord!\n\nPPS: for fellow RL moders: _for now_ i made the kismet not so easily readable, but i'm planing to release advanced kismet guides on different topics (make suggestions!) in  the next weeks, and for information you can ask me on reddit/discord.\n\n \n\nKnown Bugs:\n\nyou sometimes fall of the wall with high speed -> need better 3d models\nball canon is moveable out of bounds of the arena\nUI Text (kismet -> draw text) not correctly displayed at custom resolution (at least not 1080p). Thanks to /u/KabelGuy for reporting!\n\nPlanned features for following versions: \n\nbug fixes\nprettier UI with better handling\nbetter 3d models with custom textures\nbetter camera handling\nmore and different shooting szenarios\n(maybe) support for Rocket League Trainer and training share/import\nand many more!",
+      "tags": [],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/proving-grounds-14d1c02c-2b86-4e4c-9090-dc64279c39d2/images/0_a1b9dee4.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/proving-grounds",
+      "source": "vgm",
+      "version": "v1",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/proving-grounds-14d1c02c-2b86-4e4c-9090-dc64279c39d2/files/1472459965_provinggrounds_beta1.zip",
+        "filename": "1472459965_provinggrounds_beta1.zip",
+        "size": 24552474
+      },
+      "imports": [
+        "Engine",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-quidditch-map",
+      "name": "Quidditch Map",
+      "author": "ButterandCream",
+      "summary": "Here is a Quidditch map I made trying to replicate the game of quidditch from harry potter as best as possible.",
+      "description": "Here is a Quidditch map I made trying to replicate the game of quidditch from harry potter as best as possible.\n\nNote: The mapstyle is similar to quidditch, while the actually gameplay (such as the snitch) is far from it. I hope to include things such as the golden snitch eventually.",
+      "tags": [
+        "Arena"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/quidditch-map-1b459a9b-0835-43a8-be26-2a164737872d/images/0_82332ad0.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/quidditch-map",
+      "source": "vgm",
+      "version": "v0.6",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/quidditch-map-1b459a9b-0835-43a8-be26-2a164737872d/files/1471503752_Quidditch.zip",
+        "filename": "1471503752_Quidditch.zip",
+        "size": 29539348
+      },
+      "imports": [
+        "EditorLandscapeResources",
+        "Engine",
+        "EngineMaterials",
+        "MapTemplates",
+        "UDKR_Textures_03_Nobiax",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-race-night",
+      "name": "race_night",
+      "author": "southtwitch",
+      "summary": "A Rocket League Race Map with a built in timer, leaderboards updated frequently, reset button, and fun! Leaderboard submissions must be sent to @SouthTwitch on ",
+      "description": "A Rocket League Race Map with a built in timer, leaderboards updated frequently, reset button, and fun! Leaderboard submissions must be sent to @SouthTwitch on twitter or /u/Jeremyjr2 on Reddit in a youtube video.",
+      "tags": [
+        "Race"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/race_night-6f91c7de-deb2-4ee1-9497-16d2798889b9/images/2_aac005e1.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/race_night",
+      "source": "vgm",
+      "version": "v1.01",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/race_night-6f91c7de-deb2-4ee1-9497-16d2798889b9/files/1471651302_race_night.zip",
+        "filename": "1471651302_race_night.zip",
+        "size": 103879313
+      },
+      "imports": [
+        "Engine",
+        "EngineResources",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-roofles-schipyarrr",
+      "name": "Roofles SchipYarrr",
+      "author": "Stanbroek",
+      "summary": "Schipyarr withour the roof",
+      "description": "Schipyarr withour the roof",
+      "tags": [],
+      "thumbnail": null,
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/roofles-schipyarrr",
+      "source": "vgm",
+      "version": "v1.1.0",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/roofles-schipyarrr-94d3f970-4b35-4b98-aa6d-466b09720eee/files/1486644806_ShipYarr_noRoof.zip",
+        "filename": "1486644806_ShipYarr_noRoof.zip",
+        "size": 61529247
+      },
+      "imports": [
+        "Core",
+        "EditorLandscapeResources",
+        "EditorResources",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameFramework",
+        "MapTemplates",
+        "NodeBuddies",
+        "enginedebugmaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-sarpbc-stadium",
+      "name": "SARPBC Stadium",
+      "author": "southtwitch",
+      "summary": "Stadium from SARPBC built into DFH Stadium! With working goals and replays!",
+      "description": "Stadium from SARPBC built into DFH Stadium! With working goals and replays!",
+      "tags": [
+        "Arena"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/sarpbc-stadium-c34c3a2b-2420-4284-89b7-4e117f16f041/images/0_c2da9a23.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/sarpbc-stadium",
+      "source": "vgm",
+      "version": "v1.0",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/sarpbc-stadium-c34c3a2b-2420-4284-89b7-4e117f16f041/files/1479590812_StadiumInRL.zip",
+        "filename": "1479590812_StadiumInRL.zip",
+        "size": 31547728
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "GameFramework",
+        "MapTemplates",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-shipyarr-10-year-sarpbc-edition",
+      "name": "ShipYarr 10-Year SARPBC Edition",
+      "author": "Stanbroek",
+      "summary": "A 10-year SARPBC themed edition of the map Shipyarrr.",
+      "description": "A 10-year SARPBC themed edition of the map Shipyarrr.\n\nWhich is also temporarily available on the workshop during the celebration of 10 years SARPBC, after that, a normal themed version will replace the 10-year SARPBC themed version of the workshop.\n\nThe 10-year SARPBC themed edition will stay available for download on this page.\n\nWith the Coliseum model and Balloons model from Poly by Google and Ian MacGillivray respectively.",
+      "tags": [
+        "Arena",
+        "Training"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/shipyarr-10-year-sarpbc-edition-8fa77f59-1c4a-4c6c-938a-c20c9b85e50a/images/1_03aa04c5.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/shipyarr-10-year-sarpbc-edition",
+      "source": "vgm",
+      "version": "v1.0.1",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/shipyarr-10-year-sarpbc-edition-8fa77f59-1c4a-4c6c-938a-c20c9b85e50a/files/1531249627_ShipYarrr-10-Year-SARPBC.zip",
+        "filename": "1531249627_ShipYarrr-10-Year-SARPBC.zip",
+        "size": 37747320
+      },
+      "imports": [
+        "Beach_FX",
+        "Beach_OOB",
+        "Beach_OOBTerrain",
+        "Body_MuscleCar2_SF",
+        "Body_O2_SF",
+        "Core",
+        "EditorMeshes",
+        "EditorResources",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "Skin_Pixelfire_SF",
+        "Skin_Slipstream_SF",
+        "ThrowbackStadium_OOB",
+        "UtopiaStadium_P",
+        "WHEEL_Carriage_SF",
+        "WHEEL_Lightning_SF",
+        "WHEEL_Proto_04_SF",
+        "Wasteland_P",
+        "body_pumpernickel_SF",
+        "enginedebugmaterials",
+        "hat_ghost_SF",
+        "mods",
+        "skin_heatwave_SF",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-shipyarrr-christmas-edition",
+      "name": "ShipYarrr Christmas edition",
+      "author": "Stanbroek",
+      "summary": "A Christmas themed edition of the map Shipyarrr.",
+      "description": "A Christmas themed edition of the map Shipyarrr.\n\nWhich is also temporarily available on the workshop during Christmas, after Christmas a normal themed version will replace the Christmas themed version of the workshop.\n\nThe Christmas themed edition will stay available for download on this page.",
+      "tags": [
+        "Arena"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/shipyarrr-christmas-edition-d7704085-1222-42cb-9b0c-49c6dc4b5162/images/0_1d10048f.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/shipyarrr-christmas-edition",
+      "source": "vgm",
+      "version": "v7.2.0",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/shipyarrr-christmas-edition-d7704085-1222-42cb-9b0c-49c6dc4b5162/files/1515340605_ShipYarrr.zip",
+        "filename": "1515340605_ShipYarrr.zip",
+        "size": 33395878
+      },
+      "imports": [
+        "Body_MuscleCar2_SF",
+        "Body_O2_SF",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "EditorResources",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "EuroStadium_Night_P",
+        "Hat_SantaHat_SF",
+        "MapTemplates",
+        "Park_P",
+        "Skin_Pixelfire_SF",
+        "UtopiaStadium_Snow_P",
+        "WHEEL_Carriage_SF",
+        "WHEEL_Lightning_SF",
+        "WHEEL_Proto_04_SF",
+        "Wasteland_P",
+        "body_pumpernickel_SF",
+        "enginedebugmaterials",
+        "hat_ghost_SF",
+        "mods",
+        "skin_heatwave_SF",
+        "skin_holiday_SF",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-simplicity",
+      "name": "Simplicity",
+      "author": "dasoccerguy",
+      "summary": "This is a reconstruction of the default map style using assets exported from the game. At midfield on the ceiling is a Rocket League logo, which teleports you t",
+      "description": "This is a reconstruction of the default map style using assets exported from the game. At midfield on the ceiling is a Rocket League logo, which teleports you to and from the roof to set various options (WIP).",
+      "tags": [
+        "Arena",
+        "Training"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/simplicity-7c896e6a-3905-4460-bd5f-1d674eed7a1c/images/2_6478e615.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/simplicity",
+      "source": "vgm",
+      "version": "v2",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/simplicity-7c896e6a-3905-4460-bd5f-1d674eed7a1c/files/1481403222_Simplicity_v2.zip",
+        "filename": "1481403222_Simplicity_v2.zip",
+        "size": 899717
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "GameFramework",
+        "enginedebugmaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-skate-park-by-moistcamelrl",
+      "name": "Skate Park by MoistCamelRL",
+      "author": "MoistCamelRL",
+      "summary": "***Note: All Future updates/versions will be posted on the Steam Workshop***",
+      "description": "***Note: All Future updates/versions will be posted on the Steam Workshop***\n\nSkate Park Map\n\nHope you enjoy. \n\nThis map is also up on the steam workshop now.\n\nReddit: MoistCamelRL",
+      "tags": [
+        "Arena"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/skate-park-by-moistcamelrl-91c7190f-3b27-4afc-924a-8b54c4e41cd3/images/0_302c7b9c.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/skate-park-by-moistcamelrl",
+      "source": "vgm",
+      "version": "v1.1",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/skate-park-by-moistcamelrl-91c7190f-3b27-4afc-924a-8b54c4e41cd3/files/1525222226_SkateParkFinal11.zip",
+        "filename": "1525222226_SkateParkFinal11.zip",
+        "size": 11843615
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "NodeBuddies",
+        "enginedebugmaterials",
+        "mods"
+      ]
+    },
+    {
+      "id": "vgm-skeeball-nb",
+      "name": "Skeeball-NB",
+      "author": "neutrinobeam",
+      "summary": "Skee ball in Rocket League!",
+      "description": "Skee ball in Rocket League!\n\nPut the ball in the holes and rack up points.\n\nPlay in Training mode on the Free Play map. The ball is stored under the map until you start the game by pressing the Reset key / button.\n\nNo timer, play at your own pace.\nAutomated scoring using the original game's point values.  \nAutomated shot tracking, your shot won't start until you move forward.\nAuto ball return in the unlikely event it leaves the map.\nPer session high score tracking.\nExtremely stylish map.\n\nIf the ball spawns in spinning and rolling sideways, hit Reset to calm it. But be careful as resetting after starting a shot will waste it.",
+      "tags": [],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/skeeball-nb-621ab585-ec12-46f7-b375-7cdef3567822/images/2_e179f836.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/skeeball-nb",
+      "source": "vgm",
+      "version": "v1.0",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/skeeball-nb-621ab585-ec12-46f7-b375-7cdef3567822/files/1472278166_Skeeball-NB.zip",
+        "filename": "1472278166_Skeeball-NB.zip",
+        "size": 515771
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "NodeBuddies",
+        "enginedebugmaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-speed-jump-rings-3-by-dmc",
+      "name": "Speed Jump: Rings 3 - By dmc",
+      "author": "ExplosiveNick_YT",
+      "summary": "https://steamcommunity.com/sharedfiles/filedetails/?id=1671658424&searchtext=",
+      "description": "https://steamcommunity.com/sharedfiles/filedetails/?id=1671658424&searchtext=",
+      "tags": [
+        "Training"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/speed-jump-rings-3-by-dmc-b993a2c5-437a-4bd9-897c-54d7e5770c9d/images/0_6c9a4d2b.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/speed-jump-rings-3-by-dmc",
+      "source": "vgm",
+      "version": "v333",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/speed-jump-rings-3-by-dmc-b993a2c5-437a-4bd9-897c-54d7e5770c9d/files/1622898198_1671658424_speed_jump_rings_3_by_dmc.zip",
+        "filename": "1622898198_1671658424_speed_jump_rings_3_by_dmc.zip",
+        "size": 72827833
+      },
+      "imports": [
+        "Beach_FX",
+        "Beach_P",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
+    },
+    {
+      "id": "vgm-water-polo-map",
+      "name": "Water Polo Map",
+      "author": "glhglh",
+      "summary": "Water Polo in Rocket League, with custom water physics!",
+      "description": "Water Polo in Rocket League, with custom water physics!\n\nGame Mechanics:\n\nBoost refills constantly (slowly), but refills faster in the water.\nBoost refills to 100% percent when hitting the water.\nBoost is more powerful underwater. Walls are slightly less sticky under water.\nBoost time for full boost is 20% longer, but only activates after the first goal (minor bug).\nDodge/jump resets when either entering or exiting the water. \nDodge/jump reset timer is infinite so you can use your flip no matter how long you have been in the air.\n\nWater Physics:\n\nMax speed in the water is set to around 2000uu which is slightly below supersonic, but the boost is faster so you can enter supersonic the second you leave the water. It allows for much more control whilst in the water (to the point that I can dribble the ball in the water, and I am not even that good!).\n'Water' is a gravity volume flipped upside down (650m/s, the opposite of RL gravity)\nWhilst in the water, the velocity is reduced on the car in all directions by 2%, 20 times a second. This causes the drag (but I do need feedback on this!)\nWhen the car enters the water, the angle of entry is calculated, converted to a percentage and applied to the velocity within some boundaries. Anything over a '80% perfect dive', so the middle 36°, will not affect the velocity. Anything below a '60% perfect dive', so the angles outside of the 54° range either side, will slow the car by 40% in the z-axis. The angles in between these values will use the percentage as a multiplier for the velocity so a '70% percent perfect dive' will slow the car by 30%. This works whether the nose of the back of the car enters first. (Sorry for the confusing description! Just ask if it is not clear).\n\nThis is my first map of any kind, so I would appreciate as much feedback as possible. \n\nPlanned updates:\n\nTweak water - more drag?\nAdd ball skipping/skimming\nBoats...?\n\nKnown Bugs:\n\nSpawns sometime put you on the wrong side\nBoost length increase only activated after first goal.",
+      "tags": [
+        "Arena"
+      ],
+      "thumbnail": "https://uploads.videogamemods.com/communities/vgm/mods/water-polo-map-645fca62-3c9d-45fb-8a81-1c1e9fefd751/images/3_549ff574.webp",
+      "homepage": "https://videogamemods.com/vgm/rocketleague/mods/water-polo-map",
+      "source": "vgm",
+      "version": "v1.0",
+      "download": {
+        "url": "https://uploads.videogamemods.com/communities/vgm/mods/water-polo-map-645fca62-3c9d-45fb-8a81-1c1e9fefd751/files/1480834824_WaterPolo_P.zip",
+        "filename": "1480834824_WaterPolo_P.zip",
+        "size": 33992025
+      },
+      "imports": [
+        "Engine",
+        "GameFramework",
+        "neotokyo_p",
+        "tagame"
+      ]
+    }
+  ]
+}

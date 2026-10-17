@@ -3,6 +3,7 @@ import { mkdir } from 'node:fs/promises'
 import { pipeline } from 'node:stream/promises'
 import path from 'node:path'
 import yauzl from 'yauzl'
+import { WORKSHOP_TEXTURE_PACKAGES } from '../../shared/compat'
 
 export const MAP_EXTS = ['.upk', '.udk']
 export const IMAGE_EXTS = ['.png', '.jpg', '.jpeg', '.jfif', '.webp']
@@ -60,12 +61,18 @@ export function extractZip(zipPath: string, destDir: string): Promise<ExtractedF
 
 const byExt = (exts: string[]) => (f: ExtractedFile) => exts.includes(path.extname(f.name).toLowerCase())
 
-/** Choisit la map (le plus gros .udk/.upk), une miniature et un info.json éventuel. */
+/**
+ * Choisit la map (le plus gros .udk/.upk qui n'est pas un paquet du pack de textures), ses paquets
+ * annexes (niveaux secondaires, assets, textures embarquées…), une miniature et un info.json éventuel.
+ */
 export function pickContent(files: ExtractedFile[]) {
-  const maps = files.filter(byExt(MAP_EXTS)).sort((a, b) => b.size - a.size)
+  const packages = files.filter(byExt(MAP_EXTS)).sort((a, b) => b.size - a.size)
+  const isPack = (f: ExtractedFile) => WORKSHOP_TEXTURE_PACKAGES.has(path.parse(f.name).name.toLowerCase())
+  const map = packages.find((f) => !isPack(f)) ?? packages[0] ?? null
+  const extras = packages.filter((f) => f !== map)
   // Les zips contiennent parfois des captures 4K : on préfère la plus grande image de moins de 4 Mo.
   const images = files.filter(byExt(IMAGE_EXTS)).sort((a, b) => b.size - a.size)
   const thumbnail = images.find((f) => f.size < 4 * 1024 * 1024) ?? images.at(-1) ?? null
   const info = files.find((f) => f.name.toLowerCase() === 'info.json')
-  return { map: maps[0] ?? null, thumbnail, info: info ?? null }
+  return { map, extras, thumbnail, info: info ?? null }
 }

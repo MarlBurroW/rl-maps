@@ -14,11 +14,12 @@
     "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
     "test": "vitest run",
     "dist": "electron-vite build && electron-builder --win --publish never",
-    "registry:import": "npm run registry:import:lethamyr && npm run registry:import:bakkesplugins",
+    "registry:import": "npm run registry:import:lethamyr && npm run registry:import:bakkesplugins && npm run registry:import:vgm",
     "registry:validate": "node registry/scripts/validate.mjs",
     "registry:import:lethamyr": "node registry/scripts/import-lethamyr.mjs",
     "registry:import:bakkesplugins": "node registry/scripts/import-bakkesplugins.mjs",
-    "registry:scan": "node registry/scripts/scan.mjs"
+    "registry:scan": "node registry/scripts/scan.mjs",
+    "registry:import:vgm": "node registry/scripts/import-vgm.mjs"
   },
   "dependencies": {
     "electron-updater": "6.8.9",

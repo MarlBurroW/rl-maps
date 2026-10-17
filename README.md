@@ -19,8 +19,9 @@ au redémarrage. La version portable signale simplement qu'une nouvelle version 
 
 ## Fonctionnalités
 
-- **Market** : près de 400 maps, issues de [lethamyr.com](https://lethamyr.com/maps) et de
-  [BakkesPlugins](https://bakkesplugins.com/maps) (la bibliothèque de maps de BakkesMod). Recherche, filtres par
+- **Market** : plus de 400 maps, issues de [lethamyr.com](https://lethamyr.com/maps), de
+  [BakkesPlugins](https://bakkesplugins.com/maps) (la bibliothèque de maps de BakkesMod) et de
+  [VGM](https://videogamemods.com/vgm/rocketleague/mods). Recherche, filtres par
   catégorie et par source, fiches détaillées. Installation en un clic, avec suivi de la progression.
 - **Doublons fusionnés** : une map publiée sur les deux sources n'apparaît qu'une fois, et si un lien ne marche pas
   (quota Google Drive, par exemple), le téléchargement bascule automatiquement sur l'autre source.
@@ -35,6 +36,8 @@ au redémarrage. La version portable signale simplement qu'une nouvelle version 
 - **Compatibilité affichée** : chaque map est comparée aux fichiers de **ton** jeu. Celles qui dépendent de paquets
   absents (souvent supprimés par une mise à jour de Rocket League) portent un badge « Rendu incomplet », la fiche détaille
   ce qui manque, et le filtre « Rendu complet » ne montre que les maps sans souci.
+- **Maps en plusieurs paquets** : les paquets annexes (niveaux secondaires, assets) sont copiés à côté de la map,
+  sans jamais remplacer un fichier du jeu, et retirés à la restauration.
 - **Arène choisie selon la map** : l'app lit les dépendances de chaque map. Celles qui réutilisent des éléments
   d'Underpass (sol, bordures…) sont chargées dans **Utopia Retro**, pour ne pas perdre ces éléments en remplaçant Underpass.
 - **Compatible avec les anciens loaders** : un backup laissé par [marzeq/rl-map-loader](https://github.com/marzeq/rl-map-loader)
@@ -104,7 +107,7 @@ src/
   renderer/             UI React + Tailwind
   shared/               types et config partagés
 registry/
-  sources/              un registre JSON par source (lethamyr, bakkesplugins, community)
+  sources/              un registre JSON par source (lethamyr, bakkesplugins, vgm, community)
   scripts/              importeurs et validation
 ```
 

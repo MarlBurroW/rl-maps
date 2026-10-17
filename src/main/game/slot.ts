@@ -36,6 +36,8 @@ export interface SlotRecord {
   size: number
   /** Absent dans les réglages des versions précédentes : Underpass */
   slot?: SlotId
+  /** Paquets annexes copiés dans CookedPCConsole (noms de fichiers), à retirer à la restauration */
+  extras?: string[]
 }
 
 const slotDef = (id: SlotId | undefined) => SLOTS.find((s) => s.id === id) ?? DEFAULT_SLOT
@@ -108,6 +110,17 @@ async function restoreOps(root: string, except?: SlotDef): Promise<FileOp[]> {
   return ops
 }
 
+/** Retire les paquets annexes copiés lors du chargement précédent. */
+const removeExtrasOps = (root: string, record: SlotRecord | null | undefined): FileOp[] =>
+  (record?.extras ?? []).map((name) => ({ op: 'remove', path: path.join(cookedDir(root), path.basename(name)) }))
+
+export interface LoadOptions {
+  /** Paquets annexes à copier à côté du slot (déjà filtrés : jamais un fichier du jeu) */
+  extras?: { name: string; path: string }[]
+  /** Map chargée jusqu'ici, dont on retire les paquets annexes */
+  previous?: SlotRecord | null
+}
+
 /**
  * Charge une map dans le slot donné. Sauvegarde l'original au premier chargement uniquement,
  * et libère les autres slots : une seule map custom à la fois.
@@ -116,25 +129,42 @@ export async function loadIntoSlot(
   root: string,
   mapFile: string,
   map: { id: string; name: string },
-  slot: SlotDef = DEFAULT_SLOT
+  slot: SlotDef = DEFAULT_SLOT,
+  opts: LoadOptions = {}
 ): Promise<SlotRecord> {
   const target = targetPath(root, slot)
   const backup = backupPath(root, slot)
   const size = await sizeOf(mapFile)
   if (size === null) throw new Error(`Fichier de map introuvable : ${mapFile}`)
 
-  const ops = await restoreOps(root, slot)
+  const ops = [...removeExtrasOps(root, opts.previous), ...(await restoreOps(root, slot))]
   if ((await sizeOf(backup)) === null) {
     if ((await sizeOf(target)) === null) throw new Error(`${slot.pkg}.upk introuvable : le dossier du jeu est-il correct ?`)
     ops.push({ op: 'copy', from: target, to: backup })
   }
   ops.push({ op: 'copy', from: mapFile, to: target })
+  const extras = opts.extras ?? []
+  for (const e of extras) ops.push({ op: 'copy', from: e.path, to: path.join(cookedDir(root), path.basename(e.name)) })
   await applyOps(ops)
-  return { mapId: map.id, mapName: map.name, size, slot: slot.id }
+  return { mapId: map.id, mapName: map.name, size, slot: slot.id, ...(extras.length ? { extras: extras.map((e) => e.name) } : {}) }
 }
 
-/** Remet les fichiers d'origine en place dans tous les slots et supprime les backups. */
-export async function restoreSlot(root: string): Promise<void> {
-  const ops = await restoreOps(root)
+/** Remet les fichiers d'origine en place dans tous les slots, supprime les backups et les paquets annexes. */
+export async function restoreSlot(root: string, record?: SlotRecord | null): Promise<void> {
+  const ops = [...removeExtrasOps(root, record), ...(await restoreOps(root))]
   if (ops.length) await applyOps(ops)
+}
+
+/**
+ * Paquets annexes réellement copiables : on ne remplace jamais un fichier du jeu. Ceux du chargement
+ * précédent seront retirés juste avant, ils ne comptent pas comme présents.
+ */
+export function selectExtras(
+  extras: { name: string; path: string }[],
+  present: Set<string>,
+  previous: SlotRecord | null | undefined
+): { name: string; path: string }[] {
+  const base = (f: string) => path.parse(f).name.toLowerCase()
+  const replaced = new Set((previous?.extras ?? []).map(base))
+  return extras.filter((e) => !present.has(base(e.name)) || replaced.has(base(e.name)))
 }

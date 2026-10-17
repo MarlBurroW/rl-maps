@@ -43,11 +43,22 @@ class Reader {
   }
 }
 
+export interface PackageInfo {
+  /** Paquets externes réellement utilisés (racines des objets importés) */
+  imports: string[]
+  /** Le paquet contient un niveau (objet World) : c'est une map, pas un paquet d'assets */
+  isLevel: boolean
+}
+
 /**
  * Paquets externes réellement utilisés par la map (racines des objets importés).
  * Renvoie null si le fichier n'est pas un paquet UE3 lisible (chiffré, compressé…).
  */
 export async function readPackageImports(file: string): Promise<string[] | null> {
+  return (await readPackageInfo(file))?.imports ?? null
+}
+
+export async function readPackageInfo(file: string): Promise<PackageInfo | null> {
   const fh = await open(file, 'r')
   try {
     const head = Buffer.alloc(64)
@@ -58,7 +69,7 @@ export async function readPackageImports(file: string): Promise<string[] | null>
 
     const buf = Buffer.alloc(headerSize)
     await fh.read(buf, 0, headerSize, 0)
-    return parseImports(buf)
+    return parsePackage(buf)
   } catch {
     return null
   } finally {
@@ -67,6 +78,10 @@ export async function readPackageImports(file: string): Promise<string[] | null>
 }
 
 export function parseImports(buf: Buffer): string[] | null {
+  return parsePackage(buf)?.imports ?? null
+}
+
+export function parsePackage(buf: Buffer): PackageInfo | null {
   const r = new Reader(buf, 4)
   r.u16() // version
   r.u16() // licensee
@@ -112,5 +127,7 @@ export function parseImports(buf: Buffer): string[] | null {
     const pkg = root(i)
     if (pkg) used.add(pkg)
   })
-  return [...used].sort()
+  // Un niveau exporte un objet World : sa classe apparaît dans les imports
+  const isLevel = imports.some((imp) => imp.cls === 'Class' && imp.name === 'World')
+  return { imports: [...used].sort(), isLevel }
 }

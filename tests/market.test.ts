@@ -81,7 +81,7 @@ describe('fusion des sources', () => {
     ...extra
   })
   const index = (maps: RegistryMap[]): RegistryIndex => ({ version: 1, name: 'x', updatedAt: '', maps })
-  const [leth, bp, community] = DEFAULT_SOURCES
+  const [leth, bp, , community] = DEFAULT_SOURCES
 
   it('fusionne une même map publiée sur deux sources, la seconde devient un miroir', () => {
     const merged = mergeRegistries([
@@ -135,9 +135,9 @@ describe('sources configurées', () => {
       { id: 'community', name: 'Ancien', url: 'https://old/index.json', enabled: false },
       { id: 'perso', name: 'Perso', url: 'https://moi/maps.json', enabled: true }
     ])
-    expect(sources.map((s) => s.id)).toEqual(['lethamyr', 'bakkesplugins', 'community', 'perso'])
-    expect(sources[2]).toEqual({ ...DEFAULT_SOURCES[2], enabled: false })
-    expect(sources[3].url).toBe('https://moi/maps.json')
+    expect(sources.map((s) => s.id)).toEqual(['lethamyr', 'bakkesplugins', 'vgm', 'community', 'perso'])
+    expect(sources[3]).toEqual({ ...DEFAULT_SOURCES[3], enabled: false })
+    expect(sources[4].url).toBe('https://moi/maps.json')
   })
 })
 

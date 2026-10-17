@@ -4,7 +4,7 @@ on:
   pull_request:
     paths: ['registry/**']
   schedule:
-    - cron: '0 6 * * 1' # chaque lundi : resynchronise les sources importées
+    - cron: '0 6 * * 1' # chaque lundi : resynchronise les sources importées (Lethamyr, BakkesPlugins, VGM)
   workflow_dispatch:
 
 permissions:
@@ -36,6 +36,9 @@ jobs:
         # lancer « npm run registry:import:bakkesplugins » en local et committer le résultat.
         continue-on-error: true
         run: node registry/scripts/import-bakkesplugins.mjs || { echo "::warning::Import BakkesPlugins impossible depuis la CI (probablement bloqué par Cloudflare). Lance npm run registry:import:bakkesplugins en local."; exit 1; }
+      - name: Import VGM
+        continue-on-error: true
+        run: node registry/scripts/import-vgm.mjs
       - run: node registry/scripts/validate.mjs
       - name: Commit si le registre a changé
         run: |

@@ -6,12 +6,13 @@
 import zlib from 'node:zlib'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
-import { parseImports } from '../../src/main/game/upk.ts'
+import { parsePackage } from '../../src/main/game/upk.ts'
+import { WORKSHOP_TEXTURE_PACKAGES } from '../../src/shared/compat.ts'
 import { get, pool, SOURCES_DIR } from './lib.mjs'
 
 const MAP_EXT = /\.(udk|upk)$/i
 
-function directUrl(url) {
+export function directUrl(url) {
   const id = url.match(/drive\.google\.com\/file\/d\/([\w-]+)/)?.[1]
   return id ? `https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t` : url
 }
@@ -26,7 +27,7 @@ async function range(url, start, end) {
 }
 
 /** Entrées du zip (nom, méthode, tailles, offset) lues dans le répertoire central. */
-async function zipEntries(url, size) {
+export async function zipEntries(url, size) {
   const tailSize = Math.min(size, 65536)
   let buf = await range(url, size - tailSize, size - 1)
   const eocd = buf.lastIndexOf(Buffer.from([0x50, 0x4b, 0x05, 0x06]))
@@ -54,7 +55,7 @@ async function zipEntries(url, size) {
 }
 
 /** Lit l'en-tête UE3 (TotalHeaderSize octets) d'une map, stockée ou compressée dans le zip. */
-async function headerFromZip(url, entry) {
+export async function headerFromZip(url, entry) {
   const local = await range(url, entry.offset, entry.offset + 29)
   const start = entry.offset + 30 + local.readUInt16LE(26) + local.readUInt16LE(28)
   if (entry.method === 0) return headerFromRaw(url, start)
@@ -75,19 +76,47 @@ async function headerFromRaw(url, start) {
   return range(url, start, start + headerSize - 1)
 }
 
+export const packageName = (file) => path.basename(file).replace(/\.[^.]+$/, '').toLowerCase()
+
+/** Même choix que l'app (src/main/library/archive.ts) : le plus gros paquet hors pack de textures. */
+export function pickMainPackage(entries) {
+  const sorted = [...entries].sort((a, b) => b.usize - a.usize)
+  return sorted.find((e) => !WORKSHOP_TEXTURE_PACKAGES.has(packageName(e.name))) ?? sorted[0]
+}
+
+/**
+ * Comme l'app : parmi les paquets hors pack de textures, le plus gros qui contient un niveau
+ * (les autres sont des paquets d'assets). Renvoie aussi son en-tête, déjà lu.
+ */
+export async function findMainPackage(url, entries) {
+  const candidates = entries.filter((e) => !WORKSHOP_TEXTURE_PACKAGES.has(packageName(e.name))).sort((a, b) => b.usize - a.usize)
+  const fallback = pickMainPackage(entries)
+  if (candidates.length <= 1) return { entry: fallback, header: await headerFromZip(url, fallback) }
+  for (const entry of candidates) {
+    const header = await headerFromZip(url, entry).catch(() => null)
+    if (header && parsePackage(header)?.isLevel) return { entry, header }
+  }
+  return { entry: fallback, header: await headerFromZip(url, fallback) }
+}
+
 /** Dépendances d'une entrée de registre, ou null si illisible. */
 export async function scanImports(download) {
   const url = directUrl(download.url)
   const name = download.filename ?? ''
   let header
+  let bundled = new Set()
   if (/\.zip$/i.test(name)) {
     const maps = (await zipEntries(url, download.size)).filter((e) => MAP_EXT.test(e.name))
     if (!maps.length) return null
-    header = await headerFromZip(url, maps.reduce((a, b) => (b.usize > a.usize ? b : a)))
+    const { entry: main, header: mainHeader } = await findMainPackage(url, maps)
+    header = mainHeader
+    // Les paquets livrés dans le même zip (niveaux secondaires, assets…) sont copiés avec la map
+    bundled = new Set(maps.filter((e) => e !== main).map((e) => packageName(e.name)))
   } else {
     header = await headerFromRaw(url, 0)
   }
-  return parseImports(header)
+  const imports = parsePackage(header)?.imports ?? null
+  return imports && imports.filter((p) => !bundled.has(p.toLowerCase()))
 }
 
 /**

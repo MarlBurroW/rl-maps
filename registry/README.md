@@ -13,12 +13,13 @@ ou par la plateforme d'origine.
 | --- | --- | --- |
 | [`sources/lethamyr.json`](sources/lethamyr.json) | [lethamyr.com](https://lethamyr.com/maps), liens Google Drive de l'auteur | `scripts/import-lethamyr.mjs` |
 | [`sources/bakkesplugins.json`](sources/bakkesplugins.json) | [bakkesplugins.com/maps](https://bakkesplugins.com/maps), la bibliothèque de maps de BakkesMod (fichiers sur `cdn.bakkesplugins.com`) | `scripts/import-bakkesplugins.mjs` |
+| [`sources/vgm.json`](sources/vgm.json) | [VGM](https://videogamemods.com/vgm/rocketleague/mods) (ex-rocketleaguemods.com) : les zips qui contiennent une map | `scripts/import-vgm.mjs` |
 | [`sources/community.json`](sources/community.json) | Ajouts manuels par PR | à la main |
 
-Les deux premiers fichiers sont régénérés par leurs scripts : n'édite pas ces fichiers à la main, tes changements
+Les trois premiers fichiers sont régénérés par leurs scripts : n'édite pas ces fichiers à la main, tes changements
 seraient écrasés.
 
-- **Lethamyr** est resynchronisé chaque lundi par [`.github/workflows/registry.yml`](../.github/workflows/registry.yml).
+- **Lethamyr** et **VGM** sont resynchronisés chaque lundi par [`.github/workflows/registry.yml`](../.github/workflows/registry.yml).
 - **BakkesPlugins** bloque les serveurs de GitHub Actions (Cloudflare, HTTP 403). Le workflow essaie quand même, mais
   en pratique il faut le rafraîchir depuis une connexion classique, puis committer le résultat :
 

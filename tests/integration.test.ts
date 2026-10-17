@@ -9,7 +9,7 @@ import { loadIntoSlot, readSlot, restoreSlot, targetPath } from '../src/main/gam
 import { fakeInstall, tempDir } from './helpers'
 
 describe.skipIf(!process.env.RLMAPS_NET)('intégration réseau', () => {
-  it.each(['lethamyr', 'bakkesplugins'])('%s : télécharge la plus petite map, l’importe et la charge dans une fausse install', async (source) => {
+  it.each(['lethamyr', 'bakkesplugins', 'vgm'])('%s : télécharge la plus petite map, l’importe et la charge dans une fausse install', async (source) => {
     const index = parseRegistry(JSON.parse(await readFile(path.join(import.meta.dirname, '..', 'registry', 'sources', `${source}.json`), 'utf8')))
     const entry = [...index.maps].filter((m) => m.download.size).sort((a, b) => a.download.size! - b.download.size!)[0]
 
