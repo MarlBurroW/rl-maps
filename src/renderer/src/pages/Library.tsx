@@ -1,5 +1,5 @@
 import { useDeferredValue, useMemo, useState } from 'react'
-import { FolderInput, Search, Store, Upload } from 'lucide-react'
+import { FolderInput, RefreshCw, Search, Store, Upload } from 'lucide-react'
 import { useApp, type Item } from '../state'
 import { normalize } from '../lib/format'
 import { MapCard } from '../components/MapCard'
@@ -7,7 +7,7 @@ import { Button } from '../components/Button'
 import { FavoritesChip, Grid } from './Market'
 
 export function LibraryPage({ onOpen, onBrowse }: { onOpen: (item: Item) => void; onBrowse: () => void }) {
-  const { library, localItem, importFiles, busy, favorites } = useApp()
+  const { library, localItem, importFiles, busy, favorites, updates, updateAll, settings } = useApp()
   const [query, setQuery] = useState('')
   const [favOnly, setFavOnly] = useState(false)
   const q = useDeferredValue(normalize(query.trim()))
@@ -50,6 +50,19 @@ export function LibraryPage({ onOpen, onBrowse }: { onOpen: (item: Item) => void
         {library.length > 0 && (
           <div className="flex items-center gap-1.5">
             <FavoritesChip active={favOnly} count={favCount} onClick={() => setFavOnly((v) => !v)} />
+          </div>
+        )}
+        {updates.length > 0 && settings?.mapUpdates !== 'auto' && (
+          <div className="flex items-center gap-3 rounded-xl border border-blue/30 bg-blue/5 px-4 py-2.5">
+            <RefreshCw className="size-4 shrink-0 text-blue" />
+            <p className="flex-1 text-sm">
+              {updates.length === 1
+                ? `Une nouvelle version de ${updates[0].name} est disponible.`
+                : `${updates.length} maps ont une nouvelle version disponible.`}
+            </p>
+            <Button size="sm" variant="primary" onClick={() => void updateAll()}>
+              {updates.length === 1 ? 'Mettre à jour' : 'Tout mettre à jour'}
+            </Button>
           </div>
         )}
       </div>

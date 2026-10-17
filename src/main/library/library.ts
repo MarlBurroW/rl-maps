@@ -25,6 +25,8 @@ export interface ImportHints {
   recommendedSettings?: string
   tags?: string[]
   homepage?: string
+  /** Empreinte de la version téléchargée depuis le registre */
+  fingerprint?: string
   /** Miniature déjà téléchargée (prioritaire sur celle du zip) */
   thumbnailFile?: string
   remoteThumbnail?: string | null
@@ -108,6 +110,13 @@ export class Library {
     return path.join(this.mapDir(id), file)
   }
 
+  /** Modifie quelques champs de la fiche (date de dernière partie, empreinte…). */
+  async patch(id: string, patch: Partial<Pick<StoredMeta, 'lastPlayedAt' | 'fingerprint'>>): Promise<void> {
+    const meta = await this.readMeta(id)
+    if (!meta) return
+    await writeFile(path.join(this.mapDir(id), 'meta.json'), JSON.stringify({ ...meta, ...patch }, null, 2))
+  }
+
   async remove(id: string): Promise<void> {
     await rm(this.mapDir(id), { recursive: true, force: true })
   }
@@ -146,6 +155,8 @@ export class Library {
 
       const id = hints.registryId ?? `${slug(name)}-${randomBytes(3).toString('hex')}`
       const finalDir = this.mapDir(id)
+      // Mise à jour d'une map déjà installée : on garde sa date d'ajout et son historique
+      const previous = await this.readMeta(id)
       await rm(finalDir, { recursive: true, force: true })
       await mkdir(finalDir, { recursive: true })
 
@@ -168,7 +179,10 @@ export class Library {
         size: (await stat(path.join(finalDir, file))).size,
         registryId: hints.registryId,
         homepage: hints.homepage,
-        addedAt: new Date().toISOString(),
+        addedAt: previous?.addedAt ?? new Date().toISOString(),
+        updatedAt: previous ? new Date().toISOString() : undefined,
+        lastPlayedAt: previous?.lastPlayedAt,
+        fingerprint: hints.fingerprint,
         thumbFile,
         remoteThumbnail: hints.remoteThumbnail,
         imports: await readPackageImports(path.join(finalDir, file))

@@ -1,6 +1,6 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { CircleCheck, ExternalLink, FolderOpen, Plus, Radar, Trash2, TriangleAlert } from 'lucide-react'
-import type { GameInstall, RegistrySource, Settings } from '../../../shared/types'
+import type { GameInstall, RegistrySource } from '../../../shared/types'
 import { BUILTIN_SOURCE_IDS } from '../../../shared/config'
 import { useApp } from '../state'
 import { useToast } from '../components/Toast'
@@ -10,18 +10,11 @@ const TEXTURES_URL = 'https://videogamemods.com/vgm/rocketleague/mods/workshop-t
 const platformLabel = { epic: 'Epic Games', steam: 'Steam', custom: 'Dossier personnalisé' }
 
 export function SettingsPage() {
-  const { status, refreshMarket } = useApp()
+  const { status, refreshMarket, settings, saveSettings: update, reloadSettings } = useApp()
   const toast = useToast()
-  const [settings, setSettings] = useState<Settings | null>(null)
   const [detected, setDetected] = useState<GameInstall[] | null>(null)
   const [detecting, setDetecting] = useState(false)
   const [newSource, setNewSource] = useState({ name: '', url: '' })
-
-  useEffect(() => {
-    void window.api.getSettings().then(setSettings)
-  }, [])
-
-  const update = async (patch: Partial<Settings>) => setSettings(await window.api.updateSettings(patch))
 
   const updateSources = async (sources: RegistrySource[]) => {
     await update({ sources })
@@ -40,7 +33,7 @@ export function SettingsPage() {
   const pick = async () => {
     const r = await window.api.pickInstallFolder()
     if (!r.ok) toast('error', 'Dossier invalide', r.error)
-    else if (r.value) setSettings(await window.api.getSettings())
+    else if (r.value) await reloadSettings()
   }
 
   const addSource = async () => {
@@ -109,6 +102,12 @@ export function SettingsPage() {
             desc="Remet les arènes d'origine à la fermeture, pour ne jamais rester avec une map custom en ligne."
             checked={settings.restoreOnExit}
             onChange={(v) => void update({ restoreOnExit: v })}
+          />
+          <Toggle
+            label="Mettre à jour les maps automatiquement"
+            desc="Installe d'office les nouvelles versions publiées par les auteurs. Sinon, un badge « Mise à jour » te les propose."
+            checked={settings.mapUpdates === 'auto'}
+            onChange={(v) => void update({ mapUpdates: v ? 'auto' : 'ask' })}
           />
         </Section>
 
@@ -209,7 +208,7 @@ function Section({ title, desc, children }: { title: string; desc?: string; chil
     <section>
       <h2 className="text-xs font-bold tracking-wider text-muted uppercase">{title}</h2>
       {desc && <p className="mt-1 text-[13px] text-faint">{desc}</p>}
-      <div className="mt-3">{children}</div>
+      <div className="mt-3 space-y-2">{children}</div>
     </section>
   )
 }

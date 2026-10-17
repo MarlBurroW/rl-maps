@@ -1,5 +1,6 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
-import type { DownloadProgress, GameStatus, LibraryMap, MarketMap, MarketState, Result } from '../../shared/types'
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import type { DownloadProgress, GameStatus, LibraryMap, MarketMap, MarketState, Result, Settings } from '../../shared/types'
+import { isUpToDate } from '../../shared/updates'
 import { useToast } from './components/Toast'
 
 /** Vue unifiée d'une map, qu'elle vienne du market, de la bibliothèque, ou des deux. */
@@ -20,6 +21,8 @@ export interface Item {
   local?: LibraryMap
   /** Dépendances absentes du jeu (undefined : inconnu) */
   missing?: string[]
+  /** Une version plus récente de la map installée est publiée */
+  updateAvailable: boolean
 }
 
 export const playHint = (arena: string) => `Dans Rocket League : Entraînement → Free Play → arène « ${arena} ».`
@@ -31,6 +34,13 @@ interface AppState {
   marketLoading: boolean
   progress: Record<string, DownloadProgress>
   busy: string | null
+  settings: Settings | null
+  saveSettings(patch: Partial<Settings>): Promise<void>
+  reloadSettings(): Promise<void>
+  /** Maps installées dont une nouvelle version est publiée */
+  updates: Item[]
+  update(item: Item): Promise<void>
+  updateAll(): Promise<void>
   favorites: Set<string>
   toggleFavorite(item: Item): void
   refreshMarket(): Promise<void>
@@ -62,6 +72,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [progress, setProgress] = useState<Record<string, DownloadProgress>>({})
   const [busy, setBusy] = useState<string | null>(null)
   const [favorites, setFavorites] = useState<Set<string>>(new Set())
+  const [settings, setSettings] = useState<Settings | null>(null)
 
   const reloadLibrary = useCallback(() => window.api.getLibrary().then(setLibrary), [])
 
@@ -78,7 +89,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
     void window.api.getStatus().then(setStatus)
     void reloadLibrary()
     void refreshMarket(false)
-    void window.api.getSettings().then((s) => setFavorites(new Set(s.favorites)))
+    void window.api.getSettings().then((s) => {
+      setSettings(s)
+      setFavorites(new Set(s.favorites))
+    })
     const offStatus = window.api.onStatus(setStatus)
     const offProgress = window.api.onProgress((p) =>
       setProgress((prev) => {
@@ -120,8 +134,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
     [toast]
   )
 
+  const saveSettings = useCallback(async (patch: Partial<Settings>) => setSettings(await window.api.updateSettings(patch)), [])
+  const reloadSettings = useCallback(async () => setSettings(await window.api.getSettings()), [])
+
   const install = useCallback(
-    async (m: MarketMap) => {
+    async (m: MarketMap, opts: { update?: boolean } = {}) => {
       setProgress((p) => ({ ...p, [m.id]: { registryId: m.id, received: 0, total: m.download.size ?? null, phase: 'download' } }))
       const r = await window.api.installFromMarket(m.sourceId, m.id)
       await reloadLibrary()
@@ -134,7 +151,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
         if (r.error !== 'Téléchargement annulé') toast('error', `Échec : ${m.name}`, r.error)
         return null
       }
-      toast('success', `${m.name} installée`, 'Clique sur « Jouer » pour la charger dans le jeu.')
+      if (opts.update) toast('success', `${m.name} mise à jour`, 'La dernière version publiée est installée.')
+      else toast('success', `${m.name} installée`, 'Clique sur « Jouer » pour la charger dans le jeu.')
       return r.value
     },
     [reloadLibrary, toast]
@@ -145,6 +163,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const s = await run(`play:${map.id}`, () => window.api.loadMap(map.id), 'Impossible de charger la map')
       if (s) {
         setStatus(s)
+        void reloadLibrary() // date de dernière partie
         const arena = s.slot.kind === 'custom' ? s.slot.arena : 'Underpass'
         const moved = s.slot.kind === 'custom' && s.slot.slot !== 'underpass'
         toast(
@@ -155,7 +174,7 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
         )
       }
     },
-    [run, toast]
+    [run, toast, reloadLibrary]
   )
 
   const restore = useCallback(async () => {
@@ -217,7 +236,8 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
       homepage: m.homepage,
       market: m,
       local: byRegistryId.get(m.id),
-      missing: byRegistryId.get(m.id)?.missing ?? m.missing
+      missing: byRegistryId.get(m.id)?.missing ?? m.missing,
+      updateAvailable: !!byRegistryId.get(m.id) && !isUpToDate(byRegistryId.get(m.id)?.fingerprint, m.download)
     }),
     [byRegistryId]
   )
@@ -241,11 +261,44 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
         homepage: l.homepage,
         market: m,
         local: l,
-        missing: l.missing ?? m?.missing
+        missing: l.missing ?? m?.missing,
+        updateAvailable: !!m && !isUpToDate(l.fingerprint, m.download)
       }
     },
     [marketById]
   )
+
+  const updates = useMemo(() => library.map(localItem).filter((i) => i.updateAvailable), [library, localItem])
+
+  /** Installe la nouvelle version ; si la map est chargée dans le jeu, on y charge la nouvelle version. */
+  const update = useCallback(
+    async (item: Item) => {
+      if (!item.market || !item.local || progress[item.market.id]) return
+      const updated = await install(item.market, { update: true })
+      if (updated && status?.slot.kind === 'custom' && status.slot.mapId === updated.id) {
+        const s = await window.api.loadMap(updated.id)
+        if (s.ok) setStatus(s.value)
+        else toast('info', 'Nouvelle version prête', 'Elle sera chargée dans le jeu au prochain « Jouer ».')
+      }
+    },
+    [install, progress, status, toast]
+  )
+
+  const updateAll = useCallback(async () => {
+    for (const item of updates) await update(item)
+  }, [updates, update])
+
+  // Mode automatique : chaque mise à jour détectée est installée une fois par session
+  const autoTried = useRef(new Set<string>())
+  useEffect(() => {
+    if (settings?.mapUpdates !== 'auto') return
+    const pending = updates.filter((i) => i.market && !autoTried.current.has(i.market.id))
+    if (!pending.length) return
+    pending.forEach((i) => autoTried.current.add(i.market!.id))
+    void (async () => {
+      for (const item of pending) await update(item)
+    })()
+  }, [settings?.mapUpdates, updates, update])
 
   const value: AppState = {
     status,
@@ -254,10 +307,16 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
     marketLoading,
     progress,
     busy,
+    settings,
+    saveSettings,
+    reloadSettings,
+    updates,
+    update,
+    updateAll,
     favorites,
     toggleFavorite,
     refreshMarket: () => refreshMarket(true),
-    install,
+    install: (m) => install(m),
     cancel: (m) => void window.api.cancelDownload(m.id),
     play,
     restore,

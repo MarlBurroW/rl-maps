@@ -3,7 +3,7 @@ import { ExternalLink, Trash2, X } from 'lucide-react'
 import { useApp, type Item } from '../state'
 import { formatBytes } from '../lib/format'
 import { Thumb } from './Thumb'
-import { MapActions } from './MapActions'
+import { MapActions, UpdateButton } from './MapActions'
 import { FavoriteButton } from './FavoriteButton'
 import { CompatSection } from './Compat'
 import { Button } from './Button'
@@ -106,7 +106,8 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
               Supprimer
             </Button>
           )}
-          <MapActions item={item} className="ml-auto min-w-36" />
+          <UpdateButton item={item} className="ml-auto" />
+          <MapActions item={item} className={`${item.updateAvailable ? '' : 'ml-auto'} min-w-36`} />
         </div>
       </div>
     </div>

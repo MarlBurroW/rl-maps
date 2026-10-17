@@ -13,6 +13,8 @@ import { chooseSlot, isValidInstall, loadIntoSlot, readSlot, restoreSlot } from 
 import { readPackageImports } from './game/upk'
 import { gamePackages } from './game/packages'
 import { missingDependencies } from '../shared/compat'
+import { downloadFingerprint } from '../shared/updates'
+import type { MarketMap } from '../shared/types'
 
 const STATUS_POLL_MS = 4000
 
@@ -62,6 +64,18 @@ async function broadcastStatus(force = false): Promise<GameStatus> {
     win?.webContents.send('status', status)
   }
   return status
+}
+
+/**
+ * Maps installées avant le suivi des versions : on leur attribue la version actuelle du registre,
+ * pour pouvoir détecter les prochaines mises à jour.
+ */
+async function backfillFingerprints(maps: MarketMap[]) {
+  const byId = new Map(maps.map((m) => [m.id, m]))
+  for (const local of await library.list()) {
+    const entry = local.registryId ? byId.get(local.registryId) : undefined
+    if (entry && !local.fingerprint) await library.patch(local.id, { fingerprint: downloadFingerprint(entry.download) })
+  }
 }
 
 /** Paquets du jeu installé, ou null si le jeu n'est pas configuré ou illisible. */
@@ -143,6 +157,7 @@ function registerIpc() {
     // Une map qui réutilise les assets d'Underpass doit être chargée dans une autre arène
     const slot = await chooseSlot(install.root, await readPackageImports(file))
     const record = await loadIntoSlot(install.root, file, map, slot)
+    await library.patch(mapId, { lastPlayedAt: new Date().toISOString() })
     await store.update({ slot: record })
     return broadcastStatus(true)
   })
@@ -176,6 +191,7 @@ function registerIpc() {
   handle('market:get', async (refresh?: boolean) => {
     // Actualiser le catalogue relit aussi les paquets du jeu (il a pu être mis à jour entre-temps)
     const [state, present] = await Promise.all([market.get(store.settings.sources, refresh), presentPackages(refresh)])
+    void backfillFingerprints(state.maps)
     return { ...state, maps: state.maps.map((m) => ({ ...m, missing: missingDependencies(m.imports, present) })) }
   })
   handle('market:install', async (sourceId: string, registryId: string) => {
@@ -207,6 +223,7 @@ function registerIpc() {
       }
       const map = await library.import(file, {
         registryId: entry.id,
+        fingerprint: downloadFingerprint(entry.download),
         name: entry.name,
         author: entry.author,
         description: entry.description ?? entry.summary,

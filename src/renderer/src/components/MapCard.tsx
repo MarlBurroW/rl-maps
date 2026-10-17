@@ -2,7 +2,7 @@ import { CircleCheck } from 'lucide-react'
 import type { Item } from '../state'
 import { formatBytes } from '../lib/format'
 import { Thumb } from './Thumb'
-import { MapActions } from './MapActions'
+import { MapActions, UpdateButton } from './MapActions'
 import { FavoriteButton } from './FavoriteButton'
 import { CompatBadge } from './Compat'
 
@@ -16,6 +16,9 @@ export function MapCard({ item, onOpen, badge = true }: { item: Item; onOpen: ()
         <Thumb src={item.thumbnail} alt={item.name} className="transition group-hover:brightness-110" />
         <FavoriteButton item={item} className="absolute top-2 left-2" />
         <CompatBadge missing={item.missing} className="absolute bottom-2 left-2" />
+        {item.updateAvailable && (
+          <span className="absolute right-2 bottom-2 rounded-full bg-blue px-2 py-0.5 text-[11px] font-semibold text-white">Mise à jour</span>
+        )}
         {badge && item.local && item.market && (
           <span className="absolute top-2 right-2 inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[11px] font-semibold text-ok backdrop-blur">
             <CircleCheck className="size-3" /> Installée
@@ -40,6 +43,7 @@ export function MapCard({ item, onOpen, badge = true }: { item: Item; onOpen: ()
               </span>
             ))}
           </div>
+          <UpdateButton item={item} compact className="shrink-0" />
           <MapActions item={item} size="sm" className="shrink-0" />
         </div>
       </div>

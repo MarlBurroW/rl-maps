@@ -81,6 +81,12 @@ export interface LibraryMap {
   registryId?: string
   homepage?: string
   addedAt: string
+  /** Dernière mise à jour depuis le registre */
+  updatedAt?: string
+  /** Dernier chargement dans le jeu */
+  lastPlayedAt?: string
+  /** Empreinte de la version installée (voir shared/updates.ts) */
+  fingerprint?: string
   /** Paquets dont la map importe des objets (null : illisible) */
   imports?: string[] | null
   /** Dépendances absentes du jeu installé (undefined : inconnu) */
@@ -108,6 +114,8 @@ export interface GameStatus {
 export interface Settings {
   install: GameInstall | null
   restoreOnExit: boolean
+  /** Mises à jour des maps installées : proposées (badge + bouton) ou automatiques */
+  mapUpdates: 'ask' | 'auto'
   /** Ids des maps favorites (id du registre ou de la bibliothèque, identiques pour une map installée depuis le market) */
   favorites: string[]
   sources: RegistrySource[]
