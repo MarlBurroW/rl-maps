@@ -9,7 +9,8 @@ import { Market } from './market/market'
 import { download, downloadFirst } from './market/download'
 import { detectInstalls, resolveInstallFolder } from './game/detect'
 import { isGameRunning } from './game/process'
-import { isValidInstall, loadIntoSlot, readSlot, restoreSlot } from './game/slot'
+import { chooseSlot, isValidInstall, loadIntoSlot, readSlot, restoreSlot } from './game/slot'
+import { readPackageImports } from './game/upk'
 
 const STATUS_POLL_MS = 4000
 
@@ -129,7 +130,10 @@ function registerIpc() {
     const install = requireInstall()
     const map = await library.get(mapId)
     if (!map) throw new Error('Map introuvable dans la bibliothèque')
-    const record = await loadIntoSlot(install.root, await library.mapFile(mapId), map)
+    const file = await library.mapFile(mapId)
+    // Une map qui réutilise les assets d'Underpass doit être chargée dans une autre arène
+    const slot = await chooseSlot(install.root, await readPackageImports(file))
+    const record = await loadIntoSlot(install.root, file, map, slot)
     await store.update({ slot: record })
     return broadcastStatus(true)
   })

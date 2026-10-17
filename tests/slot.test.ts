@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { readFile, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import path from 'node:path'
-import { backupPath, isValidInstall, loadIntoSlot, readSlot, restoreSlot, targetPath } from '../src/main/game/slot'
+import { backupPath, chooseSlot, isValidInstall, loadIntoSlot, readSlot, restoreSlot, SLOTS, targetPath } from '../src/main/game/slot'
 import { fakeInstall, tempDir } from './helpers'
 
 async function mapFile(content: string) {
@@ -24,7 +24,7 @@ describe('slot Underpass', () => {
 
     expect(await readFile(targetPath(root), 'utf8')).toBe('MAP-A')
     expect(await readFile(backupPath(root), 'utf8')).toBe('ORIGINAL')
-    expect((await readSlot(root, record)).state).toEqual({ kind: 'custom', mapId: 'a', mapName: 'Map A' })
+    expect((await readSlot(root, record)).state).toEqual({ kind: 'custom', mapId: 'a', mapName: 'Map A', slot: 'underpass', arena: 'Underpass' })
 
     await restoreSlot(root)
     expect(await readFile(targetPath(root), 'utf8')).toBe('ORIGINAL')
@@ -78,5 +78,50 @@ describe('slot Underpass', () => {
     const { rm } = await import('node:fs/promises')
     await rm(targetPath(root))
     await expect(loadIntoSlot(root, await mapFile('MAP'), { id: 'a', name: 'A' })).rejects.toThrow(/introuvable/)
+  })
+
+  describe('plusieurs arènes', () => {
+    const [underpass, utopia] = SLOTS
+
+    it('envoie dans Utopia Retro une map qui réutilise les assets d’Underpass', async () => {
+      const root = await fakeInstall('ORIGINAL', 'ORIGINAL-UTOPIA')
+      expect((await chooseSlot(root, ['Engine', 'Labs_Underpass_P'])).id).toBe('utopia')
+      expect((await chooseSlot(root, ['Engine', 'Park_P'])).id).toBe('underpass')
+      expect((await chooseSlot(root, null)).id).toBe('underpass')
+      // Utilise les deux : on retombe sur Underpass
+      expect((await chooseSlot(root, ['labs_underpass_p', 'LABS_UTOPIA_P'])).id).toBe('underpass')
+    })
+
+    it('reste sur Underpass si Utopia Retro est absente du jeu', async () => {
+      const root = await fakeInstall('ORIGINAL')
+      expect((await chooseSlot(root, ['Labs_Underpass_P'])).id).toBe('underpass')
+    })
+
+    it('ne garde qu’une map chargée à la fois, et la restauration remet toutes les arènes', async () => {
+      const root = await fakeInstall('ORIGINAL', 'ORIGINAL-UTOPIA')
+      const a = await loadIntoSlot(root, await mapFile('MAP-A'), { id: 'a', name: 'A' }, utopia)
+      expect(await readFile(targetPath(root, utopia), 'utf8')).toBe('MAP-A')
+      expect(await readFile(targetPath(root), 'utf8')).toBe('ORIGINAL')
+      expect((await readSlot(root, a)).state).toEqual({ kind: 'custom', mapId: 'a', mapName: 'A', slot: 'utopia', arena: 'Utopia Retro' })
+
+      // Une autre map dans Underpass : Utopia Retro est restaurée au passage
+      const b = await loadIntoSlot(root, await mapFile('MAP-BB'), { id: 'b', name: 'B' }, underpass)
+      expect(await readFile(targetPath(root, utopia), 'utf8')).toBe('ORIGINAL-UTOPIA')
+      expect(existsSync(backupPath(root, utopia))).toBe(false)
+      expect((await readSlot(root, b)).state).toMatchObject({ kind: 'custom', mapId: 'b', slot: 'underpass' })
+
+      await loadIntoSlot(root, await mapFile('MAP-A'), { id: 'a', name: 'A' }, utopia)
+      await restoreSlot(root)
+      expect(await readFile(targetPath(root), 'utf8')).toBe('ORIGINAL')
+      expect(await readFile(targetPath(root, utopia), 'utf8')).toBe('ORIGINAL-UTOPIA')
+      expect((await readSlot(root, null)).state).toEqual({ kind: 'original' })
+    })
+
+    it('lit un ancien enregistrement sans arène comme Underpass', async () => {
+      const root = await fakeInstall('ORIGINAL', 'ORIGINAL-UTOPIA')
+      const record = await loadIntoSlot(root, await mapFile('MAP-A'), { id: 'a', name: 'A' })
+      const legacy = { mapId: record.mapId, mapName: record.mapName, size: record.size }
+      expect((await readSlot(root, legacy)).state).toMatchObject({ kind: 'custom', slot: 'underpass' })
+    })
   })
 })

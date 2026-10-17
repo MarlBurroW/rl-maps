@@ -50,7 +50,7 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
             </div>
             <p className="mt-1 text-sm text-muted">
               par <span className="text-fg">{item.author ?? 'Auteur inconnu'}</span> · {formatBytes(item.size)}
-              {item.market?.version && <> · {item.market.version}</>}
+              {item.market?.version && <> · {item.market.version.replace(/^v+/i, 'v')}</>}
             </p>
           </div>
         </div>

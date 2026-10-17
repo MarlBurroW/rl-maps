@@ -20,7 +20,7 @@ export interface Item {
   local?: LibraryMap
 }
 
-export const PLAY_HINT = 'Dans Rocket League : Entraînement → Free Play → arène « Underpass ».'
+export const playHint = (arena: string) => `Dans Rocket League : Entraînement → Free Play → arène « ${arena} ».`
 
 interface AppState {
   status: GameStatus | null
@@ -135,7 +135,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const s = await run(`play:${map.id}`, () => window.api.loadMap(map.id), 'Impossible de charger la map')
       if (s) {
         setStatus(s)
-        toast('success', `${map.name} est prête`, PLAY_HINT)
+        const arena = s.slot.kind === 'custom' ? s.slot.arena : 'Underpass'
+        const moved = s.slot.kind === 'custom' && s.slot.slot !== 'underpass'
+        toast(
+          'success',
+          `${map.name} est prête`,
+          playHint(arena) + (moved ? `
+Cette map réutilise des éléments d’Underpass : elle est chargée dans ${arena} pour les garder intacts.` : '')
+        )
       }
     },
     [run, toast]

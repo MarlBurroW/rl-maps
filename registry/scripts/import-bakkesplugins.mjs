@@ -44,7 +44,7 @@ function parseLatestVersion(html) {
   if (!latest) return null
   const url = latest.match(/href="(https:\/\/cdn\.bakkesplugins\.com\/[^"]+)"/)?.[1]
   const version = latest.match(/<span class="text-lg font-semibold text-gray-900">([^<]+)<\/span>/)?.[1]
-  return url ? { url: decode(url), version: version ? decode(version) : null } : null
+  return url ? { url: decode(url), version: version ? decode(version).replace(/^v+/i, 'v') : null } : null
 }
 
 /** Taille exacte via HEAD sur le CDN, et nom de fichier sans le préfixe de hash. */

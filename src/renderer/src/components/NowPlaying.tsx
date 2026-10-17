@@ -1,9 +1,9 @@
 import { FolderSearch, RotateCcw, TriangleAlert } from 'lucide-react'
-import { PLAY_HINT, useApp } from '../state'
+import { playHint, useApp } from '../state'
 import { Thumb } from './Thumb'
 import { Button } from './Button'
 
-/** Barre persistante en bas : quelle map est dans le slot Underpass, et comment revenir à l'original. */
+/** Barre persistante en bas : quelle map est chargée, dans quelle arène, et comment revenir à l'original. */
 export function NowPlaying({ onOpenSettings }: { onOpenSettings: () => void }) {
   const { status, library, busy, restore } = useApp()
   if (!status) return <footer className="h-[72px] shrink-0 border-t border-line bg-surface" />
@@ -32,7 +32,7 @@ export function NowPlaying({ onOpenSettings }: { onOpenSettings: () => void }) {
       </>
     )
   } else if (status.slot.kind === 'custom') {
-    const { mapId, mapName } = status.slot
+    const { mapId, mapName, arena } = status.slot
     const map = library.find((m) => m.id === mapId)
     content = (
       <>
@@ -42,7 +42,7 @@ export function NowPlaying({ onOpenSettings }: { onOpenSettings: () => void }) {
             <span className="mr-2 rounded bg-orange/15 px-1.5 py-0.5 text-[11px] font-bold tracking-wide text-orange uppercase">En jeu</span>
             {mapName}
           </p>
-          <p className="truncate text-[13px] text-muted">{PLAY_HINT}</p>
+          <p className="truncate text-[13px] text-muted">{playHint(arena)}</p>
         </div>
         {running}
         <Button icon={<RotateCcw className="size-4" />} busy={busy === 'restore'} onClick={() => void restore()}>
@@ -74,7 +74,7 @@ export function NowPlaying({ onOpenSettings }: { onOpenSettings: () => void }) {
         </div>
         <div className="min-w-0 flex-1">
           <p className="text-sm font-semibold">Aucune map custom chargée</p>
-          <p className="text-[13px] text-muted">Underpass d'origine en place, tu peux jouer en ligne normalement.</p>
+          <p className="text-[13px] text-muted">Arènes d'origine en place, tu peux jouer en ligne normalement.</p>
         </div>
         {running}
       </>

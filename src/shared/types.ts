@@ -79,11 +79,14 @@ export interface LibraryMap {
   addedAt: string
 }
 
+/** Arène Labs dont le fichier sert à charger la map */
+export type SlotId = 'underpass' | 'utopia'
+
 export type SlotState =
   /** Fichier d'origine en place */
   | { kind: 'original' }
   /** Une map de la bibliothèque est chargée */
-  | { kind: 'custom'; mapId: string; mapName: string }
+  | { kind: 'custom'; mapId: string; mapName: string; slot: SlotId; arena: string }
   /** Un backup existe mais la map chargée est inconnue (ancien outil, autre loader…) */
   | { kind: 'unknown' }
 

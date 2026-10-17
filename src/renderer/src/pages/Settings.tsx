@@ -64,7 +64,7 @@ export function SettingsPage() {
       <div className="mx-auto max-w-3xl space-y-8 px-8 py-7">
         <h1 className="font-display text-2xl font-bold">Réglages</h1>
 
-        <Section title="Rocket League" desc="L'app remplace l'arène « Underpass » de Free Play par la map choisie.">
+        <Section title="Rocket League" desc="L'app remplace une arène Labs de Free Play par la map choisie : Underpass en général, Utopia Retro pour les maps qui réutilisent des éléments d'Underpass.">
           <div className="flex items-center gap-4 rounded-xl border border-line bg-surface p-4">
             {status?.valid ? <CircleCheck className="size-5 shrink-0 text-ok" /> : <TriangleAlert className="size-5 shrink-0 text-warn" />}
             <div className="min-w-0 flex-1">
@@ -106,7 +106,7 @@ export function SettingsPage() {
         <Section title="Comportement">
           <Toggle
             label="Restaurer l'original en quittant l'app"
-            desc="Remet Underpass d'origine à la fermeture, pour ne jamais rester avec une map custom en ligne."
+            desc="Remet les arènes d'origine à la fermeture, pour ne jamais rester avec une map custom en ligne."
             checked={settings.restoreOnExit}
             onChange={(v) => void update({ restoreOnExit: v })}
           />
@@ -180,7 +180,7 @@ export function SettingsPage() {
               <li>
                 Sur Epic, lance le jeu via Bibliothèque → Rocket League → <b className="text-fg">⋯ → Lancer sans anti-triche</b>.
               </li>
-              <li>Entraînement → Free Play → choisis l'arène « Underpass ».</li>
+              <li>Entraînement → Free Play → choisis l'arène indiquée en bas de l'app (« Underpass » le plus souvent).</li>
               <li>Restaure l'original avant de rejouer en ligne (automatique en quittant l'app si l'option est active).</li>
             </ol>
             <p className="pt-2 font-semibold">Textures roses ?</p>

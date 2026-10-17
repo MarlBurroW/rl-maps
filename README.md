@@ -3,7 +3,7 @@
 Market et loader de maps custom pour **Rocket League** (Epic Games et Steam), sans BakkesMod.
 
 Tu parcours le catalogue, tu cliques sur **Installer** puis sur **Jouer**, et la map t'attend dans
-Free Play → **Underpass**.
+Free Play.
 
 ## Télécharger
 
@@ -24,6 +24,8 @@ Dernière version : **[Releases](https://github.com/MarlBurroW/rl-maps/releases/
 - **Bibliothèque** : tes maps installées. Glisse-dépose un `.upk`, `.udk` ou `.zip` n'importe où dans la fenêtre pour en ajouter.
 - **Chargement sûr** : l'original est sauvegardé une seule fois (`Labs_Underpass_P.upk.bak`), chaque écriture passe
   par un fichier temporaire, et l'original peut être restauré automatiquement à la fermeture.
+- **Arène choisie selon la map** : l'app lit les dépendances de chaque map. Celles qui réutilisent des éléments
+  d'Underpass (sol, bordures…) sont chargées dans **Utopia Retro**, pour ne pas perdre ces éléments en remplaçant Underpass.
 - **Compatible avec les anciens loaders** : un backup laissé par [marzeq/rl-map-loader](https://github.com/marzeq/rl-map-loader)
   ou [nikosleft/rl-map-loader](https://github.com/nikosleft/rl-map-loader) est reconnu et peut être restauré.
 - **Détection automatique** de l'installation (Epic, Steam, Heroic) et du jeu lancé.
@@ -36,11 +38,13 @@ Dernière version : **[Releases](https://github.com/MarlBurroW/rl-maps/releases/
 
 1. **Jouer** sur une map de la bibliothèque.
 2. Sur Epic : Bibliothèque → Rocket League → **⋯ → Lancer sans anti-triche**.
-3. Entraînement → Free Play → arène **Underpass**.
+3. Entraînement → Free Play → l'arène indiquée en bas de l'app (**Underpass** le plus souvent, **Utopia Retro** pour certaines maps).
 4. Avant de rejouer en ligne : **Restaurer l'original** (automatique en quittant l'app si l'option est active).
 
-Textures roses ? Installe une fois pour toutes le
+Textures roses ou manquantes ? Installe une fois pour toutes le
 [pack de textures Workshop](https://videogamemods.com/vgm/rocketleague/mods/workshop-textures) dans `TAGame/CookedPCConsole`.
+Si une map reste incomplète malgré le pack, elle dépend sans doute de paquets que Rocket League a supprimés depuis
+(`grass_textures`, `PostProcess`, `PhysicalMaterials`…) : seul son auteur peut la corriger.
 
 > Projet non affilié à Psyonix ni à Epic Games. N'utilise jamais une map custom en partie en ligne.
 
@@ -77,7 +81,8 @@ Pour lancer une instance isolée (données et réglages séparés) : `RLMAPS_USE
 ```
 src/
   main/                 process principal (Node)
-    game/slot.ts        swap Labs_Underpass_P.upk <-> map, backup, détection d'état
+    game/slot.ts        swap des arènes Labs (Underpass, Utopia Retro) <-> map, backups, état
+    game/upk.ts         lecture des dépendances d'une map (en-tête des paquets UE3)
     game/fsops.ts       écritures atomiques + repli UAC
     game/detect.ts      détection Epic / Steam / Heroic
     library/            bibliothèque locale (+ extraction zip)
