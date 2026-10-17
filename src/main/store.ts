@@ -10,7 +10,7 @@ interface StoreData {
 }
 
 const defaults = (): StoreData => ({
-  settings: { install: null, restoreOnExit: true, mapUpdates: 'ask', sources: DEFAULT_SOURCES, favorites: [] },
+  settings: { install: null, restoreOnExit: true, closeToTray: true, mapUpdates: 'ask', sources: DEFAULT_SOURCES, favorites: [] },
   slot: null
 })
 

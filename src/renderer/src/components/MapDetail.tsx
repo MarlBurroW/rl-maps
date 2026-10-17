@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { ExternalLink, Trash2, X } from 'lucide-react'
 import { useApp, type Item } from '../state'
-import { formatBytes } from '../lib/format'
+import { formatBytes, formatDate, timeAgo } from '../lib/format'
 import { Thumb } from './Thumb'
 import { MapActions, UpdateButton } from './MapActions'
 import { FavoriteButton } from './FavoriteButton'
@@ -68,6 +68,14 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
           )}
           {(item.description || item.summary) && (
             <p className="text-[15px] leading-relaxed whitespace-pre-line text-fg/90">{item.description || item.summary}</p>
+          )}
+          {item.local && (
+            <p className="text-[13px] text-muted">
+              Ajoutée le {formatDate(item.local.addedAt)}
+              {item.local.updatedAt && <> · mise à jour le {formatDate(item.local.updatedAt)}</>}
+              {' · '}
+              {item.local.lastPlayedAt ? `dernière partie ${timeAgo(item.local.lastPlayedAt)}` : 'jamais jouée'}
+            </p>
           )}
           <CompatSection missing={item.missing} />
           {item.recommendedSettings && (

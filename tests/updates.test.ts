@@ -48,3 +48,16 @@ describe('version de l’app', () => {
     expect(compareVersions('0.1.0', '1.0.0')).toBeLessThan(0)
   })
 })
+
+describe('dates relatives', () => {
+  it('formate une durée écoulée', async () => {
+    const { timeAgo } = await import('../src/renderer/src/lib/format')
+    const now = Date.parse('2026-10-17T12:00:00Z')
+    expect(timeAgo(undefined, now)).toBeNull()
+    expect(timeAgo('2026-10-17T11:59:30Z', now)).toBe('à l’instant')
+    expect(timeAgo('2026-10-17T09:00:00Z', now)).toBe('il y a 3 h')
+    expect(timeAgo('2026-10-16T08:00:00Z', now)).toBe('hier')
+    expect(timeAgo('2026-10-10T12:00:00Z', now)).toBe('il y a 7 jours')
+    expect(timeAgo('2025-09-01T12:00:00Z', now)).toBe('il y a 1 an')
+  })
+})

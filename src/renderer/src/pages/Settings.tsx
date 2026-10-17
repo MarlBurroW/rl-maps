@@ -107,6 +107,12 @@ export function SettingsPage() {
             onChange={(v) => void update({ restoreOnExit: v })}
           />
           <Toggle
+            label="Garder l'app en arrière-plan à la fermeture"
+            desc="La croix cache la fenêtre : l'app reste près de l'horloge (clic pour la rouvrir, clic droit pour quitter). L'original n'est restauré qu'en quittant vraiment."
+            checked={settings.closeToTray}
+            onChange={(v) => void update({ closeToTray: v })}
+          />
+          <Toggle
             label="Mettre à jour les maps automatiquement"
             desc="Installe d'office les nouvelles versions publiées par les auteurs. Sinon, un badge « Mise à jour » te les propose."
             checked={settings.mapUpdates === 'auto'}

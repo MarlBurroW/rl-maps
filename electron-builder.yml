@@ -17,6 +17,9 @@ extraResources:
   - from: registry/sources
     to: registry/sources
     filter: ['*.json']
+  # Icône de la zone de notification
+  - from: build/icon.ico
+    to: icon.ico
 asarUnpack: []
 win:
   target:

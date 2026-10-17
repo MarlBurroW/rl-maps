@@ -1,24 +1,46 @@
 import { useDeferredValue, useMemo, useState } from 'react'
-import { FolderInput, RefreshCw, Search, Store, Upload } from 'lucide-react'
+import { Dices, FolderInput, RefreshCw, Search, Store, Upload } from 'lucide-react'
 import { useApp, type Item } from '../state'
-import { normalize } from '../lib/format'
+import { formatBytes, normalize } from '../lib/format'
 import { MapCard } from '../components/MapCard'
 import { Button } from '../components/Button'
 import { FavoritesChip, Grid } from './Market'
 
+type LibrarySort = 'added' | 'played' | 'name' | 'size'
+
+const time = (iso?: string) => (iso ? Date.parse(iso) : 0)
+const SORTS: Record<LibrarySort, { label: string; compare: (a: Item, b: Item) => number }> = {
+  added: { label: 'Ajoutées récemment', compare: (a, b) => time(b.local?.addedAt) - time(a.local?.addedAt) },
+  played: { label: 'Jouées récemment', compare: (a, b) => time(b.local?.lastPlayedAt) - time(a.local?.lastPlayedAt) },
+  name: { label: 'Nom (A → Z)', compare: (a, b) => a.name.localeCompare(b.name) },
+  size: { label: 'Plus lourdes', compare: (a, b) => (b.local?.size ?? 0) - (a.local?.size ?? 0) }
+}
+
 export function LibraryPage({ onOpen, onBrowse }: { onOpen: (item: Item) => void; onBrowse: () => void }) {
-  const { library, localItem, importFiles, busy, favorites, updates, updateAll, settings } = useApp()
+  const { library, localItem, importFiles, busy, favorites, updates, updateAll, settings, play, status } = useApp()
   const [query, setQuery] = useState('')
   const [favOnly, setFavOnly] = useState(false)
+  const [sort, setSort] = useState<LibrarySort>('added')
   const q = useDeferredValue(normalize(query.trim()))
 
   const items = useMemo(() => library.map(localItem), [library, localItem])
   const favCount = items.filter((i) => favorites.has(i.favId)).length
-  const shown = items.filter(
-    (i) =>
-      (!favOnly || favorites.has(i.favId)) &&
-      (!q || normalize(`${i.name} ${i.author ?? ''} ${i.tags.join(' ')}`).includes(q))
-  )
+  const totalSize = library.reduce((sum, m) => sum + m.size, 0)
+  const shown = items
+    .filter(
+      (i) =>
+        (!favOnly || favorites.has(i.favId)) &&
+        (!q || normalize(`${i.name} ${i.author ?? ''} ${i.tags.join(' ')}`).includes(q))
+    )
+    .sort(SORTS[sort].compare)
+
+  /** Charge une map au hasard parmi celles affichées (hors celle déjà en jeu). */
+  const playRandom = () => {
+    const loaded = status?.slot.kind === 'custom' ? status.slot.mapId : null
+    const pool = shown.filter((i) => i.local && i.local.id !== loaded)
+    const pick = pool[Math.floor(Math.random() * pool.length)]
+    if (pick?.local) void play(pick.local)
+  }
 
   return (
     <div className="flex h-full flex-col">
@@ -29,7 +51,7 @@ export function LibraryPage({ onOpen, onBrowse }: { onOpen: (item: Item) => void
             <p className="mt-1 text-sm text-muted">
               {library.length === 0
                 ? 'Tes maps installées apparaîtront ici.'
-                : `${library.length} map${library.length > 1 ? 's' : ''} installée${library.length > 1 ? 's' : ''}. Glisse un fichier dans la fenêtre pour en ajouter.`}
+                : `${library.length} map${library.length > 1 ? 's' : ''} installée${library.length > 1 ? 's' : ''} · ${formatBytes(totalSize)} sur le disque. Glisse un fichier dans la fenêtre pour en ajouter.`}
             </p>
           </div>
           {library.length > 0 && (
@@ -50,6 +72,30 @@ export function LibraryPage({ onOpen, onBrowse }: { onOpen: (item: Item) => void
         {library.length > 0 && (
           <div className="flex items-center gap-1.5">
             <FavoritesChip active={favOnly} count={favCount} onClick={() => setFavOnly((v) => !v)} />
+            <div className="ml-auto flex items-center gap-2">
+              <select
+                value={sort}
+                onChange={(e) => setSort(e.target.value as LibrarySort)}
+                className="h-8 rounded-lg border border-line bg-surface px-2.5 text-[13px] outline-none focus:border-blue"
+                aria-label="Trier"
+              >
+                {Object.entries(SORTS).map(([id, s]) => (
+                  <option key={id} value={id}>
+                    {s.label}
+                  </option>
+                ))}
+              </select>
+              <Button
+                size="sm"
+                variant="play"
+                icon={<Dices className="size-4" />}
+                disabled={!status?.valid || shown.filter((i) => i.local).length < 2 || (busy?.startsWith('play:') ?? false)}
+                title="Charge une map au hasard parmi celles affichées"
+                onClick={playRandom}
+              >
+                Au hasard
+              </Button>
+            </div>
           </div>
         )}
         {updates.length > 0 && settings?.mapUpdates !== 'auto' && (

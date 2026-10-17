@@ -24,7 +24,12 @@ au redémarrage. La version portable signale simplement qu'une nouvelle version 
   catégorie et par source, fiches détaillées. Installation en un clic, avec suivi de la progression.
 - **Doublons fusionnés** : une map publiée sur les deux sources n'apparaît qu'une fois, et si un lien ne marche pas
   (quota Google Drive, par exemple), le téléchargement bascule automatiquement sur l'autre source.
-- **Bibliothèque** : tes maps installées. Glisse-dépose un `.upk`, `.udk` ou `.zip` n'importe où dans la fenêtre pour en ajouter.
+- **Bibliothèque** : tes maps installées, avec recherche, favoris, tri (ajoutées ou jouées récemment, nom, taille),
+  espace disque occupé et bouton « Au hasard ». Glisse-dépose un `.upk`, `.udk` ou `.zip` n'importe où dans la fenêtre pour en ajouter.
+- **Mises à jour des maps** : quand un auteur publie une nouvelle version, l'app la propose (badge et bouton) ou
+  l'installe d'office (réglage).
+- **Reste en arrière-plan** : fermer la fenêtre garde l'app près de l'horloge (clic pour rouvrir, clic droit pour
+  restaurer l'original ou quitter).
 - **Chargement sûr** : l'original est sauvegardé une seule fois (`Labs_Underpass_P.upk.bak`), chaque écriture passe
   par un fichier temporaire, et l'original peut être restauré automatiquement à la fermeture.
 - **Compatibilité affichée** : chaque map est comparée aux fichiers de **ton** jeu. Celles qui dépendent de paquets

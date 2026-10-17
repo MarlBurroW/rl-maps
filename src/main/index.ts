@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, ipcMain, net, protocol, shell } from 'electron'
+import { app, BrowserWindow, dialog, ipcMain, net, Notification, protocol, shell } from 'electron'
 import { mkdtemp, rm, stat } from 'node:fs/promises'
 import { pathToFileURL } from 'node:url'
 import path from 'node:path'
@@ -15,6 +15,7 @@ import { gamePackages } from './game/packages'
 import { missingDependencies } from '../shared/compat'
 import { downloadFingerprint } from '../shared/updates'
 import { checkForUpdates, getUpdateState, initUpdater, installUpdate } from './updater'
+import { createTray, updateTray } from './tray'
 import type { MarketMap } from '../shared/types'
 
 const STATUS_POLL_MS = 4000
@@ -63,6 +64,7 @@ async function broadcastStatus(force = false): Promise<GameStatus> {
   if (force || json !== lastStatus) {
     lastStatus = json
     win?.webContents.send('status', status)
+    updateTray(status)
   }
   return status
 }
@@ -284,6 +286,21 @@ function createWindow() {
   })
 
   win.once('ready-to-show', () => win?.show())
+
+  // Fermer la fenêtre la cache seulement : l'app reste dans la zone de notification
+  let hintShown = false
+  win.on('close', (e) => {
+    if (appQuitting || !store.settings.closeToTray) return
+    e.preventDefault()
+    win?.hide()
+    if (!hintShown && Notification.isSupported()) {
+      hintShown = true
+      new Notification({
+        title: 'RL Maps tourne en arrière-plan',
+        body: "Clic sur l'icône près de l'horloge pour la rouvrir, clic droit pour quitter."
+      }).show()
+    }
+  })
   win.webContents.setWindowOpenHandler(({ url }) => {
     if (/^https:\/\//.test(url)) void shell.openExternal(url)
     return { action: 'deny' }
@@ -294,10 +311,14 @@ function createWindow() {
   else void win.loadFile(path.join(import.meta.dirname, '../renderer/index.html'))
 }
 
-app.on('second-instance', () => {
-  if (win?.isMinimized()) win.restore()
-  win?.focus()
-})
+function showWindow() {
+  if (!win) return
+  if (win.isMinimized()) win.restore()
+  win.show()
+  win.focus()
+}
+
+app.on('second-instance', showWindow)
 
 app.whenReady().then(async () => {
   await store.load()
@@ -316,13 +337,30 @@ app.whenReady().then(async () => {
 
   registerIpc()
   createWindow()
+  createTray(
+    app.isPackaged ? path.join(process.resourcesPath, 'icon.ico') : path.join(app.getAppPath(), 'build', 'icon.ico'),
+    {
+      show: showWindow,
+      restore: () => {
+        const install = store.settings.install
+        if (!install) return
+        void restoreSlot(install.root)
+          .then(() => store.update({ slot: null }))
+          .catch((err: Error) => dialog.showErrorBox('Restauration impossible', err.message))
+          .finally(() => void broadcastStatus(true))
+      },
+      quit: () => app.quit()
+    }
+  )
   initUpdater((s) => win?.webContents.send('app-update', s))
   setInterval(() => void broadcastStatus(), STATUS_POLL_MS)
 })
 
 // Restauration de l'original à la fermeture (si l'option est active et que c'est nous qui avons chargé la map).
 let quitting = false
+let appQuitting = false
 app.on('before-quit', (e) => {
+  appQuitting = true
   if (quitting) return
   const install = store.settings.install
   if (!store.settings.restoreOnExit || !install || !store.slot) return
