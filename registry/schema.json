@@ -115,6 +115,16 @@
           "version": {
             "type": "string",
             "description": "Version publiée de la map (ex. v1.0.0)"
+          },
+          "imports": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Paquets dont la map importe des objets (généré par scripts/scan-imports.mjs, null si illisible). L'app les compare aux fichiers du jeu pour signaler un rendu incomplet."
           }
         }
       }

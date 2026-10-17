@@ -2,7 +2,7 @@
   "$schema": "../schema.json",
   "version": 1,
   "name": "Lethamyr",
-  "updatedAt": "2026-10-15T22:09:26.542Z",
+  "updatedAt": "2026-10-17T14:23:02.763Z",
   "maps": [
     {
       "id": "lethamyr-1d",
@@ -21,7 +21,18 @@
         "url": "https://drive.google.com/file/d/1TFWrmpAkx9Z624PwsQv5bIzuyGdwpudf/view",
         "filename": "Leth1D.zip",
         "size": 2301218
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "HoopsStadium_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Stadium_P",
+        "Underwater_Field",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-2fort",
@@ -41,7 +52,20 @@
         "url": "https://drive.google.com/file/d/1uUmzGUjpoUITo0Sg9Kpu8oTQ8vMBvAUi/view",
         "filename": "2Fort.zip",
         "size": 270053561
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "BoardwalkPack",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-4-square",
@@ -63,7 +87,19 @@
         "url": "https://drive.google.com/file/d/1rmqKjf-0RmMpPssMB6ssgrebnzK34HPd/view",
         "filename": "4-Square.zip",
         "size": 86129065
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-4v4-field",
@@ -82,7 +118,23 @@
         "url": "https://drive.google.com/file/d/1iklF9DJ2J0LpE5RgcyVVg8L9oGDjxDjk/view",
         "filename": "4v4 Field.zip",
         "size": 10101420
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "Stadium_P",
+        "TrainStation_P",
+        "UtopiaStadium_Lux_P",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-8-ball",
@@ -101,7 +153,28 @@
         "url": "https://drive.google.com/file/d/1bnTYnoHd0Ln-3EMvALnElRA-WqQ7owKd/view",
         "filename": "Leth8Ball.zip",
         "size": 12519570
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "Stadium_P",
+        "Underwater_Field",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-abstract",
@@ -120,7 +193,21 @@
         "url": "https://drive.google.com/file/d/1q1HoSA5sCn8vprWzTOSKt1-QxbNs_vQJ/view",
         "filename": "LethAbstract.zip",
         "size": 8035061
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "Underwater_Field",
+        "UtopiaStadium_P",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-aerial-training-remastered",
@@ -139,7 +226,19 @@
         "url": "https://drive.google.com/file/d/17DKLR0gc-Xfs_B4trkkLePI9ZM0nStvE/view",
         "filename": "Aerial Training Remastered.zip",
         "size": 1622773
-      }
+      },
+      "imports": [
+        "CS_Grounds",
+        "EditorLandscapeResources",
+        "Engine",
+        "EngineMaterials",
+        "MapTemplates",
+        "Music_OOB",
+        "Stadium_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-air-dribble-arena",
@@ -158,7 +257,20 @@
         "url": "https://drive.google.com/file/d/1KuuekUKzoXM4Fux0pioVkDS98FsfqzZ-/view",
         "filename": "Air Dribble Arena.zip",
         "size": 25258239
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-air-hockey-remastered",
@@ -178,7 +290,28 @@
         "url": "https://drive.google.com/file/d/1tVYlmtt1a8yhI69SMYoLElizueVs_b-N/view",
         "filename": "Air Hockey Table Remastered.zip",
         "size": 262989764
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ShatterShot_VFX",
+        "Stadium_Winter_P",
+        "enginedebugmaterials",
+        "gameinfo_hockey_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-air-hockey-table",
@@ -199,7 +332,15 @@
         "url": "https://drive.google.com/file/d/19i-hW3DawqTLbS4NbYqBDjG3lJZS5Bf8/view",
         "filename": "Air Hockey Table.zip",
         "size": 1227370
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-air-hockey-4-team",
@@ -219,7 +360,28 @@
         "url": "https://drive.google.com/file/d/1ZoeA8AqMSZNSDwQBpfvLd2uzcRbzPDuz/view",
         "filename": "Air Hockey 4 Team.zip",
         "size": 270659884
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ShatterShot_VFX",
+        "Stadium_Winter_P",
+        "enginedebugmaterials",
+        "gameinfo_hockey_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-airship",
@@ -239,7 +401,24 @@
         "url": "https://drive.google.com/file/d/1Cj0j1Z-B72krprUu7v6MQm3pVqS2XNwA/view",
         "filename": "Airship.zip",
         "size": 24196393
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "GlacierPack",
+        "MapTemplates",
+        "Park_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-among-us-in-rocket-league",
@@ -258,7 +437,28 @@
         "url": "https://drive.google.com/file/d/10zcZ61fVsqLByhETOwc_z_0Ex8hv1Z6G/view",
         "filename": "Among Us in Rocket League.zip",
         "size": 145320286
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GFxUI",
+        "HoopsStadium_P",
+        "Park_P",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "Underwater_FX",
+        "Underwater_OOB_foliage",
+        "UtopiaStadium_P",
+        "UtopiaStadium_Snow_P",
+        "enginedebugmaterials",
+        "explosion_batman_SF",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-arabian-nights",
@@ -277,7 +477,33 @@
         "url": "https://drive.google.com/file/d/1tk26Dcpzps4csGU6UbgCeuzVaviBIYXX/view",
         "filename": "Arabian Nights.zip",
         "size": 211131521
-      }
+      },
+      "imports": [
+        "Beach_Cage",
+        "Beach_Night_OOB",
+        "CS_Field",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Hat_AlphaHat_SF",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "Stadium_P",
+        "TrainStation_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_Night_P",
+        "Wasteland_Night_S_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-backrooms",
@@ -294,7 +520,26 @@
         "url": "https://drive.google.com/file/d/1LlXR3aztwIjn3CMeBqIy1PqNO3OzPBDG/view",
         "filename": "LethBackrooms.zip",
         "size": 8708461
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "IPI_Challenge_Support",
+        "MapTemplates",
+        "ShatterShot_VFX",
+        "ThrowbackStadium_Field",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-banjo-bridge",
@@ -311,7 +556,18 @@
         "url": "https://drive.google.com/file/d/1Pxj8dT7Lk93q2NBM_QOMrMbLkimSYZB-/view",
         "filename": "LethBanjoBridge.zip",
         "size": 5071732
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-barrel-run",
@@ -330,7 +586,18 @@
         "url": "https://drive.google.com/file/d/1-zQWpRIBVAZtolu0yoUYdBmMXUA7pFGR/view",
         "filename": "Barrel Run.zip",
         "size": 3011211
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UtopiaStadium_P",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-basketball-court",
@@ -350,7 +617,17 @@
         "url": "https://drive.google.com/file/d/1elDjJtTqRksDhuV_BNu-9K5PG5YxuQWR/view",
         "filename": "Basketball Court.zip",
         "size": 48300854
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-battlegrounds",
@@ -369,7 +646,20 @@
         "url": "https://drive.google.com/file/d/1z8I5Dcz55B3lcHbUJp9GVfdTO5WdNRYL/view",
         "filename": "Battlegrounds.zip",
         "size": 34403040
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameFramework",
+        "MapTemplates",
+        "ParkourPack",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-beach-brawl",
@@ -389,7 +679,22 @@
         "url": "https://drive.google.com/file/d/1u95vAYtDKIEddYMeDv_94lO-VtW0sX3x/view",
         "filename": "Beach Brawl.zip",
         "size": 11827889
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "LethBeachBallPondPack",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-beach-brawl-2-0",
@@ -406,7 +711,23 @@
         "url": "https://drive.google.com/file/d/1oN7tClhF2tvTufFVl--uuFikMCaEuDA0/view",
         "filename": "LethBeachBrawl2.zip",
         "size": 12111505
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "LethBeachBallPondPack",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_Night_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-beer-pong",
@@ -426,7 +747,16 @@
         "url": "https://drive.google.com/file/d/1WfO5gRfGs5xhQA6bfjVgnrWIKpaOCxlF/view",
         "filename": "Beer Pong.zip",
         "size": 3081407
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-beer-pong-remastered",
@@ -447,7 +777,21 @@
         "url": "https://drive.google.com/file/d/11xRGYhJmlPpMLKQWzlT9ZAnIAY8plg-Y/view",
         "filename": "Beer Pong Remastered.zip",
         "size": 10044749
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Underwater_Field",
+        "UtopiaStadium_P",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-birthday-cake",
@@ -464,7 +808,23 @@
         "url": "https://drive.google.com/file/d/1bqXlk8gAp0-miOjGE66dYz5wrkoMRctI/view",
         "filename": "LethCake28.zip",
         "size": 13814515
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Hat_CatOLantern_SF",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Stadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-block-fort",
@@ -485,7 +845,19 @@
         "url": "https://drive.google.com/file/d/1AHgQz6aQT3BXK8yOps6tSANc545PpqtC/view",
         "filename": "Block Fort.zip",
         "size": 3396746
-      }
+      },
+      "imports": [
+        "BlockFortPack2",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-block-fort-sumo",
@@ -505,7 +877,18 @@
         "url": "https://drive.google.com/file/d/1esbrQ32pn2sIB5A2dwZ78zDbmJ0UbHcx/view",
         "filename": "Block Fort Sumo.zip",
         "size": 8988357
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "LethParkourEgyptPack",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-boardwalk",
@@ -524,7 +907,19 @@
         "url": "https://drive.google.com/file/d/1awLsxi48Mk0lAQbuMKrhCNAs5ofvs4To/view",
         "filename": "Boardwalk.zip",
         "size": 14429962
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameFramework",
+        "MapTemplates",
+        "Utopiastadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-bomberman",
@@ -543,7 +938,25 @@
         "url": "https://drive.google.com/file/d/1O56AgYAUcuHpSfoyzRTnF6oU5zFZ8obZ/view",
         "filename": "Bomberman.zip",
         "size": 100205005
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "FXActorEvents",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Park_P",
+        "UtopiaStadium_P",
+        "antenna_sparkler_SF",
+        "enginedebugmaterials",
+        "explosion_basic_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-bouncy-castle",
@@ -563,7 +976,24 @@
         "url": "https://drive.google.com/file/d/1yDry1VmxWLz6zg48uz0ZfKb3leqSGT6T/view",
         "filename": "Bouncy Castle.zip",
         "size": 63181817
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ParkourPack",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-break-the-bank",
@@ -582,7 +1012,15 @@
         "url": "https://drive.google.com/file/d/1C_MWMQxsCnpP0jH9vjnkCKAwuFx6Shc4/view",
         "filename": "Break the Bank.zip",
         "size": 3270287
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-breaking-point-standard-day",
@@ -601,7 +1039,39 @@
         "url": "https://drive.google.com/file/d/1TxRq5C6_ZAlr8tTauABQYXU5pI2LSwsW/view",
         "filename": "Breaking Point (Day).zip",
         "size": 214725661
-      }
+      },
+      "imports": [
+        "ARC_Standard_P",
+        "Beach_Cage",
+        "Beach_FX",
+        "Beach_OOB",
+        "CHN_Stadium_Day_OOB",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "NeoTokyo_Standard_P",
+        "Outlaw_P",
+        "Park_P",
+        "PortalPackage",
+        "TrainStation_P",
+        "Underwater_Field",
+        "Underwater_OOB_foliage",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_Night_S_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-breaking-point-standard-night",
@@ -620,7 +1090,39 @@
         "url": "https://drive.google.com/file/d/1So1Hu1VlM4aIzoK7R8u7Rwqfcx4i2PZd/view",
         "filename": "Breaking Point (Night).zip",
         "size": 214691403
-      }
+      },
+      "imports": [
+        "ARC_Standard_P",
+        "Beach_Cage",
+        "Beach_FX",
+        "Beach_OOB",
+        "CHN_Stadium_Day_OOB",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "NeoTokyo_Standard_P",
+        "Outlaw_P",
+        "Park_P",
+        "PortalPackage",
+        "TrainStation_P",
+        "Underwater_Field",
+        "Underwater_OOB_foliage",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_Night_S_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-broken-bridge",
@@ -639,7 +1141,21 @@
         "url": "https://drive.google.com/file/d/1HvxHxFZqfq4M_9itbbhwA_IQLSTF3ags/view",
         "filename": "Broken Bridge.zip",
         "size": 97627201
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-capture-the-flag",
@@ -660,7 +1176,27 @@
         "url": "https://drive.google.com/file/d/1IiboaP1rnRM-YyPn4OC0D-k4F2VDBsOV/view",
         "filename": "Capture The Flag.zip",
         "size": 76105360
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "FXActorEvents",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "explosion_confetti_sf",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-capture-the-flag-retro",
@@ -677,7 +1213,25 @@
         "url": "https://drive.google.com/file/d/1LMpc-NmCdFQhx4sWBQJFgzjBH4eUYxRb/view",
         "filename": "LethCaptureTheFlagOG.zip",
         "size": 9480739
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "FXActorEvents",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "Underwater_Field",
+        "enginedebugmaterials",
+        "explosion_confetti_sf",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-capture-the-flag-candyland",
@@ -698,7 +1252,27 @@
         "url": "https://drive.google.com/file/d/1oLVA3oQJLFSuA3Xlw0qMJ5lMvfA9A5L_/view",
         "filename": "Capture the Flag Candyland.zip",
         "size": 122556907
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "FXActorEvents",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "Underwater_Field",
+        "enginedebugmaterials",
+        "explosion_confetti_sf",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-capture-the-flag-sandcastle",
@@ -719,7 +1293,32 @@
         "url": "https://drive.google.com/file/d/1kvrwruof2XN75eCyRKFNlYO6pBaGURDO/view",
         "filename": "Capture the Flag Sandcastle.zip",
         "size": 47957242
-      }
+      },
+      "imports": [
+        "Beach_Night_Cage",
+        "Beach_Night_FX",
+        "Beach_Night_Field",
+        "Beach_Night_OOB",
+        "Beach_Night_OOB2",
+        "Beach_Night_OOBTerrain",
+        "Beach_Night_P",
+        "Beach_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "FXActorEvents",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "LethSandCastleCTFPack",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "enginedebugmaterials",
+        "explosion_confetti_sf",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-capture-the-flag-winter",
@@ -740,7 +1339,28 @@
         "url": "https://drive.google.com/file/d/1EJLZCEfh4jnlnckUowXBb1aGod6yYPgD/view",
         "filename": "Capture the Flag Winter.zip",
         "size": 116998430
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "FXActorEvents",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "Stadium_Winter_P",
+        "UtopiaStadium_Snow_P",
+        "enginedebugmaterials",
+        "explosion_confetti_sf",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-cargo-bay",
@@ -759,7 +1379,29 @@
         "url": "https://drive.google.com/file/d/1CSxQL0zagDlnu5hkNl8vTbXvM-cn0vmF/view",
         "filename": "Cargo Bay.zip",
         "size": 463521575
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineMeshes",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-chemical-chamber",
@@ -778,7 +1420,34 @@
         "url": "https://drive.google.com/file/d/101PZbH3cRn56cwuPI5mB7iW3XFMYj36P/view",
         "filename": "Chemical Chamber.zip",
         "size": 100822290
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "LethSpacePack",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_P",
+        "Park_P",
+        "Stadium_P",
+        "TrainStation_P",
+        "Underwater_FX",
+        "Underwater_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-chess",
@@ -797,7 +1466,26 @@
         "url": "https://drive.google.com/file/d/1gNU4Svamdp8AutkX9y1esbciWlee7he0/view",
         "filename": "Chess.zip",
         "size": 166849060
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HSBuildingPack",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "UnrealEd",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-choo-choo-train",
@@ -816,7 +1504,33 @@
         "url": "https://drive.google.com/file/d/1vbl7C2SWldk9ryxfOuFzLm7ZDTRO70Ty/view",
         "filename": "Choo Choo Train.zip",
         "size": 31481829
-      }
+      },
+      "imports": [
+        "Beach_Field",
+        "Boost_Bubble_SF",
+        "CS_Field",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "Hat_Beret_SF",
+        "Hat_DetectiveHat_SF",
+        "Hat_Party_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_Standard_P",
+        "Outlaw_P",
+        "Park_P",
+        "Underwater_FX",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-christmas-snow-hill",
@@ -835,7 +1549,20 @@
         "url": "https://drive.google.com/file/d/1dfojnVATUEc_DpXyQexz1xDI_3StGM66/view",
         "filename": "Christmas Snowhill.zip",
         "size": 102333953
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "UtopiaStadium_Snow_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-clock-tower",
@@ -854,7 +1581,23 @@
         "url": "https://drive.google.com/file/d/16CCO3DvUg3zq4_rHIieMvOsf_tlyyBB-/view",
         "filename": "Clocktower.zip",
         "size": 7887041
-      }
+      },
+      "imports": [
+        "Beach_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Stadium_P",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-connect-4",
@@ -874,7 +1617,31 @@
         "url": "https://drive.google.com/file/d/1fWk66CD2q4_0iSUM-vptjIy78vEUhAh8/view",
         "filename": "Connect 4.zip",
         "size": 331724287
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_Field",
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_P",
+        "Park_P",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "Stadium_Winter_P",
+        "Underwater_Field",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-cornhole",
@@ -893,7 +1660,25 @@
         "url": "https://drive.google.com/file/d/1d_QN9OQcqPH_xLIvpPOSmoqFlxRZM1kn/view",
         "filename": "Cornhole.zip",
         "size": 26358035
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GlacierPack",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ParkourPack",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-crokinole",
@@ -912,7 +1697,22 @@
         "url": "https://drive.google.com/file/d/1u0javFAo1TlXhMiLAo_hFzXdwIYDNJYN/view",
         "filename": "Crokinole.zip",
         "size": 5453828
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Explosion_Electric_SF",
+        "HoopsStadium_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Outlaw_P",
+        "ShatterShot_VFX",
+        "Underwater_Field",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-cross-bridge",
@@ -931,7 +1731,22 @@
         "url": "https://drive.google.com/file/d/13PypJ84gZisoViRpeaYfgVznoyLigOha/view",
         "filename": "Cross Bridge.zip",
         "size": 2818469
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "Underwater_Field",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-crossroads",
@@ -950,7 +1765,22 @@
         "url": "https://drive.google.com/file/d/192aLpMOfFP5aG7HCkdfAgtexrEE7PSiZ/view",
         "filename": "Crossroads.zip",
         "size": 4977248
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-dart-board",
@@ -971,7 +1801,26 @@
         "url": "https://drive.google.com/file/d/11yIANOo94zfQwFbc2taL07Sch3m2kGtl/view",
         "filename": "Dart Board.zip",
         "size": 253980775
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "Stadium_P",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-dfh-cliffside",
@@ -991,7 +1840,22 @@
         "url": "https://drive.google.com/file/d/1i8J6OlvgUBYCDPsjDMVSPta_L4WxaHnq/view",
         "filename": "DFH Cliffside.zip",
         "size": 44986027
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "Underwater_OOB_foliage",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-dice",
@@ -1010,7 +1874,23 @@
         "url": "https://drive.google.com/file/d/1XzoE_ONZoWyE9jym32pC93P1KP5VGkfV/view",
         "filename": "Dice.zip",
         "size": 31946708
-      }
+      },
+      "imports": [
+        "Beach_Field",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_DoubleGoal_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Stadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-donut-dropshot",
@@ -1029,7 +1909,27 @@
         "url": "https://drive.google.com/file/d/11D023FsfSRfeQqpJu6Fc9eLQOaikgqmD/view",
         "filename": "Donut Dropshot.zip",
         "size": 2975765
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "FXActorEvents",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Music_Field",
+        "PortalPackage",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "Underwater_Field",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-double-size",
@@ -1048,7 +1948,25 @@
         "url": "https://drive.google.com/file/d/1GNhpnCimbMDAQ_fN1RpE7Kg6fveFpJJO/view",
         "filename": "Double-Size.zip",
         "size": 49532178
-      }
+      },
+      "imports": [
+        "ARC_Standard_P",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-dribbling-challenge-1",
@@ -1067,7 +1985,21 @@
         "url": "https://drive.google.com/file/d/1Ky1MtS8kSShwoGDUk8dAiHUHU3bfUIGO/view",
         "filename": "Dribbling Challenge .zip",
         "size": 124602259
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-dribbling-challenge-1-remastered",
@@ -1084,7 +2016,25 @@
         "url": "https://drive.google.com/file/d/1o7GbhR5NnD4xyLpOchaXjBeBD64zRcxN/view",
         "filename": "Dribble Challenge Remastered.zip",
         "size": 49570994
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "ARC_Standard_P",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Outlaw_P",
+        "Stadium_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-dual-pinball-tables",
@@ -1104,7 +2054,29 @@
         "url": "https://drive.google.com/file/d/1doXKBW-Z_bomPVfXZ54_TCwNci3SfBXW/view",
         "filename": "Dual Pinball Machine.zip",
         "size": 306102183
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_Field",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_P",
+        "Park_P",
+        "ShatterShot_VFX",
+        "Stadium_Winter_P",
+        "Underwater_Field",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-dueling-snakes-ball-sized-goal",
@@ -1123,7 +2095,22 @@
         "url": "https://drive.google.com/file/d/1dthBRRri1ST8j6EkxwLuu2HKz5yGdIfR/view",
         "filename": "Dueling Snakes.zip",
         "size": 23473610
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "LethDuelingSnakesPack",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "UtopiaStadium_P",
+        "Wasteland_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-dungeon-parkour",
@@ -1142,7 +2129,23 @@
         "url": "https://drive.google.com/file/d/1qzCsdzB-QUtMl1Fwx3FxF3KA4z32B4PC/view",
         "filename": "Dungeon Parkour.zip",
         "size": 217460366
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "KO_Retro_OOB",
+        "MapTemplates",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame",
+        "wheel_rmp_SF"
+      ]
     },
     {
       "id": "lethamyr-easter-catwalk",
@@ -1161,7 +2164,22 @@
         "url": "https://drive.google.com/file/d/1yMVz97fHe1mUqWHYB3GwERQ9cCojKR3f/view",
         "filename": "Easter Catwalk.zip",
         "size": 106359272
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "LethSpacePack",
+        "MapTemplates",
+        "Park_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-egyptian-parkour",
@@ -1180,7 +2198,24 @@
         "url": "https://drive.google.com/file/d/1-5CuIS4jN9j55EaxipTmzDsYiWtVjpTB/view",
         "filename": "Egyptian Parkour.zip",
         "size": 201811650
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineMeshes",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "UnrealEd",
+        "Wasteland_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-f-zero-big-blue",
@@ -1200,7 +2235,17 @@
         "url": "https://drive.google.com/file/d/1MCLLOLkLX-KmFuB0qHlTz3YsaYCLYasW/view",
         "filename": "F-Zero Big Blue.zip",
         "size": 7660545
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-fall-guys",
@@ -1221,7 +2266,27 @@
         "url": "https://drive.google.com/file/d/1IFD9Z744ppFCFqvdEedP_pY9zEkGjxIG/view",
         "filename": "fall guys rocket league.zip",
         "size": 77199101
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "FXActorEvents",
+        "GameInfo_Soccar_SF",
+        "MapTemplates",
+        "Park_P",
+        "UnrealEd",
+        "WetDryPack",
+        "enginedebugmaterials",
+        "explosion_poof_sf",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-fashion-show",
@@ -1240,7 +2305,22 @@
         "url": "https://drive.google.com/file/d/1BWD3mjKpQU6BMTUxoAh7RSEqwRr8Mn2C/view",
         "filename": "Fashion Show.zip",
         "size": 55353904
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Park_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-flappy-bird",
@@ -1259,7 +2339,17 @@
         "url": "https://drive.google.com/file/d/17dRvfo0EDgi2NjqsjWWv6XI_XCv1Q9dM/view",
         "filename": "Flappy Bird - 1st Person.zip",
         "size": 6638545
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-flash-freeze",
@@ -1278,7 +2368,29 @@
         "url": "https://drive.google.com/file/d/16O0WTcUhZqav_2k_wHehvNAyo_qpPCpO/view",
         "filename": "Flash Freeze.zip",
         "size": 122940541
-      }
+      },
+      "imports": [
+        "ARC_Standard_P",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Ice_SF",
+        "FXActorEvents",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "UnrealEd",
+        "UtopiaStadium_Snow_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-floating-rings",
@@ -1297,7 +2409,25 @@
         "url": "https://drive.google.com/file/d/1M8m7ilUaTCVpr0oXZTImeoAq3adGzT4X/view",
         "filename": "Floating Rings.zip",
         "size": 21556641
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GlacierPack",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ParkourPack",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-foosball-table-2-0",
@@ -1318,7 +2448,25 @@
         "url": "https://drive.google.com/file/d/14JYj64T8EblN0MvEiBUODolA6JOkqeQs/view",
         "filename": "Foosball Table - Remastered.zip",
         "size": 50263214
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "NeverendPack",
+        "Park_P",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-forest",
@@ -1337,7 +2485,19 @@
         "url": "https://drive.google.com/file/d/1sXD46WjoqzWkrsmR164t1AjQ1Jsp-lLM/view",
         "filename": "Leth.Forest.zip",
         "size": 87016465
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorLandscapeResources",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-full-scale-football-field",
@@ -1356,7 +2516,23 @@
         "url": "https://drive.google.com/file/d/1HwJnmHs6nY6oZOOmOy88iZSarbDlIurQ/view",
         "filename": "Full-scale Football.zip",
         "size": 49940202
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-garrison",
@@ -1377,7 +2553,23 @@
         "url": "https://drive.google.com/file/d/16OW_8Ps7XfWn367DSlMHXjt48rBBjL3b/view",
         "filename": "Garrison.zip",
         "size": 9207995
-      }
+      },
+      "imports": [
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "Stadium_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "boost_vt_SF",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-giant-easter-egg",
@@ -1396,7 +2588,17 @@
         "url": "https://drive.google.com/file/d/15VmhdWzJcTNb4IUtOQl9v2rgAyyqKS_Q/view",
         "filename": "Giant Easter Egg.zip",
         "size": 60429016
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-giant-foosball-table",
@@ -1417,7 +2619,16 @@
         "url": "https://drive.google.com/file/d/1-2PIVY-WiIpTKNuFYQFwi2qWYueGr2HW/view",
         "filename": "Giant Foosball Table.zip",
         "size": 5107911
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "LethLevelPackage",
+        "MapTemplates",
+        "PinballPackage",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-giant-pinball-table",
@@ -1437,7 +2648,15 @@
         "url": "https://drive.google.com/file/d/1pFjKvGiv3uDNHSHBwgYBiX4yx0jyv7pd/view",
         "filename": "Pinball Table.zip",
         "size": 7308609
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-gladiator",
@@ -1457,7 +2676,26 @@
         "url": "https://drive.google.com/file/d/1o7V_zPZIZc30imj1wd4exGIEfhnKptSc/view",
         "filename": "Gladiator.zip",
         "size": 84548327
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EasterPackage",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HSBuildingPack",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-go-kart-mania",
@@ -1477,7 +2715,22 @@
         "url": "https://drive.google.com/file/d/1GJW-h2mzKaIixzaCvBhGg0HwUgYFAyTt/view",
         "filename": "Go-Kart Mania.zip",
         "size": 129680837
-      }
+      },
+      "imports": [
+        "Beach_Night_OOB",
+        "CS_Field",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Outlaw_P",
+        "Park_P",
+        "Stadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-grand-hall",
@@ -1496,7 +2749,20 @@
         "url": "https://drive.google.com/file/d/1rsbKLrrnQphOpul7NSZqmRqDj-cVNb4d/view",
         "filename": "custom map.zip",
         "size": 7480827
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "Engine",
+        "EngineMaterials",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "TrainStation_P",
+        "UtopiaStadium_P",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-graverobber",
@@ -1515,7 +2781,32 @@
         "url": "https://drive.google.com/file/d/1ByRe2zLu4uqvK6zCXJBlEgYrq6tKB5ao/view",
         "filename": "Graverobber.zip",
         "size": 101724718
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CHN_Stadium_VFX",
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GlacierPack",
+        "HSBuildingPack",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "TrainStation_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-graverobber-day",
@@ -1534,7 +2825,32 @@
         "url": "https://drive.google.com/file/d/1ByRe2zLu4uqvK6zCXJBlEgYrq6tKB5ao/view",
         "filename": "Graverobber.zip",
         "size": 101724718
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CHN_Stadium_VFX",
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GlacierPack",
+        "HSBuildingPack",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "TrainStation_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-half-size",
@@ -1553,7 +2869,25 @@
         "url": "https://drive.google.com/file/d/1ZYFXUiKBzM0esYVEHfaQfF64pIQ2uA2m/view",
         "filename": "leth.zip",
         "size": 45979063
-      }
+      },
+      "imports": [
+        "ARC_Standard_P",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-haunted-hallows-escape",
@@ -1572,7 +2906,40 @@
         "url": "https://drive.google.com/file/d/1AXReLHaTlbFweqlT182TdM7_0nS7wrCb/view",
         "filename": "Haunted Hallows.zip",
         "size": 343809215
-      }
+      },
+      "imports": [
+        "BG_UtopiaStadium_Lux",
+        "Beach_Night_OOB",
+        "Beach_OOB",
+        "CS_Grounds",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_HW_P",
+        "Farm_Night_P",
+        "Farm_P",
+        "HH_SupportSwag",
+        "Hat_AlphaHat_SF",
+        "Hat_CatOLantern_SF",
+        "Hat_Chainsaw_SF",
+        "Hat_LightBulb_SF",
+        "MapTemplates",
+        "Outlaw_P",
+        "Park_P",
+        "Street_P",
+        "TrainStation_P",
+        "Underwater_OOB_foliage",
+        "Underwater_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "explosion_skull_sf",
+        "grass_textures",
+        "tagame",
+        "wheel_rmp_SF"
+      ]
     },
     {
       "id": "lethamyr-heatseeker-dungeon",
@@ -1592,7 +2959,28 @@
         "url": "https://drive.google.com/file/d/1kodyQ-zCAKuGT-6wI82epIU7kRBCuB7-/view",
         "filename": "Heatseeker Dungeon.zip",
         "size": 78827940
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_GodBall_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ParkourPack",
+        "UtopiaStadium_Snow_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-heatseeker-tennis",
@@ -1613,7 +3001,28 @@
         "url": "https://drive.google.com/file/d/19XNx3JxKQUM7dyiLhbvp6ZUbCV61QWml/view",
         "filename": "Heatseeker Tennis.zip",
         "size": 81399157
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_GodBall_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ParkourPack",
+        "UtopiaStadium_Snow_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-helium-ball",
@@ -1632,7 +3041,30 @@
         "url": "https://drive.google.com/file/d/1fA2mckE8yXrwGYQ5C2II7fvnG0trHfpb/view",
         "filename": "Helium Ball.zip",
         "size": 81584142
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "LethSpacePack",
+        "LethSumoCagePack",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ParkourPack",
+        "UtopiaStadium_Snow_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-hex-drop",
@@ -1651,7 +3083,31 @@
         "url": "https://drive.google.com/file/d/1viWI3uaOkpzq-8b5knm_nwn_C_X48RfX/view",
         "filename": "Hex Drop.zip",
         "size": 8791314
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "BoostPadTypes",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "FXActorEvents",
+        "MapTemplates",
+        "Park_P",
+        "PortalPackage",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-hexagon-2v2v2",
@@ -1670,7 +3126,19 @@
         "url": "https://drive.google.com/file/d/12PE7dmLoBXwA_AvlEBNSj3ZIdsSp7CVe/view",
         "filename": "Hexagon 2v2v2.zip",
         "size": 3090033
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-hoops-stadium",
@@ -1690,7 +3158,24 @@
         "url": "https://drive.google.com/file/d/1v39I_SIUvScJ6SYXedm4J9SercFYj7eC/view",
         "filename": "Hoops Stadium.zip",
         "size": 26653739
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EasterPackage",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GlacierPack",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-horseshoe",
@@ -1709,7 +3194,21 @@
         "url": "https://drive.google.com/file/d/1lpeAkAe-bBI3r_pSg1qpb6uL0i6ggKXz/view",
         "filename": "Horseshoe.zip",
         "size": 13617343
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-hospital",
@@ -1729,7 +3228,23 @@
         "url": "https://drive.google.com/file/d/1gy6k5ZyIZESGImH3lEKQryV8kF-kbg6v/view",
         "filename": "Hospital.zip",
         "size": 60383346
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "PipePackage",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-ice-cube",
@@ -1748,7 +3263,29 @@
         "url": "https://drive.google.com/file/d/1OMSXgtvYUfWSHqzE_nufE9bCb_RhrrAd/view",
         "filename": "Ice Cube.zip",
         "size": 52141512
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Music_Field",
+        "Stadium_Winter_P",
+        "Underwater_Field",
+        "UtopiaStadium_P",
+        "UtopiaStadium_Snow_P",
+        "enginedebugmaterials",
+        "gameinfo_basketball_SF",
+        "gameinfo_hockey_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-ice-rings",
@@ -1767,7 +3304,19 @@
         "url": "https://drive.google.com/file/d/1lZP3KfdZsn2K2WAF92JWuhrnZlU-X5x4/view",
         "filename": "Ice Ring;lhkj.zip",
         "size": 164909817
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "UtopiaStadium_Snow_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-infinium-sumo",
@@ -1787,7 +3336,27 @@
         "url": "https://drive.google.com/file/d/1vHDTIImiRLwSlzNfri_XE2dURtUKZJQ2/view",
         "filename": "Infinium Sumo.zip",
         "size": 3759667
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "Labs_Cosmic_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "ShatterShot_VFX",
+        "UnrealEd",
+        "Wheel_InfinityMirror_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-inside-out",
@@ -1806,7 +3375,27 @@
         "url": "https://drive.google.com/file/d/1d54Z7-Xzzphn0CvGPQ2HOIe1F0wF2Bed/view",
         "filename": "Inside Out.zip",
         "size": 13532056
-      }
+      },
+      "imports": [
+        "BoostPadTypes",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "LethDropshotPack",
+        "MapTemplates",
+        "Park_P",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-jacuzzi",
@@ -1825,7 +3414,25 @@
         "url": "https://drive.google.com/file/d/1MhrrS6m_41ln_Qnixi5FsLNkRPOWQGZ5/view",
         "filename": "Jacuzzi.zip",
         "size": 115380581
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Music_Field",
+        "Outlaw_P",
+        "Park_P",
+        "Underwater_Field",
+        "enginedebugmaterials",
+        "gameinfo_basketball_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-jenga-sumo",
@@ -1844,7 +3451,29 @@
         "url": "https://drive.google.com/file/d/1SYK2gSvLUgKAKut0xU7caq14O3N16Lhr/view",
         "filename": "Jenga Sumo.zip",
         "size": 40923298
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "GameInfo_Soccar_SF",
+        "Hat_Beret_SF",
+        "Hat_DetectiveHat_SF",
+        "Hat_Party_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Music_Field",
+        "Outlaw_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-jump-rope-sumo",
@@ -1863,7 +3492,24 @@
         "url": "https://drive.google.com/file/d/1M612yeCSSwGWCZqlx9zuk4pFmEswe3fU/view",
         "filename": "Jump Rope.zip",
         "size": 40437335
-      }
+      },
+      "imports": [
+        "Beach_Night_OOB",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Outlaw_P",
+        "Park_P",
+        "Stadium_P",
+        "Wasteland_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-jungle-gym-sumo-day",
@@ -1882,7 +3528,23 @@
         "url": "https://drive.google.com/file/d/12dB6uickRxrlA1C8qEhcVSMkd69-F4me/view",
         "filename": "Jungle Gym Sumo - Day.zip",
         "size": 115329335
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Outlaw_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-jungle-gym-sumo-night",
@@ -1901,7 +3563,23 @@
         "url": "https://drive.google.com/file/d/1JuXnu08JnrBf82Nlg3-SWPz-9toPlzDb/view",
         "filename": "Jungle Gym Sumo - Night.zip",
         "size": 115979519
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Outlaw_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-knockout-air-battle",
@@ -1920,7 +3598,19 @@
         "url": "https://drive.google.com/file/d/1vppO-BPIH6XQa9CeT6RGxQpCv7qoKRnw/view",
         "filename": "Knockout Air Battle.zip",
         "size": 9945102
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "KO_Retro_OOB",
+        "KO_Retro_OOB2",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-knockout-cubic",
@@ -1939,7 +3629,21 @@
         "url": "https://drive.google.com/file/d/1DmBKV_q-EUkNJZeqKxkVx2UOomXPkdQ8/view",
         "filename": "Knockout Cubic.zip",
         "size": 4054053
-      }
+      },
+      "imports": [
+        "CS_P",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "KO_Carbon_P",
+        "KO_Retro_OOB",
+        "KO_Retro_OOB2",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-knockout-infinium",
@@ -1958,7 +3662,23 @@
         "url": "https://drive.google.com/file/d/1WZ9RbRoDqKU4hXyUH8baaqXzdWt1tTpk/view",
         "filename": "Knockout Infinium.zip",
         "size": 3537128
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "KO_Retro_OOB",
+        "KO_Retro_OOB2",
+        "Labs_Cosmic_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "Music_Field",
+        "Wheel_InfinityMirror_SF",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-knockout-outskirts",
@@ -1977,7 +3697,21 @@
         "url": "https://drive.google.com/file/d/1H2ojnC2zZSlc-5BsJsHg3HxMK4HtF4b1/view",
         "filename": "Knockout Outskirts.zip",
         "size": 1593280
-      }
+      },
+      "imports": [
+        "CS_P",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "KO_Carbon_P",
+        "KO_Retro_OOB",
+        "KO_Retro_OOB2",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-knockout-solar-system",
@@ -1996,7 +3730,22 @@
         "url": "https://drive.google.com/file/d/1Qeb1MnypBZCsD1zcqyxL3o--JbeCnKEI/view",
         "filename": "Knockout Solar System.zip",
         "size": 219083420
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "KO_Quadron_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Underwater_FX",
+        "UnrealEd",
+        "boost_lava_SF",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-knockout-swinging-boat",
@@ -2015,7 +3764,21 @@
         "url": "https://drive.google.com/file/d/1WfA6LoCdBrVSyfJdJUrmVs7UZlN5CDkm/view",
         "filename": "Knockout Swinging Boat.zip",
         "size": 8846311
-      }
+      },
+      "imports": [
+        "CS_P",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "KO_Retro_OOB",
+        "MapTemplates",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-knockout-volcano",
@@ -2034,7 +3797,21 @@
         "url": "https://drive.google.com/file/d/1my5Jp5c1GxupHIdK0CJv1Luxoc4Tm9Vi/view",
         "filename": "Knockout Volcano.zip",
         "size": 62436652
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Skull_SF",
+        "FXActorEvents",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-lava-rings",
@@ -2053,7 +3830,21 @@
         "url": "https://drive.google.com/file/d/1_EUc0kD4HSgZlEYHdCkatIn0zTUE2nHM/view",
         "filename": "lava map.zip",
         "size": 136286290
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "RPGPack",
+        "UnrealEd",
+        "UtopiaStadium_Snow_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-loopty-loop",
@@ -2072,7 +3863,20 @@
         "url": "https://drive.google.com/file/d/1TZVeXMtZUdEBWKamFspPxHAtTlfIDYf_/view",
         "filename": "LethLoopty.zip",
         "size": 2728033
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "HoopsStadium_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "Underwater_Field",
+        "Woods_Forest_P",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-luigi-s-mansion",
@@ -2093,7 +3897,18 @@
         "url": "https://drive.google.com/file/d/1fKXXD-1QqrgySNqln2ZF4PdrrdliGy5u/view",
         "filename": "Luigi's Mansion.zip",
         "size": 2520486
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-mario-64-mirror-room",
@@ -2112,7 +3927,17 @@
         "url": "https://drive.google.com/file/d/1l4mAHWwbhe-shoqbGLtHAR78PxFfQS2A/view",
         "filename": "Mario 64 Mirror.zip",
         "size": 5000916
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-mayan-pitz",
@@ -2132,7 +3957,27 @@
         "url": "https://drive.google.com/file/d/1w-cTJZ3LC80HTRZ2BZbrnI3dETY_MT_M/view",
         "filename": "Mayan Pitz.zip",
         "size": 294357387
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EasterPackage",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HSBuildingPack",
+        "MapTemplates",
+        "Park_P",
+        "RomePack",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-medieval-bumperball",
@@ -2153,7 +3998,30 @@
         "url": "https://drive.google.com/file/d/136JQtAhz7t-03QcL-xKoiD3zX3IQaLnH/view",
         "filename": "Medieval Bumperball.zip",
         "size": 303283330
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Boost_AlphaReward_SF",
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_Night_P",
+        "Farm_P",
+        "Hat_AlphaHat_SF",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-medieval-chainball",
@@ -2173,7 +4041,30 @@
         "url": "https://drive.google.com/file/d/14lffmN3mFaZc_WgcnEWkbw1UxXwqPcop/view",
         "filename": "Medieval Chainball.zip",
         "size": 312435725
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Boost_AlphaReward_SF",
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "Hat_AlphaHat_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-medieval-hoops-stadium",
@@ -2194,7 +4085,28 @@
         "url": "https://drive.google.com/file/d/1HtabZAULmJ91_njs_AwDViee7zYkx3ug/view",
         "filename": "Medieval Hoops Stadium.zip",
         "size": 306746730
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Beach_Cage",
+        "Boost_AlphaReward_SF",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "Hat_AlphaHat_SF",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-medieval-jousting-sumo",
@@ -2215,7 +4127,29 @@
         "url": "https://drive.google.com/file/d/1N0pVfqCeDjh9k2NRJwV1MlJ_S7HnPv6M/view",
         "filename": "Medieval Jousting Sumo.zip",
         "size": 290287214
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Boost_AlphaReward_SF",
+        "CHN_Stadium_VFX",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "Hat_AlphaHat_SF",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Outlaw_P",
+        "Park_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-medieval-quidditch",
@@ -2236,7 +4170,31 @@
         "url": "https://drive.google.com/file/d/1LDqpZyx_Ez2dEH7QiT2x7HoZP4demuD6/view",
         "filename": "Medieval Quidditch.zip",
         "size": 299838364
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Beach_Cage",
+        "Boost_AlphaReward_SF",
+        "CHN_Stadium_VFX",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "Hat_AlphaHat_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Park_Night_P",
+        "Park_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-medieval-rings",
@@ -2256,7 +4214,24 @@
         "url": "https://drive.google.com/file/d/1aVh74XgpQ-eyr2PzbfQ64RUK8LjOvi01/view",
         "filename": "Medieval Rings.zip",
         "size": 287894943
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "LethNeonHeightsPack",
+        "MapTemplates",
+        "Outlaw_P",
+        "Park_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-medieval-volleyball",
@@ -2277,7 +4252,33 @@
         "url": "https://drive.google.com/file/d/1uGstb-p3NHq82o8_796Seqm872Sg8GRe/view",
         "filename": "Medieval Volleyball.zip",
         "size": 304343665
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Beach_Cage",
+        "Beach_Night_P",
+        "Beach_P",
+        "Boost_AlphaReward_SF",
+        "CHN_Stadium_VFX",
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "Farm_P",
+        "Hat_AlphaHat_SF",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-minecraft",
@@ -2298,7 +4299,24 @@
         "url": "https://drive.google.com/file/d/1WloVyjYijI6PhgevPulNkm8i6mrO4UZO/view",
         "filename": "Minecraft in Rocket League.zip",
         "size": 25571359
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-miniature-pool-table",
@@ -2319,7 +4337,21 @@
         "url": "https://drive.google.com/file/d/13btgH_9ILiqaKyo7QQUMGWeKSOhff9qy/view",
         "filename": "Minature Pool Table.zip",
         "size": 242556673
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-monster-truck-rally",
@@ -2338,7 +4370,27 @@
         "url": "https://drive.google.com/file/d/1Q7cNNqoAKVnQ_O6MpE6DPmg3xwK8Tz48/view",
         "filename": "Monster Truck Rally.zip",
         "size": 180789943
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "Stadium_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_Night_VFX_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-neon-heights-rings",
@@ -2357,7 +4409,21 @@
         "url": "https://drive.google.com/file/d/1vRx6OUhS-uAXNiOjhAzQS0_rVdAcShHp/view",
         "filename": "Neon Heights Rings.zip",
         "size": 25405550
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "LethNeonHeightsPack",
+        "MapTemplates",
+        "Park_P",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-oil-rig",
@@ -2377,7 +4443,20 @@
         "url": "https://drive.google.com/file/d/1ED5FwvERQTRtK3EyILMfN61Zf5HFuVak/view",
         "filename": "Oil Rig Hide n Seek.zip",
         "size": 128576980
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-original-sumo",
@@ -2397,7 +4476,19 @@
         "url": "https://drive.google.com/file/d/1MpdAyiQF55gUMt2ZfVwFfbSPTnAE18Uo/view",
         "filename": "Original Sumo.zip",
         "size": 23603134
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-ping-pong-table",
@@ -2418,7 +4509,18 @@
         "url": "https://drive.google.com/file/d/1ZbIfpC5bbWau9K7v5gacWsz0xx3kOlum/view",
         "filename": "Ping Pong Table.zip",
         "size": 7057621
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "ParkourPack",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-pitch-black",
@@ -2435,7 +4537,19 @@
         "url": "https://drive.google.com/file/d/15awKK_o5pW-KyxGNkijJHK-_XLWV4XHP/view",
         "filename": "Pitch Black.zip",
         "size": 2417770
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-pool-table",
@@ -2456,7 +4570,18 @@
         "url": "https://drive.google.com/file/d/1dDgibDkbxyUZ-x66KPtNKuS4DfUwqw7u/view",
         "filename": "Pool Table.zip",
         "size": 29630812
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-popshot",
@@ -2475,7 +4600,28 @@
         "url": "https://drive.google.com/file/d/14zP8xNlixxT_DIyg4f4DUHlNlR8Aab9z/view",
         "filename": "Popshot.zip",
         "size": 2563300
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "FXActorEvents",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-portal",
@@ -2495,7 +4641,17 @@
         "url": "https://drive.google.com/file/d/19TC50r7CVyHuMJDru7lRlrKi6s9T-mjP/view",
         "filename": "Portal.zip",
         "size": 24619467
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "ParkourPack",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-prop-hunt",
@@ -2515,7 +4671,18 @@
         "url": "https://drive.google.com/file/d/1LA4aAVL0nzlE0cbWqMByhHU4Ho6EsVeg/view",
         "filename": "Prop Hunt - Castle.zip",
         "size": 140163049
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-prop-hunt-remastered",
@@ -2535,7 +4702,22 @@
         "url": "https://drive.google.com/file/d/1hJz3AIwQmG-OQFwXuQ1JHFTeh1YMKFE-/view",
         "filename": "Prop Hunt - Castle Remastered.zip",
         "size": 130359475
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "NeverendPack",
+        "PortalPackage",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-pyramids",
@@ -2554,7 +4736,25 @@
         "url": "https://drive.google.com/file/d/1-Gz9rbVhe2c3HF36pobA9eAeeh64jALi/view",
         "filename": "Pyramids.zip",
         "size": 132068960
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HSBuildingPack",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-quake-sumo",
@@ -2574,7 +4774,23 @@
         "url": "https://drive.google.com/file/d/1Bl6Le0I_Y9RV-EVSAHWgiqKNf0VTq84F/view",
         "filename": "Quake Sumo.zip",
         "size": 10143183
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "TrainStation_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-quicksand-sumo",
@@ -2594,7 +4810,20 @@
         "url": "https://drive.google.com/file/d/1hmkLBmaFy1bixROBzi1a7WJaLbdsTyYc/view",
         "filename": "Quicksand Sumo.zip",
         "size": 129998517
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Wasteland_Night_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-rainbow-road-64",
@@ -2614,7 +4843,17 @@
         "url": "https://drive.google.com/file/d/1JxwfpjLRohCDgNtjWg5S0hDZfZP5N4D1/view",
         "filename": "Rainbow Road 64.zip",
         "size": 2880179
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-random-goal-locations-arabian-nights",
@@ -2633,7 +4872,33 @@
         "url": "https://drive.google.com/file/d/109SFUqma4PiUsXHmZ9jf5GLJBUUCPtls/view",
         "filename": "Random Goal Locations.zip",
         "size": 211175141
-      }
+      },
+      "imports": [
+        "Beach_Cage",
+        "Beach_Night_OOB",
+        "CS_Field",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Hat_AlphaHat_SF",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "Stadium_P",
+        "TrainStation_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_Night_P",
+        "Wasteland_Night_S_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-rapid-fire",
@@ -2654,7 +4919,30 @@
         "url": "https://drive.google.com/file/d/1CU8qRmqIbJ7rdBJacpr9YvW98FobKeqY/view",
         "filename": "Rapid Fire.zip",
         "size": 6657447
-      }
+      },
+      "imports": [
+        "ARC_Standard_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "FXActorEvents",
+        "GameInfo_GodBall_SF",
+        "GameInfo_Soccar_SF",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "enginedebugmaterials",
+        "gameinfo_breakout_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-rocket-labs-revolver",
@@ -2673,7 +4961,23 @@
         "url": "https://drive.google.com/file/d/1WBv-aCkvPGhGwp0eRn0FRlws4Ul04Txl/view",
         "filename": "Rocket Labs Revolver.zip",
         "size": 7538120
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_DoubleGoal_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_Standard_P",
+        "Park_P",
+        "ShatterShot_VFX",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-roulette",
@@ -2692,7 +4996,26 @@
         "url": "https://drive.google.com/file/d/1KOZXYoCwSeAMneLmgh05dvug062LYr8m/view",
         "filename": "Roulette.zip",
         "size": 70489965
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Hat_AlphaHat_SF",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "UtopiaStadium_Snow_P",
+        "enginedebugmaterials",
+        "gameinfo_basketball_SF",
+        "gameinfo_hockey_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-shipment",
@@ -2712,7 +5035,20 @@
         "url": "https://drive.google.com/file/d/1MjqsUtNXVb3lPA-7A8EXIWCkWWkCe4fw/view",
         "filename": "Call of Duty Shipment.zip",
         "size": 121670479
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameFramework",
+        "MapTemplates",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-shuffleboard",
@@ -2733,7 +5069,23 @@
         "url": "https://drive.google.com/file/d/1brD-ccDOdTr4DRhrOt3i_kY0TcZl-0f1/view",
         "filename": "Shuffleboard.zip",
         "size": 18151313
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-sideswipe-dropshot",
@@ -2752,7 +5104,32 @@
         "url": "https://drive.google.com/file/d/1jwO9v2tCpdcUEk8_hCt9QqAevgpSO91u/view",
         "filename": "Sideswipe Dropshot.zip",
         "size": 4564227
-      }
+      },
+      "imports": [
+        "Beach_Cage",
+        "CS_Field",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Explosion_Electric_SF",
+        "FXActorEvents",
+        "Farm_Night_P",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "NeoTokyo_Standard_P",
+        "PortalPackage",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_P",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-sizz-s-building",
@@ -2771,7 +5148,23 @@
         "url": "https://drive.google.com/file/d/1b-rQymcsJyi2WAUYa4uXFkjmh9ToPVlG/view",
         "filename": "Sizz Building.zip",
         "size": 20205176
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Music_Field",
+        "Outlaw_P",
+        "Park_P",
+        "Stadium_P",
+        "TrainStation_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-skyscraper",
@@ -2791,7 +5184,8 @@
         "url": "https://drive.google.com/file/d/11JAzhuUK0A6RCJ496UGx3afxVCJZ3MBt/view",
         "filename": "Skyscraper.zip",
         "size": 1139562
-      }
+      },
+      "imports": null
     },
     {
       "id": "lethamyr-slantshot",
@@ -2810,7 +5204,24 @@
         "url": "https://drive.google.com/file/d/1llYcV1djdXOBTY7w6kvmiztw3XjC58SA/view",
         "filename": "Slantshot.zip",
         "size": 4126501
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "FXActorEvents",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "Underwater_Field",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-sling-puck",
@@ -2830,7 +5241,28 @@
         "url": "https://drive.google.com/file/d/1aq3W9rga5GJq1uILY8ugck3D-AH-hJzl/view",
         "filename": "Sling Puck.zip",
         "size": 256558892
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "enginedebugmaterials",
+        "gameinfo_hockey_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-smash-bros-sumo",
@@ -2849,7 +5281,17 @@
         "url": "https://drive.google.com/file/d/1NQFTvN8nITC6Njydj23vE1iRspriAXgL/view",
         "filename": "Smash Bros.zip",
         "size": 734524
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-spaceseeker",
@@ -2868,7 +5310,23 @@
         "url": "https://drive.google.com/file/d/1xeUuBVnSFAabvTXz2NYpiI3aiVrIzC7P/view",
         "filename": "Space Seeker.zip",
         "size": 17541720
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_GodBall_SF",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-spaceship",
@@ -2888,7 +5346,21 @@
         "url": "https://drive.google.com/file/d/1OcNrZaie_ov39tdSGfWway6OMaM8wJIK/view",
         "filename": "Spaceship - FULL SIZE.zip",
         "size": 473088797
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "Engine",
+        "EngineMaterials",
+        "EngineMeshes",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-speed-training-whack-a-mole",
@@ -2907,7 +5379,24 @@
         "url": "https://drive.google.com/file/d/1FBwNfnFsysjqKMvOYiCFDMuBKx3Mn6Eg/view",
         "filename": "Training Whack a Mole (Mole).zip",
         "size": 18819528
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "KO_Carbon_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Stadium_P",
+        "Underwater_Field",
+        "enginedebugmaterials",
+        "gameinfo_hockey_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-sphereshot",
@@ -2926,7 +5415,28 @@
         "url": "https://drive.google.com/file/d/1CpiZXN4vrykM3IKnNbEFYnJhJZIuZMyr/view",
         "filename": "Sphereshot.zip",
         "size": 7687148
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "KO_Calavera_P",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_Standard_P",
+        "Park_P",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "Underwater_FX",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-split",
@@ -2945,7 +5455,27 @@
         "url": "https://drive.google.com/file/d/1TqPw_VBGaiDZZoOwJaaTruvPqw42dbN7/view",
         "filename": "Split.zip",
         "size": 466387307
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineMeshes",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-squash-court",
@@ -2965,7 +5495,19 @@
         "url": "https://drive.google.com/file/d/1CRuHZWRestvJ7FejIBzfkMleWsTM4onv/view",
         "filename": "Squash Court.zip",
         "size": 18323902
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-squid-game-glass-bridge",
@@ -2984,7 +5526,21 @@
         "url": "https://drive.google.com/file/d/1sbXYHzghxBAr_6fAb_8HYGqgqC5dluW6/view",
         "filename": "Squid Game Glass Bridge.zip",
         "size": 82615801
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Hat_AlphaHat_SF",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-standard-dropshot",
@@ -3004,7 +5560,29 @@
         "url": "https://drive.google.com/file/d/1UtRrthfxqZNjasXtDI85VZsEASTZeCTN/view",
         "filename": "Standard Dropshot.zip",
         "size": 5688305
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "FXActorEvents",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "UnrealEd",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-standard-garrison",
@@ -3025,7 +5603,27 @@
         "url": "https://drive.google.com/file/d/1yPI7yZAYQ78XTGP5AxalOA0ew3NjAELk/view",
         "filename": "Standard Garrison.zip",
         "size": 97643725
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ParkourPack",
+        "UtopiaStadium_Snow_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-sumo-cagematch",
@@ -3045,7 +5643,20 @@
         "url": "https://drive.google.com/file/d/1UKFNv8Ej55GgqeaEExu69mbAVDem_Ijt/view",
         "filename": "Sumo Cagematch.zip",
         "size": 36340118
-      }
+      },
+      "imports": [
+        "Core",
+        "EditorLandscapeResources",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-tetherball",
@@ -3066,7 +5677,27 @@
         "url": "https://drive.google.com/file/d/1P7AXB9-pnb1Szu5bzIOM7lSdXpZRFFN_/view",
         "filename": "Heatseeker Tetherball.zip",
         "size": 34025600
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineMeshes",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_GodBall_SF",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "UnrealEd",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-tetris",
@@ -3085,7 +5716,20 @@
         "url": "https://drive.google.com/file/d/10w-5A1RvZ8uPhJszya5qISr-mMpw__-U/view",
         "filename": "Tetris.zip",
         "size": 1792173
-      }
+      },
+      "imports": [
+        "CS_Field",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-ascent",
@@ -3102,7 +5746,38 @@
         "url": "https://drive.google.com/file/d/1zOhYa_jSTiyObpfhW8LbY-ZO0CXNC3YG/view",
         "filename": "TheApex_Ascent.udk",
         "size": 259071630
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "FF_Dusk_OOB",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Park_Night_P",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-barrage",
@@ -3119,7 +5794,41 @@
         "url": "https://drive.google.com/file/d/1lkj4zjZ_pNPgrDBr17vlWBasjOWxeJw4/view",
         "filename": "TheApex_Barrage.udk",
         "size": 254930393
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_Cage",
+        "Beach_Night_P",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "EuroStadium_Rainy_P",
+        "FF_Dusk_OOB",
+        "HoopsStreet_P",
+        "MapTemplates",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-blacktop",
@@ -3136,7 +5845,44 @@
         "url": "https://drive.google.com/file/d/1OiedjQ8ju9H7gSmG2ao2-uAFyFuPdwRR/view",
         "filename": "TheApex_Blacktop.udk",
         "size": 256336406
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Field",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "FF_Dusk_OOB",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "HoopsStreet_P",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_P",
+        "Park_Night_P",
+        "Park_P",
+        "PhysicalMaterials",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-colossus",
@@ -3153,7 +5899,39 @@
         "url": "https://drive.google.com/file/d/1-7s_meLxpc8xOIENGcW3PiSVf6CkdSzk/view",
         "filename": "TheApex_Colossus.udk",
         "size": 257900567
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "FF_Dusk_OOB",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-convergence",
@@ -3170,7 +5948,41 @@
         "url": "https://drive.google.com/file/d/1VpzzFqLidXQCYm3kDd8vcD_Gop0PfLtn/view",
         "filename": "TheApex_Convergence.udk",
         "size": 268221664
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "FF_Dusk_OOB",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TheApex_Support",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-crucible",
@@ -3187,7 +5999,43 @@
         "url": "https://drive.google.com/file/d/1azHNC2P2f3pl3m_aVW_1vs8NYA_etCLu/view",
         "filename": "TheApex_Crucible.udk",
         "size": 287846432
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_Cage",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "EuroStadium_Rainy_P",
+        "FF_Dusk_OOB",
+        "HoopsStadium_P",
+        "HoopsStreet_P",
+        "MapTemplates",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PhysicalMaterials",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-exfoliation",
@@ -3204,7 +6052,44 @@
         "url": "https://drive.google.com/file/d/1pj5PPCHuqgTAjNYDcnA0JaJ8nctEcc9l/view",
         "filename": "TheApex_Exfoliation.udk",
         "size": 265848832
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "FF_Dusk_OOB",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "HoopsStreet_P",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_P",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PhysicalMaterials",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-gradient",
@@ -3221,7 +6106,43 @@
         "url": "https://drive.google.com/file/d/1ZHOw8IDkVWrSUpzxgUn_0FT6-YciaCoe/view",
         "filename": "TheApex_Gradient.udk",
         "size": 256980441
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "FF_Dusk_OOB",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_P",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TheApex_Support",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-halo",
@@ -3238,7 +6159,44 @@
         "url": "https://drive.google.com/file/d/1UuFUoyqQmM_Z5-C6j09onO-w44KuwaJ8/view",
         "filename": "TheApex_Halo.udk",
         "size": 268687905
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_Cage",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "EuroStadium_Rainy_P",
+        "FF_Dusk_OOB",
+        "HoopsStadium_P",
+        "HoopsStreet_P",
+        "MapTemplates",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PhysicalMaterials",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-overpass",
@@ -3255,7 +6213,45 @@
         "url": "https://drive.google.com/file/d/1ku2VuDCSGz0V8gkaRU8T5vpaySASzBax/view",
         "filename": "TheApex_Overpass.udk",
         "size": 298658384
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_Cage",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "EuroStadium_Rainy_P",
+        "FF_Dusk_OOB",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "HoopsStreet_P",
+        "MapTemplates",
+        "Music_Field",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-prominence",
@@ -3272,7 +6268,42 @@
         "url": "https://drive.google.com/file/d/1jg9Vn0_gGLzx6alw-oyf8Y0lZqzthHYA/view",
         "filename": "TheApex_Prominence.udk",
         "size": 259386357
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Field",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "FF_Dusk_OOB",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Music_Field",
+        "Park_Night_P",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "Stadium_P",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-shatter",
@@ -3289,7 +6320,45 @@
         "url": "https://drive.google.com/file/d/1blJG0oJ6PiT0yDcoFi42BVfB0NsS0kCN/view",
         "filename": "TheApex_Shatter.udk",
         "size": 252541734
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "FF_Dusk_OOB",
+        "HoopsStreet_P",
+        "MapTemplates",
+        "NeoTokyo_Standard_P",
+        "Park_Night_P",
+        "Park_P",
+        "PhysicalMaterials",
+        "PostProcess",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_P",
+        "ShatterShot_SFX",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "akaudio",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-apex-vertigo",
@@ -3306,7 +6375,42 @@
         "url": "https://drive.google.com/file/d/1j1ZtUfMOAayd-3uvhbhPcXTKZglSejaW/view",
         "filename": "TheApex_Vertigo.udk",
         "size": 269147934
-      }
+      },
+      "imports": [
+        "ARC_Sky",
+        "Beach_P",
+        "CHN_Stadium_VFX",
+        "CS_Grounds",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "EuroStadium_P",
+        "EuroStadium_Rainy_P",
+        "FF_Dusk_OOB",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "HoopsStreet_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_Night_P",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_VFX",
+        "TrainStation_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "Woods_Forest_P",
+        "Woods_P",
+        "enginedebugmaterials",
+        "fxactorevents",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-bubble",
@@ -3326,7 +6430,21 @@
         "url": "https://drive.google.com/file/d/1YW2vbn1jyKt_ShoIIVaYCOPHC515rxxz/view",
         "filename": "The Bubble.zip",
         "size": 23940209
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-core",
@@ -3345,7 +6463,24 @@
         "url": "https://drive.google.com/file/d/1bVlG0WQCiywCmnioSGeHFEL9j6JoDxiy/view",
         "filename": "The Core.zip",
         "size": 8562421
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Explosion_Electric_SF",
+        "KO_Calavera_P",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "ShatterShot_VFX",
+        "Underwater_Field",
+        "UnrealEd",
+        "tagame",
+        "wheel_hologram_SF"
+      ]
     },
     {
       "id": "lethamyr-the-elements",
@@ -3364,7 +6499,26 @@
         "url": "https://drive.google.com/file/d/1nDDqgNQ3AAgq3PtcKJiKPFY5zfcNsJ2e/view",
         "filename": "The Elements.zip",
         "size": 22320865
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "CS_Field",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Music_Field",
+        "Outlaw_P",
+        "Park_P",
+        "Stadium_P",
+        "boost_lava_SF",
+        "boost_techy_SF",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-floor-is-lava",
@@ -3384,7 +6538,26 @@
         "url": "https://drive.google.com/file/d/1A0BhB4qB_DkIVKF2x4_Aq49v7r-rWB39/view",
         "filename": "The Floor is Lava.zip",
         "size": 52900735
-      }
+      },
+      "imports": [
+        "CS_P",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Park_P",
+        "PortalPackage",
+        "UnrealEd",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-hive",
@@ -3403,7 +6576,33 @@
         "url": "https://drive.google.com/file/d/1DomCdxuD3EnOZAHCO0tLez4iXxRrpsUT/view",
         "filename": "The Hive.zip",
         "size": 59553566
-      }
+      },
+      "imports": [
+        "ARC_P",
+        "Beach_Cage",
+        "CHN_Stadium_VFX",
+        "CS_Day_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Engine_MI_Shaders",
+        "FXActorEvents",
+        "Grass_Textures",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "PostProcess",
+        "ShatterShot_OOB_Exploration",
+        "Stadium_P",
+        "Wasteland_P",
+        "enginedebugmaterials",
+        "explosion_seasonten03_sf",
+        "explosion_solar_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-immortals-progressive-tower",
@@ -3422,7 +6621,41 @@
         "url": "https://drive.google.com/file/d/1ldmB0X61TJstg1yCTVTGtKxhkHOAGZm0/view",
         "filename": "Immortals Progressive Tower.zip",
         "size": 64797488
-      }
+      },
+      "imports": [
+        "ARC_Field",
+        "Beach_Night_P",
+        "CHN_Stadium_VFX",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_OOBTerrain",
+        "GFxUI",
+        "Hat_SantaHat_SF",
+        "Hat_SharkFin_SF",
+        "Labs_Cosmic_P",
+        "Labs_DoubleGoal_P",
+        "Outlaw_Oasis_FX_P",
+        "Outlaw_P",
+        "Park_P",
+        "PhysicalMaterials",
+        "PostProcess",
+        "Stadium_P",
+        "Stadium_Winter_P",
+        "TrainStation_P",
+        "UnrealEd",
+        "UtopiaStadium_Lux_P",
+        "UtopiaStadium_P",
+        "akaudio",
+        "enginedebugmaterials",
+        "flag_lethamyr_SF",
+        "gameinfo_soccar_SF",
+        "grass_textures",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-the-ring-of-fire",
@@ -3441,7 +6674,25 @@
         "url": "https://drive.google.com/file/d/1pemUGCgZl4u_N7x8CCCqJBAQUWSrg1vY/view",
         "filename": "The Ring of Fire.zip",
         "size": 77106176
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Farm_P",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "Park_P",
+        "Stadium_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "Wasteland_Night_VFX_P",
+        "Wasteland_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-top-down-rocket-league",
@@ -3460,7 +6711,14 @@
         "url": "https://drive.google.com/file/d/1Afc0ygwhvTD0ZwUez9mJDdjxm5c5pCem/view",
         "filename": "Top Down Rocket League.zip",
         "size": 1701340
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "Park_P",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-top-golf",
@@ -3479,7 +6737,26 @@
         "url": "https://drive.google.com/file/d/1WeVBh9-e4kh5h9BATMXHCupyGox152gb/view",
         "filename": "Top Golf.zip",
         "size": 69932561
-      }
+      },
+      "imports": [
+        "Beach_Night_OOB",
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Labs_Cosmic_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "Outlaw_P",
+        "Park_P",
+        "enginedebugmaterials",
+        "gameinfo_hockey_SF",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-toronto-track",
@@ -3500,7 +6777,23 @@
         "url": "https://drive.google.com/file/d/1mnsAt_FrCZYPRh1d5-MeZ5fv65Qtv8Pe/view",
         "filename": "Toronto Track.zip",
         "size": 25815549
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineMeshes",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "Park_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-triple-goal",
@@ -3519,7 +6812,15 @@
         "url": "https://drive.google.com/file/d/1QiM9_Hm7ZyLuYNWs-HaggjMYaYbAxlJj/view",
         "filename": "Triple Goal.zip",
         "size": 614434
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "LethLevelPackage",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-underwater-goals",
@@ -3538,7 +6839,20 @@
         "url": "https://drive.google.com/file/d/1wBYwRQR7-dchnQIY49mUmw9ZcahXjSCM/view",
         "filename": "Underwater Goals.zip",
         "size": 4645617
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineFonts",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameFramework",
+        "MapTemplates",
+        "ParkourPack",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-uplink",
@@ -3558,7 +6872,23 @@
         "url": "https://drive.google.com/file/d/1D5D5T9RrfDNR5cOgN3ByCZGfF258qOV8/view",
         "filename": "Uplink.zip",
         "size": 9192956
-      }
+      },
+      "imports": [
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "HoopsStadium_P",
+        "Labs_Cosmic_P",
+        "Labs_OOB_01",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "Underwater_Field",
+        "UnrealEd",
+        "boost_vt_SF",
+        "tagame",
+        "wheel_hologram_SF"
+      ]
     },
     {
       "id": "lethamyr-volcanic-eruption",
@@ -3578,7 +6908,24 @@
         "url": "https://drive.google.com/file/d/178jYpohqoju8-8D1qlojYn-4arJ8f-fh/view",
         "filename": "Volcanic Eruption.zip",
         "size": 87045251
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Core",
+        "EditorLandscapeResources",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Skull_SF",
+        "FXActorEvents",
+        "GameInfo_Soccar_SF",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-volleyshot",
@@ -3598,7 +6945,30 @@
         "url": "https://drive.google.com/file/d/1vFKGc4vxzV1qPGpV4mE9JQHZvEyLWMMI/view",
         "filename": "Volleyshot.zip",
         "size": 6579270
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "Beach_Cage",
+        "Beach_Night_P",
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "Explosion_Electric_SF",
+        "FXActorEvents",
+        "MapTemplates",
+        "Park_P",
+        "PortalPackage",
+        "ShatterShot_OOB_Exploration",
+        "ShatterShot_VFX",
+        "Underwater_Field",
+        "UnrealEd",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-wario-s-goldmine",
@@ -3618,7 +6988,8 @@
         "url": "https://drive.google.com/file/d/1JHLvlVz_mQwqu_x2XuA7eHz2uDWjgMEq/view",
         "filename": "LethGoldMine.udk",
         "size": 95599270
-      }
+      },
+      "imports": null
     },
     {
       "id": "lethamyr-warzone",
@@ -3637,7 +7008,22 @@
         "url": "https://drive.google.com/file/d/1KzX7odO_xs_VCtXb0J7JIDhb7RLj_p6l/view",
         "filename": "Warzone.zip",
         "size": 263276675
-      }
+      },
+      "imports": [
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HoopsStadium_P",
+        "MapTemplates",
+        "Music_Field",
+        "Park_P",
+        "TrainStation_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-water-polo",
@@ -3657,7 +7043,17 @@
         "url": "https://drive.google.com/file/d/1wH6eCKqCzWtqJmutJ0eLsZwiqCi8-Lfr/view",
         "filename": "Water Polo.zip",
         "size": 12092677
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameFramework",
+        "MapTemplates",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-water-polo-remastered",
@@ -3677,7 +7073,18 @@
         "url": "https://drive.google.com/file/d/1000E518vTQKi4AR4NXopwLAPCwk2t6Wo/view",
         "filename": "Water Polo Remastered.zip",
         "size": 10406112
-      }
+      },
+      "imports": [
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameFramework",
+        "MapTemplates",
+        "Park_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-wave-race",
@@ -3697,7 +7104,26 @@
         "url": "https://drive.google.com/file/d/1LbXGO_JvF6kNzhzZi_irX3DkxyFrMyal/view",
         "filename": "Wave Race.zip",
         "size": 43790138
-      }
+      },
+      "imports": [
+        "4v4MapPack",
+        "CS_P",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "HSBuildingPack",
+        "Labs_DoubleGoal_P",
+        "MapTemplates",
+        "NeoTokyo_P",
+        "NeverendPack",
+        "Park_P",
+        "PipePackage",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-whirly-tanks",
@@ -3717,7 +7143,29 @@
         "url": "https://drive.google.com/file/d/1AKRD-eFqknIuwVVPqlTAD5duze-W5Y-9/view",
         "filename": "Whirly Tanks.zip",
         "size": 321711990
-      }
+      },
+      "imports": [
+        "Beach_Night_OOB",
+        "Boost_Burnout_SF",
+        "CS_Field",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "MapTemplates",
+        "Outlaw_P",
+        "Park_P",
+        "Stadium_P",
+        "TrainStation_P",
+        "UnrealEd",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-whirly-tanks-2",
@@ -3736,7 +7184,23 @@
         "url": "https://drive.google.com/file/d/1HIUFA8WasORcvHCkejXxYixMu-Rw882n/view",
         "filename": "Whirly Tanks 2.zip",
         "size": 252198993
-      }
+      },
+      "imports": [
+        "Boost_Burnout_SF",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "MapTemplates",
+        "TrainStation_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-whirly-tanks-3",
@@ -3755,7 +7219,23 @@
         "url": "https://drive.google.com/file/d/1mLVLobadFAyTpfIn8jtKfnlABuzPtu5Q/view",
         "filename": "Whirly Tanks 3.zip",
         "size": 221354000
-      }
+      },
+      "imports": [
+        "Boost_Burnout_SF",
+        "Core",
+        "EditorMeshes",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "GameInfo_Soccar_SF",
+        "HoopsStadium_P",
+        "Park_P",
+        "UtopiaStadium_P",
+        "enginedebugmaterials",
+        "projectx",
+        "tagame"
+      ]
     },
     {
       "id": "lethamyr-zelda-clock-town",
@@ -3775,7 +7255,20 @@
         "url": "https://drive.google.com/file/d/1O4eqgNLqe6Gp4OCZP-ENy-5d6v9fZ4wV/view",
         "filename": "Zelda Clock Town.zip",
         "size": 19038423
-      }
+      },
+      "imports": [
+        "CHN_Stadium_VFX",
+        "Core",
+        "Engine",
+        "EngineMaterials",
+        "EngineResources",
+        "Engine_MI_Shaders",
+        "MapTemplates",
+        "UtopiaStadium_P",
+        "Wasteland_VFX",
+        "enginedebugmaterials",
+        "tagame"
+      ]
     }
   ]
 }
