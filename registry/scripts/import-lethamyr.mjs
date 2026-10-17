@@ -6,6 +6,7 @@
 // Usage : node registry/scripts/import-lethamyr.mjs
 
 import { decode, get, pool, slug, text, writeSource } from './lib.mjs'
+import { withImports } from './scan-imports.mjs'
 
 const BASE = 'https://lethamyr.com'
 
@@ -106,7 +107,7 @@ async function main() {
     }
   })
 
-  await writeSource('lethamyr', 'Lethamyr', maps.filter(Boolean))
+  await writeSource('lethamyr', 'Lethamyr', await withImports('lethamyr', maps.filter(Boolean)))
 }
 
 main().catch((err) => {

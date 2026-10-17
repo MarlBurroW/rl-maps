@@ -11,6 +11,8 @@ import { detectInstalls, resolveInstallFolder } from './game/detect'
 import { isGameRunning } from './game/process'
 import { chooseSlot, isValidInstall, loadIntoSlot, readSlot, restoreSlot } from './game/slot'
 import { readPackageImports } from './game/upk'
+import { gamePackages } from './game/packages'
+import { missingDependencies } from '../shared/compat'
 
 const STATUS_POLL_MS = 4000
 
@@ -60,6 +62,13 @@ async function broadcastStatus(force = false): Promise<GameStatus> {
     win?.webContents.send('status', status)
   }
   return status
+}
+
+/** Paquets du jeu installé, ou null si le jeu n'est pas configuré ou illisible. */
+async function presentPackages(refresh = false): Promise<Set<string> | null> {
+  const install = store.settings.install
+  if (!install) return null
+  return gamePackages(install.root, refresh).catch(() => null)
 }
 
 function requireInstall(): GameInstall {
@@ -143,7 +152,10 @@ function registerIpc() {
     return broadcastStatus(true)
   })
 
-  handle('library:list', () => library.list())
+  handle('library:list', async () => {
+    const [maps, present] = await Promise.all([library.list(), presentPackages()])
+    return maps.map((m) => ({ ...m, missing: missingDependencies(m.imports, present) }))
+  })
   handle('library:import', importPaths)
   handle('library:pickAndImport', async () => {
     const res = await dialog.showOpenDialog(win!, {
@@ -161,7 +173,11 @@ function registerIpc() {
     await library.remove(mapId)
   })
 
-  handle('market:get', (refresh?: boolean) => market.get(store.settings.sources, refresh))
+  handle('market:get', async (refresh?: boolean) => {
+    // Actualiser le catalogue relit aussi les paquets du jeu (il a pu être mis à jour entre-temps)
+    const [state, present] = await Promise.all([market.get(store.settings.sources, refresh), presentPackages(refresh)])
+    return { ...state, maps: state.maps.map((m) => ({ ...m, missing: missingDependencies(m.imports, present) })) }
+  })
   handle('market:install', async (sourceId: string, registryId: string) => {
     let entry = market.find(sourceId, registryId)
     if (!entry) {

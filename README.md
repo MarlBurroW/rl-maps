@@ -24,6 +24,9 @@ Dernière version : **[Releases](https://github.com/MarlBurroW/rl-maps/releases/
 - **Bibliothèque** : tes maps installées. Glisse-dépose un `.upk`, `.udk` ou `.zip` n'importe où dans la fenêtre pour en ajouter.
 - **Chargement sûr** : l'original est sauvegardé une seule fois (`Labs_Underpass_P.upk.bak`), chaque écriture passe
   par un fichier temporaire, et l'original peut être restauré automatiquement à la fermeture.
+- **Compatibilité affichée** : chaque map est comparée aux fichiers de **ton** jeu. Celles qui dépendent de paquets
+  absents (souvent supprimés par une mise à jour de Rocket League) portent un badge « Rendu incomplet », la fiche détaille
+  ce qui manque, et le filtre « Rendu complet » ne montre que les maps sans souci.
 - **Arène choisie selon la map** : l'app lit les dépendances de chaque map. Celles qui réutilisent des éléments
   d'Underpass (sol, bordures…) sont chargées dans **Utopia Retro**, pour ne pas perdre ces éléments en remplaçant Underpass.
 - **Compatible avec les anciens loaders** : un backup laissé par [marzeq/rl-map-loader](https://github.com/marzeq/rl-map-loader)
@@ -43,8 +46,8 @@ Dernière version : **[Releases](https://github.com/MarlBurroW/rl-maps/releases/
 
 Textures roses ou manquantes ? Installe une fois pour toutes le
 [pack de textures Workshop](https://videogamemods.com/vgm/rocketleague/mods/workshop-textures) dans `TAGame/CookedPCConsole`.
-Si une map reste incomplète malgré le pack, elle dépend sans doute de paquets que Rocket League a supprimés depuis
-(`grass_textures`, `PostProcess`, `PhysicalMaterials`…) : seul son auteur peut la corriger.
+Si une map reste incomplète malgré le pack, sa fiche dans l'app indique les paquets manquants : en général des paquets
+que Rocket League a supprimés depuis (`grass_textures`, `PostProcess`, `PhysicalMaterials`…). Seul son auteur peut la corriger.
 
 > Projet non affilié à Psyonix ni à Epic Games. N'utilise jamais une map custom en partie en ligne.
 
@@ -83,6 +86,7 @@ src/
   main/                 process principal (Node)
     game/slot.ts        swap des arènes Labs (Underpass, Utopia Retro) <-> map, backups, état
     game/upk.ts         lecture des dépendances d'une map (en-tête des paquets UE3)
+    game/packages.ts    inventaire des paquets du jeu installé
     game/fsops.ts       écritures atomiques + repli UAC
     game/detect.ts      détection Epic / Steam / Heroic
     library/            bibliothèque locale (+ extraction zip)

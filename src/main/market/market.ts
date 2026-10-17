@@ -28,6 +28,7 @@ export function parseRegistry(raw: unknown): RegistryIndex {
       author: typeof m.author === 'string' ? m.author : 'Inconnu',
       tags: Array.isArray(m.tags) ? m.tags.filter((t) => typeof t === 'string') : [],
       thumbnail: isHttps(m.thumbnail) ? m.thumbnail : null,
+      imports: Array.isArray(m.imports) ? m.imports.filter((p) => typeof p === 'string') : null,
       download: { ...m.download, mirrors: Array.isArray(m.download.mirrors) ? m.download.mirrors.filter(isHttps) : [] }
     }))
   }
@@ -66,6 +67,7 @@ export function mergeRegistries(entries: { source: RegistrySource; index: Regist
         existing.thumbnail ??= m.thumbnail
         existing.description ||= m.description
         existing.recommendedSettings ||= m.recommendedSettings
+        existing.imports ??= m.imports
         if (!existing.sources.some((s) => s.id === source.id)) existing.sources.push(ref)
         continue
       }

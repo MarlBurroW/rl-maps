@@ -30,6 +30,8 @@ export interface RegistryMap {
   homepage?: string
   source?: string
   version?: string
+  /** Paquets dont la map importe des objets (null : en-tête illisible) */
+  imports?: string[] | null
   download: RegistryDownload
 }
 
@@ -51,6 +53,8 @@ export interface MarketMap extends RegistryMap {
   sourceId: string
   /** Registres où la map apparaît (fusion des doublons entre sources) */
   sources: { id: string; name: string; homepage?: string }[]
+  /** Dépendances absentes du jeu installé (undefined : inconnu) */
+  missing?: string[]
 }
 
 export interface MarketState {
@@ -77,6 +81,10 @@ export interface LibraryMap {
   registryId?: string
   homepage?: string
   addedAt: string
+  /** Paquets dont la map importe des objets (null : illisible) */
+  imports?: string[] | null
+  /** Dépendances absentes du jeu installé (undefined : inconnu) */
+  missing?: string[]
 }
 
 /** Arène Labs dont le fichier sert à charger la map */

@@ -8,11 +8,15 @@ const PKG_STORE_COMPRESSED = 0x02000000
 /** Garde-fou : un en-tête de map fait quelques centaines de Ko, jamais des centaines de Mo */
 const MAX_HEADER = 64 * 1024 * 1024
 
+// Pas de propriétés de paramètre (`constructor(readonly buf)`) : ce fichier est aussi exécuté
+// directement par Node (scripts du registre), qui ne gère que les types effaçables.
 class Reader {
-  constructor(
-    readonly buf: Buffer,
-    public pos = 0
-  ) {}
+  buf: Buffer
+  pos: number
+  constructor(buf: Buffer, pos = 0) {
+    this.buf = buf
+    this.pos = pos
+  }
   i32() {
     const v = this.buf.readInt32LE(this.pos)
     this.pos += 4

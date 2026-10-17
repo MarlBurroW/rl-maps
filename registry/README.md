@@ -27,6 +27,15 @@ seraient écrasés.
   git commit -am "registry: synchronisation BakkesPlugins" && git push
   ```
 
+### Dépendances des maps
+
+Chaque entrée porte un champ `imports` : la liste des paquets dont la map utilise des objets (textures, matériaux…).
+Il est lu à distance dans l'en-tête de la map, par requêtes partielles, sans télécharger les fichiers
+([`scripts/scan-imports.mjs`](scripts/scan-imports.mjs)). Les importeurs le remplissent automatiquement, en ne
+réanalysant que les maps nouvelles ou modifiées. Après un ajout manuel dans `community.json`, lance `npm run registry:scan`.
+
+L'app compare ces dépendances aux fichiers du jeu de l'utilisateur pour signaler les maps au rendu incomplet.
+
 ### Doublons entre sources
 
 Beaucoup de maps sont publiées à la fois sur lethamyr.com et sur BakkesPlugins. L'app les fusionne quand le
@@ -58,8 +67,9 @@ téléchargement (quota dépassé), l'app bascule automatiquement sur le CDN de 
    }
    ```
 
-2. Vérifie : `npm run registry:validate` (ajoute `-- --check-links` pour tester les liens).
-3. Ouvre une PR. La CI valide les fichiers automatiquement.
+2. Ajoute ses dépendances : `npm run registry:scan -- community`.
+3. Vérifie : `npm run registry:validate` (ajoute `-- --check-links` pour tester les liens).
+4. Ouvre une PR. La CI valide les fichiers automatiquement.
 
 ### Règles
 

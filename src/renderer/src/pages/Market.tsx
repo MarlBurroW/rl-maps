@@ -1,5 +1,5 @@
 import { useDeferredValue, useMemo, useState, type ReactNode } from 'react'
-import { CloudOff, Heart, RefreshCw, Search } from 'lucide-react'
+import { CircleCheck, CloudOff, Heart, RefreshCw, Search } from 'lucide-react'
 import { useApp, type Item } from '../state'
 import { normalize } from '../lib/format'
 import { MapCard, MapCardSkeleton } from '../components/MapCard'
@@ -8,13 +8,14 @@ import { Button } from '../components/Button'
 type Sort = 'name' | 'size-asc' | 'size-desc'
 
 /** Nombre de catégories affichées en pastilles, les autres sont dans un menu */
-const VISIBLE_TAGS = 10
+const VISIBLE_TAGS = 8
 
 const selectClass = 'h-10 rounded-lg border border-line bg-surface px-3 text-sm outline-none focus:border-blue'
 
 export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
   const { market, marketLoading, refreshMarket, marketItem, favorites } = useApp()
   const [favOnly, setFavOnly] = useState(false)
+  const [completeOnly, setCompleteOnly] = useState(false)
   const [query, setQuery] = useState('')
   const [tag, setTag] = useState<string | null>(null)
   const [source, setSource] = useState<string | null>(null)
@@ -46,9 +47,10 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
     const size = (x: (typeof list)[number]) => x.download.size ?? 0
     if (sort === 'size-asc') list.sort((a, b) => size(a) - size(b))
     else if (sort === 'size-desc') list.sort((a, b) => size(b) - size(a))
-    const all = list.map(marketItem)
-    return favOnly ? all.filter((i) => favorites.has(i.favId)) : all
-  }, [market, tag, source, q, sort, marketItem, favOnly, favorites])
+    return list
+      .map(marketItem)
+      .filter((i) => (!favOnly || favorites.has(i.favId)) && (!completeOnly || i.missing?.length === 0))
+  }, [market, tag, source, q, sort, marketItem, favOnly, favorites, completeOnly])
 
   const favCount = useMemo(
     () => (market?.maps ?? []).filter((m) => favorites.has(marketItem(m).favId)).length,
@@ -113,6 +115,17 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
         {tags.length > 0 && (
           <div className="flex flex-wrap items-center gap-1.5">
             <FavoritesChip active={favOnly} count={favCount} onClick={() => setFavOnly((v) => !v)} />
+            <button
+              onClick={() => setCompleteOnly((v) => !v)}
+              aria-pressed={completeOnly}
+              title="N'afficher que les maps dont toutes les dépendances sont présentes dans ton jeu"
+              className={`inline-flex h-7 items-center gap-1.5 rounded-full px-3 text-[13px] font-medium transition ${
+                completeOnly ? 'bg-ok text-bg' : 'bg-surface text-muted hover:bg-surface-2 hover:text-fg'
+              }`}
+            >
+              <CircleCheck className={`size-3.5 ${completeOnly ? '' : 'text-ok'}`} />
+              Rendu complet
+            </button>
             <span className="mx-1 h-5 w-px bg-line" />
             <button onClick={() => setTag(null)} className={chip(tag === null)}>
               Toutes

@@ -5,6 +5,7 @@ import { formatBytes } from '../lib/format'
 import { Thumb } from './Thumb'
 import { MapActions } from './MapActions'
 import { FavoriteButton } from './FavoriteButton'
+import { CompatSection } from './Compat'
 import { Button } from './Button'
 
 export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }) {
@@ -68,6 +69,7 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
           {(item.description || item.summary) && (
             <p className="text-[15px] leading-relaxed whitespace-pre-line text-fg/90">{item.description || item.summary}</p>
           )}
+          <CompatSection missing={item.missing} />
           {item.recommendedSettings && (
             <div className="rounded-xl border border-line bg-surface-2/60 p-4">
               <h3 className="text-xs font-semibold tracking-wider text-muted uppercase">Réglages conseillés</h3>

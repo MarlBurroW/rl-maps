@@ -4,6 +4,7 @@ import { formatBytes } from '../lib/format'
 import { Thumb } from './Thumb'
 import { MapActions } from './MapActions'
 import { FavoriteButton } from './FavoriteButton'
+import { CompatBadge } from './Compat'
 
 export function MapCard({ item, onOpen, badge = true }: { item: Item; onOpen: () => void; badge?: boolean }) {
   return (
@@ -14,6 +15,7 @@ export function MapCard({ item, onOpen, badge = true }: { item: Item; onOpen: ()
       <div className="relative">
         <Thumb src={item.thumbnail} alt={item.name} className="transition group-hover:brightness-110" />
         <FavoriteButton item={item} className="absolute top-2 left-2" />
+        <CompatBadge missing={item.missing} className="absolute bottom-2 left-2" />
         {badge && item.local && item.market && (
           <span className="absolute top-2 right-2 inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[11px] font-semibold text-ok backdrop-blur">
             <CircleCheck className="size-3" /> Installée

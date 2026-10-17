@@ -5,6 +5,7 @@
 // Usage : node registry/scripts/import-bakkesplugins.mjs
 
 import { decode, get, pool, SUPPORTED_EXTS, text, writeSource } from './lib.mjs'
+import { withImports } from './scan-imports.mjs'
 
 const BASE = 'https://bakkesplugins.com'
 const CDN = 'https://cdn.bakkesplugins.com/'
@@ -95,7 +96,7 @@ async function main() {
   })
 
   if (skipped.length) console.warn(`\nIgnorées (${skipped.length}) :\n  ` + skipped.join('\n  '))
-  await writeSource('bakkesplugins', 'BakkesPlugins', maps.filter(Boolean))
+  await writeSource('bakkesplugins', 'BakkesPlugins', await withImports('bakkesplugins', maps.filter(Boolean)))
 }
 
 main().catch((err) => {

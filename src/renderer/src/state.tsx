@@ -18,6 +18,8 @@ export interface Item {
   homepage?: string
   market?: MarketMap
   local?: LibraryMap
+  /** Dépendances absentes du jeu (undefined : inconnu) */
+  missing?: string[]
 }
 
 export const playHint = (arena: string) => `Dans Rocket League : Entraînement → Free Play → arène « ${arena} ».`
@@ -91,6 +93,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
       offProgress()
     }
   }, [reloadLibrary, refreshMarket])
+
+  // Changement de dossier du jeu : la compatibilité des maps est à recalculer
+  const installRoot = status?.install?.root
+  useEffect(() => {
+    if (!installRoot) return
+    void reloadLibrary()
+    void window.api.getMarket(false).then(setMarket)
+  }, [installRoot, reloadLibrary])
 
   /** Exécute une action qui renvoie un Result et affiche l'erreur éventuelle. */
   const run = useCallback(
@@ -206,7 +216,8 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
       recommendedSettings: m.recommendedSettings,
       homepage: m.homepage,
       market: m,
-      local: byRegistryId.get(m.id)
+      local: byRegistryId.get(m.id),
+      missing: byRegistryId.get(m.id)?.missing ?? m.missing
     }),
     [byRegistryId]
   )
@@ -229,7 +240,8 @@ Cette map réutilise des éléments d’Underpass : elle est chargée dans ${are
         recommendedSettings: l.recommendedSettings,
         homepage: l.homepage,
         market: m,
-        local: l
+        local: l,
+        missing: l.missing ?? m?.missing
       }
     },
     [marketById]

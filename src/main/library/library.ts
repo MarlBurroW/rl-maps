@@ -8,6 +8,7 @@ import { randomBytes } from 'node:crypto'
 import path from 'node:path'
 import type { LibraryMap } from '../../shared/types'
 import { extractZip, IMAGE_EXTS, MAP_EXTS, pickContent } from './archive'
+import { readPackageImports } from '../game/upk'
 
 export const THUMB_PROTOCOL = 'rlmaps'
 
@@ -63,11 +64,18 @@ export class Library {
   }
 
   private async readMeta(id: string): Promise<StoredMeta | null> {
+    let meta: StoredMeta
     try {
-      return JSON.parse(await readFile(path.join(this.mapDir(id), 'meta.json'), 'utf8')) as StoredMeta
+      meta = JSON.parse(await readFile(path.join(this.mapDir(id), 'meta.json'), 'utf8')) as StoredMeta
     } catch {
       return null
     }
+    // Maps installées avant l'analyse des dépendances : on la fait une fois et on l'enregistre
+    if (meta.imports === undefined) {
+      meta.imports = await readPackageImports(path.join(this.mapDir(id), meta.file))
+      await writeFile(path.join(this.mapDir(id), 'meta.json'), JSON.stringify(meta, null, 2)).catch(() => {})
+    }
+    return meta
   }
 
   async list(): Promise<LibraryMap[]> {
@@ -162,7 +170,8 @@ export class Library {
         homepage: hints.homepage,
         addedAt: new Date().toISOString(),
         thumbFile,
-        remoteThumbnail: hints.remoteThumbnail
+        remoteThumbnail: hints.remoteThumbnail,
+        imports: await readPackageImports(path.join(finalDir, file))
       }
       await writeFile(path.join(finalDir, 'meta.json'), JSON.stringify(meta, null, 2))
       return this.toPublic(meta)
