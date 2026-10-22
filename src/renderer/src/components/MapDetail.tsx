@@ -78,6 +78,12 @@ export function MapDetail({ item, onClose }: { item: Item; onClose: () => void }
               {item.local.lastPlayedAt ? t('dernière partie {when}', { when: timeAgo(item.local.lastPlayedAt) ?? '' }) : t('jamais jouée')}
             </p>
           )}
+          {item.market?.availability === 'steam-required' && <p className="rounded-xl border border-warn/30 bg-warn/5 p-4 text-sm text-muted">
+            {t('Steam ne fournit pas de lien direct pour cette map. Télécharge-la avec Steam, puis actualise le catalogue pour l’importer et y jouer sur Epic. Tu peux aussi importer un fichier fourni par son auteur.')}
+          </p>}
+          {item.market?.availability === 'local' && <p className="text-sm text-muted">
+            {t('Une copie téléchargée par Steam est disponible. Son import conserve les fichiers Steam et permet de jouer avec le client Epic.')}
+          </p>}
           <CompatSection missing={item.missing} />
           {item.recommendedSettings && (
             <div className="rounded-xl border border-line bg-surface-2/60 p-4">

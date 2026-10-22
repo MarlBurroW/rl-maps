@@ -6,6 +6,7 @@ import { useApp } from '../state'
 import { describeAppUpdate, useAppUpdate } from '../components/AppUpdate'
 import { useToast } from '../components/Toast'
 import { Button } from '../components/Button'
+import { SteamWorkshopSettings } from '../components/SteamWorkshopSettings'
 import { t, tk, type LanguageSetting } from '../../../shared/i18n'
 
 const TEXTURES_URL = 'https://videogamemods.com/vgm/rocketleague/mods/workshop-textures'
@@ -180,6 +181,8 @@ export function SettingsPage() {
             </form>
           </div>
         </Section>
+
+        <SteamWorkshopSettings />
 
         <Section title={t('Aide')}>
           <div className="space-y-3 rounded-xl border border-line bg-surface p-5 text-sm leading-relaxed">

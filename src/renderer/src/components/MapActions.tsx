@@ -1,4 +1,4 @@
-import { Download, Play, Radio, RefreshCw, X } from 'lucide-react'
+import { Download, ExternalLink, Play, Radio, RefreshCw, X } from 'lucide-react'
 import type React from 'react'
 import { useApp, type Item } from '../state'
 import { formatBytes } from '../lib/format'
@@ -71,6 +71,13 @@ export function MapActions({ item, size = 'md', className = '' }: { item: Item; 
 
   if (item.market) {
     const m = item.market
+    if (m.availability === 'steam-required') {
+      return <Button size={size} className={className} icon={<ExternalLink className="size-4" />}
+        title={t('Cette map nécessite un téléchargement dans Steam avant son import.')}
+        onClick={(e) => { e.stopPropagation(); if (m.homepage) void window.api.openExternal(m.homepage) }}>
+        {t('Voir sur Steam')}
+      </Button>
+    }
     return (
       <Button
         variant="primary"
@@ -82,7 +89,7 @@ export function MapActions({ item, size = 'md', className = '' }: { item: Item; 
           void install(m)
         }}
       >
-        {t('Installer')}
+        {m.availability === 'local' ? t('Importer de Steam') : t('Installer')}
       </Button>
     )
   }
@@ -94,6 +101,13 @@ export function MapActions({ item, size = 'md', className = '' }: { item: Item; 
 export function UpdateButton({ item, compact = false, className = '' }: { item: Item; compact?: boolean; className?: string }) {
   const { update, progress } = useApp()
   if (!item.updateAvailable || !item.market || progress[item.market.id]) return null
+  if (item.market.availability === 'steam-required') {
+    return <Button size="sm" className={className} icon={<ExternalLink className="size-4" />}
+      title={t('Mettre à jour dans Steam')} aria-label={t('Mettre à jour dans Steam')}
+      onClick={(e) => { e.stopPropagation(); if (item.market?.homepage) void window.api.openExternal(item.market.homepage) }}>
+      {!compact && t('Mettre à jour dans Steam')}
+    </Button>
+  }
   const onClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     void update(item)

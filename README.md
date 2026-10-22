@@ -51,6 +51,26 @@ au redémarrage. La version portable signale simplement qu'une nouvelle version 
 
 ## Jouer
 
+### Steam Workshop
+
+Dans **Réglages → Steam Workshop**, saisis une clé obtenue sur
+[la page des clés API Steam](https://steamcommunity.com/dev/apikey), puis clique sur **Enregistrer et activer**.
+Le catalogue parcourt toutes les pages de maps publiques de Rocket League, récupère les auteurs et garde une copie locale.
+La clé est chiffrée avec le stockage sécurisé du système, dans les données de l'app ; elle n'est envoyée qu'à Steam.
+
+- **Installer** : un lien direct est disponible, éventuellement grâce à une autre source du market.
+- **Importer de Steam** : la map est déjà téléchargée dans une bibliothèque Steam détectée sur ce PC.
+  L'app copie la map et ses paquets annexes dans sa bibliothèque, puis **Jouer** utilise le loader habituel, y compris sur Epic.
+- **Voir sur Steam** : aucun fichier directement accessible n'a été trouvé. Télécharge la map via le client Steam,
+  puis actualise le catalogue. Une licence Steam de Rocket League peut être nécessaire ; une clé API ne donne pas ce droit.
+  L'import manuel d'un fichier fourni par l'auteur reste possible.
+
+Le filtre **Installables** masque les maps qui nécessitent encore un téléchargement dans Steam.
+La synchronisation ne souscrit à aucune map et ne demande pas tes identifiants Steam.
+Les anciennes maps peuvent conserver des dépendances absentes du jeu actuel : leur présence au catalogue ne garantit pas leur compatibilité.
+
+### Charger une map
+
 1. **Jouer** sur une map de la bibliothèque.
 2. Sur Epic : Bibliothèque → Rocket League → **⋯ → Lancer sans anti-triche**.
 3. Entraînement → Free Play → l'arène indiquée en bas de l'app (**Underpass** le plus souvent, **Utopia Retro** pour certaines maps).

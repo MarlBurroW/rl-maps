@@ -20,6 +20,8 @@ function subscribe<T>(channel: string, cb: (payload: T) => void) {
 }
 
 const api: Api = {
+  getSteamWorkshopConfig: () => value('steam:config'),
+  setSteamWorkshopConfig: (patch) => result('steam:configure', patch),
   getSettings: () => value('settings:get'),
   updateSettings: (patch) => value('settings:update', patch),
   setFavorite: (id, favorite) => value('favorites:set', id, favorite),

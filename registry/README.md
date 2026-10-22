@@ -46,6 +46,12 @@ téléchargement (quota dépassé), l'app bascule automatiquement sur le CDN de 
 
 ## Ajouter une map
 
+La source **Steam Workshop** est alimentée à l'exécution par l'API Steam (`QueryFiles`, app `252950`),
+avec la clé configurée dans l'application. Elle ne correspond pas à un fichier embarqué de `sources/`.
+Son cache privé est dans `%APPDATA%/RL Maps/cache/steam-workshop.json` (sans clé).
+Les entrées sans lien direct restent visibles et portent un identifiant Workshop pour retrouver leur copie locale Steam.
+Les registres JSON publics continuent d'exiger un `download.url` HTTPS ; ils ne peuvent pas activer un accès aux dossiers Steam.
+
 1. Ajoute une entrée dans `sources/community.json` :
 
    ```json

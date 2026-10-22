@@ -220,7 +220,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
     void window.api.setFavorite(item.favId, on).then((ids) => setFavorites(new Set(ids)))
   }, [favorites])
 
-  const byRegistryId = useMemo(() => new Map(library.filter((l) => l.registryId).map((l) => [l.registryId!, l])), [library])
+  const byRegistryId = useMemo(() => {
+    const byId = new Map(library.filter((l) => l.registryId).map((l) => [l.registryId!, l]))
+    for (const map of market?.maps ?? []) {
+      const installed = (map.registryIds ?? [map.id]).map((id) => byId.get(id)).find(Boolean)
+      if (installed) byId.set(map.id, installed)
+    }
+    return byId
+  }, [library, market])
 
   const marketItem = useCallback(
     (m: MarketMap): Item => ({
@@ -243,7 +250,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
     [byRegistryId]
   )
 
-  const marketById = useMemo(() => new Map((market?.maps ?? []).map((m) => [m.id, m])), [market])
+  const marketById = useMemo(() => new Map((market?.maps ?? []).flatMap((m) =>
+    (m.registryIds ?? [m.id]).map((id) => [id, m] as const))), [market])
 
   const localItem = useCallback(
     (l: LibraryMap): Item => {
@@ -286,14 +294,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
   )
 
   const updateAll = useCallback(async () => {
-    for (const item of updates) await update(item)
+    for (const item of updates) if (item.market?.availability !== 'steam-required') await update(item)
   }, [updates, update])
 
   // Mode automatique : chaque mise à jour détectée est installée une fois par session
   const autoTried = useRef(new Set<string>())
   useEffect(() => {
     if (settings?.mapUpdates !== 'auto') return
-    const pending = updates.filter((i) => i.market && !autoTried.current.has(i.market.id))
+    const pending = updates.filter((i) => i.market && i.market.availability !== 'steam-required' && !autoTried.current.has(i.market.id))
     if (!pending.length) return
     pending.forEach((i) => autoTried.current.add(i.market!.id))
     void (async () => {

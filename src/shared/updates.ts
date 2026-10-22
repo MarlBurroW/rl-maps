@@ -1,7 +1,12 @@
 import type { RegistryDownload } from './types'
 
 /** Empreinte d'un fichier publié : change dès que l'auteur publie une nouvelle version. */
-export const downloadFingerprint = (d: RegistryDownload) => `${d.url}|${d.size ?? ''}`
+export const downloadFingerprint = (d: RegistryDownload) => d.workshop && !d.url
+  ? `steam:${d.workshop.id}|${d.workshop.revision}`
+  : `${d.url}|${d.size ?? ''}`
+
+export const downloadUrls = (d: RegistryDownload): string[] =>
+  [d.url, ...(d.mirrors ?? [])].filter((u): u is string => !!u)
 
 /**
  * La version installée est-elle à jour par rapport au registre ?
@@ -9,6 +14,10 @@ export const downloadFingerprint = (d: RegistryDownload) => `${d.url}|${d.size ?
  */
 export function isUpToDate(installed: string | undefined, d: RegistryDownload): boolean {
   if (!installed) return true // installée avant le suivi des versions : on ne sait pas, on ne propose rien
+  if (installed.startsWith('steam:')) {
+    const [id, revision] = installed.slice(6).split('|')
+    return d.workshop?.id === id && (revision === 'unknown' || revision === d.workshop.revision)
+  }
   const sep = installed.lastIndexOf('|')
   const url = installed.slice(0, sep)
   const size = Number(installed.slice(sep + 1)) || null

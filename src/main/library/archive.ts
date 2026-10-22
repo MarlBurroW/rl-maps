@@ -1,5 +1,5 @@
 import { createWriteStream } from 'node:fs'
-import { mkdir } from 'node:fs/promises'
+import { copyFile, mkdir, readdir, stat } from 'node:fs/promises'
 import { pipeline } from 'node:stream/promises'
 import path from 'node:path'
 import yauzl from 'yauzl'
@@ -9,6 +9,30 @@ import { t } from '../../shared/i18n'
 export const MAP_EXTS = ['.upk', '.udk']
 export const IMAGE_EXTS = ['.png', '.jpg', '.jpeg', '.jfif', '.webp']
 const KEEP_EXTS = [...MAP_EXTS, ...IMAGE_EXTS, '.json']
+
+/** Copie les fichiers utiles d'un item Steam. Ne déplace ni ne modifie son contenu d'origine. */
+export async function copyWorkshopDirectory(source: string, dest: string): Promise<ExtractedFile[]> {
+  const files: ExtractedFile[] = []
+  const used = new Set<string>()
+  const walk = async (dir: string, depth: number) => {
+    if (depth > 12) throw new Error(t('Arborescence Workshop trop profonde.'))
+    for (const entry of await readdir(dir, { withFileTypes: true })) {
+      if (entry.isSymbolicLink()) continue
+      const original = path.join(dir, entry.name)
+      if (entry.isDirectory()) await walk(original, depth + 1)
+      else if (entry.isFile() && KEEP_EXTS.includes(path.extname(entry.name).toLowerCase())) {
+        // Renommer un paquet Unreal casserait ses références : rejeter les collisions.
+        if (used.has(entry.name.toLowerCase())) throw new Error(t('Deux fichiers Workshop portent le même nom : {name}', { name: entry.name }))
+        used.add(entry.name.toLowerCase())
+        const target = path.join(dest, entry.name)
+        await copyFile(original, target)
+        files.push({ path: target, name: entry.name, size: (await stat(target)).size })
+      }
+    }
+  }
+  await walk(source, 0)
+  return files
+}
 
 export interface ExtractedFile {
   path: string

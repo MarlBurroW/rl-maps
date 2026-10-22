@@ -44,7 +44,7 @@ export function parseLibraryFolders(vdf: string): string[] {
   return [...vdf.matchAll(/"path"\s+"([^"]+)"/g)].map((m) => m[1].replace(/\\\\/g, '\\'))
 }
 
-async function steamCandidates(): Promise<string[]> {
+export async function steamLibraries(): Promise<string[]> {
   const roots =
     process.platform === 'win32'
       ? [await steamPathFromRegistry(), 'C:\\Program Files (x86)\\Steam']
@@ -60,7 +60,11 @@ async function steamCandidates(): Promise<string[]> {
       /* pas de Steam ici */
     }
   }
-  return [...libraries].map((lib) => path.join(lib, 'steamapps', 'common', STEAM_APP_DIR))
+  return [...libraries]
+}
+
+async function steamCandidates(): Promise<string[]> {
+  return (await steamLibraries()).map((lib) => path.join(lib, 'steamapps', 'common', STEAM_APP_DIR))
 }
 
 export async function detectInstalls(): Promise<GameInstall[]> {

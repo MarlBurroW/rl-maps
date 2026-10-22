@@ -7,7 +7,7 @@ import { copyFile, mkdir, readdir, readFile, rename, rm, stat, writeFile } from 
 import { randomBytes } from 'node:crypto'
 import path from 'node:path'
 import type { LibraryMap } from '../../shared/types'
-import { extractZip, IMAGE_EXTS, MAP_EXTS, pickContent } from './archive'
+import { copyWorkshopDirectory, extractZip, IMAGE_EXTS, MAP_EXTS, pickContent } from './archive'
 import { readPackageImports, readPackageInfo } from '../game/upk'
 import { WORKSHOP_TEXTURE_PACKAGES } from '../../shared/compat'
 import { t } from '../../shared/i18n'
@@ -131,9 +131,9 @@ export class Library {
   }
 
   /** Importe un .upk/.udk ou un .zip contenant une map. */
-  async import(source: string, hints: ImportHints = {}): Promise<LibraryMap> {
+  async import(source: string, hints: ImportHints = {}, workshopDirectory = false): Promise<LibraryMap> {
     const ext = path.extname(source).toLowerCase()
-    if (!SUPPORTED_IMPORT_EXTS.includes(ext)) {
+    if (!workshopDirectory && !SUPPORTED_IMPORT_EXTS.includes(ext)) {
       throw new Error(t('Format non supporté ({ext}) : utilise un .upk, .udk ou .zip', { ext: ext || t('sans extension') }))
     }
     await mkdir(this.dir, { recursive: true })
@@ -146,8 +146,8 @@ export class Library {
       let thumbPath: string | null = null
       let info: { title?: string; author?: string; desc?: string; description?: string } = {}
 
-      if (ext === '.zip') {
-        const content = pickContent(await extractZip(source, staging))
+      if (workshopDirectory || ext === '.zip') {
+        const content = pickContent(workshopDirectory ? await copyWorkshopDirectory(source, staging) : await extractZip(source, staging))
         if (!content.map) throw new Error(t("Aucun fichier .upk ou .udk trouvé dans l'archive"))
         if ([content.map, ...content.extras].every((f) => WORKSHOP_TEXTURE_PACKAGES.has(path.parse(f.name).name.toLowerCase()))) {
           throw new Error(t("Cette archive ne contient pas de map : c'est un pack de textures. Décompresse-le dans le dossier TAGame/CookedPCConsole du jeu."))

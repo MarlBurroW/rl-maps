@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, ipcMain, net, Notification, protocol, shell } from 'electron'
+import { app, BrowserWindow, dialog, ipcMain, net, Notification, protocol, safeStorage, shell } from 'electron'
 import { mkdtemp, rm, stat } from 'node:fs/promises'
 import { pathToFileURL } from 'node:url'
 import path from 'node:path'
@@ -6,14 +6,17 @@ import type { DownloadProgress, GameInstall, GameStatus, Result, Settings } from
 import { Store } from './store'
 import { Library, SUPPORTED_IMPORT_EXTS, THUMB_PROTOCOL } from './library/library'
 import { Market } from './market/market'
-import { download, downloadFirst } from './market/download'
+import { download } from './market/download'
+import { SteamWorkshop } from './market/steam-workshop'
+import { isCurrentLocal, localWorkshopItems } from './market/steam-local'
+import { acquireMarketMap } from './market/acquire'
 import { detectInstalls, resolveInstallFolder } from './game/detect'
 import { isGameRunning } from './game/process'
 import { chooseSlot, isValidInstall, loadIntoSlot, readSlot, restoreSlot, selectExtras } from './game/slot'
 import { readPackageImports } from './game/upk'
 import { gamePackages } from './game/packages'
 import { missingDependencies } from '../shared/compat'
-import { downloadFingerprint } from '../shared/updates'
+import { downloadFingerprint, downloadUrls } from '../shared/updates'
 import { checkForUpdates, getUpdateState, initUpdater, installUpdate } from './updater'
 import { createTray, updateTray } from './tray'
 import { resolveLang, setLang, t } from '../shared/i18n'
@@ -35,11 +38,17 @@ protocol.registerSchemesAsPrivileged([
 const userData = app.getPath('userData')
 const store = new Store(path.join(userData, 'settings.json'))
 const library = new Library(path.join(userData, 'library'))
+const steamWorkshop = new SteamWorkshop(userData, {
+  available: () => safeStorage.isEncryptionAvailable() && (process.platform !== 'linux' || safeStorage.getSelectedStorageBackend() !== 'basic_text'),
+  encrypt: (value) => safeStorage.encryptString(value),
+  decrypt: (value) => safeStorage.decryptString(value)
+})
 const market = new Market(
   path.join(userData, 'cache'),
   app.isPackaged
     ? path.join(process.resourcesPath, 'registry', 'sources')
-    : path.join(app.getAppPath(), 'registry', 'sources')
+    : path.join(app.getAppPath(), 'registry', 'sources'),
+  (refresh) => steamWorkshop.catalog(refresh)
 )
 const downloads = new Map<string, AbortController>()
 
@@ -75,7 +84,7 @@ async function broadcastStatus(force = false): Promise<GameStatus> {
  * pour pouvoir détecter les prochaines mises à jour.
  */
 async function backfillFingerprints(maps: MarketMap[]) {
-  const byId = new Map(maps.map((m) => [m.id, m]))
+  const byId = new Map(maps.flatMap((m) => (m.registryIds ?? [m.id]).map((id) => [id, m] as const)))
   for (const local of await library.list()) {
     const entry = local.registryId ? byId.get(local.registryId) : undefined
     if (entry && !local.fingerprint) await library.patch(local.id, { fingerprint: downloadFingerprint(entry.download) })
@@ -126,6 +135,12 @@ async function importPaths(paths: string[]) {
 }
 
 function registerIpc() {
+  handle('steam:config', async () => steamWorkshop.status())
+  handle('steam:configure', async (patch: { enabled?: boolean; apiKey?: string }) => {
+    const config = await steamWorkshop.configure(patch)
+    market.invalidate()
+    return config
+  })
   handle('settings:get', async () => store.settings)
   handle('favorites:set', async (id: string, favorite: boolean) => {
     if (typeof id !== 'string' || !/^[\w.-]+$/.test(id)) throw new Error(t('Identifiant de map invalide'))
@@ -135,6 +150,7 @@ function registerIpc() {
   })
   handle('settings:update', async (patch: Partial<Settings>) => {
     await store.update({ settings: patch })
+    if (patch.sources) market.invalidate()
     applyLanguage()
     await broadcastStatus(true)
     return store.settings
@@ -204,7 +220,11 @@ function registerIpc() {
     // Actualiser le catalogue relit aussi les paquets du jeu (il a pu être mis à jour entre-temps)
     const [state, present] = await Promise.all([market.get(store.settings.sources, refresh), presentPackages(refresh)])
     void backfillFingerprints(state.maps)
-    return { ...state, maps: state.maps.map((m) => ({ ...m, missing: missingDependencies(m.imports, present) })) }
+    const locals = state.maps.some((m) => m.download.workshop) ? await localWorkshopItems() : new Map()
+    return { ...state, maps: state.maps.map((m) => ({ ...m, missing: missingDependencies(m.imports, present),
+      availability: downloadUrls(m.download).length ? 'download' : m.download.workshop &&
+        isCurrentLocal(locals.get(m.download.workshop.id), m.download.workshop.revision) ? 'local' : 'steam-required'
+    })) }
   })
   handle('market:install', async (sourceId: string, registryId: string) => {
     let entry = market.find(sourceId, registryId)
@@ -219,8 +239,7 @@ function registerIpc() {
     downloads.set(registryId, controller)
     const tmp = await mkdtemp(path.join(app.getPath('temp'), 'rlmaps-dl-'))
     try {
-      const urls = [entry.download.url, ...(entry.download.mirrors ?? [])]
-      const file = await downloadFirst(urls, tmp, `${entry.id}.zip`, {
+      const acquired = await acquireMarketMap(entry, tmp, {
         signal: controller.signal,
         onProgress: (received, total) =>
           sendProgress({ registryId, received, total: total ?? entry.download.size ?? null, phase: 'download' })
@@ -233,9 +252,11 @@ function registerIpc() {
           signal: AbortSignal.timeout(15_000)
         }).catch(() => undefined)
       }
-      const map = await library.import(file, {
-        registryId: entry.id,
-        fingerprint: downloadFingerprint(entry.download),
+      const aliases = entry.registryIds ?? [entry.id]
+      const previous = (await library.list()).find((m) => m.registryId && aliases.includes(m.registryId))
+      const map = await library.import(acquired.file, {
+        registryId: previous?.registryId ?? entry.id,
+        fingerprint: acquired.fingerprint,
         name: entry.name,
         author: entry.author,
         description: entry.description ?? entry.summary,
@@ -244,7 +265,7 @@ function registerIpc() {
         homepage: entry.homepage,
         thumbnailFile,
         remoteThumbnail: entry.thumbnail
-      })
+      }, acquired.workshopDirectory)
       sendProgress({ registryId, received: 0, total: null, phase: 'done' })
       return map
     } catch (err) {
@@ -336,6 +357,7 @@ function applyLanguage() {
 
 app.whenReady().then(async () => {
   await store.load()
+  await steamWorkshop.load()
   applyLanguage()
   if (!store.settings.install) {
     const [first] = await detectInstalls()

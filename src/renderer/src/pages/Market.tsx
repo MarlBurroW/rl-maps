@@ -1,4 +1,4 @@
-import { useDeferredValue, useMemo, useState, type ReactNode } from 'react'
+import { useDeferredValue, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { CircleCheck, CloudOff, Heart, RefreshCw, Search } from 'lucide-react'
 import { useApp, type Item } from '../state'
 import { normalize } from '../lib/format'
@@ -17,11 +17,14 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
   const { market, marketLoading, refreshMarket, marketItem, favorites } = useApp()
   const [favOnly, setFavOnly] = useState(false)
   const [completeOnly, setCompleteOnly] = useState(false)
+  const [installableOnly, setInstallableOnly] = useState(false)
+  const [visible, setVisible] = useState(120)
   const [query, setQuery] = useState('')
   const [tag, setTag] = useState<string | null>(null)
   const [source, setSource] = useState<string | null>(null)
   const [sort, setSort] = useState<Sort>('name')
   const q = useDeferredValue(normalize(query.trim()))
+  useEffect(() => setVisible(120), [q, tag, source, sort, favOnly, completeOnly, installableOnly])
 
   const sources = useMemo(() => {
     const counts = new Map<string, { name: string; count: number }>()
@@ -41,6 +44,7 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
   const items = useMemo(() => {
     const list = (market?.maps ?? []).filter(
       (m) =>
+        (!installableOnly || m.availability !== 'steam-required') &&
         (!tag || m.tags.includes(tag)) &&
         (!source || m.sources.some((s) => s.id === source)) &&
         (!q || normalize(`${m.name} ${m.author} ${m.summary ?? ''} ${m.tags.join(' ')}`).includes(q))
@@ -51,7 +55,7 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
     return list
       .map(marketItem)
       .filter((i) => (!favOnly || favorites.has(i.favId)) && (!completeOnly || i.missing?.length === 0))
-  }, [market, tag, source, q, sort, marketItem, favOnly, favorites, completeOnly])
+  }, [market, tag, source, q, sort, marketItem, favOnly, favorites, completeOnly, installableOnly])
 
   const favCount = useMemo(
     () => (market?.maps ?? []).filter((m) => favorites.has(marketItem(m).favId)).length,
@@ -75,7 +79,7 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
             <h1 className="font-display text-2xl font-bold">Market</h1>
             <p className="mt-1 text-sm text-muted">
               {market
-                ? t('{n} maps de {sources}, prêtes à jouer en un clic.', {
+                ? t('{n} maps de {sources}.', {
                     n: market.maps.length,
                     sources: sources.map((s) => t(s.name)).join(', ') || t('la communauté')
                   })
@@ -116,9 +120,12 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
           />
         </div>
 
-        {tags.length > 0 && (
+        {!!market?.maps.length && (
           <div className="flex flex-wrap items-center gap-1.5">
             <FavoritesChip active={favOnly} count={favCount} onClick={() => setFavOnly((v) => !v)} />
+            <button onClick={() => setInstallableOnly((v) => !v)} aria-pressed={installableOnly} className={chip(installableOnly)}>
+              {t('Installables')}
+            </button>
             <button
               onClick={() => setCompleteOnly((v) => !v)}
               aria-pressed={completeOnly}
@@ -163,6 +170,9 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
             {t('Registre en ligne injoignable pour certaines sources : affichage de la copie locale du catalogue.')}
           </p>
         )}
+        {!!market?.errors.length && <div role="alert" className="space-y-1 text-[13px] text-warn">
+          {market.errors.map((error) => <p key={error}>{error}</p>)}
+        </div>}
       </div>
 
       <div className="flex-1 overflow-y-auto px-8 pb-8">
@@ -182,11 +192,14 @@ export function MarketPage({ onOpen }: { onOpen: (item: Item) => void }) {
           </div>
         ) : (
           <Grid>
-            {items.map((item) => (
+            {items.slice(0, visible).map((item) => (
               <MapCard key={item.key} item={item} onOpen={() => onOpen(item)} />
             ))}
           </Grid>
         )}
+        {items.length > visible && <div className="mt-6 flex justify-center">
+          <Button onClick={() => setVisible((n) => n + 120)}>{t('Afficher plus ({n} restantes)', { n: items.length - visible })}</Button>
+        </div>}
       </div>
     </div>
   )

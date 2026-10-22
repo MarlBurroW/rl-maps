@@ -15,7 +15,7 @@ describe.skipIf(!process.env.RLMAPS_NET)('intégration réseau', () => {
 
     const dir = await tempDir()
     let last = 0
-    const file = await download(entry.download.url, dir, `${entry.id}.zip`, { onProgress: (r) => (last = r) })
+    const file = await download(entry.download.url!, dir, `${entry.id}.zip`, { onProgress: (r) => (last = r) })
     expect(last).toBe(entry.download.size)
 
     const lib = new Library(path.join(dir, 'library'))

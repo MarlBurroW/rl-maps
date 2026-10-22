@@ -9,7 +9,9 @@ export interface GameInstall {
 }
 
 export interface RegistryDownload {
-  url: string
+  /** Absent pour une map disponible uniquement via le client Steam. */
+  url?: string
+  workshop?: { id: string; revision: string }
   filename?: string | null
   size?: number | null
   sha256?: string
@@ -51,10 +53,18 @@ export interface RegistrySource {
 
 export interface MarketMap extends RegistryMap {
   sourceId: string
+  /** Identifiants des publications fusionnées, pour retrouver une installation antérieure. */
+  registryIds?: string[]
   /** Registres où la map apparaît (fusion des doublons entre sources) */
   sources: { id: string; name: string; homepage?: string }[]
   /** Dépendances absentes du jeu installé (undefined : inconnu) */
   missing?: string[]
+  availability?: 'download' | 'local' | 'steam-required'
+}
+
+export interface SteamWorkshopConfig {
+  enabled: boolean
+  hasApiKey: boolean
 }
 
 export interface MarketState {
@@ -152,6 +162,8 @@ export type Result<T = void> = { ok: true; value: T } | { ok: false; error: stri
 
 /** Contrat IPC exposé au renderer via window.api */
 export interface Api {
+  getSteamWorkshopConfig(): Promise<SteamWorkshopConfig>
+  setSteamWorkshopConfig(patch: { enabled?: boolean; apiKey?: string }): Promise<Result<SteamWorkshopConfig>>
   getSettings(): Promise<Settings>
   updateSettings(patch: Partial<Settings>): Promise<Settings>
   setFavorite(id: string, favorite: boolean): Promise<string[]>
